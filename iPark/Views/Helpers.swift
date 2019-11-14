@@ -17,15 +17,29 @@ extension UIView {
     }
     
     func showFlip(){
-            if self.isHidden{
-                UIView.transition(with: self, duration: 0.5, options: [.transitionFlipFromRight,.allowUserInteraction], animations: nil, completion: nil)
-                self.isHidden = false
-            }
-
+        if self.isHidden {
+            UIView.transition(with: self, duration: 0.5, options: [.transitionFlipFromRight,.allowUserInteraction], animations: nil, completion: nil)
+            self.isHidden = false
         }
+    }
+    
     func hideFlip(){
-        if !self.isHidden{
+        if !self.isHidden {
             UIView.transition(with: self, duration: 0.5, options: [.transitionFlipFromLeft,.allowUserInteraction], animations: nil,  completion: nil)
+            self.isHidden = true
+        }
+    }
+    
+    func showFade() {
+        if self.isHidden {
+            UIView.transition(with: self, duration: 2, options: [.curveEaseIn, .allowUserInteraction], animations: nil, completion: nil)
+            self.isHidden = false
+        }
+    }
+    
+    func hideFade() {
+        if !self.isHidden {
+            UIView.transition(with: self, duration: 1, options: [.curveEaseIn, .allowUserInteraction], animations: nil, completion: nil)
             self.isHidden = true
         }
     }
@@ -77,6 +91,10 @@ extension UIColor {
     }
     
     open class var iBlack50: UIColor {
+        return UIColor(rgb: 0x969FAA)
+    }
+    
+    open class var iBlack40: UIColor {
         return UIColor(rgb: 0xE6E5F5)
     }
 }

@@ -301,11 +301,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJ6-cV-JxI">
                                                                 <rect key="frame" x="-2" y="15" width="18" height="18"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-time" translatesAutoresizingMaskIntoConstraints="NO" id="0At-Qb-vCy">
-                                                                        <rect key="frame" x="2" y="2" width="14" height="14"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0At-Qb-vCy">
+                                                                        <rect key="frame" x="1" y="1.5" width="16" height="15"/>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="14" id="bIF-Tx-x0B"/>
-                                                                            <constraint firstAttribute="height" constant="14" id="qi2-iF-oAR"/>
+                                                                            <constraint firstAttribute="width" constant="16" id="bIF-Tx-x0B"/>
+                                                                            <constraint firstAttribute="height" constant="16" id="qi2-iF-oAR"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                 </subviews>
@@ -543,17 +544,194 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RO-3N-fcB">
+                                <rect key="frame" x="0.0" y="50" width="414" height="724"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-7W-tUv" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="32" y="32" width="350" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="8mo-dM-xCJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Address, Venue, or Airport"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lU5-eq-Hr6" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="32" y="98" width="350" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="xFs-q5-0po"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Address, Venue, or Airport"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKX-AA-jLr" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="32" y="166" width="350" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="4O2-YJ-T6e"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Address, Venue, or Airport"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgu-nm-URd" customClass="FlatButton" customModule="Material">
+                                        <rect key="frame" x="20" y="623" width="374" height="56"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="oUq-wO-udz"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="SEARCH"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onDailySearchClick:" destination="T2q-yP-fXh" eventType="touchUpInside" id="6of-XE-WEP"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lU5-eq-Hr6" secondAttribute="trailing" constant="32" id="3ND-3A-a8V"/>
+                                    <constraint firstItem="lU5-eq-Hr6" firstAttribute="top" secondItem="N9k-7W-tUv" secondAttribute="bottom" constant="30" id="BzK-OY-rv7"/>
+                                    <constraint firstItem="Sgu-nm-URd" firstAttribute="leading" secondItem="8RO-3N-fcB" secondAttribute="leading" constant="20" id="DrK-6x-sEh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sgu-nm-URd" secondAttribute="trailing" constant="20" id="LgS-FI-acJ"/>
+                                    <constraint firstItem="lU5-eq-Hr6" firstAttribute="leading" secondItem="8RO-3N-fcB" secondAttribute="leading" constant="32" id="Pe9-ff-SKi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sgu-nm-URd" secondAttribute="bottom" constant="45" id="Qhk-wg-MpU"/>
+                                    <constraint firstItem="N9k-7W-tUv" firstAttribute="leading" secondItem="8RO-3N-fcB" secondAttribute="leading" constant="32" id="W1F-Ih-c3L"/>
+                                    <constraint firstAttribute="trailing" secondItem="PKX-AA-jLr" secondAttribute="trailing" constant="32" id="XpC-BJ-pK9"/>
+                                    <constraint firstItem="PKX-AA-jLr" firstAttribute="top" secondItem="lU5-eq-Hr6" secondAttribute="bottom" constant="32" id="qQB-Bs-uct"/>
+                                    <constraint firstAttribute="trailing" secondItem="N9k-7W-tUv" secondAttribute="trailing" constant="32" id="qdZ-1A-er2"/>
+                                    <constraint firstItem="N9k-7W-tUv" firstAttribute="top" secondItem="8RO-3N-fcB" secondAttribute="top" constant="32" id="qme-JS-gll"/>
+                                    <constraint firstItem="PKX-AA-jLr" firstAttribute="leading" secondItem="8RO-3N-fcB" secondAttribute="leading" constant="32" id="rVR-eO-j4R"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz8-PT-7SE">
+                                <rect key="frame" x="0.0" y="50" width="414" height="724"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqx-X0-PHx" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="32" y="32" width="350" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="cob-Pf-NUP"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Address, Venue, or Airport"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4h-Ny-3P8" customClass="TextField" customModule="Material">
+                                        <rect key="frame" x="32" y="98" width="350" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="1Kb-Lb-RdU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Address, Venue, or Airport"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWo-eh-wlQ" customClass="FlatButton" customModule="Material">
+                                        <rect key="frame" x="20" y="623" width="374" height="56"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="4Le-5E-ZVI"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="SEARCH"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                <color key="value" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onMonthlySearchClick:" destination="T2q-yP-fXh" eventType="touchUpInside" id="PJM-Zr-lBY"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yqx-X0-PHx" firstAttribute="leading" secondItem="Jz8-PT-7SE" secondAttribute="leading" constant="32" id="OCZ-DJ-Bb1"/>
+                                    <constraint firstAttribute="trailing" secondItem="yqx-X0-PHx" secondAttribute="trailing" constant="32" id="QFz-wp-AJE"/>
+                                    <constraint firstItem="yqx-X0-PHx" firstAttribute="top" secondItem="Jz8-PT-7SE" secondAttribute="top" constant="32" id="Qtd-EA-wC5"/>
+                                    <constraint firstAttribute="bottom" secondItem="pWo-eh-wlQ" secondAttribute="bottom" constant="45" id="Rta-vy-iDs"/>
+                                    <constraint firstItem="g4h-Ny-3P8" firstAttribute="leading" secondItem="Jz8-PT-7SE" secondAttribute="leading" constant="32" id="cdf-Ur-FRI"/>
+                                    <constraint firstAttribute="trailing" secondItem="g4h-Ny-3P8" secondAttribute="trailing" constant="32" id="gfD-H0-ArN"/>
+                                    <constraint firstAttribute="trailing" secondItem="pWo-eh-wlQ" secondAttribute="trailing" constant="20" id="haM-ag-ZQS"/>
+                                    <constraint firstItem="pWo-eh-wlQ" firstAttribute="leading" secondItem="Jz8-PT-7SE" secondAttribute="leading" constant="20" id="htm-9n-aTk"/>
+                                    <constraint firstItem="g4h-Ny-3P8" firstAttribute="top" secondItem="yqx-X0-PHx" secondAttribute="bottom" constant="30" id="oBH-FW-g1w"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="d9N-xN-bA5" firstAttribute="bottom" secondItem="8RO-3N-fcB" secondAttribute="bottom" id="3c1-JH-Wos"/>
                             <constraint firstItem="beN-cO-eAq" firstAttribute="top" secondItem="d9N-xN-bA5" secondAttribute="top" id="6fG-kE-Mao"/>
+                            <constraint firstItem="8RO-3N-fcB" firstAttribute="leading" secondItem="d9N-xN-bA5" secondAttribute="leading" id="EuB-Lx-bXo"/>
+                            <constraint firstItem="8RO-3N-fcB" firstAttribute="top" secondItem="beN-cO-eAq" secondAttribute="bottom" id="GYg-BQ-pwf"/>
+                            <constraint firstItem="Jz8-PT-7SE" firstAttribute="trailing" secondItem="d9N-xN-bA5" secondAttribute="trailing" id="OZD-qz-vIg"/>
+                            <constraint firstItem="d9N-xN-bA5" firstAttribute="trailing" secondItem="8RO-3N-fcB" secondAttribute="trailing" id="YOo-ir-5Dz"/>
+                            <constraint firstItem="Jz8-PT-7SE" firstAttribute="top" secondItem="beN-cO-eAq" secondAttribute="bottom" id="d8T-Zd-lcp"/>
                             <constraint firstItem="d9N-xN-bA5" firstAttribute="trailing" secondItem="beN-cO-eAq" secondAttribute="trailing" id="knY-eo-lKj"/>
                             <constraint firstItem="beN-cO-eAq" firstAttribute="leading" secondItem="d9N-xN-bA5" secondAttribute="leading" id="qYS-x8-hA1"/>
+                            <constraint firstItem="d9N-xN-bA5" firstAttribute="bottom" secondItem="Jz8-PT-7SE" secondAttribute="bottom" id="udV-YV-0wC"/>
+                            <constraint firstItem="Jz8-PT-7SE" firstAttribute="leading" secondItem="d9N-xN-bA5" secondAttribute="leading" id="z0G-df-fYZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d9N-xN-bA5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Let's Find Your Spot" id="yXu-Tf-Yfh"/>
                     <connections>
+                        <outlet property="addressField" destination="N9k-7W-tUv" id="oK1-GG-TQj"/>
+                        <outlet property="dailySearchButton" destination="Sgu-nm-URd" id="EHo-jq-lEx"/>
+                        <outlet property="dailyView" destination="8RO-3N-fcB" id="d2U-0x-iQD"/>
+                        <outlet property="endTimeField" destination="PKX-AA-jLr" id="GkA-NG-ezj"/>
+                        <outlet property="mAddressField" destination="yqx-X0-PHx" id="h4a-6t-9GN"/>
+                        <outlet property="mStartTimeField" destination="g4h-Ny-3P8" id="62t-k2-vlY"/>
+                        <outlet property="monthlySearchButton" destination="pWo-eh-wlQ" id="z5O-Oj-33L"/>
+                        <outlet property="monthlyView" destination="Jz8-PT-7SE" id="1z2-9w-aXW"/>
+                        <outlet property="startTimeField" destination="lU5-eq-Hr6" id="O3z-zN-8wW"/>
                         <outlet property="tabBar" destination="beN-cO-eAq" id="KkS-xQ-qZj"/>
                     </connections>
                 </viewController>
@@ -604,13 +782,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clock" catalog="system" width="64" height="60"/>
         <image name="icon-down-arrow" width="512" height="512"/>
         <image name="icon-favorite" width="512" height="512"/>
         <image name="icon-home" width="25" height="25"/>
         <image name="icon-menu" width="25" height="25"/>
         <image name="icon-reservations" width="25" height="25"/>
         <image name="icon-rewards" width="25" height="25"/>
-        <image name="icon-time" width="512" height="512"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="multiply" catalog="system" width="64" height="54"/>
     </resources>

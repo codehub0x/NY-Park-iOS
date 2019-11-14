@@ -103,12 +103,12 @@ class HomeViewController: UIViewController {
 
 fileprivate extension HomeViewController {
     func prepareUI() {
-        btnToggle.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
-        btnFilters.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
-        btnSearch.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
+        btnToggle.roundCorners(corners: [.allCorners], radius: 4.0)
+        btnFilters.roundCorners(corners: [.allCorners], radius: 4.0)
+        btnSearch.roundCorners(corners: [.allCorners], radius: 4.0)
         btnArrow.roundCorners(corners: [.topLeft, .topRight], radius: 18.0)
         btnArrow.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
-        viewDetails.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 8.0)
+        viewDetails.roundCorners(corners: [.allCorners], radius: 8.0)
         viewDetails.layer.borderWidth = 0.5
         viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
         viewDetails.layer.cornerRadius = 8.0
