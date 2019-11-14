@@ -33,6 +33,7 @@ fileprivate extension SearchViewController {
         let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
         leftButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
     }
     
     func prepareButtons() {
@@ -40,12 +41,14 @@ fileprivate extension SearchViewController {
         btn1.pulseAnimation = .centerRadialBeyondBounds
         btn1.setTabItemColor(UIColor.iYellow, for: .selected)
         btn1.setTabItemColor(UIColor.white, for: .normal)
+        btn1.titleLabel?.font = LatoFont.bold(with: 15)
         buttons.append(btn1)
        
         let btn2 = TabItem(title: "Monthly", titleColor: Color.white)
         btn2.pulseAnimation = .centerRadialBeyondBounds
         btn2.setTabItemColor(UIColor.iYellow, for: .selected)
         btn2.setTabItemColor(UIColor.white, for: .normal)
+        btn1.titleLabel?.font = LatoFont.bold(with: 15)
         buttons.append(btn2)
     }
     

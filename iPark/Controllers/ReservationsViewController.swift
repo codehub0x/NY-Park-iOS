@@ -39,18 +39,21 @@ fileprivate extension ReservationsViewController {
         btn1.pulseAnimation = .centerRadialBeyondBounds
         btn1.setTabItemColor(UIColor.iYellow, for: .selected)
         btn1.setTabItemColor(UIColor.white, for: .normal)
+        btn1.titleLabel?.font = LatoFont.bold(with: 15)
         buttons.append(btn1)
        
         let btn2 = TabItem(title: "Past", titleColor: Color.white)
         btn2.pulseAnimation = .centerRadialBeyondBounds
         btn2.setTabItemColor(UIColor.iYellow, for: .selected)
         btn2.setTabItemColor(UIColor.white, for: .normal)
+        btn2.titleLabel?.font = LatoFont.bold(with: 15)
         buttons.append(btn2)
         
         let btn3 = TabItem(title: "Canceled", titleColor: Color.white)
         btn3.pulseAnimation = .centerRadialBeyondBounds
         btn3.setTabItemColor(UIColor.iYellow, for: .selected)
         btn3.setTabItemColor(UIColor.white, for: .normal)
+        btn3.titleLabel?.font = LatoFont.bold(with: 15)
         buttons.append(btn3)
     }
     

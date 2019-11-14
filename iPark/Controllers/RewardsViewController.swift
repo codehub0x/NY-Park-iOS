@@ -25,7 +25,6 @@ fileprivate extension RewardsViewController {
     func prepareNavigation() {
         self.navigationItem.title = "Reward Points"
         let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
-//        leftButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = leftButton
     }
 }

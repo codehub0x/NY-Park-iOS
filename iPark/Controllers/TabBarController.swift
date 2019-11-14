@@ -14,6 +14,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.delegate = self
+        prepareTabBar()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -65,10 +66,19 @@ fileprivate extension TabBarController {
         navVC.navigationBar.isTranslucent = false
         navVC.navigationBar.barTintColor = UIColor.iDarkBlue
         navVC.navigationBar.tintColor = UIColor.white
-        navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .medium)]
+        navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
         navVC.navigationBar.barStyle = .black
         
         return navVC
+    }
+    
+    func prepareTabBar() {
+        let tabItems = self.tabBar.items
+        tabItems?.forEach({ (item) in
+            item.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 10)], for: .normal)
+            item.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 10)], for: .selected)
+        })
+        
     }
 }
 

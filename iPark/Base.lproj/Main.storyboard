@@ -6,6 +6,20 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MENU-->
         <scene sceneID="2pF-9t-6up">
@@ -26,8 +40,8 @@
                                         <rect key="frame" x="0.0" y="44" width="300" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Guest," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk3-vX-Ir1">
-                                                <rect key="frame" x="16" y="10" width="148" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <rect key="frame" x="16" y="10" width="146" height="24"/>
+                                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -198,7 +212,7 @@
                                                     <constraint firstAttribute="width" constant="36" id="2Wc-95-uzN"/>
                                                     <constraint firstAttribute="height" constant="36" id="3db-vQ-o38"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="11"/>
                                                 <state key="normal" title="LIST">
                                                     <color key="titleColor" red="0.27695047855377197" green="0.32079684734344482" blue="0.3707582950592041" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -212,7 +226,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="7eL-Bv-BRX"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                 <color key="tintColor" red="0.50588235294117645" green="0.56470588235294117" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                 <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -257,14 +271,14 @@
                                                         <rect key="frame" x="0.0" y="10" width="136" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-Rs-n0q">
-                                                                <rect key="frame" x="44.5" y="0.0" width="47.5" height="11"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                                <rect key="frame" x="46.5" y="0.0" width="43" height="11"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-su-SvG">
-                                                                <rect key="frame" x="23.5" y="13.5" width="89" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                <rect key="frame" x="28.5" y="13.5" width="79" height="14.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -316,14 +330,14 @@
                                                         <rect key="frame" x="150" y="10" width="135" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-E4-IE0">
-                                                                <rect key="frame" x="47.5" y="0.0" width="40.5" height="11"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                                <rect key="frame" x="49" y="0.0" width="37" height="11"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-lX-UKX">
-                                                                <rect key="frame" x="23.5" y="13.5" width="88.5" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                                <rect key="frame" x="28" y="13.5" width="79" height="14.5"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -373,7 +387,7 @@
                                                     <constraint firstAttribute="height" constant="32" id="WZD-KG-Nop"/>
                                                     <constraint firstAttribute="width" constant="96" id="YJy-vZ-HoU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                                 <color key="tintColor" red="0.027450980392156862" green="0.0" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="FILTERS">

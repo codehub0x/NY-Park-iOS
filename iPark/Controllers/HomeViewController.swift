@@ -67,33 +67,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        initUI()
+        prepareUI()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-    
-    private func initUI() {
-        btnToggle.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
-        btnFilters.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
-        btnSearch.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
-        btnArrow.roundCorners(corners: [.topLeft, .topRight], radius: 18.0)
-        btnArrow.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
-        viewDetails.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 8.0)
-        viewDetails.layer.borderWidth = 0.5
-        viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
-        viewDetails.layer.cornerRadius = 8.0
-        viewDetails.layer.masksToBounds = true
-        
-        // Set image color
-        btnFavorite.setImage(UIImage(named: "icon-favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnFavorite.tintColor = UIColor.white
-        btnArrow.setImage(UIImage(named: "icon-up-arrow.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnArrow.tintColor = UIColor.iBlack90
-        imageTime.image = imageTime.image?.withRenderingMode(.alwaysTemplate)
-        imageTime.tintColor = UIColor.white
-        
     }
     
     @IBAction func onClickToggle(_ sender: Any) {
@@ -121,4 +99,27 @@ class HomeViewController: UIViewController {
     }
 
 
+}
+
+fileprivate extension HomeViewController {
+    func prepareUI() {
+        btnToggle.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
+        btnFilters.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
+        btnSearch.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 4.0)
+        btnArrow.roundCorners(corners: [.topLeft, .topRight], radius: 18.0)
+        btnArrow.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+        viewDetails.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 8.0)
+        viewDetails.layer.borderWidth = 0.5
+        viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
+        viewDetails.layer.cornerRadius = 8.0
+        viewDetails.layer.masksToBounds = true
+        
+        // Set image color
+        btnFavorite.setImage(UIImage(named: "icon-favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnFavorite.tintColor = UIColor.white
+        btnArrow.setImage(UIImage(named: "icon-up-arrow.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnArrow.tintColor = UIColor.iBlack90
+        imageTime.image = imageTime.image?.withRenderingMode(.alwaysTemplate)
+        imageTime.tintColor = UIColor.white
+    }
 }

@@ -27,3 +27,7 @@ class MenuViewController: UIViewController {
         self.dismiss(animated: true)
     }
 }
+
+fileprivate extension MenuViewController {
+    
+}
