@@ -1,0 +1,24 @@
+PODS:
+  - Material (3.1.8):
+    - Material/Core (= 3.1.8)
+  - Material/Core (3.1.8):
+    - Motion (~> 3.1.1)
+  - Motion (3.1.3):
+    - Motion/Core (= 3.1.3)
+  - Motion/Core (3.1.3)
+
+DEPENDENCIES:
+  - Material (~> 3.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Material
+    - Motion
+
+SPEC CHECKSUMS:
+  Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
+  Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
+
+PODFILE CHECKSUM: 34f2607db7fdf7a7de0153935bcb12a7ffb6f542
+
+COCOAPODS: 1.8.3
