@@ -47,11 +47,11 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-    @IBAction onDailySearchClick(_ sender: Any) {
+    @IBAction func onDailySearchClick(_ sender: Any) {
         
     }
     
-    @IBAction onMonthlySearchClick(_ sender: Any) {
+    @IBAction func onMonthlySearchClick(_ sender: Any) {
         
     }
     

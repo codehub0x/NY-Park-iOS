@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "ReservationCell.prepareButtons():ReservationCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "btnDirections.titleColor(for: .normal)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
