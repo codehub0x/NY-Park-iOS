@@ -8,5 +8,6 @@ target 'iPark' do
   # Pods for iPark
 
   pod 'Material', '~> 3.1.0'
+  pod 'FSPagerView'
 
 end

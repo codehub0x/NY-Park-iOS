@@ -9,6 +9,12 @@
 import UIKit
 import Material
 
+protocol ReservationCellDelegate {
+    func onDetails()
+    func onDirections()
+    func onRebook()
+}
+
 class ReservationCell: UITableViewCell {
     
     static let reuseIdentifier = "\(ReservationCell.self)"
@@ -26,6 +32,8 @@ class ReservationCell: UITableViewCell {
     @IBOutlet weak var btnDirections: UIButton!
     @IBOutlet weak var btnDetails: UIButton!
     @IBOutlet weak var labelDistance: UILabel!
+    
+    var delegate: ReservationCellDelegate!
     
     var reservationType: ReservationType = .upcoming {
         didSet {
@@ -65,7 +73,7 @@ class ReservationCell: UITableViewCell {
                 break
             }
 
-            prepareDirectionsButtons()
+            prepareDirectionsButton()
         }
     }
     
@@ -83,7 +91,9 @@ class ReservationCell: UITableViewCell {
     }
     
     @IBAction func onDetailsClick(_ sender: Any) {
-        
+        if delegate != nil {
+            delegate.onDetails()
+        }
     }
 }
 
@@ -107,7 +117,7 @@ fileprivate extension ReservationCell {
         priceView.backgroundColor = UIColor.iYellow
     }
     
-    func prepareDirectionsButtons() {
+    func prepareDirectionsButton() {
         let textString = NSMutableAttributedString(
             string: btnDirections.title(for: .normal)!,
             attributes: [

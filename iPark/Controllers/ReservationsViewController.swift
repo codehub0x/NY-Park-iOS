@@ -107,6 +107,7 @@ extension ReservationsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReservationCell.reuseIdentifier, for: indexPath) as! ReservationCell
+        cell.delegate = self
         switch tabBar.selectedTabItem?.tag {
         case 1:
             cell.reservationType = .upcoming
@@ -128,5 +129,21 @@ extension ReservationsViewController: UITableViewDataSource {
 extension ReservationsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
+    }
+}
+
+extension ReservationsViewController: ReservationCellDelegate {
+    func onDetails() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
+    func onDirections() {
+        
+    }
+    
+    func onRebook() {
+        
     }
 }

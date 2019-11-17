@@ -57,6 +57,10 @@
 		3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892504237C53E9004F7E97 /* RewardsViewController.swift */; };
 		3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892506237C693F004F7E97 /* MenuViewController.swift */; };
 		3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892508237CF3BF004F7E97 /* SearchViewController.swift */; };
+		3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBB237F87C400E85702 /* SavedCell.swift */; };
+		3CB69DBE237F87CF00E85702 /* SavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB69DBD237F87CF00E85702 /* SavedCell.xib */; };
+		3CB69DC0237F935500E85702 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBF237F935500E85702 /* FavoriteViewController.swift */; };
+		3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */; };
 		3CF6CF05237BFF1C00E53AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6CF04237BFF1C00E53AC0 /* AppDelegate.swift */; };
 		3CF6CF07237BFF1C00E53AC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6CF06237BFF1C00E53AC0 /* SceneDelegate.swift */; };
 		3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6CF08237BFF1C00E53AC0 /* TabBarController.swift */; };
@@ -137,6 +141,10 @@
 		3C892504237C53E9004F7E97 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		3C892506237C693F004F7E97 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C892508237CF3BF004F7E97 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3CB69DBB237F87C400E85702 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
+		3CB69DBD237F87CF00E85702 /* SavedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedCell.xib; sourceTree = "<group>"; };
+		3CB69DBF237F935500E85702 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3CF6CF01237BFF1C00E53AC0 /* iPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF6CF04237BFF1C00E53AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF6CF06237BFF1C00E53AC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +260,8 @@
 				3C8924FD237C31D4004F7E97 /* Helpers.swift */,
 				3C29BEBA237DA110009F46EC /* ReservationCell.swift */,
 				3C29BEBC237DA141009F46EC /* ReservationCell.xib */,
+				3CB69DBB237F87C400E85702 /* SavedCell.swift */,
+				3CB69DBD237F87CF00E85702 /* SavedCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +275,8 @@
 				3C892502237C51BE004F7E97 /* ReservationsViewController.swift */,
 				3C892504237C53E9004F7E97 /* RewardsViewController.swift */,
 				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
+				3CB69DBF237F935500E85702 /* FavoriteViewController.swift */,
+				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -481,6 +493,7 @@
 				3C29BF93237DBC9E009F46EC /* Roboto-ThinItalic.ttf in Resources */,
 				3CF6CF0C237BFF1C00E53AC0 /* Main.storyboard in Resources */,
 				3C29BF94237DBC9E009F46EC /* RobotoCondensed-Bold.ttf in Resources */,
+				3CB69DBE237F87CF00E85702 /* SavedCell.xib in Resources */,
 				3C29BF9E237DBC9E009F46EC /* Lato-Hairline.ttf in Resources */,
 				3C29BF9F237DBC9E009F46EC /* Lato-HairlineItalic.ttf in Resources */,
 				3C29BFA4237DBC9E009F46EC /* Lato-LightItalic.ttf in Resources */,
@@ -560,12 +573,15 @@
 				3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */,
 				3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */,
 				3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */,
+				3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */,
+				3CB69DC0237F935500E85702 /* FavoriteViewController.swift in Sources */,
 				3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */,
 				3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */,
 				3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */,
 				3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */,
 				3C29BF14237DB43E009F46EC /* Fonts.swift in Sources */,
 				3CF6CF05237BFF1C00E53AC0 /* AppDelegate.swift in Sources */,
+				3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */,
 				3C29BF12237DB3EC009F46EC /* RobottoFont.swift in Sources */,
 				3CF6CF07237BFF1C00E53AC0 /* SceneDelegate.swift in Sources */,
 				3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */,
