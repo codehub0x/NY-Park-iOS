@@ -28,6 +28,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var checkBtn24Hours: FlatButton!
+    @IBOutlet weak var checkBtn7Days: FlatButton!
+    @IBOutlet weak var checkBtnCovered: FlatButton!
+    @IBOutlet weak var checkBtnPaved: FlatButton!
+    @IBOutlet weak var checkBtnValet: FlatButton!
+    @IBOutlet weak var checkBtnOversizedVehicles: FlatButton!
+    @IBOutlet weak var checkBtnGreen: FlatButton!
+    @IBOutlet weak var checkBtnTesla: FlatButton!
+    @IBOutlet weak var checkBtnOutdoors: FlatButton!
+    @IBOutlet weak var checkBtnOnSiteStaff: FlatButton!
+    
     /// Toggle bottom shown/hidden parameter
     private var isShowBottomView: Bool = false {
         didSet {
@@ -55,7 +66,7 @@ class HomeViewController: UIViewController {
         didSet {
             if isShowFilter {
                 UIView.animate(withDuration: 1) {
-                    self.filterWidthConstraint.constant = 240
+                    self.filterWidthConstraint.constant = 270
                     self.btnFilters.setTitle("CLOSE", for: .normal)
                     self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
                     self.btnFilters.tintColor = UIColor.iDarkBlue
@@ -133,6 +144,27 @@ class HomeViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    @IBAction func onApplyFiltersBtnClick(_ sender: Any) {
+        isShowFilter = false
+    }
+    
+    @IBAction func onClearBtnClick(_ sender: Any) {
+        checkBtn24Hours.isSelected = false
+        checkBtn7Days.isSelected = false
+        checkBtnCovered.isSelected = false
+        checkBtnPaved.isSelected = false
+        checkBtnValet.isSelected = false
+        checkBtnOversizedVehicles.isSelected = false
+        checkBtnGreen.isSelected = false
+        checkBtnTesla.isSelected = false
+        checkBtnOutdoors.isSelected = false
+        checkBtnOnSiteStaff.isSelected = false
+    }
+    
+    @IBAction func onFilterButtonChanged(_ sender: FlatButton) {
+        sender.isSelected = !sender.isSelected
     }
 
 }
