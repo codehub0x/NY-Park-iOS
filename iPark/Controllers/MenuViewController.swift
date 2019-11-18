@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Material
 
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var overlapView: UIView!
+    @IBOutlet weak var closeBtn: FlatButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        prepareCloseButton()
         
         overlapView.isUserInteractionEnabled = true
         overlapView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(onOverlapViewClick)))
@@ -29,5 +33,8 @@ class MenuViewController: UIViewController {
 }
 
 fileprivate extension MenuViewController {
-    
+    func prepareCloseButton() {
+        closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        closeBtn.tintColor = UIColor.white
+    }
 }

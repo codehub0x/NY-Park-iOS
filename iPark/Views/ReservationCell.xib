@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -112,8 +112,8 @@ New York, NY 10024, USA</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOg-a9-N7u">
                                                 <rect key="frame" x="-2" y="6" width="18" height="18"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H93-fV-yT9">
-                                                        <rect key="frame" x="2" y="2.5" width="14" height="13"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-time" translatesAutoresizingMaskIntoConstraints="NO" id="H93-fV-yT9">
+                                                        <rect key="frame" x="2" y="2" width="14" height="14"/>
                                                         <color key="tintColor" red="0.58823529411764708" green="0.62352941176470589" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="14" id="2gk-2v-ceh"/>
@@ -221,15 +221,15 @@ New York, NY 10024, USA</string>
                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pqL-9f-g0q">
-                                <rect key="frame" x="295.5" y="162.5" width="12" height="11"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="pqL-9f-g0q">
+                                <rect key="frame" x="295.5" y="162" width="12" height="12"/>
                                 <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="IFi-bb-lSX"/>
                                     <constraint firstAttribute="width" constant="12" id="XaP-iR-Ysz"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-Qb-gRu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-Qb-gRu" customClass="RaisedButton" customModule="Material">
                                 <rect key="frame" x="16" y="158" width="100" height="20"/>
                                 <color key="backgroundColor" red="0.039215686270000001" green="0.0" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -247,7 +247,7 @@ New York, NY 10024, USA</string>
                                     <action selector="onDirectionsClick:" destination="aCt-TI-mYh" eventType="touchUpInside" id="sKs-I4-Pri"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-ua-Fop">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-ua-Fop" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="132" y="158" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="30q-od-9IT"/>
@@ -256,7 +256,7 @@ New York, NY 10024, USA</string>
                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="10"/>
                                 <color key="tintColor" red="0.27843137254901962" green="0.32156862745098036" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
-                                <state key="normal" title="DETAILS" image="ellipsis.circle" catalog="system">
+                                <state key="normal" title="DETAILS" image="icon-details">
                                     <color key="titleColor" red="0.27843137254901962" green="0.32156862745098036" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
@@ -307,6 +307,7 @@ New York, NY 10024, USA</string>
                 <outlet property="btnDetails" destination="Dbj-ua-Fop" id="cxq-Mo-rcl"/>
                 <outlet property="btnDirections" destination="9LD-Qb-gRu" id="gXF-TX-auu"/>
                 <outlet property="cardView" destination="M85-hm-6hd" id="mdj-tb-odK"/>
+                <outlet property="hoursImageView" destination="H93-fV-yT9" id="sl0-SB-4vA"/>
                 <outlet property="imageViewItem" destination="vR9-Fs-y5f" id="7ct-58-PRM"/>
                 <outlet property="labelAddress" destination="ATg-6J-CN5" id="56u-vl-vQF"/>
                 <outlet property="labelDistance" destination="upy-17-Eww" id="E1o-X5-VVk"/>
@@ -316,15 +317,16 @@ New York, NY 10024, USA</string>
                 <outlet property="labelPrice" destination="R4r-Zw-qu3" id="Lfj-9T-wAW"/>
                 <outlet property="labelStartTime" destination="OiV-Ql-y2Z" id="rRa-bf-SEH"/>
                 <outlet property="labelTitle" destination="SJm-Io-BsK" id="kU9-sy-QP9"/>
+                <outlet property="locationImageView" destination="pqL-9f-g0q" id="CRt-ns-lL3"/>
                 <outlet property="priceView" destination="toC-gq-N5i" id="Oc3-zP-osB"/>
             </connections>
             <point key="canvasLocation" x="-862.31884057971024" y="94.419642857142847"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" catalog="system" width="64" height="60"/>
         <image name="dog" width="275" height="183"/>
-        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
-        <image name="location.fill" catalog="system" width="64" height="56"/>
+        <image name="icon-details" width="16" height="16"/>
+        <image name="icon-location" width="16" height="16"/>
+        <image name="icon-time" width="16" height="16"/>
     </resources>
 </document>

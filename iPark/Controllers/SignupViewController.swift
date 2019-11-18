@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import Material
 
 class SignupViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var termsBtn: UIButton!
+    @IBOutlet weak var termsBtn: FlatButton!
+    @IBOutlet weak var closeBtn: FlatButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareTermsButton()
+        prepareCloseButton()
     }
     
     @IBAction func onCloseBtnClick(_ sender: Any) {
@@ -49,5 +52,10 @@ fileprivate extension SignupViewController {
         
         let btnTitleStr = NSMutableAttributedString(string: "Terms", attributes: attrs)
         termsBtn.setAttributedTitle(btnTitleStr, for: .normal)
+    }
+    
+    func prepareCloseButton() {
+        closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        closeBtn.tintColor = UIColor.iBlack90
     }
 }

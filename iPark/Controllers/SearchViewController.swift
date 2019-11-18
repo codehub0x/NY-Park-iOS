@@ -59,7 +59,7 @@ class SearchViewController: UIViewController {
 
 fileprivate extension SearchViewController {
     func prepareNavigation() {
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         leftButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = leftButton
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
@@ -115,7 +115,7 @@ fileprivate extension SearchViewController {
         addressField.dividerActiveColor = UIColor.iDarkBlue
         
         let leftView = UIImageView()
-        leftView.image = UIImage(systemName: "magnifyingglass")
+        leftView.image = UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate)
         addressField.leftView = leftView
         addressField.leftViewOffset = -8
         addressField.leftViewNormalColor = UIColor.iBlack50
@@ -140,7 +140,7 @@ fileprivate extension SearchViewController {
         startTimeField.dividerActiveColor = UIColor.iDarkBlue
         
         let leftView = UIImageView()
-        leftView.image = UIImage(systemName: "clock")
+        leftView.image = UIImage(named: "icon-time")?.withRenderingMode(.alwaysTemplate)
         startTimeField.leftView = leftView
         startTimeField.leftViewOffset = -8
         startTimeField.leftViewNormalColor = UIColor.iBlack50
@@ -165,7 +165,7 @@ fileprivate extension SearchViewController {
         endTimeField.dividerActiveColor = UIColor.iDarkBlue
         
         let leftView = UIImageView()
-        leftView.image = UIImage(systemName: "clock")
+        leftView.image = UIImage(named: "icon-time")?.withRenderingMode(.alwaysTemplate)
         endTimeField.leftView = leftView
         endTimeField.leftViewOffset = -8
         endTimeField.leftViewNormalColor = UIColor.iBlack50
@@ -190,7 +190,7 @@ fileprivate extension SearchViewController {
         mAddressField.dividerActiveColor = UIColor.iDarkBlue
         
         let leftView = UIImageView()
-        leftView.image = UIImage(systemName: "magnifyingglass")
+        leftView.image = UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate)
         mAddressField.leftView = leftView
         mAddressField.leftViewOffset = -8
         mAddressField.leftViewNormalColor = UIColor.iBlack50
@@ -215,7 +215,7 @@ fileprivate extension SearchViewController {
         mStartTimeField.dividerActiveColor = UIColor.iDarkBlue
         
         let leftView = UIImageView()
-        leftView.image = UIImage(systemName: "calendar")
+        leftView.image = UIImage(named: "icon-calendar")?.withRenderingMode(.alwaysTemplate)
         mStartTimeField.leftView = leftView
         mStartTimeField.leftViewOffset = -8
         mStartTimeField.leftViewNormalColor = UIColor.iBlack50

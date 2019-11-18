@@ -29,7 +29,14 @@ extension TabBarController: UITabBarControllerDelegate {
         let tag = viewController.tabBarItem.tag
         switch tag {
         case 2:
-            if let newVC = tabBarController.storyboard?.instantiateViewController(identifier: "ReservationsViewController") {
+            var vc: UIViewController!
+            if #available(iOS 13.0, *) {
+                vc = tabBarController.storyboard?.instantiateViewController(identifier: "ReservationsViewController")
+            } else {
+                // Fallback on earlier versions
+                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "ReservationsViewController")
+            }
+            if let newVC = vc {
                 let navVC = prepareNavigationController(newVC)
                 navVC.modalPresentationStyle = .overFullScreen
                 tabBarController.present(navVC, animated: true)
@@ -37,7 +44,14 @@ extension TabBarController: UITabBarControllerDelegate {
             }
             break;
         case 3:
-            if let newVC = tabBarController.storyboard?.instantiateViewController(identifier: "RewardsViewController") {
+            var vc: UIViewController!
+            if #available(iOS 13.0, *) {
+                vc = tabBarController.storyboard?.instantiateViewController(identifier: "RewardsViewController")
+            } else {
+                // Fallback on earlier versions
+                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "RewardsViewController")
+            }
+            if let newVC = vc {
                 let navVC = prepareNavigationController(newVC)
                 navVC.modalPresentationStyle = .overFullScreen
                 tabBarController.present(navVC, animated: true)
@@ -45,7 +59,14 @@ extension TabBarController: UITabBarControllerDelegate {
             }
             break;
         case 4:
-            if let newVC = tabBarController.storyboard?.instantiateViewController(identifier: "MenuViewController") {
+            var vc: UIViewController!
+            if #available(iOS 13.0, *) {
+                vc = tabBarController.storyboard?.instantiateViewController(identifier: "MenuViewController")
+            } else {
+                // Fallback on earlier versions
+                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+            }
+            if let newVC = vc {
                 newVC.modalPresentationStyle = .overFullScreen
                 newVC.modalTransitionStyle = .crossDissolve
                 tabBarController.present(newVC, animated: true)

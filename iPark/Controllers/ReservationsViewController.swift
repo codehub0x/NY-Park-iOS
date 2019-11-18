@@ -40,8 +40,9 @@ class ReservationsViewController: UIViewController {
 fileprivate extension ReservationsViewController {
     func prepareNavigation() {
         self.navigationItem.title = "My Reservations"
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     func prepareButtons() {
@@ -135,7 +136,13 @@ extension ReservationsViewController: UITableViewDelegate {
 extension ReservationsViewController: ReservationCellDelegate {
     func onDetails() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+        var detailsVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+        } else {
+            // Fallback on earlier versions
+            detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+        }
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     

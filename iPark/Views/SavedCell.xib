@@ -32,14 +32,14 @@
                                 <color key="textColor" red="0.20392156862745098" green="0.24705882352941178" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywi-67-zJ5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywi-67-zJ5" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="362" y="4" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="psD-hM-LWT"/>
                                     <constraint firstAttribute="height" constant="32" id="t0J-fl-E9S"/>
                                 </constraints>
                                 <color key="tintColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="star.fill" catalog="system"/>
+                                <state key="normal" image="icon-star-filled"/>
                                 <connections>
                                     <action selector="onStarBtnClick:" destination="JmX-BA-54x" eventType="touchUpInside" id="je6-xJ-N18"/>
                                 </connections>
@@ -68,8 +68,8 @@ New York, NY 10024, USA</string>
                                 <color key="textColor" red="0.039215686270000001" green="0.0" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nvX-el-FWi">
-                                <rect key="frame" x="16" y="110.5" width="12" height="11"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="nvX-el-FWi">
+                                <rect key="frame" x="16" y="110" width="12" height="12"/>
                                 <color key="tintColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="12" id="8hx-mw-YLO"/>
@@ -82,7 +82,7 @@ New York, NY 10024, USA</string>
                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-lH-KV5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-lH-KV5" customClass="RaisedButton" customModule="Material">
                                 <rect key="frame" x="112" y="106" width="116" height="20"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -104,7 +104,7 @@ New York, NY 10024, USA</string>
                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAe-Og-pxY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAe-Og-pxY" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="244" y="106" width="90" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="CHd-Zv-JMc"/>
@@ -113,7 +113,7 @@ New York, NY 10024, USA</string>
                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="9"/>
                                 <color key="tintColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
-                                <state key="normal" title="DETAILS" image="ellipsis.circle" catalog="system">
+                                <state key="normal" title="DETAILS" image="icon-details">
                                     <color key="titleColor" red="0.27843137254901962" green="0.32156862745098036" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
@@ -168,14 +168,15 @@ New York, NY 10024, USA</string>
                 <outlet property="labelLicense" destination="ezw-bP-ATB" id="R3C-xt-QdY"/>
                 <outlet property="labelPrice" destination="dCj-vd-FY6" id="7GM-E5-ChI"/>
                 <outlet property="labelTitle" destination="cS3-PK-Hyg" id="4xJ-5t-XXq"/>
+                <outlet property="locationImageView" destination="nvX-el-FWi" id="SGW-cN-i5R"/>
             </connections>
             <point key="canvasLocation" x="-426.08695652173918" y="-146.65178571428569"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="dog" width="275" height="183"/>
-        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
-        <image name="location.fill" catalog="system" width="64" height="56"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="icon-details" width="16" height="16"/>
+        <image name="icon-location" width="16" height="16"/>
+        <image name="icon-star-filled" width="18" height="18"/>
     </resources>
 </document>

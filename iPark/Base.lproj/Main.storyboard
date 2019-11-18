@@ -48,14 +48,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-UG-6xx">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-UG-6xx" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="252" y="4" width="36" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="JY5-wc-qTL"/>
                                                     <constraint firstAttribute="width" constant="36" id="kNZ-34-kSb"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="multiply" catalog="system"/>
+                                                <state key="normal" image="icon-close"/>
                                                 <connections>
                                                     <action selector="onBack:" destination="bLq-t2-sEs" eventType="touchUpInside" id="xY0-qG-oQU"/>
                                                 </connections>
@@ -93,6 +93,7 @@
                     <tabBarItem key="tabBarItem" tag="4" title="MENU" image="icon-menu" id="2zO-4Y-1c3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="closeBtn" destination="AYW-UG-6xx" id="e06-os-EjA"/>
                         <outlet property="overlapView" destination="34m-8b-cMz" id="UvJ-bF-Hwq"/>
                     </connections>
                 </viewController>
@@ -114,7 +115,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="EnM-oS-nK0">
                                         <rect key="frame" x="40" y="12" width="334" height="48"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-Rw-T1b">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-Rw-T1b" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="0.0" y="0.0" width="190.5" height="48"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                                 <state key="normal" title="Create Account">
@@ -124,7 +125,7 @@
                                                     <segue destination="H2c-SF-Uai" kind="presentation" modalPresentationStyle="overFullScreen" id="zq4-St-gTL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-9v-eo0">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-9v-eo0" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="206.5" y="0.0" width="127.5" height="48"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                                 <state key="normal" title="Login">
@@ -203,14 +204,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J0-h1-TTu">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-5E-9ih">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-5E-9ih" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="368" y="16" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="NPW-cj-Ro0"/>
                                             <constraint firstAttribute="height" constant="30" id="awR-lL-isW"/>
                                         </constraints>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="multiply" catalog="system"/>
+                                        <state key="normal" image="icon-close"/>
                                         <connections>
                                             <action selector="onCloseBtnClick:" destination="G1W-CK-rqH" eventType="touchUpInside" id="oRz-EL-CSo"/>
                                         </connections>
@@ -252,7 +253,7 @@
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-go-g7y">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-go-g7y" customClass="RaisedButton" customModule="Material">
                                         <rect key="frame" x="45" y="416" width="324" height="40"/>
                                         <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -274,7 +275,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-t4-Xny" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="754" width="414" height="64"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-mg-qg3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-mg-qg3" customClass="RaisedButton" customModule="Material">
                                                 <rect key="frame" x="253" y="16" width="116" height="32"/>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -310,7 +311,7 @@
                                             <constraint firstItem="MxK-9k-IFQ" firstAttribute="leading" secondItem="Yun-t4-Xny" secondAttribute="leading" constant="45" id="wji-bH-JjH"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-mb-BG6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-mb-BG6" customClass="FlatButton" customModule="Material">
                                         <rect key="frame" x="45" y="464" width="324" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ars-DA-aI6"/>
@@ -362,6 +363,7 @@
                         <viewLayoutGuide key="safeArea" id="Lho-hU-1Z9"/>
                     </view>
                     <connections>
+                        <outlet property="closeBtn" destination="pfX-5E-9ih" id="4V0-eW-lA2"/>
                         <outlet property="emailTextField" destination="fQd-XA-l85" id="CpW-gy-cco"/>
                         <outlet property="passwordTextField" destination="5Kf-dS-zgv" id="XVJ-bZ-GJc"/>
                     </connections>
@@ -488,8 +490,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w21-qO-dhq">
                                                         <rect key="frame" x="-2" y="14" width="18" height="18"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pxP-v6-ull">
-                                                                <rect key="frame" x="2" y="2.5" width="14" height="13"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-time" translatesAutoresizingMaskIntoConstraints="NO" id="pxP-v6-ull">
+                                                                <rect key="frame" x="2" y="2" width="14" height="14"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="14" id="ORh-Ou-w6m"/>
@@ -601,8 +603,8 @@
                                                         <color key="textColor" red="0.20784313730000001" green="0.1960784314" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-ao-kMN">
-                                                        <rect key="frame" x="270.5" y="15.5" width="14" height="13"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-ao-kMN">
+                                                        <rect key="frame" x="270.5" y="15" width="14" height="14"/>
                                                         <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="14" id="HAD-rH-xfU"/>
@@ -629,19 +631,19 @@
                                                     <constraint firstItem="2pp-sj-5Wo" firstAttribute="centerY" secondItem="gOe-aE-gcD" secondAttribute="centerY" id="u5V-1H-Eeu"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-Oh-AcO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-Oh-AcO" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="363" y="44" width="35" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="7Uc-3F-0Yx"/>
                                                     <constraint firstAttribute="height" constant="30" id="cGp-wC-uAa"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="questionmark.circle" catalog="system"/>
+                                                <state key="normal" image="icon-questionmark"/>
                                                 <connections>
                                                     <action selector="onHelpClick:" destination="Ach-ev-lqV" eventType="touchUpInside" id="d63-Zc-R2J"/>
                                                 </connections>
                                             </button>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-L5-Maq">
+                                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dX8-L5-Maq">
                                                 <rect key="frame" x="16" y="44" width="331" height="31"/>
                                                 <color key="backgroundColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -652,9 +654,10 @@
                                                     <segment title="SUV"/>
                                                     <segment title="Large SUV"/>
                                                 </segments>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="selectedSegmentTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.63" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k97-bg-NB9">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k97-bg-NB9" customClass="RaisedButton" customModule="Material">
                                                 <rect key="frame" x="16" y="90" width="382" height="45"/>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -691,7 +694,7 @@
                                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A4z-qe-80Q">
+                                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A4z-qe-80Q">
                                                 <rect key="frame" x="16" y="189" width="382" height="33"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -702,6 +705,7 @@
                                                     <segment title="Rates"/>
                                                     <segment title="Specials"/>
                                                 </segments>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="selectedSegmentTintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="onViewIndexChanged:" destination="Ach-ev-lqV" eventType="valueChanged" id="mWf-0r-xHX"/>
@@ -845,7 +849,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-in-l8N">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-in-l8N" customClass="FlatButton" customModule="Material">
                                                                 <rect key="frame" x="226" y="0.0" width="140" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="140" id="cU3-Wg-lEp"/>
@@ -1065,6 +1069,7 @@ All SUVs oversized fee of $12.00 daily</string>
                     <connections>
                         <outlet property="btnDirections" destination="zTV-in-l8N" id="kaY-Xf-0p9"/>
                         <outlet property="btnHelp" destination="1Zc-Oh-AcO" id="6ER-YE-ceS"/>
+                        <outlet property="hoursImageView" destination="pxP-v6-ull" id="lAo-sK-tCt"/>
                         <outlet property="infoView" destination="m9G-q0-lYo" id="qbz-VL-uyS"/>
                         <outlet property="labelAddress" destination="fkV-EF-Chd" id="0Gy-v6-JJK"/>
                         <outlet property="labelDistance" destination="Ea4-gW-u3R" id="sgT-48-HPr"/>
@@ -1076,6 +1081,7 @@ All SUVs oversized fee of $12.00 daily</string>
                         <outlet property="labelSuv" destination="emZ-aU-DwI" id="sAL-Zh-9lM"/>
                         <outlet property="labelTax" destination="L1i-lh-kdw" id="eTe-c0-4js"/>
                         <outlet property="lableHours" destination="PZk-SN-HBL" id="3OX-EZ-oZz"/>
+                        <outlet property="locationImageView" destination="Lfj-ao-kMN" id="EjO-Ch-CZZ"/>
                         <outlet property="ratesView" destination="RaC-5m-I3e" id="bpr-lc-7Jw"/>
                         <outlet property="scrollHeight" destination="BtF-4a-G7t" id="l89-cp-Geb"/>
                         <outlet property="segmentedControl" destination="A4z-qe-80Q" id="nsv-zt-EHQ"/>
@@ -1085,7 +1091,7 @@ All SUVs oversized fee of $12.00 daily</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA9-Ad-ieW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="556"/>
+            <point key="canvasLocation" x="798.55072463768124" y="555.80357142857144"/>
         </scene>
         <!--HOME-->
         <scene sceneID="6OT-zI-v2X">
@@ -1101,7 +1107,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-o0-CRO">
                                         <rect key="frame" x="0.0" y="4" width="414" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-i7-3j3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-i7-3j3" customClass="RaisedButton" customModule="Material">
                                                 <rect key="frame" x="18" y="2" width="36" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1116,7 +1122,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                     <action selector="onClickToggle:" destination="z24-As-qFl" eventType="touchUpInside" id="HYX-W1-ytO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-gW-aVd">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7S-gW-aVd" customClass="RaisedButton" customModule="Material">
                                                 <rect key="frame" x="62" y="2" width="298" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1126,14 +1132,14 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <color key="tintColor" red="0.50588235294117645" green="0.56470588235294117" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                 <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="Street, attraction or neighborhood" image="magnifyingglass" catalog="system">
+                                                <state key="normal" title="Street, attraction or neighborhood" image="icon-search">
                                                     <color key="titleColor" red="0.50588235294117645" green="0.56470588235294117" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="Wm0-AD-V0x" kind="presentation" modalPresentationStyle="overFullScreen" id="Ii6-M1-58X"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWO-I1-XfJ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWO-I1-XfJ" customClass="FlatButton" customModule="Material">
                                                 <rect key="frame" x="368" y="5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Jei-2S-zU8"/>
@@ -1198,8 +1204,8 @@ All SUVs oversized fee of $12.00 daily</string>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJ6-cV-JxI">
                                                                 <rect key="frame" x="-2" y="15" width="18" height="18"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0At-Qb-vCy">
-                                                                        <rect key="frame" x="2" y="2.5" width="14" height="13"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-time" translatesAutoresizingMaskIntoConstraints="NO" id="0At-Qb-vCy">
+                                                                        <rect key="frame" x="2" y="2" width="14" height="14"/>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="14" id="bIF-Tx-x0B"/>
@@ -1252,7 +1258,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                             <constraint firstAttribute="width" constant="1" id="C9P-eO-yIS"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-Lh-v1q">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8b-Lh-v1q" customClass="FlatButton" customModule="Material">
                                                         <rect key="frame" x="0.0" y="0.0" width="286" height="48"/>
                                                         <connections>
                                                             <segue destination="Wm0-AD-V0x" kind="presentation" modalPresentationStyle="overFullScreen" id="sCk-bK-3zO"/>
@@ -1278,7 +1284,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                     <constraint firstItem="4n9-3e-iYj" firstAttribute="centerX" secondItem="oy7-EW-aKR" secondAttribute="centerX" id="vJe-ha-Q6i"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQO-GJ-KjR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQO-GJ-KjR" customClass="RaisedButton" customModule="Material">
                                                 <rect key="frame" x="306" y="8" width="96" height="32"/>
                                                 <color key="backgroundColor" red="0.99446636438369751" green="0.73378592729568481" blue="0.1070776954293251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1287,7 +1293,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                                 <color key="tintColor" red="0.027450980392156862" green="0.0" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                                 <state key="normal" title="FILTERS">
                                                     <color key="titleColor" red="0.027450980392156862" green="0.0" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -1336,14 +1342,14 @@ All SUVs oversized fee of $12.00 daily</string>
                                     <constraint firstAttribute="trailing" secondItem="Uqy-gd-Rub" secondAttribute="trailing" id="v4U-ck-4hM"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNv-L2-a97">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNv-L2-a97" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="189" y="777" width="36" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="P1F-eK-c5P"/>
                                     <constraint firstAttribute="width" constant="36" id="VZg-YK-O7T"/>
                                 </constraints>
-                                <state key="normal" image="icon-down-arrow"/>
+                                <state key="normal" image="icon-arrow-down"/>
                                 <connections>
                                     <action selector="onClickArrow:" destination="z24-As-qFl" eventType="touchUpInside" id="14h-15-UsT"/>
                                 </connections>
@@ -1403,7 +1409,7 @@ All SUVs oversized fee of $12.00 daily</string>
                         <outlet property="btnSearch" destination="a7S-gW-aVd" id="RZd-A3-TqJ"/>
                         <outlet property="btnToggle" destination="0ju-i7-3j3" id="cRh-Gj-yru"/>
                         <outlet property="filterWidthConstraint" destination="Slm-zh-vjV" id="7pU-ma-qeZ"/>
-                        <outlet property="imageTime" destination="0At-Qb-vCy" id="GfH-Zd-PQf"/>
+                        <outlet property="hoursImageView" destination="0At-Qb-vCy" id="2NZ-Qr-ZpQ"/>
                         <outlet property="listView" destination="7vD-JL-HF5" id="bLT-GW-5bI"/>
                         <outlet property="mkMapView" destination="Uqy-gd-Rub" id="R9k-rx-gWD"/>
                         <outlet property="viewContainer" destination="3rE-g8-brh" id="5Y8-YM-BAS"/>
@@ -1750,14 +1756,14 @@ All SUVs oversized fee of $12.00 daily</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-nx-4Ml">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-nx-4Ml" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="368" y="60" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DnW-4n-eqC"/>
                                     <constraint firstAttribute="width" constant="30" id="cNU-aO-5La"/>
                                 </constraints>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="multiply" catalog="system"/>
+                                <state key="normal" image="icon-close"/>
                                 <connections>
                                     <action selector="onCloseBtnClick:" destination="H2c-SF-Uai" eventType="touchUpInside" id="kp0-5c-ClZ"/>
                                 </connections>
@@ -1808,7 +1814,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8U-Gy-41j">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8U-Gy-41j" customClass="RaisedButton" customModule="Material">
                                 <rect key="frame" x="45" y="530" width="324" height="40"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1833,7 +1839,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                 <color key="textColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqW-t1-bm0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqW-t1-bm0" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="286.5" y="581.5" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YBE-go-htK"/>
@@ -1856,7 +1862,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                         <color key="textColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-6n-n7E">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-6n-n7E" customClass="RaisedButton" customModule="Material">
                                         <rect key="frame" x="253" y="16" width="116" height="32"/>
                                         <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1926,6 +1932,7 @@ All SUVs oversized fee of $12.00 daily</string>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="closeBtn" destination="ib6-nx-4Ml" id="l3J-7U-iWT"/>
                         <outlet property="emailTextField" destination="yVD-iD-LlB" id="0cz-oC-8B0"/>
                         <outlet property="nameTextField" destination="Y8B-bu-2Lj" id="k5o-ng-Mqx"/>
                         <outlet property="passwordTextField" destination="UeK-8y-Wla" id="HuG-vD-hWB"/>
@@ -1938,22 +1945,22 @@ All SUVs oversized fee of $12.00 daily</string>
         </scene>
     </scenes>
     <resources>
-        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="icon-arrow-down" width="24" height="24"/>
+        <image name="icon-close" width="24" height="24"/>
         <image name="icon-covered" width="40.5" height="30"/>
-        <image name="icon-down-arrow" width="512" height="512"/>
-        <image name="icon-favorite" width="512" height="512"/>
+        <image name="icon-favorite" width="24" height="24"/>
         <image name="icon-home" width="25" height="25"/>
+        <image name="icon-location" width="16" height="16"/>
         <image name="icon-menu" width="25" height="25"/>
         <image name="icon-paved" width="23" height="29"/>
+        <image name="icon-questionmark" width="18" height="18"/>
         <image name="icon-reservations" width="25" height="25"/>
         <image name="icon-rewards" width="25" height="25"/>
+        <image name="icon-search" width="16" height="16"/>
         <image name="icon-staff" width="28.5" height="33"/>
+        <image name="icon-time" width="16" height="16"/>
         <image name="icon-valet" width="28.5" height="28"/>
-        <image name="location.fill" catalog="system" width="64" height="56"/>
         <image name="logo" width="333" height="133"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
-        <image name="multiply" catalog="system" width="64" height="54"/>
-        <image name="questionmark.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="t2s-JM-4ih"/>

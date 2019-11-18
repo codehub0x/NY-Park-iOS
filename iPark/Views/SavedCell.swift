@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import Material
+
+protocol SavedCellDelegate {
+    func onDetails()
+    func onBook()
+}
 
 class SavedCell: UITableViewCell {
     
@@ -17,17 +23,21 @@ class SavedCell: UITableViewCell {
     @IBOutlet weak var labelAddress: UIView!
     @IBOutlet weak var labelTitle: UIView!
     @IBOutlet weak var imageViewItem: UIImageView!
-    @IBOutlet weak var btnStar: UIButton!
+    @IBOutlet weak var btnStar: FlatButton!
+    @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
-    @IBOutlet weak var btnBook: UIButton!
-    @IBOutlet weak var btnDetails: UIButton!
+    @IBOutlet weak var btnBook: RaisedButton!
+    @IBOutlet weak var btnDetails: FlatButton!
+    
+    var delegate: SavedCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         prepareCardView()
         prepareImageView()
+        prepareLocationImageView()
         prepareBookButton()
         prepareDetailsButton()
     }
@@ -37,11 +47,15 @@ class SavedCell: UITableViewCell {
     }
     
     @IBAction func onBookBtnClick(_ sender: Any) {
-        
+        if delegate != nil {
+            delegate.onBook()
+        }
     }
     
     @IBAction func onDetailsBtnClick(_ sender: Any) {
-        
+        if delegate != nil {
+            delegate.onDetails()
+        }
     }
 }
 
@@ -57,6 +71,11 @@ fileprivate extension SavedCell {
     func prepareImageView() {
         imageViewItem.clipsToBounds = true
         imageViewItem.roundCorners(corners: [.allCorners], radius: 4)
+    }
+    
+    func prepareLocationImageView() {
+        locationImageView.image = locationImageView.image?.withRenderingMode(.alwaysTemplate)
+        locationImageView.tintColor = UIColor.iGray
     }
     
     func prepareBookButton() {
@@ -93,5 +112,8 @@ fileprivate extension SavedCell {
         btnDetails.layer.borderWidth = 1
         btnDetails.layer.cornerRadius = 2
         btnDetails.layer.borderColor = UIColor.iBlack70.cgColor
+        
+        btnDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnDetails.tintColor = UIColor.iBlack90
     }
 }

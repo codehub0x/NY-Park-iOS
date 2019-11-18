@@ -97,6 +97,10 @@ extension UIColor {
     open class var iBlack40: UIColor {
         return UIColor(rgb: 0xE6E5F5)
     }
+    
+    open class var iGray: UIColor {
+        return UIColor(rgb: 0x6A6A6A)
+    }
 }
 
 extension CALayer {

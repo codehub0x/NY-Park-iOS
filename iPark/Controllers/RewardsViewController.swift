@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Material
 
 class RewardsViewController: UIViewController {
     
-    @IBOutlet weak var btnCreateAccount: UIButton!
-    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnCreateAccount: FlatButton!
+    @IBOutlet weak var btnLogin: FlatButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,9 @@ class RewardsViewController: UIViewController {
 fileprivate extension RewardsViewController {
     func prepareNavigation() {
         self.navigationItem.title = "Reward Points"
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left"), style: .plain, target: self, action: #selector(onBackClick))
         self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     func prepareCreateAccountButton() {

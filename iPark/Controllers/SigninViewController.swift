@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Material
 
 class SigninViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var closeBtn: FlatButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        prepareCloseButton()
     }
     
     @IBAction func onCloseBtnClick(_ sender: Any) {
@@ -33,4 +37,12 @@ class SigninViewController: UIViewController {
         
     }
     
+}
+
+
+fileprivate extension SigninViewController {
+    func prepareCloseButton() {
+        closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        closeBtn.tintColor = UIColor.iBlack90
+    }
 }

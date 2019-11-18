@@ -8,16 +8,17 @@
 
 import UIKit
 import MapKit
+import Material
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var btnToggle: UIButton!
-    @IBOutlet weak var btnFavorite: UIButton!
-    @IBOutlet weak var btnFilters: UIButton!
-    @IBOutlet weak var btnSearch: UIButton!
-    @IBOutlet weak var imageTime: UIImageView!
+    @IBOutlet weak var btnToggle: RaisedButton!
+    @IBOutlet weak var btnFavorite: FlatButton!
+    @IBOutlet weak var btnFilters: RaisedButton!
+    @IBOutlet weak var btnSearch: RaisedButton!
+    @IBOutlet weak var hoursImageView: UIImageView!
     @IBOutlet weak var viewDetails: UIView!
-    @IBOutlet weak var btnArrow: UIButton!
+    @IBOutlet weak var btnArrow: FlatButton!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var filterWidthConstraint: NSLayoutConstraint!
@@ -32,14 +33,14 @@ class HomeViewController: UIViewController {
                 UIView.animate(withDuration: 1) {
                     self.bottomHeightConstraint.constant = 160
                     self.bottomView.layoutIfNeeded()
-                    self.btnArrow.setImage(UIImage(named: "icon-down-arrow.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                    self.btnArrow.setImage(UIImage(named: "icon-arrow-down")?.withRenderingMode(.alwaysTemplate), for: .normal)
                     self.btnArrow.tintColor = UIColor.iBlack90
                 }
             } else {
                 UIView.animate(withDuration: 1) {
                     self.bottomHeightConstraint.constant = 0
                     self.bottomView.layoutIfNeeded()
-                    self.btnArrow.setImage(UIImage(named: "icon-up-arrow.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                    self.btnArrow.setImage(UIImage(named: "icon-arrow-up")?.withRenderingMode(.alwaysTemplate), for: .normal)
                     self.btnArrow.tintColor = UIColor.iBlack90
                 }
             }
@@ -52,7 +53,8 @@ class HomeViewController: UIViewController {
                 UIView.animate(withDuration: 1) {
                     self.filterWidthConstraint.constant = 240
                     self.btnFilters.setTitle("CLOSE", for: .normal)
-                    self.btnFilters.setImage(UIImage(systemName: "multiply.circle"), for: .normal)
+                    self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                    self.btnFilters.tintColor = UIColor.iDarkBlue
                 }
             } else {
                 UIView.animate(withDuration: 1) {
@@ -68,6 +70,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         prepareUI()
+        prepareSearchButton()
+        prepareFavoriteButton()
+        prepareHoursImageView()
+        prepareArrowButton()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -105,21 +111,34 @@ fileprivate extension HomeViewController {
     func prepareUI() {
         btnToggle.roundCorners(corners: [.allCorners], radius: 4.0)
         btnFilters.roundCorners(corners: [.allCorners], radius: 4.0)
-        btnSearch.roundCorners(corners: [.allCorners], radius: 4.0)
-        btnArrow.roundCorners(corners: [.topLeft, .topRight], radius: 18.0)
-        btnArrow.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+        
         viewDetails.roundCorners(corners: [.allCorners], radius: 8.0)
         viewDetails.layer.borderWidth = 0.5
         viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
         viewDetails.layer.cornerRadius = 8.0
         viewDetails.layer.masksToBounds = true
-        
-        // Set image color
-        btnFavorite.setImage(UIImage(named: "icon-favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+    }
+    
+    func prepareSearchButton() {
+        btnSearch.roundCorners(corners: [.allCorners], radius: 4.0)
+        btnSearch.setImage(UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnSearch.tintColor = UIColor.iBlack80
+    }
+    
+    func prepareFavoriteButton() {
+        btnFavorite.setImage(UIImage(named: "icon-favorite")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnFavorite.tintColor = UIColor.white
-        btnArrow.setImage(UIImage(named: "icon-up-arrow.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+    }
+    
+    func prepareArrowButton() {
+        btnArrow.roundCorners(corners: [.topLeft, .topRight], radius: 18.0)
+        btnArrow.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+        btnArrow.setImage(UIImage(named: "icon-arrow-up")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnArrow.tintColor = UIColor.iBlack90
-        imageTime.image = imageTime.image?.withRenderingMode(.alwaysTemplate)
-        imageTime.tintColor = UIColor.white
+    }
+    
+    func prepareHoursImageView() {
+        hoursImageView.image = hoursImageView.image?.withRenderingMode(.alwaysTemplate)
+        hoursImageView.tintColor = UIColor.white
     }
 }

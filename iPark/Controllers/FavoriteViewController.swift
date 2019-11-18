@@ -30,7 +30,8 @@ extension FavoriteViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SavedCell.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SavedCell.reuseIdentifier, for: indexPath) as! SavedCell
+        cell.delegate = self
         return cell
     }
 }
@@ -41,9 +42,29 @@ extension FavoriteViewController: UITableViewDelegate {
     }
 }
 
+extension FavoriteViewController: SavedCellDelegate {
+    func onDetails() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var detailsVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+        } else {
+            // Fallback on earlier versions
+            detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+        }
+        self.navigationController?.pushViewController(detailsVC, animated: true)
+    }
+    
+    func onBook() {
+        
+    }
+    
+    
+}
+
 fileprivate extension FavoriteViewController {
     func prepareNavigation() {
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         leftButton.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = leftButton
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]

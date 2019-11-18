@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Material
 
 class DetailsViewController: UIViewController {
     
@@ -16,15 +17,17 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var labelStayPayload: UILabel!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var btnHelp: UIButton!
+    @IBOutlet weak var btnHelp: FlatButton!
     @IBOutlet weak var labelSuv: UILabel!
     @IBOutlet weak var labelTax: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var hoursImageView: UIImageView!
+    @IBOutlet weak var locationImageView: UIImageView!
     
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var lableHours: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
-    @IBOutlet weak var btnDirections: UIButton!
+    @IBOutlet weak var btnDirections: FlatButton!
     @IBOutlet weak var labelPhone: UILabel!
     
     @IBOutlet weak var ratesView: UIView!
@@ -38,6 +41,8 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
         prepareNavigation(title: "West 90TH Garage Corp.", subTitle: "7 East 14th Street, New York, NY...")
+        prepareHoursImageView()
+        prepareLocationImageView()
         prepareTypeSegmentedControl()
         prepareSegmentedControl()
         prepareHelpButton()
@@ -99,31 +104,51 @@ fileprivate extension DetailsViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.setTwoLineTitle(lineOne: title, lineTwo: subTitle)
         
-        let leftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onBackClick))
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         self.navigationItem.leftBarButtonItem = leftButton
         
-        let rightButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(onFavoriteClick))
+        let rightButton = UIBarButtonItem(image: UIImage(named: "icon-favorite"), style: .plain, target: self, action: #selector(onFavoriteClick))
         self.navigationItem.rightBarButtonItem = rightButton
     }
     
+    func prepareHoursImageView() {
+        hoursImageView.image = hoursImageView.image?.withRenderingMode(.alwaysTemplate)
+        hoursImageView.tintColor = UIColor.white
+    }
+    
+    func prepareLocationImageView() {
+        locationImageView.image = locationImageView.image?.withRenderingMode(.alwaysTemplate)
+        locationImageView.tintColor = UIColor.iGray
+    }
+    
     func prepareTypeSegmentedControl() {
-//        typeSegmentedControl.setBackgroundImage(imageWithColor(color: UIColor(red: 0.28, green: 0.32, blue: 0.37, alpha: 0.73)), for: .normal, barMetrics: .default)
-//        typeSegmentedControl.setBackgroundImage(imageWithColor(color: UIColor(red: 0, green: 0, blue: 0, alpha: 0.63)), for: .selected, barMetrics: .default)
-        typeSegmentedControl.selectedSegmentTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.63)
-        typeSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 15), NSAttributedString.Key.foregroundColor: UIColor.iBlack90], for: .normal)
+        if #available(iOS 13.0, *) {
+            typeSegmentedControl.selectedSegmentTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.63)
+        } else {
+            // Fallback on earlier versions
+//            typeSegmentedControl.setBackgroundImage(imageWithColor(color: UIColor(red: 0, green: 0, blue: 0, alpha: 0.63)), for: .selected, barMetrics: .default)
+            typeSegmentedControl.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.63)
+            typeSegmentedControl.layer.cornerRadius = 4
+        }
+        typeSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 15), NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         typeSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 15), NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        
     }
     
     func prepareSegmentedControl() {
-        segmentedControl.selectedSegmentTintColor = UIColor.iDarkBlue
-//        segmentedControl.setBackgroundImage(imageWithColor(color: UIColor.white), for: .normal, barMetrics: .default)
-//        segmentedControl.setBackgroundImage(imageWithColor(color: UIColor.iDarkBlue), for: .selected, barMetrics: .default)
+        if #available(iOS 13.0, *) {
+            segmentedControl.selectedSegmentTintColor = UIColor.iDarkBlue
+        } else {
+            // Fallback on earlier versions
+//            segmentedControl.setBackgroundImage(imageWithColor(color: UIColor.iDarkBlue), for: .selected, barMetrics: .default)
+            segmentedControl.tintColor = UIColor.iDarkBlue
+        }
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 15), NSAttributedString.Key.foregroundColor: UIColor.iBlack90], for: .normal)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.bold(with: 15), NSAttributedString.Key.foregroundColor: UIColor.iYellow], for: .selected)
         
         segmentedControl.layer.borderWidth = 1
         segmentedControl.layer.borderColor = UIColor.iBlack90.cgColor
-        segmentedControl.layer.cornerRadius = 2
+        segmentedControl.layer.cornerRadius = 4
         segmentedControl.layer.masksToBounds = true
     }
     
@@ -131,6 +156,9 @@ fileprivate extension DetailsViewController {
         btnHelp.layer.cornerRadius = 4
         btnHelp.layer.borderWidth = 0.5
         btnHelp.layer.borderColor = UIColor.iBlack70.cgColor
+        
+        btnHelp.setImage(UIImage(named: "icon-questionmark")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnHelp.tintColor = UIColor.iBlack90
     }
     
     func prepareGetDirectionsButton() {

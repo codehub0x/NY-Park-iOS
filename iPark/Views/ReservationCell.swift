@@ -29,9 +29,11 @@ class ReservationCell: UITableViewCell {
     @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelFlag: UILabel!
-    @IBOutlet weak var btnDirections: UIButton!
-    @IBOutlet weak var btnDetails: UIButton!
+    @IBOutlet weak var btnDirections: RaisedButton!
+    @IBOutlet weak var btnDetails: FlatButton!
     @IBOutlet weak var labelDistance: UILabel!
+    @IBOutlet weak var hoursImageView: UIImageView!
+    @IBOutlet weak var locationImageView: UIImageView!
     
     var delegate: ReservationCellDelegate!
     
@@ -51,7 +53,7 @@ class ReservationCell: UITableViewCell {
                 break
             case .past:
                 btnDirections.setTitle("REBOOK", for: .normal)
-                btnDirections.setImage(UIImage(systemName: "arrow.2.circlepath"), for: .normal)
+                btnDirections.setImage(UIImage(named: "icon-rebook")?.withRenderingMode(.alwaysTemplate), for: .normal)
                 btnDirections.backgroundColor = UIColor.iYellow
                 btnDirections.tintColor = UIColor.iDarkBlue
                 btnDirections.setTitleColor(UIColor.iDarkBlue, for: .normal)
@@ -82,6 +84,8 @@ class ReservationCell: UITableViewCell {
         
         prepareCardView()
         prepareImageView()
+        prepareHoursImageView()
+        prepareLocationImageView()
         preparePriceView()
         prepareDetailsButton()
     }
@@ -151,5 +155,18 @@ fileprivate extension ReservationCell {
         btnDetails.layer.borderWidth = 1
         btnDetails.layer.cornerRadius = 2
         btnDetails.layer.borderColor = UIColor.iBlack70.cgColor
+        
+        btnDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnDetails.tintColor = UIColor.iBlack90
+    }
+    
+    func prepareHoursImageView() {
+        hoursImageView.image = hoursImageView.image?.withRenderingMode(.alwaysTemplate)
+        hoursImageView.tintColor = UIColor.iBlack50
+    }
+    
+    func prepareLocationImageView() {
+        locationImageView.image = locationImageView.image?.withRenderingMode(.alwaysTemplate)
+        locationImageView.tintColor = UIColor.iGray
     }
 }
