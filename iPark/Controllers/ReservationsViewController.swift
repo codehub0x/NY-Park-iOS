@@ -137,11 +137,20 @@ extension ReservationsViewController: ReservationCellDelegate {
     func onDetails() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var detailsVC: UIViewController!
+        let tag = tabBar.selectedTabItem?.tag
         if #available(iOS 13.0, *) {
-            detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+            if tag == 1 {
+                detailsVC = storyboard.instantiateViewController(identifier: "UpcomingDetailsViewController")
+            } else {
+                detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+            }
         } else {
             // Fallback on earlier versions
-            detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+            if tag == 1 {
+                detailsVC = storyboard.instantiateViewController(withIdentifier: "UpcomingDetailsViewController")
+            } else {
+                detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+            }
         }
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }

@@ -88,9 +88,9 @@ fileprivate extension SavedCell {
         )
         let textRange = NSRange(location: 0, length: textString.length)
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 1.28
+        paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 0, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
         btnBook.setAttributedTitle(textString, for: .normal)
         btnBook.layer.cornerRadius = 2
     }
@@ -105,9 +105,9 @@ fileprivate extension SavedCell {
         )
         let textRange = NSRange(location: 0, length: textString.length)
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 1.28
+        paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 0, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
         btnDetails.setAttributedTitle(textString, for: .normal)
         btnDetails.layer.borderWidth = 1
         btnDetails.layer.cornerRadius = 2

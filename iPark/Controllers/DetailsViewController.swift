@@ -25,10 +25,13 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var locationImageView: UIImageView!
     
     @IBOutlet weak var infoView: UIView!
-    @IBOutlet weak var lableHours: UILabel!
+    @IBOutlet weak var labelHours: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var btnDirections: FlatButton!
     @IBOutlet weak var labelPhone: UILabel!
+    @IBOutlet weak var labelHoursTitle: UILabel!
+    @IBOutlet weak var labelAddressTitle: UILabel!
+    @IBOutlet weak var labelPhoneTitle: UILabel!
     
     @IBOutlet weak var ratesView: UIView!
     
@@ -47,6 +50,9 @@ class DetailsViewController: UIViewController {
         prepareSegmentedControl()
         prepareHelpButton()
         prepareGetDirectionsButton()
+        prepareHoursTitle()
+        prepareAddressTitle()
+        preparePhoneTitle()
     }
     
     @objc func onBackClick() {
@@ -79,7 +85,7 @@ class DetailsViewController: UIViewController {
             infoView.isHidden = false
             ratesView.isHidden = true
             specialsView.isHidden = true
-            scrollHeight.constant = 1100
+            scrollHeight.constant = 1160
             break
         case 1:
             infoView.isHidden = true
@@ -154,7 +160,7 @@ fileprivate extension DetailsViewController {
     
     func prepareHelpButton() {
         btnHelp.layer.cornerRadius = 4
-        btnHelp.layer.borderWidth = 0.5
+        btnHelp.layer.borderWidth = 1
         btnHelp.layer.borderColor = UIColor.iBlack70.cgColor
         
         btnHelp.setImage(UIImage(named: "icon-questionmark")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -162,9 +168,70 @@ fileprivate extension DetailsViewController {
     }
     
     func prepareGetDirectionsButton() {
+        let textString = NSMutableAttributedString(
+            string: btnDirections.title(for: .normal)!,
+            attributes: [
+                NSAttributedString.Key.font: LatoFont.bold(with: 12),
+                NSAttributedString.Key.foregroundColor: btnDirections.titleColor(for: .normal)!
+            ]
+        )
+        let textRange = NSRange(location: 0, length: textString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
+        btnDirections.setAttributedTitle(textString, for: .normal)
+        btnDirections.layer.borderWidth = 1
         btnDirections.layer.cornerRadius = 4
-        btnDirections.layer.borderWidth = 0.5
         btnDirections.layer.borderColor = UIColor.iBlack70.cgColor
+    }
+    
+    func prepareHoursTitle() {
+        let textString = NSMutableAttributedString(
+            string: labelHoursTitle.text!,
+            attributes: [
+                NSAttributedString.Key.font: LatoFont.black(with: 13.33),
+                NSAttributedString.Key.foregroundColor: labelHoursTitle.textColor!
+            ]
+        )
+        let textRange = NSRange(location: 0, length: textString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        labelHoursTitle.attributedText = textString
+    }
+    
+    func prepareAddressTitle() {
+        let textString = NSMutableAttributedString(
+            string: labelAddressTitle.text!,
+            attributes: [
+                NSAttributedString.Key.font: LatoFont.black(with: 13.33),
+                NSAttributedString.Key.foregroundColor: labelAddressTitle.textColor!
+            ]
+        )
+        let textRange = NSRange(location: 0, length: textString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        labelAddressTitle.attributedText = textString
+    }
+    
+    func preparePhoneTitle() {
+        let textString = NSMutableAttributedString(
+            string: labelPhoneTitle.text!,
+            attributes: [
+                NSAttributedString.Key.font: LatoFont.black(with: 13.33),
+                NSAttributedString.Key.foregroundColor: labelPhoneTitle.textColor!
+            ]
+        )
+        let textRange = NSRange(location: 0, length: textString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        labelPhoneTitle.attributedText = textString
     }
     
     func imageWithColor(color: UIColor) -> UIImage {

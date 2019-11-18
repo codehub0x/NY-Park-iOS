@@ -91,7 +91,7 @@ New York, NY 10024, USA</string>
                                     <constraint firstAttribute="height" constant="20" id="rNJ-3A-AlC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="9"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                 <state key="normal" title="BOOK NOW">
                                     <color key="titleColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -100,7 +100,7 @@ New York, NY 10024, USA</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCj-vd-FY6">
-                                <rect key="frame" x="128" y="106" width="23" height="16"/>
+                                <rect key="frame" x="124" y="106" width="23" height="16"/>
                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@ New York, NY 10024, USA</string>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cS3-PK-Hyg" secondAttribute="trailing" constant="16" id="14d-Ey-5GL"/>
                             <constraint firstItem="Ywi-67-zJ5" firstAttribute="top" secondItem="0fF-a7-93g" secondAttribute="top" constant="2" id="1bC-QO-Rm6"/>
-                            <constraint firstItem="dCj-vd-FY6" firstAttribute="leading" secondItem="s1V-lH-KV5" secondAttribute="leading" constant="16" id="4pR-8T-nYC"/>
+                            <constraint firstItem="dCj-vd-FY6" firstAttribute="leading" secondItem="s1V-lH-KV5" secondAttribute="leading" constant="12" id="4pR-8T-nYC"/>
                             <constraint firstItem="XAe-Og-pxY" firstAttribute="top" secondItem="s1V-lH-KV5" secondAttribute="top" id="4qY-vr-miE"/>
                             <constraint firstItem="XAe-Og-pxY" firstAttribute="leading" secondItem="s1V-lH-KV5" secondAttribute="trailing" constant="16" id="AOc-4i-PiV"/>
                             <constraint firstItem="QFE-aa-ut6" firstAttribute="leading" secondItem="0fF-a7-93g" secondAttribute="leading" constant="16" id="CU1-8v-lQ1"/>

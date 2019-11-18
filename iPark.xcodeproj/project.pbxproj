@@ -51,6 +51,7 @@
 		3C29BFAB237DBC9E009F46EC /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF84237DBC9E009F46EC /* Lato-ThinItalic.ttf */; };
 		3C29BFAC237DBC9E009F46EC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF85237DBC9E009F46EC /* OFL.txt */; };
 		3C29BFAD237DBC9E009F46EC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF86237DBC9E009F46EC /* README.txt */; };
+		3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */; };
 		3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8924FD237C31D4004F7E97 /* Helpers.swift */; };
 		3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8924FF237C364B004F7E97 /* HomeViewController.swift */; };
 		3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892502237C51BE004F7E97 /* ReservationsViewController.swift */; };
@@ -139,6 +140,7 @@
 		3C29BF84237DBC9E009F46EC /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		3C29BF85237DBC9E009F46EC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		3C29BF86237DBC9E009F46EC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingDetailsViewController.swift; sourceTree = "<group>"; };
 		3C8924FD237C31D4004F7E97 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3C8924FF237C364B004F7E97 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3C892502237C51BE004F7E97 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
 				3CB69DBF237F935500E85702 /* FavoriteViewController.swift */,
 				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
+				3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */,
 				3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */,
 				3CEB5D422381C0FB0020CD14 /* SignupViewController.swift */,
 			);
@@ -592,6 +595,7 @@
 				3CB69DC0237F935500E85702 /* FavoriteViewController.swift in Sources */,
 				3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */,
 				3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */,
+				3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */,
 				3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */,
 				3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */,
 				3C29BF14237DB43E009F46EC /* Fonts.swift in Sources */,

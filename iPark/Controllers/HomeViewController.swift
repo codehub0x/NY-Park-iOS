@@ -253,10 +253,12 @@ fileprivate extension HomeViewController {
     }
     
     func prepareSegmentedControl() {
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.black(with: 9), NSAttributedString.Key.foregroundColor: UIColor.iBlack70], for: .normal)
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.black(with: 9), NSAttributedString.Key.foregroundColor: UIColor.iDarkBlue], for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.black(with: 9), NSAttributedString.Key.foregroundColor: UIColor.iBlack70, NSAttributedString.Key.kern: 2], for: .normal)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: LatoFont.black(with: 9), NSAttributedString.Key.foregroundColor: UIColor.iDarkBlue, NSAttributedString.Key.kern: 2], for: .selected)
         segmentedControl.setDividerImage(imageWithColor(color: UIColor.iBlack70), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         segmentedControl.setBackgroundImage(imageWithColor(color: UIColor(rgb: 0xEFF2F7)), for: .normal, barMetrics: .default)
+        segmentedControl.setBackgroundImage(imageWithColor(color: UIColor(rgb: 0xEFF2F7)), for: .selected, barMetrics: .default)
+        segmentedControl.setBackgroundImage(imageWithColor(color: UIColor(rgb: 0xEFF2F7)), for: .highlighted, barMetrics: .default)
     }
     
     func imageWithColor(color: UIColor) -> UIImage {
