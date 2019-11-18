@@ -9,5 +9,6 @@ target 'iPark' do
 
   pod 'Material', '~> 3.1.0'
   pod 'FSPagerView'
+  pod 'TPKeyboardAvoiding'
 
 end

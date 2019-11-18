@@ -61,6 +61,8 @@
 		3CB69DBE237F87CF00E85702 /* SavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB69DBD237F87CF00E85702 /* SavedCell.xib */; };
 		3CB69DC0237F935500E85702 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBF237F935500E85702 /* FavoriteViewController.swift */; };
 		3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */; };
+		3CEB5D412381BF4A0020CD14 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */; };
+		3CEB5D432381C0FB0020CD14 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB5D422381C0FB0020CD14 /* SignupViewController.swift */; };
 		3CF6CF05237BFF1C00E53AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6CF04237BFF1C00E53AC0 /* AppDelegate.swift */; };
 		3CF6CF07237BFF1C00E53AC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6CF06237BFF1C00E53AC0 /* SceneDelegate.swift */; };
 		3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6CF08237BFF1C00E53AC0 /* TabBarController.swift */; };
@@ -145,6 +147,8 @@
 		3CB69DBD237F87CF00E85702 /* SavedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedCell.xib; sourceTree = "<group>"; };
 		3CB69DBF237F935500E85702 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		3CEB5D422381C0FB0020CD14 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		3CF6CF01237BFF1C00E53AC0 /* iPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF6CF04237BFF1C00E53AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF6CF06237BFF1C00E53AC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
 				3CB69DBF237F935500E85702 /* FavoriteViewController.swift */,
 				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
+				3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */,
+				3CEB5D422381C0FB0020CD14 /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -570,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CEB5D432381C0FB0020CD14 /* SignupViewController.swift in Sources */,
 				3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */,
 				3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */,
 				3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */,
@@ -583,6 +590,7 @@
 				3CF6CF05237BFF1C00E53AC0 /* AppDelegate.swift in Sources */,
 				3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */,
 				3C29BF12237DB3EC009F46EC /* RobottoFont.swift in Sources */,
+				3CEB5D412381BF4A0020CD14 /* SigninViewController.swift in Sources */,
 				3CF6CF07237BFF1C00E53AC0 /* SceneDelegate.swift in Sources */,
 				3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */,
 				3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */,
