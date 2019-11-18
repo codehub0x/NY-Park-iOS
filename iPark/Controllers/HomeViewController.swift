@@ -210,7 +210,19 @@ extension HomeViewController: HomeCellDelegate {
     }
     
     func onBook() {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc: UIViewController!
+        if #available(iOS 13.0, *) {
+            vc = storyboard.instantiateViewController(identifier: "BookViewController")
+        } else {
+            // Fallback on earlier versions
+            vc = storyboard.instantiateViewController(withIdentifier: "BookViewController")
+        }
+        if let newVC = vc {
+            let navVC = prepareNavigationController(newVC)
+            navVC.modalPresentationStyle = .overFullScreen
+            self.present(navVC, animated: true)
+        }
     }
     
     

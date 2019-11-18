@@ -56,7 +56,15 @@ extension FavoriteViewController: SavedCellDelegate {
     }
     
     func onBook() {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var detailsVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            detailsVC = storyboard.instantiateViewController(identifier: "BookViewController")
+        } else {
+            // Fallback on earlier versions
+            detailsVC = storyboard.instantiateViewController(withIdentifier: "BookViewController")
+        }
+        self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     
     

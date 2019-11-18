@@ -91,7 +91,9 @@ class ReservationCell: UITableViewCell {
     }
     
     @IBAction func onDirectionsClick(_ sender: Any) {
-        
+        if delegate != nil {
+            delegate.onRebook()
+        }
     }
     
     @IBAction func onDetailsClick(_ sender: Any) {
