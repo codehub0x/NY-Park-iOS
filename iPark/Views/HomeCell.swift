@@ -9,28 +9,26 @@
 import UIKit
 import Material
 
-protocol SavedCellDelegate {
+protocol HomeCellDelegate {
     func onDetails()
     func onBook()
 }
 
-class SavedCell: UITableViewCell {
+class HomeCell: UITableViewCell {
     
-    static let reuseIdentifier = "\(SavedCell.self)"
+    static let reuseIdentifier = "\(HomeCell.self)"
     
     @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var labelLicense: UIView!
     @IBOutlet weak var labelAddress: UIView!
     @IBOutlet weak var labelTitle: UIView!
     @IBOutlet weak var imageViewItem: UIImageView!
-    @IBOutlet weak var btnStar: FlatButton!
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var btnBook: RaisedButton!
     @IBOutlet weak var btnDetails: FlatButton!
     
-    var delegate: SavedCellDelegate!
+    var delegate: HomeCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,10 +38,6 @@ class SavedCell: UITableViewCell {
         prepareLocationImageView()
         prepareBookButton()
         prepareDetailsButton()
-    }
-    
-    @IBAction func onStarBtnClick(_ sender: Any) {
-        
     }
     
     @IBAction func onBookBtnClick(_ sender: Any) {
@@ -59,13 +53,13 @@ class SavedCell: UITableViewCell {
     }
 }
 
-fileprivate extension SavedCell {
+fileprivate extension HomeCell {
     func prepareCardView() {
         cardView.layer.cornerRadius = 8
         cardView.layer.shadowColor = UIColor.black.cgColor
         cardView.layer.shadowOpacity = 0.6
-        cardView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        cardView.layer.shadowRadius = 2
+        cardView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        cardView.layer.shadowRadius = 1
     }
     
     func prepareImageView() {

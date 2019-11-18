@@ -107,8 +107,8 @@ fileprivate extension ReservationCell {
         cardView.layer.cornerRadius = 8
         cardView.layer.shadowColor = UIColor.black.cgColor
         cardView.layer.shadowOpacity = 0.6
-        cardView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        cardView.layer.shadowRadius = 2
+        cardView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        cardView.layer.shadowRadius = 1
     }
     
     func prepareImageView() {

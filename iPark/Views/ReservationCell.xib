@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,15 +20,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="210" id="aCt-TI-mYh" customClass="ReservationCell" customModule="iPark" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="aCt-TI-mYh" customClass="ReservationCell" customModule="iPark" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCt-TI-mYh" id="xBY-d2-Lfa">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M85-hm-6hd">
-                        <rect key="frame" x="8" y="8" width="398" height="194"/>
+                        <rect key="frame" x="8" y="5" width="398" height="190"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="vR9-Fs-y5f">
                                 <rect key="frame" x="15" y="15" width="114" height="89"/>
@@ -299,10 +300,11 @@ New York, NY 10024, USA</string>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="M85-hm-6hd" secondAttribute="trailing" constant="8" id="EMc-Xc-GA6"/>
                     <constraint firstItem="M85-hm-6hd" firstAttribute="leading" secondItem="xBY-d2-Lfa" secondAttribute="leading" constant="8" id="Heq-Kf-cs4"/>
-                    <constraint firstItem="M85-hm-6hd" firstAttribute="top" secondItem="xBY-d2-Lfa" secondAttribute="top" constant="8" id="KmR-43-Oig"/>
-                    <constraint firstAttribute="bottom" secondItem="M85-hm-6hd" secondAttribute="bottom" constant="8" id="m5h-ri-55b"/>
+                    <constraint firstItem="M85-hm-6hd" firstAttribute="top" secondItem="xBY-d2-Lfa" secondAttribute="top" constant="5" id="KmR-43-Oig"/>
+                    <constraint firstAttribute="bottom" secondItem="M85-hm-6hd" secondAttribute="bottom" constant="5" id="m5h-ri-55b"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="btnDetails" destination="Dbj-ua-Fop" id="cxq-Mo-rcl"/>
                 <outlet property="btnDirections" destination="9LD-Qb-gRu" id="gXF-TX-auu"/>

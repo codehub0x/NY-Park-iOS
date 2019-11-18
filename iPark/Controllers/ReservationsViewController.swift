@@ -129,7 +129,7 @@ extension ReservationsViewController: UITableViewDataSource {
 
 extension ReservationsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+        return 200
     }
 }
 
