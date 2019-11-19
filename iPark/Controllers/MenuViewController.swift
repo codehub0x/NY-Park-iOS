@@ -154,7 +154,14 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onHelpBtnClick(_ sender: Any) {
-        
+        let newVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            newVC = mainStoryboard.instantiateViewController(identifier: HelpViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: HelpViewController.storyboardId)
+        }
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onBtn1Click(_ sender: Any) {
