@@ -49,8 +49,6 @@ class MenuViewController: UIViewController {
     /// App version
     @IBOutlet weak var labelVersion: UILabel!
     
-    
-    var isLoggedIn: Bool = false
     fileprivate var mainStoryboard: UIStoryboard!
     
     override func viewDidLoad() {
@@ -59,7 +57,7 @@ class MenuViewController: UIViewController {
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         prepareCloseButton()
         
-        if isLoggedIn {
+        if Global.isLoggedIn {
             topViewHeight.constant = 360
             infoView1.isHidden = true
             infoView2.isHidden = false
@@ -131,10 +129,10 @@ class MenuViewController: UIViewController {
     @IBAction func onSavedLocationsBtnClick(_ sender: Any) {
         let newVC: UIViewController!
         if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: FavoriteViewController.storyboardId)
+            newVC = mainStoryboard.instantiateViewController(identifier: SavedViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: FavoriteViewController.storyboardId)
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: SavedViewController.storyboardId)
         }
         self.navigationController?.pushViewController(newVC, animated: true)
     }
@@ -160,7 +158,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onBtn1Click(_ sender: Any) {
-        if isLoggedIn {
+        if Global.isLoggedIn {
             /// Go to the AccountViewController
         } else {
             /// Go to the SignupViewController
@@ -178,8 +176,10 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onBtn2Click(_ sender: Any) {
-        if isLoggedIn {
+        if Global.isLoggedIn {
             /// Call Logout function
+            Global.isLoggedIn = false
+            self.view.window?.rootViewController?.dismiss(animated: true)
         } else {
             /// Go to the SigninViewController
             let newVC: UIViewController!

@@ -43,7 +43,7 @@ class SignupViewController: UIViewController {
             newVC = mainStoryboard.instantiateViewController(withIdentifier: MenuViewController.storyboardId) as? MenuViewController
         }
         
-        newVC.isLoggedIn = true
+        Global.isLoggedIn = true
         
         let navVC = newVC.getNavigationController()
         navVC.modalPresentationStyle = .overFullScreen

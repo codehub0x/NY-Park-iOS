@@ -13,6 +13,8 @@ class RewardsViewController: UIViewController {
     
     static let storyboardId = "\(RewardsViewController.self)"
     
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     @IBOutlet weak var btnCreateAccount: FlatButton!
     @IBOutlet weak var btnLogin: FlatButton!
     @IBOutlet weak var earnView: UIView!
@@ -33,6 +35,14 @@ class RewardsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
+        
+        if Global.isLoggedIn {
+            topViewHeight.constant = 0
+            topView.isHidden = true
+        } else {
+            topViewHeight.constant = 56
+            topView.isHidden = false
+        }
     }
     
     @objc func onBackClick() {

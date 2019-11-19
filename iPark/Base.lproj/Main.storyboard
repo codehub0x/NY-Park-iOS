@@ -984,6 +984,8 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                         <outlet property="earnView" destination="zbT-Ue-IiM" id="lWO-Bi-0yn"/>
                         <outlet property="parkView" destination="BVa-F6-1eH" id="H77-Tr-pjW"/>
                         <outlet property="saveTimeView" destination="Bjw-Wo-c6x" id="Xzi-fi-9Tv"/>
+                        <outlet property="topView" destination="wyf-XQ-Ghl" id="9uv-4P-uTH"/>
+                        <outlet property="topViewHeight" destination="siU-B9-o4i" id="wqA-cE-ZjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4H-so-qEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3857,7 +3859,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
         <!--Saved Garages-->
         <scene sceneID="UFN-w0-tnm">
             <objects>
-                <viewController id="mtK-Z2-ccL" customClass="FavoriteViewController" customModule="iPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavedViewController" id="mtK-Z2-ccL" customClass="SavedViewController" customModule="iPark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71R-eb-HWM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3876,8 +3878,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="mtK-Z2-ccL" id="SNc-ap-SbJ"/>
-                                    <outlet property="delegate" destination="mtK-Z2-ccL" id="7dw-gm-j5s"/>
+                                    <outlet property="dataSource" destination="mtK-Z2-ccL" id="nrf-A0-CPn"/>
+                                    <outlet property="delegate" destination="mtK-Z2-ccL" id="zVb-Rh-ymh"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -3892,7 +3894,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                     </view>
                     <navigationItem key="navigationItem" title="Saved Garages" id="0Mj-nz-hXb"/>
                     <connections>
-                        <outlet property="tableView" destination="PeK-12-Rh6" id="ONm-hU-1j9"/>
+                        <outlet property="tableView" destination="PeK-12-Rh6" id="vsc-DK-MtB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd7-Aa-xBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

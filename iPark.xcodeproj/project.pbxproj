@@ -60,9 +60,10 @@
 		3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892508237CF3BF004F7E97 /* SearchViewController.swift */; };
 		3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CABA6862382A3C000EB368E /* HomeCell.swift */; };
 		3CABA6892382A3C000EB368E /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CABA6872382A3C000EB368E /* HomeCell.xib */; };
+		3CB4DB14238400820037B033 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4DB13238400820037B033 /* Global.swift */; };
 		3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBB237F87C400E85702 /* SavedCell.swift */; };
 		3CB69DBE237F87CF00E85702 /* SavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB69DBD237F87CF00E85702 /* SavedCell.xib */; };
-		3CB69DC0237F935500E85702 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBF237F935500E85702 /* FavoriteViewController.swift */; };
+		3CB69DC0237F935500E85702 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBF237F935500E85702 /* SavedViewController.swift */; };
 		3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */; };
 		3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE4F6C23831F59005C45DF /* BookViewController.swift */; };
 		3CEB5D412381BF4A0020CD14 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */; };
@@ -150,9 +151,10 @@
 		3C892508237CF3BF004F7E97 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3CABA6862382A3C000EB368E /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		3CABA6872382A3C000EB368E /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		3CB4DB13238400820037B033 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		3CB69DBB237F87C400E85702 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
 		3CB69DBD237F87CF00E85702 /* SavedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedCell.xib; sourceTree = "<group>"; };
-		3CB69DBF237F935500E85702 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		3CB69DBF237F935500E85702 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3CBE4F6C23831F59005C45DF /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -289,7 +291,7 @@
 				3C892502237C51BE004F7E97 /* ReservationsViewController.swift */,
 				3C892504237C53E9004F7E97 /* RewardsViewController.swift */,
 				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
-				3CB69DBF237F935500E85702 /* FavoriteViewController.swift */,
+				3CB69DBF237F935500E85702 /* SavedViewController.swift */,
 				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
 				3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */,
 				3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */,
@@ -333,6 +335,7 @@
 				3CF6CF0D237BFF4C00E53AC0 /* Assets.xcassets */,
 				3CF6CF0F237BFF4C00E53AC0 /* LaunchScreen.storyboard */,
 				3CF6CF12237BFF4C00E53AC0 /* Info.plist */,
+				3CB4DB13238400820037B033 /* Global.swift */,
 			);
 			path = iPark;
 			sourceTree = "<group>";
@@ -595,8 +598,9 @@
 				3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */,
 				3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */,
 				3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */,
+				3CB4DB14238400820037B033 /* Global.swift in Sources */,
 				3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */,
-				3CB69DC0237F935500E85702 /* FavoriteViewController.swift in Sources */,
+				3CB69DC0237F935500E85702 /* SavedViewController.swift in Sources */,
 				3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */,
 				3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */,
 				3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */,

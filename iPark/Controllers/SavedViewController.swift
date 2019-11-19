@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FavoriteViewController: UIViewController {
+class SavedViewController: UIViewController {
     
-    static let storyboardId = "\(FavoriteViewController.self)"
+    static let storyboardId = "\(SavedViewController.self)"
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,7 +35,7 @@ class FavoriteViewController: UIViewController {
     }
 }
 
-extension FavoriteViewController: UITableViewDataSource {
+extension SavedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -47,13 +47,13 @@ extension FavoriteViewController: UITableViewDataSource {
     }
 }
 
-extension FavoriteViewController: UITableViewDelegate {
+extension SavedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
     }
 }
 
-extension FavoriteViewController: SavedCellDelegate {
+extension SavedViewController: SavedCellDelegate {
     func onDetails() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var detailsVC: UIViewController!
@@ -81,7 +81,7 @@ extension FavoriteViewController: SavedCellDelegate {
     
 }
 
-fileprivate extension FavoriteViewController {
+fileprivate extension SavedViewController {
     func prepareNavigation() {
         let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         leftButton.tintColor = UIColor.white
