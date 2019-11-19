@@ -11,6 +11,8 @@ import Material
 
 class MenuViewController: UIViewController {
     
+    static let storyboardId = "\(MenuViewController.self)"
+    
     @IBOutlet weak var overlapView: UIView!
     @IBOutlet weak var closeBtn: FlatButton!
     @IBOutlet weak var topViewHeight: NSLayoutConstraint!
@@ -49,11 +51,12 @@ class MenuViewController: UIViewController {
     
     
     var isLoggedIn: Bool = false
+    fileprivate var mainStoryboard: UIStoryboard!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isHidden = true
+        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         prepareCloseButton()
         
         if isLoggedIn {
@@ -82,25 +85,58 @@ class MenuViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     /// IBActions
     @IBAction func onClose(_ sender: Any) {
         self.view.window?.rootViewController?.dismiss(animated: true)
     }
     
     @IBAction func oniParkBtnClick(_ sender: Any) {
-        
+        let newVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            newVC = mainStoryboard.instantiateViewController(identifier: RewardsViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
+        }
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onRewardsBtnClick(_ sender: Any) {
-        
+        let newVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            newVC = mainStoryboard.instantiateViewController(identifier: RewardsViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
+        }
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onUpcomingBtnClick(_ sender: Any) {
-        
+        let newVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            newVC = mainStoryboard.instantiateViewController(identifier: ReservationsViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: ReservationsViewController.storyboardId)
+        }
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onSavedLocationsBtnClick(_ sender: Any) {
-        
+        let newVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            newVC = mainStoryboard.instantiateViewController(identifier: FavoriteViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: FavoriteViewController.storyboardId)
+        }
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onVehiclesBtnClick(_ sender: Any) {
@@ -128,13 +164,12 @@ class MenuViewController: UIViewController {
             /// Go to the AccountViewController
         } else {
             /// Go to the SignupViewController
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newVC: UIViewController!
             if #available(iOS 13.0, *) {
-                newVC = storyboard.instantiateViewController(identifier: "SignupViewController")
+                newVC = mainStoryboard.instantiateViewController(identifier: SignupViewController.storyboardId)
             } else {
                 // Fallback on earlier versions
-                newVC = storyboard.instantiateViewController(withIdentifier: "SignupViewController")
+                newVC = mainStoryboard.instantiateViewController(withIdentifier: SignupViewController.storyboardId)
             }
             newVC.modalPresentationStyle = .overFullScreen
             newVC.modalTransitionStyle = .flipHorizontal
@@ -147,13 +182,12 @@ class MenuViewController: UIViewController {
             /// Call Logout function
         } else {
             /// Go to the SigninViewController
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newVC: UIViewController!
             if #available(iOS 13.0, *) {
-                newVC = storyboard.instantiateViewController(identifier: "SigninViewController")
+                newVC = mainStoryboard.instantiateViewController(identifier: SigninViewController.storyboardId)
             } else {
                 // Fallback on earlier versions
-                newVC = storyboard.instantiateViewController(withIdentifier: "SigninViewController")
+                newVC = mainStoryboard.instantiateViewController(withIdentifier: SigninViewController.storyboardId)
             }
             newVC.modalPresentationStyle = .overFullScreen
             newVC.modalTransitionStyle = .flipHorizontal

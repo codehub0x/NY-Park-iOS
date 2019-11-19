@@ -11,6 +11,8 @@ import Material
 
 class DetailsViewController: UIViewController {
     
+    static let storyboardId = "\(DetailsViewController.self)"
+    
     @IBOutlet weak var labelStartTime: UILabel!
     @IBOutlet weak var labelEndTime: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
@@ -55,6 +57,11 @@ class DetailsViewController: UIViewController {
         preparePhoneTitle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     @objc func onBackClick() {
         if let count = self.navigationController?.viewControllers.count, count > 1 {
             self.navigationController?.popViewController(animated: true)
@@ -75,10 +82,10 @@ class DetailsViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var newVC: UIViewController!
         if #available(iOS 13.0, *) {
-            newVC = storyboard.instantiateViewController(identifier: "BookViewController")
+            newVC = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            newVC = storyboard.instantiateViewController(withIdentifier: "BookViewController")
+            newVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         }
         self.navigationController?.pushViewController(newVC, animated: true)
     }

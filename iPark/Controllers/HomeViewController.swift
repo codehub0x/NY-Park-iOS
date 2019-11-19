@@ -197,10 +197,10 @@ extension HomeViewController: HomeCellDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc: UIViewController!
         if #available(iOS 13.0, *) {
-            vc = storyboard.instantiateViewController(identifier: "DetailsViewController")
+            vc = storyboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+            vc = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
         }
         if let newVC = vc {
             let navVC = newVC.getNavigationController()
@@ -213,10 +213,10 @@ extension HomeViewController: HomeCellDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc: UIViewController!
         if #available(iOS 13.0, *) {
-            vc = storyboard.instantiateViewController(identifier: "BookViewController")
+            vc = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            vc = storyboard.instantiateViewController(withIdentifier: "BookViewController")
+            vc = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         }
         if let newVC = vc {
             let navVC = newVC.getNavigationController()

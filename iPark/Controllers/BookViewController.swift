@@ -11,6 +11,8 @@ import Material
 
 class BookViewController: UIViewController {
     
+    static let storyboardId = "\(BookViewController.self)"
+    
     @IBOutlet weak var labelDays: UILabel!
     @IBOutlet weak var labelHours: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
@@ -26,6 +28,11 @@ class BookViewController: UIViewController {
         
         prepareNavigation(title: "West 90TH Garage Corp.", subTitle: "7 East 14th Street, New York, NY...")
         prepareAddPaymentButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     @objc func onBackClick() {

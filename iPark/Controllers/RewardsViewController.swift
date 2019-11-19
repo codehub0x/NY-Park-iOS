@@ -11,6 +11,8 @@ import Material
 
 class RewardsViewController: UIViewController {
     
+    static let storyboardId = "\(RewardsViewController.self)"
+    
     @IBOutlet weak var btnCreateAccount: FlatButton!
     @IBOutlet weak var btnLogin: FlatButton!
     @IBOutlet weak var earnView: UIView!
@@ -28,8 +30,17 @@ class RewardsViewController: UIViewController {
         prepareSaveTimeView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     @objc func onBackClick() {
-        self.dismiss(animated: true)
+        if let count = self.navigationController?.viewControllers.count, count > 1 {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
     }
 }
 

@@ -11,6 +11,8 @@ import Material
 
 class SearchViewController: UIViewController {
     
+    static let storyboardId = "\(SearchViewController.self)"
+    
     fileprivate var buttons = [TabItem]()
     fileprivate var selectedTag = 1
     
@@ -43,8 +45,17 @@ class SearchViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     @objc fileprivate func onBackClick() {
-        self.dismiss(animated: true)
+        if let count = self.navigationController?.viewControllers.count, count > 1 {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func onDailySearchClick(_ sender: Any) {

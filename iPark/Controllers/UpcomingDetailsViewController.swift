@@ -11,6 +11,8 @@ import Material
 
 class UpcomingDetailsViewController: UIViewController {
     
+    static let storyboardId = "\(UpcomingDetailsViewController.self)"
+    
     @IBOutlet weak var labelStartTime: UILabel!
     @IBOutlet weak var labelEndTime: UILabel!
     @IBOutlet weak var labelPrice1: UILabel!
@@ -50,6 +52,11 @@ class UpcomingDetailsViewController: UIViewController {
         prepareAddressTitle()
         prepareHoursOfOperationTitle()
         preparePhoneTitle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     @objc func onBackClick() {

@@ -31,10 +31,10 @@ extension TabBarController: UITabBarControllerDelegate {
         case 2:
             var vc: UIViewController!
             if #available(iOS 13.0, *) {
-                vc = tabBarController.storyboard?.instantiateViewController(identifier: "ReservationsViewController")
+                vc = tabBarController.storyboard?.instantiateViewController(identifier: ReservationsViewController.storyboardId)
             } else {
                 // Fallback on earlier versions
-                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "ReservationsViewController")
+                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: ReservationsViewController.storyboardId)
             }
             if let newVC = vc {
                 let navVC = newVC.getNavigationController()
@@ -46,10 +46,10 @@ extension TabBarController: UITabBarControllerDelegate {
         case 3:
             var vc: UIViewController!
             if #available(iOS 13.0, *) {
-                vc = tabBarController.storyboard?.instantiateViewController(identifier: "RewardsViewController")
+                vc = tabBarController.storyboard?.instantiateViewController(identifier: RewardsViewController.storyboardId)
             } else {
                 // Fallback on earlier versions
-                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "RewardsViewController")
+                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
             }
             if let newVC = vc {
                 let navVC = newVC.getNavigationController()
@@ -61,10 +61,10 @@ extension TabBarController: UITabBarControllerDelegate {
         case 4:
             var vc: UIViewController!
             if #available(iOS 13.0, *) {
-                vc = tabBarController.storyboard?.instantiateViewController(identifier: "MenuViewController")
+                vc = tabBarController.storyboard?.instantiateViewController(identifier: MenuViewController.storyboardId)
             } else {
                 // Fallback on earlier versions
-                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
+                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: MenuViewController.storyboardId)
             }
             if let newVC = vc {
                 let navVC = newVC.getNavigationController()

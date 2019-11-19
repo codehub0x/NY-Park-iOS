@@ -11,13 +11,18 @@ import Material
 
 class SigninViewController: UIViewController {
     
+    static let storyboardId = "\(SigninViewController.self)"
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var closeBtn: FlatButton!
     
+    fileprivate var mainStoryboard: UIStoryboard!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         prepareCloseButton()
     }
     
@@ -26,13 +31,12 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func onSigninBtnClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newVC: MenuViewController!
         if #available(iOS 13.0, *) {
-            newVC = storyboard.instantiateViewController(identifier: "MenuViewController")
+            newVC = mainStoryboard.instantiateViewController(identifier: MenuViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            newVC = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: MenuViewController.storyboardId) as? MenuViewController
         }
         
         newVC.isLoggedIn = true
@@ -49,13 +53,12 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func onRegisterBtnClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let newVC: UIViewController!
         if #available(iOS 13.0, *) {
-            newVC = storyboard.instantiateViewController(identifier: "SignupViewController")
+            newVC = mainStoryboard.instantiateViewController(identifier: SignupViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            newVC = storyboard.instantiateViewController(withIdentifier: "SignupViewController")
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: SignupViewController.storyboardId)
         }
         newVC.modalPresentationStyle = .overFullScreen
         newVC.modalTransitionStyle = .flipHorizontal

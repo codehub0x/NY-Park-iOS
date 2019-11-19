@@ -666,13 +666,13 @@ VEHICLES</string>
                                                 <rect key="frame" x="8" y="8" width="398" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EARN POINTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k3-0D-pgK">
-                                                        <rect key="frame" x="36" y="24" width="338" height="23.5"/>
+                                                        <rect key="frame" x="36" y="24" width="338" height="24"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="20"/>
                                                         <color key="textColor" red="0.20392156862745098" green="0.24705882352941178" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgX-xk-ZSj">
-                                                        <rect key="frame" x="36" y="55.5" width="338" height="105"/>
+                                                        <rect key="frame" x="36" y="56" width="338" height="108"/>
                                                         <string key="text">As a iPark Rewards member you can earn 1 point for every iPark reservation made through your iPark Rewards member account.
 
 After every 10 points earned you will receive 1 free reservation.*</string>
@@ -696,19 +696,19 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <rect key="frame" x="8" y="218" width="398" height="280"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARK FOR FREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSi-Cu-Iiq">
-                                                        <rect key="frame" x="36" y="24" width="338" height="23.5"/>
+                                                        <rect key="frame" x="36" y="24" width="338" height="24"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="20"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to redeem your points for free parking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggc-DZ-wHa">
-                                                        <rect key="frame" x="36" y="55.5" width="338" height="17.5"/>
+                                                        <rect key="frame" x="36" y="56" width="338" height="18"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ia-Z2-Ngv">
-                                                        <rect key="frame" x="36" y="88" width="17" height="17"/>
+                                                        <rect key="frame" x="36" y="89" width="17" height="17"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="9Ux-Me-PpD"/>
@@ -725,13 +725,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reserve parking via the iPark website, while being logged into your iPark Rewards account;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YD-W9-cEq">
-                                                        <rect key="frame" x="65" y="86" width="309" height="52.5"/>
+                                                        <rect key="frame" x="65" y="87" width="309" height="36"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPR-Jl-Iu9">
-                                                        <rect key="frame" x="36" y="155" width="17" height="17"/>
+                                                        <rect key="frame" x="36" y="156" width="17" height="17"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="86Z-ah-isB"/>
@@ -748,13 +748,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each reservation will earn 1 point;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-s6-m4M">
-                                                        <rect key="frame" x="65" y="153" width="309" height="17.5"/>
+                                                        <rect key="frame" x="65" y="154" width="309" height="18"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhG-Sh-pTF">
-                                                        <rect key="frame" x="36" y="202" width="17" height="17"/>
+                                                        <rect key="frame" x="36" y="203" width="17" height="17"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="3ho-iV-jdU"/>
@@ -771,7 +771,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After 10 reservations have been made, the next reservation up to 24 hours will be free.*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYm-bg-JHw">
-                                                        <rect key="frame" x="65" y="200" width="309" height="35"/>
+                                                        <rect key="frame" x="65" y="201" width="309" height="36"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -807,20 +807,20 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <rect key="frame" x="8" y="508" width="398" height="430"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6h-Pa-Kad">
-                                                        <rect key="frame" x="36" y="24" width="338" height="23.5"/>
+                                                        <rect key="frame" x="36" y="24" width="338" height="24"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="20"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3W7-lW-ASx">
-                                                        <rect key="frame" x="36" y="55.5" width="338" height="70"/>
+                                                        <rect key="frame" x="36" y="56" width="338" height="72"/>
                                                         <string key="text">Finalize your reservation and check out faster by saving your billing and vehicle information under your iPark Rewards account. With an iPark Rewards account you can:</string>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKG-y7-O0C">
-                                                        <rect key="frame" x="36" y="140.5" width="17" height="17"/>
+                                                        <rect key="frame" x="36" y="143" width="17" height="17"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="uHd-st-9fD"/>
@@ -837,13 +837,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save up to 3 vehicles under the &quot;Vehicles&quot; menu " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agm-Yf-Quq">
-                                                        <rect key="frame" x="65" y="138.5" width="309" height="35"/>
+                                                        <rect key="frame" x="65" y="141" width="309" height="36"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zM-5i-8Or">
-                                                        <rect key="frame" x="36" y="197.5" width="17" height="17"/>
+                                                        <rect key="frame" x="36" y="200" width="17" height="17"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="6aO-zG-bep"/>
@@ -860,13 +860,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save payment information for future reservations under the &quot;Billing&quot; menu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izk-uv-txh">
-                                                        <rect key="frame" x="65" y="195.5" width="309" height="35"/>
+                                                        <rect key="frame" x="65" y="198" width="309" height="36"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-RP-dUr">
-                                                        <rect key="frame" x="36" y="254.5" width="17" height="17"/>
+                                                        <rect key="frame" x="36" y="257" width="17" height="17"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="MXb-ai-l6t"/>
@@ -883,13 +883,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save up to 3 favorite iPark locations under the &quot;Locations&quot; for quick access" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECz-sf-uc7">
-                                                        <rect key="frame" x="65" y="252.5" width="309" height="35"/>
+                                                        <rect key="frame" x="65" y="255" width="309" height="36"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All details will appear immediately at checkout, ensuring you can finalize your reservation a lot faster! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="any-gP-yTb">
-                                                        <rect key="frame" x="36" y="319.5" width="338" height="52.5"/>
+                                                        <rect key="frame" x="36" y="323" width="338" height="54"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -976,6 +976,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                         <viewLayoutGuide key="safeArea" id="ErM-sI-YgT"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="REWARDS" image="icon-rewards" id="qvs-We-FGH"/>
+                    <navigationItem key="navigationItem" id="BQr-gf-u2r"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnCreateAccount" destination="QJr-Rw-T1b" id="Jmz-gK-6Mq"/>

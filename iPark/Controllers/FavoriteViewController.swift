@@ -10,6 +10,8 @@ import UIKit
 
 class FavoriteViewController: UIViewController {
     
+    static let storyboardId = "\(FavoriteViewController.self)"
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,8 +21,17 @@ class FavoriteViewController: UIViewController {
         tableView.register(UINib(nibName: "\(SavedCell.self)", bundle: Bundle.main), forCellReuseIdentifier: SavedCell.reuseIdentifier)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     @objc func onBackClick() {
-        self.dismiss(animated: true)
+        if let count = self.navigationController?.viewControllers.count, count > 1 {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true)
+        }
     }
 }
 
@@ -47,10 +58,10 @@ extension FavoriteViewController: SavedCellDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var detailsVC: UIViewController!
         if #available(iOS 13.0, *) {
-            detailsVC = storyboard.instantiateViewController(identifier: "DetailsViewController")
+            detailsVC = storyboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+            detailsVC = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
         }
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
@@ -59,10 +70,10 @@ extension FavoriteViewController: SavedCellDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var detailsVC: UIViewController!
         if #available(iOS 13.0, *) {
-            detailsVC = storyboard.instantiateViewController(identifier: "BookViewController")
+            detailsVC = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            detailsVC = storyboard.instantiateViewController(withIdentifier: "BookViewController")
+            detailsVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         }
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
