@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "pvc?.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "StatusBarController.layoutSubviews():StatusBarController.swift">
          <PersistentStrings>
             <PersistentString

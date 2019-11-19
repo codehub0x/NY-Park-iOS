@@ -168,3 +168,17 @@ extension UINavigationItem {
         titleView = titleLabel
     }
 }
+
+extension UIViewController {
+    func getNavigationController() -> UINavigationController {
+        let navVC = UINavigationController(rootViewController: self)
+        
+        navVC.navigationBar.isTranslucent = false
+        navVC.navigationBar.barTintColor = UIColor.iDarkBlue
+        navVC.navigationBar.tintColor = UIColor.white
+        navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
+        navVC.navigationBar.barStyle = .black
+        
+        return navVC
+    }
+}

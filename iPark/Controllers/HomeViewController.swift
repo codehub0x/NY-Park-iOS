@@ -203,7 +203,7 @@ extension HomeViewController: HomeCellDelegate {
             vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
         }
         if let newVC = vc {
-            let navVC = prepareNavigationController(newVC)
+            let navVC = newVC.getNavigationController()
             navVC.modalPresentationStyle = .overFullScreen
             self.present(navVC, animated: true)
         }
@@ -219,12 +219,11 @@ extension HomeViewController: HomeCellDelegate {
             vc = storyboard.instantiateViewController(withIdentifier: "BookViewController")
         }
         if let newVC = vc {
-            let navVC = prepareNavigationController(newVC)
+            let navVC = newVC.getNavigationController()
             navVC.modalPresentationStyle = .overFullScreen
             self.present(navVC, animated: true)
         }
     }
-    
     
 }
 
@@ -282,17 +281,5 @@ fileprivate extension HomeViewController {
         let image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         return image!
-    }
-    
-    func prepareNavigationController(_ controller: UIViewController) -> UINavigationController {
-        let navVC = UINavigationController(rootViewController: controller)
-        
-        navVC.navigationBar.isTranslucent = false
-        navVC.navigationBar.barTintColor = UIColor.iDarkBlue
-        navVC.navigationBar.tintColor = UIColor.white
-        navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
-        navVC.navigationBar.barStyle = .black
-        
-        return navVC
     }
 }

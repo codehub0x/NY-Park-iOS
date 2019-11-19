@@ -37,7 +37,7 @@ extension TabBarController: UITabBarControllerDelegate {
                 vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "ReservationsViewController")
             }
             if let newVC = vc {
-                let navVC = prepareNavigationController(newVC)
+                let navVC = newVC.getNavigationController()
                 navVC.modalPresentationStyle = .overFullScreen
                 tabBarController.present(navVC, animated: true)
                 return false
@@ -52,7 +52,7 @@ extension TabBarController: UITabBarControllerDelegate {
                 vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "RewardsViewController")
             }
             if let newVC = vc {
-                let navVC = prepareNavigationController(newVC)
+                let navVC = newVC.getNavigationController()
                 navVC.modalPresentationStyle = .overFullScreen
                 tabBarController.present(navVC, animated: true)
                 return false
@@ -67,9 +67,10 @@ extension TabBarController: UITabBarControllerDelegate {
                 vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: "MenuViewController")
             }
             if let newVC = vc {
-                newVC.modalPresentationStyle = .overFullScreen
-                newVC.modalTransitionStyle = .crossDissolve
-                tabBarController.present(newVC, animated: true)
+                let navVC = newVC.getNavigationController()
+                navVC.modalPresentationStyle = .overFullScreen
+                navVC.modalTransitionStyle = .crossDissolve
+                tabBarController.present(navVC, animated: true)
                 return false
             }
             break;
@@ -81,18 +82,6 @@ extension TabBarController: UITabBarControllerDelegate {
 }
 
 fileprivate extension TabBarController {
-    func prepareNavigationController(_ controller: UIViewController) -> UINavigationController {
-        let navVC = UINavigationController(rootViewController: controller)
-        
-        navVC.navigationBar.isTranslucent = false
-        navVC.navigationBar.barTintColor = UIColor.iDarkBlue
-        navVC.navigationBar.tintColor = UIColor.white
-        navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
-        navVC.navigationBar.barStyle = .black
-        
-        return navVC
-    }
-    
     func prepareTabBar() {
         let tabItems = self.tabBar.items
         tabItems?.forEach({ (item) in
