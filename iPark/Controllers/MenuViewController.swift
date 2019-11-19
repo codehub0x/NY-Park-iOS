@@ -167,6 +167,14 @@ class MenuViewController: UIViewController {
     @IBAction func onBtn1Click(_ sender: Any) {
         if Global.isLoggedIn {
             /// Go to the AccountViewController
+            let newVC: UIViewController!
+            if #available(iOS 13.0, *) {
+                newVC = mainStoryboard.instantiateViewController(identifier: AccountViewController.storyboardId)
+            } else {
+                // Fallback on earlier versions
+                newVC = mainStoryboard.instantiateViewController(withIdentifier: AccountViewController.storyboardId)
+            }
+            self.navigationController?.pushViewController(newVC, animated: true)
         } else {
             /// Go to the SignupViewController
             let newVC: UIViewController!

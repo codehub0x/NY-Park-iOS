@@ -83,7 +83,6 @@ fileprivate extension HelpViewController {
         self.title = "Help"
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
-        
         self.navigationItem.leftBarButtonItem = leftButton
     }
     

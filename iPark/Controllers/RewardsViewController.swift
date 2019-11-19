@@ -78,26 +78,35 @@ fileprivate extension RewardsViewController {
     
     func prepareEarnView() {
         earnView.layer.cornerRadius = 8
-        earnView.layer.shadowColor = UIColor.black.cgColor
-        earnView.layer.shadowOpacity = 0.6
-        earnView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        earnView.layer.shadowRadius = 1
+        earnView.layer.borderWidth = 0.5
+        earnView.layer.borderColor = UIColor.iBlack70.cgColor
+        earnView.layer.masksToBounds = true
+//        earnView.layer.shadowColor = UIColor.black.cgColor
+//        earnView.layer.shadowOpacity = 0.6
+//        earnView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+//        earnView.layer.shadowRadius = 1
     }
     
     func prepareParkView() {
         parkView.layer.cornerRadius = 8
-        parkView.layer.shadowColor = UIColor.black.cgColor
-        parkView.layer.shadowOpacity = 0.6
-        parkView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        parkView.layer.shadowRadius = 1
+        parkView.layer.borderWidth = 0.5
+        parkView.layer.borderColor = UIColor.iBlack70.cgColor
+        parkView.layer.masksToBounds = true
+//        parkView.layer.shadowColor = UIColor.black.cgColor
+//        parkView.layer.shadowOpacity = 0.6
+//        parkView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+//        parkView.layer.shadowRadius = 1
     }
     
     func prepareSaveTimeView() {
         saveTimeView.layer.cornerRadius = 8
-        saveTimeView.layer.shadowColor = UIColor.black.cgColor
-        saveTimeView.layer.shadowOpacity = 0.6
-        saveTimeView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        saveTimeView.layer.shadowRadius = 1
+        saveTimeView.layer.borderWidth = 0.5
+        saveTimeView.layer.borderColor = UIColor.iBlack70.cgColor
+        saveTimeView.layer.masksToBounds = true
+//        saveTimeView.layer.shadowColor = UIColor.black.cgColor
+//        saveTimeView.layer.shadowOpacity = 0.6
+//        saveTimeView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+//        saveTimeView.layer.shadowRadius = 1
     }
     
 }
