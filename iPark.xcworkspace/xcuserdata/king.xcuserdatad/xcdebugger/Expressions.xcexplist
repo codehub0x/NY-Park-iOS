@@ -3,10 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
+         contextName = "ReservationCell.prepareButtons():ReservationCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "pvc?.navigationController">
+               value = "btnDirections.titleColor(for: .normal)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookViewController.initBookData():BookViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "bookData">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -19,10 +27,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ReservationCell.prepareButtons():ReservationCell.swift">
+         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "btnDirections.titleColor(for: .normal)">
+               value = "pvc?.navigationController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
