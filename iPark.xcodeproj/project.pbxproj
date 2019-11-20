@@ -60,6 +60,8 @@
 		3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892504237C53E9004F7E97 /* RewardsViewController.swift */; };
 		3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892506237C693F004F7E97 /* MenuViewController.swift */; };
 		3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892508237CF3BF004F7E97 /* SearchViewController.swift */; };
+		3C8D2D4D2385768500B91F09 /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D2D4C2385768500B91F09 /* VehicleCell.xib */; };
+		3C8D2D4F2385769200B91F09 /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D2D4E2385769200B91F09 /* VehicleCell.swift */; };
 		3CA30A93238448760046CCD5 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA30A92238448760046CCD5 /* FAQViewController.swift */; };
 		3CA30A952384495A0046CCD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA30A942384495A0046CCD5 /* AccountViewController.swift */; };
 		3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CABA6862382A3C000EB368E /* HomeCell.swift */; };
@@ -158,6 +160,8 @@
 		3C892504237C53E9004F7E97 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		3C892506237C693F004F7E97 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C892508237CF3BF004F7E97 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3C8D2D4C2385768500B91F09 /* VehicleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
+		3C8D2D4E2385769200B91F09 /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
 		3CA30A92238448760046CCD5 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		3CA30A942384495A0046CCD5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3CABA6862382A3C000EB368E /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				3CB69DBD237F87CF00E85702 /* SavedCell.xib */,
 				3CF87AE72384C95E00DE9995 /* BookCell.swift */,
 				3CF87AE92384C98000DE9995 /* BookCell.xib */,
+				3C8D2D4E2385769200B91F09 /* VehicleCell.swift */,
+				3C8D2D4C2385768500B91F09 /* VehicleCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 				3C29BFA7237DBC9E009F46EC /* Lato-Regular.ttf in Resources */,
 				3C29BFA6237DBC9E009F46EC /* Lato-MediumItalic.ttf in Resources */,
 				3C29BFA9237DBC9E009F46EC /* Lato-SemiboldItalic.ttf in Resources */,
+				3C8D2D4D2385768500B91F09 /* VehicleCell.xib in Resources */,
 				3C29BF9C237DBC9E009F46EC /* Lato-Bold.ttf in Resources */,
 				3C29BF8B237DBC9E009F46EC /* Roboto-BoldItalic.ttf in Resources */,
 				3C29BFAB237DBC9E009F46EC /* Lato-ThinItalic.ttf in Resources */,
@@ -630,6 +637,7 @@
 				3CA30A93238448760046CCD5 /* FAQViewController.swift in Sources */,
 				3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */,
 				3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */,
+				3C8D2D4F2385769200B91F09 /* VehicleCell.swift in Sources */,
 				3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */,
 				3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */,
 				3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */,

@@ -181,6 +181,11 @@ extension UIViewController {
         
         return navVC
     }
+    
+    var topbarHeight: CGFloat {
+        return UIApplication.shared.statusBarFrame.size.height +
+            (self.navigationController?.navigationBar.frame.height ?? 0.0)
+    }
 }
 
 extension UIButton {
