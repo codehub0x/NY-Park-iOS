@@ -20,9 +20,12 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var faqImageView: UIImageView!
     @IBOutlet weak var termsBtn: FlatButton!
     @IBOutlet weak var privacyBtn: FlatButton!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        adjustUIHeight()
         
         prepareNavigation()
         prepareMainView()
@@ -34,6 +37,22 @@ class HelpViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    func adjustUIHeight() {
+        let windowSize = UIScreen.main.bounds
+        var padding: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.keyWindow
+            let topPadding = window?.safeAreaInsets.top ?? 0
+            let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+            padding = topPadding + bottomPadding
+        }
+        var height = windowSize.height - padding
+        if height < 650 {
+            height = 650
+        }
+        heightConstraint.constant = height
     }
     
     @objc func onBackClick() {

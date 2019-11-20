@@ -27,6 +27,24 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var dailySearchButton: FlatButton!
     @IBOutlet weak var monthlySearchButton: FlatButton!
     
+    open var startTime: Date = Date() {
+        didSet {
+            startTimeField.text = startTime.dateString()
+        }
+    }
+    
+    open var endTime: Date = Date() {
+        didSet {
+            endTimeField.text = endTime.dateString()
+        }
+    }
+    
+    open var startDate: Date = Date() {
+        didSet {
+            mStartTimeField.text = startDate.dateString("EEE, MMM dd")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +61,11 @@ class SearchViewController: UIViewController {
         
         prepareSearchButton()
         
+        addressField.delegate = self
+        mAddressField.delegate = self
+        
+        startTimeField.isEnabled = false
+        endTimeField.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +81,25 @@ class SearchViewController: UIViewController {
         }
     }
     
+    @IBAction func onStartTimeFieldClick(_ sender: Any) {
+        RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: startTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
+            self.startTime = selectedDate
+        }
+    }
+    
+    @IBAction func onEndTimeFieldClick(_ sender: Any) {
+        RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: endTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
+            self.endTime = selectedDate
+        }
+    }
+    
+    @IBAction func onMStartTimeFieldClick(_ sender: Any) {
+        RPicker.selectDate(title: "Select Date", hideCancel: false, datePickerMode: .date, selectedDate: startDate, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
+            self.startDate = selectedDate
+        }
+        self.view.endEditing(true)
+    }
+    
     @IBAction func onDailySearchClick(_ sender: Any) {
         
     }
@@ -66,6 +108,17 @@ class SearchViewController: UIViewController {
         
     }
     
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+    }
 }
 
 fileprivate extension SearchViewController {

@@ -48,6 +48,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var button2: FlatButton!
     /// App version
     @IBOutlet weak var labelVersion: UILabel!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
@@ -81,11 +82,34 @@ class MenuViewController: UIViewController {
             prepareButton2()
         }
         
+        adjustUIHeight()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func adjustUIHeight() {
+        let windowSize = UIScreen.main.bounds
+        var topPadding: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.keyWindow
+            topPadding = window?.safeAreaInsets.top ?? 0
+        }
+        var height = windowSize.height - topPadding
+        if Global.isLoggedIn {
+            if height < 850 {
+                height = 850
+            }
+        } else {
+            if height < 680 {
+                height = 680
+            }
+        }
+        
+        heightConstraint.constant = height
     }
     
     /// IBActions

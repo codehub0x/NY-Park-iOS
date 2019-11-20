@@ -18,6 +18,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var termsBtn: FlatButton!
     @IBOutlet weak var closeBtn: FlatButton!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
@@ -26,8 +27,24 @@ class SignupViewController: UIViewController {
         
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
+        adjustUIHeight()
+        
         prepareTermsButton()
         prepareCloseButton()
+    }
+    
+    func adjustUIHeight() {
+        let windowSize = UIScreen.main.bounds
+        var topPadding: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.keyWindow
+            topPadding = window?.safeAreaInsets.top ?? 0
+        }
+        var height = windowSize.height - topPadding
+        if height < 650 {
+            height = 650
+        }
+        heightConstraint.constant = height
     }
     
     @IBAction func onCloseBtnClick(_ sender: Any) {
