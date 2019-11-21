@@ -15,7 +15,6 @@ class SigninViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var closeBtn: FlatButton!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     fileprivate var mainStoryboard: UIStoryboard!
@@ -25,7 +24,6 @@ class SigninViewController: UIViewController {
         
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         adjustUIHeight()
-        prepareCloseButton()
     }
     
     func adjustUIHeight() {
@@ -84,12 +82,4 @@ class SigninViewController: UIViewController {
         }
     }
     
-}
-
-
-fileprivate extension SigninViewController {
-    func prepareCloseButton() {
-        closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        closeBtn.tintColor = UIColor.iBlack90
-    }
 }

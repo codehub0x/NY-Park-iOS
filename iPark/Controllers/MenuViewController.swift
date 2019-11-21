@@ -15,7 +15,6 @@ class MenuViewController: UIViewController {
     
     @IBOutlet weak var overlapView: UIView!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var closeBtn: FlatButton!
     @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     /// Before Login
     @IBOutlet weak var infoView1: UIView!
@@ -59,7 +58,6 @@ class MenuViewController: UIViewController {
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         prepareMainView()
-        prepareCloseButton()
         
         if Global.isLoggedIn {
             topViewHeight.constant = 360
@@ -262,11 +260,6 @@ fileprivate extension MenuViewController {
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
             self.mainView.transform = CGAffineTransform(translationX: 0, y: 0)
         })
-    }
-    
-    func prepareCloseButton() {
-        closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        closeBtn.tintColor = UIColor.white
     }
     
     func prepareiParkView() {

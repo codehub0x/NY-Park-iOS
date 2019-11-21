@@ -13,13 +13,12 @@ import Material
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var btnToggle: RaisedButton!
-    @IBOutlet weak var btnFavorite: FlatButton!
     @IBOutlet weak var btnFilters: RaisedButton!
-    @IBOutlet weak var btnSearch: RaisedButton!
     @IBOutlet weak var hoursImageView: UIImageView!
     @IBOutlet weak var viewDetails: UIView!
     @IBOutlet weak var btnArrow: FlatButton!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomCollectionView: UICollectionView!
     @IBOutlet weak var filterView: UIScrollView!
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var filterWidthConstraint: NSLayoutConstraint!
@@ -40,6 +39,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var checkBtnOutdoors: FlatButton!
     @IBOutlet weak var checkBtnOnSiteStaff: FlatButton!
     
+    fileprivate var mainStoryboard: UIStoryboard!
+    
+    let bottomViewHeight: CGFloat = 185
+    let filterViewWidth: CGFloat = 270
+    
     /// Toggle bottom shown/hidden parameter
     private var isShowBottomView: Bool = false {
         didSet {
@@ -53,8 +57,8 @@ class HomeViewController: UIViewController {
                 }
             } else {
                 UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: 160)
-                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: 160)
+                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
+                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
                 }) { _ in
                     self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: false)
                     self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: true)
@@ -67,9 +71,8 @@ class HomeViewController: UIViewController {
     private var isShowFilter: Bool = false {
         didSet {
             if isShowFilter {
-                let left = CGAffineTransform(translationX: 0, y: 0)
                 UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.filterView.transform = left
+                    self.filterView.transform = CGAffineTransform(translationX: 0, y: 0)
                 }, completion: { _ in
                     self.btnFilters.setTitle("CLOSE", for: .normal)
                     self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -78,9 +81,8 @@ class HomeViewController: UIViewController {
                     self.btnFilters.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
                 })
             } else {
-                let right = CGAffineTransform(translationX: 270, y: 0)
                 UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.filterView.transform = right
+                    self.filterView.transform = CGAffineTransform(translationX: self.filterViewWidth, y: 0)
                 }, completion: { _ in
                     self.btnFilters.setTitle("FILTERS", for: .normal)
                     self.btnFilters.setImage(UIImage(), for: .normal)
@@ -93,10 +95,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         /// Initialize the UI Settings
         prepareUI()
-        prepareSearchButton()
-        prepareFavoriteButton()
         prepareHoursImageView()
         prepareArrowButton()
         
@@ -104,6 +105,8 @@ class HomeViewController: UIViewController {
         
         /// Register table view xib
         tableView.register(UINib(nibName: "\(HomeCell.self)", bundle: Bundle.main), forCellReuseIdentifier: HomeCell.reuseIdentifier)
+        /// Register collection view xib
+        bottomCollectionView.register(UINib(nibName: "\(BookedCell.self)", bundle: Bundle.main), forCellWithReuseIdentifier: BookedCell.reuseIdentifier)
     }
     
     // Set the status bar style as light
@@ -122,10 +125,6 @@ class HomeViewController: UIViewController {
             listView.hideFlip()
             btnToggle.setTitle("LIST", for: .normal)
         }
-    }
-    
-    @IBAction func onClickFavorite(_ sender: Any) {
-        
     }
     
     /// Show / Hidden recently booked locations
@@ -188,8 +187,6 @@ extension HomeViewController: UITableViewDataSource {
         cell.delegate = self
         return cell
     }
-    
-    
 }
 
 /// TableView delegate
@@ -202,13 +199,12 @@ extension HomeViewController: UITableViewDelegate {
 /// TableViewCell delegate
 extension HomeViewController: HomeCellDelegate {
     func onDetails() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc: UIViewController!
         if #available(iOS 13.0, *) {
-            vc = storyboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
+            vc = mainStoryboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            vc = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
+            vc = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
         }
         if let newVC = vc {
             let navVC = newVC.getNavigationController()
@@ -218,13 +214,12 @@ extension HomeViewController: HomeCellDelegate {
     }
     
     func onBook() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc: UIViewController!
         if #available(iOS 13.0, *) {
-            vc = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
+            vc = mainStoryboard.instantiateViewController(identifier: BookViewController.storyboardId)
         } else {
             // Fallback on earlier versions
-            vc = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
+            vc = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         }
         if let newVC = vc {
             let navVC = newVC.getNavigationController()
@@ -233,6 +228,58 @@ extension HomeViewController: HomeCellDelegate {
         }
     }
     
+}
+
+// MARK: - CollectionView datasource
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookedCell.reuseIdentifier, for: indexPath)
+        
+        return cell
+    }
+}
+
+// MARK: - CollectionView delegate
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var vc: UIViewController!
+        if #available(iOS 13.0, *) {
+            vc = mainStoryboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            vc = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
+        }
+        if let newVC = vc {
+            let navVC = newVC.getNavigationController()
+            navVC.modalPresentationStyle = .overFullScreen
+            self.present(navVC, animated: true)
+        }
+    }
+}
+
+// MARK: - Collection View Flow Layout Delegate
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+      return CGSize(width: 140, height: 140)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+      return 10
+    }
 }
 
 // Initialize the UI settings
@@ -248,23 +295,10 @@ fileprivate extension HomeViewController {
         viewDetails.layer.masksToBounds = true
         
         filterWidthConstraint.constant = 270
-        filterView.transform = CGAffineTransform(translationX: 270, y: 0)
+        filterView.transform = CGAffineTransform(translationX: filterViewWidth, y: 0)
         
-        bottomHeightConstraint.constant = 160
-        bottomView.transform = CGAffineTransform(translationX: 0, y: 160)
-        
-        btnArrow.transform = CGAffineTransform(translationX: 0, y: 160)
-    }
-    
-    func prepareSearchButton() {
-        btnSearch.roundCorners(corners: [.allCorners], radius: 4.0)
-        btnSearch.setImage(UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnSearch.tintColor = UIColor.iBlack80
-    }
-    
-    func prepareFavoriteButton() {
-        btnFavorite.setImage(UIImage(named: "icon-favorite")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnFavorite.tintColor = UIColor.white
+        bottomView.transform = CGAffineTransform(translationX: 0, y: bottomViewHeight)
+        btnArrow.transform = CGAffineTransform(translationX: 0, y: bottomViewHeight)
     }
     
     func prepareArrowButton() {

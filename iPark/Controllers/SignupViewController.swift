@@ -17,7 +17,6 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var termsBtn: FlatButton!
-    @IBOutlet weak var closeBtn: FlatButton!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     fileprivate var mainStoryboard: UIStoryboard!
@@ -30,7 +29,6 @@ class SignupViewController: UIViewController {
         adjustUIHeight()
         
         prepareTermsButton()
-        prepareCloseButton()
     }
     
     func adjustUIHeight() {
@@ -101,10 +99,5 @@ fileprivate extension SignupViewController {
         
         let btnTitleStr = NSMutableAttributedString(string: "Terms", attributes: attrs)
         termsBtn.setAttributedTitle(btnTitleStr, for: .normal)
-    }
-    
-    func prepareCloseButton() {
-        closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        closeBtn.tintColor = UIColor.iBlack90
     }
 }

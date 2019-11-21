@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookedCell" id="twH-Yy-7Cd" customClass="BookedCell" customModule="iPark" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0d9-6M-Zqz">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="5Yi-xj-W4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="4pM-qE-SWv"/>
+                            <constraint firstAttribute="height" constant="100" id="JHR-nl-Lhl"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 East 86th Street, New York, NY, 10028" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ml-uZ-Nhe">
+                        <rect key="frame" x="12" y="8" width="116" height="22.5"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="0.0" height="-0.5"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOK AGAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jE-Q9-YzZ">
+                        <rect key="frame" x="4" y="112" width="76" height="14.5"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0ml-uZ-Nhe" firstAttribute="leading" secondItem="0d9-6M-Zqz" secondAttribute="leading" constant="12" id="5Ix-cy-v1V"/>
+                    <constraint firstAttribute="trailing" secondItem="5Yi-xj-W4Y" secondAttribute="trailing" id="QoK-mO-RHs"/>
+                    <constraint firstItem="5Yi-xj-W4Y" firstAttribute="top" secondItem="0d9-6M-Zqz" secondAttribute="top" id="aOn-3R-WdY"/>
+                    <constraint firstItem="0ml-uZ-Nhe" firstAttribute="top" secondItem="0d9-6M-Zqz" secondAttribute="top" constant="8" id="cGT-2P-BNd"/>
+                    <constraint firstAttribute="trailing" secondItem="0ml-uZ-Nhe" secondAttribute="trailing" constant="12" id="eIL-Xe-2bc"/>
+                    <constraint firstItem="5Yi-xj-W4Y" firstAttribute="leading" secondItem="0d9-6M-Zqz" secondAttribute="leading" id="mQB-c7-dzr"/>
+                    <constraint firstItem="2jE-Q9-YzZ" firstAttribute="top" secondItem="5Yi-xj-W4Y" secondAttribute="bottom" constant="12" id="wCx-zk-ly1"/>
+                    <constraint firstItem="2jE-Q9-YzZ" firstAttribute="leading" secondItem="0d9-6M-Zqz" secondAttribute="leading" constant="4" id="wtA-Pv-bxd"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="0ml-uZ-Nhe" id="sgV-8x-nLd"/>
+                <outlet property="bookImageView" destination="5Yi-xj-W4Y" id="Vat-Qn-3dU"/>
+            </connections>
+            <point key="canvasLocation" x="-323" y="-9"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dog" width="275" height="183"/>
+    </resources>
+</document>

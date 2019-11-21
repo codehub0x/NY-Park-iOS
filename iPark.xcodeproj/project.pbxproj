@@ -66,6 +66,8 @@
 		3CA6F6A82386D3E900A24521 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6F6A72386D3E900A24521 /* FAQViewController.swift */; };
 		3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CABA6862382A3C000EB368E /* HomeCell.swift */; };
 		3CABA6892382A3C000EB368E /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CABA6872382A3C000EB368E /* HomeCell.xib */; };
+		3CB03860238724A10050130F /* BookedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0385F238724A10050130F /* BookedCell.swift */; };
+		3CB03862238724B20050130F /* BookedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB03861238724B20050130F /* BookedCell.xib */; };
 		3CB4DB14238400820037B033 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4DB13238400820037B033 /* Global.swift */; };
 		3CB4DB16238429690037B033 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4DB15238429690037B033 /* HelpViewController.swift */; };
 		3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBB237F87C400E85702 /* SavedCell.swift */; };
@@ -168,6 +170,8 @@
 		3CA6F6A72386D3E900A24521 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		3CABA6862382A3C000EB368E /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		3CABA6872382A3C000EB368E /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		3CB0385F238724A10050130F /* BookedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedCell.swift; sourceTree = "<group>"; };
+		3CB03861238724B20050130F /* BookedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookedCell.xib; sourceTree = "<group>"; };
 		3CB4DB13238400820037B033 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		3CB4DB15238429690037B033 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		3CB69DBB237F87C400E85702 /* SavedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCell.swift; sourceTree = "<group>"; };
@@ -307,6 +311,8 @@
 				3CF87AE92384C98000DE9995 /* BookCell.xib */,
 				3C8D2D4E2385769200B91F09 /* VehicleCell.swift */,
 				3C8D2D4C2385768500B91F09 /* VehicleCell.xib */,
+				3CB0385F238724A10050130F /* BookedCell.swift */,
+				3CB03861238724B20050130F /* BookedCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 				3C29BFAA237DBC9E009F46EC /* Lato-Thin.ttf in Resources */,
 				3C29BF90237DBC9E009F46EC /* Roboto-MediumItalic.ttf in Resources */,
 				3CF6CF0E237BFF4C00E53AC0 /* Assets.xcassets in Resources */,
+				3CB03862238724B20050130F /* BookedCell.xib in Resources */,
 				3C29BF9D237DBC9E009F46EC /* Lato-BoldItalic.ttf in Resources */,
 				3C29BF8D237DBC9E009F46EC /* Roboto-Light.ttf in Resources */,
 				3C29BF9B237DBC9E009F46EC /* Lato-BlackItalic.ttf in Resources */,
@@ -658,6 +665,7 @@
 				3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */,
 				3CB4DB16238429690037B033 /* HelpViewController.swift in Sources */,
 				3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */,
+				3CB03860238724A10050130F /* BookedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
