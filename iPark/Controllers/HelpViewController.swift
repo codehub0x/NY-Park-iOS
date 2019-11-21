@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import MessageUI
 
 class HelpViewController: UIViewController {
     
@@ -63,11 +64,16 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func onWebsiteBtnClick(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://ipark.com/")!, options: [:], completionHandler: nil)
     }
     
     @IBAction func onEmailBtnClick(_ sender: Any) {
-        
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
+        }
     }
     
     @IBAction func onRateUsBtnClick(_ sender: Any) {
@@ -86,23 +92,54 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func onPhoneBtnClick(_ sender: Any) {
-        
+        guard let url = URL(string: "tel://8554727569"),
+            UIApplication.shared.canOpenURL(url) else { return }
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     @IBAction func onTermsBtnClick(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://ipark.com/terms-and-conditions/")!, options: [:], completionHandler: nil)
     }
     
     @IBAction func onPrivacyBtnClick(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://ipark.com/privacy-policy/")!, options: [:], completionHandler: nil)
     }
     
     @IBAction func onFacebookBtnClick(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://www.facebook.com/pages/IPark/606293799431302")!, options: [:], completionHandler: nil)
     }
     
     @IBAction func onTwitterBtnClick(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://twitter.com/imperialparking")!, options: [:], completionHandler: nil)
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+
+        mailComposerVC.setToRecipients(["info@ipark.com"])
+        mailComposerVC.setSubject("Sending you an in-app e-mail...")
+        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let alertController = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(okAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+extension HelpViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 

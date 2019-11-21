@@ -70,7 +70,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func onTermsBtnClick(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://ipark.com/terms-and-conditions/")!, options: [:], completionHandler: nil)
     }
     
     @IBAction func onSigninBtnClick(_ sender: Any) {
