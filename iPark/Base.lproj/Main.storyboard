@@ -60,13 +60,13 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="190"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Guest," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk3-vX-Ir1">
-                                                                                <rect key="frame" x="24" y="16" width="146" height="24"/>
+                                                                                <rect key="frame" x="24" y="16" width="147.5" height="23.5"/>
                                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HA-gB-IJI">
-                                                                                <rect key="frame" x="24" y="64" width="252" height="96"/>
+                                                                                <rect key="frame" x="24" y="63.5" width="252" height="96"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-Wp-c3v">
                                                                                         <rect key="frame" x="202" y="23" width="50" height="50"/>
@@ -76,13 +76,13 @@
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPark Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Q9-Do-gCH">
-                                                                                        <rect key="frame" x="32" y="14" width="121" height="22.5"/>
+                                                                                        <rect key="frame" x="32" y="14" width="121" height="22"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="18.700000762939453"/>
                                                                                         <color key="textColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up and earn for each reservation!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-ho-Ats">
-                                                                                        <rect key="frame" x="32" y="40.5" width="170" height="36"/>
+                                                                                        <rect key="frame" x="32" y="40" width="170" height="35"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
@@ -139,7 +139,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-mq-LUY">
-                                                                                <rect key="frame" x="120" y="22" width="130" height="56.5"/>
+                                                                                <rect key="frame" x="120" y="25" width="130" height="50"/>
                                                                                 <string key="text">Lev
 Vakulin</string>
                                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="21.299999237060547"/>
@@ -161,7 +161,7 @@ Vakulin</string>
                                                                                         <rect key="frame" x="0.0" y="0.0" width="123" height="98"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayF-1y-eNM">
-                                                                                                <rect key="frame" x="35.5" y="10" width="52.5" height="29"/>
+                                                                                                <rect key="frame" x="36" y="10" width="51" height="28"/>
                                                                                                 <string key="text">REWARD
 POINTS</string>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
@@ -169,13 +169,13 @@ POINTS</string>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-g5-sAK">
-                                                                                                <rect key="frame" x="34" y="29" width="35.5" height="73"/>
+                                                                                                <rect key="frame" x="34.5" y="28" width="34" height="71"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="60.700000762939453"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-uA-FoY">
-                                                                                                <rect key="frame" x="69.5" y="56.5" width="28.5" height="18"/>
+                                                                                                <rect key="frame" x="68.5" y="55" width="26" height="17.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@ POINTS</string>
                                                                                         <rect key="frame" x="129" y="0.0" width="123" height="98"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUk-E7-7q4">
-                                                                                                <rect key="frame" x="17.5" y="10" width="88.5" height="29"/>
+                                                                                                <rect key="frame" x="17.5" y="10" width="88" height="28"/>
                                                                                                 <string key="text">UPCOMING
 RESERVATIONS</string>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
@@ -214,7 +214,7 @@ RESERVATIONS</string>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAe-JV-TYp">
-                                                                                                <rect key="frame" x="44" y="29" width="35.5" height="73"/>
+                                                                                                <rect key="frame" x="44.5" y="28" width="34" height="71"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="60.700000762939453"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -251,7 +251,7 @@ RESERVATIONS</string>
                                                                                         <rect key="frame" x="0.0" y="0.0" width="123" height="98"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shF-xi-neP">
-                                                                                                <rect key="frame" x="27.5" y="10" width="68.5" height="29"/>
+                                                                                                <rect key="frame" x="28" y="10" width="67" height="28"/>
                                                                                                 <string key="text">SAVED
 LOCATIONS</string>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
@@ -259,13 +259,13 @@ LOCATIONS</string>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeB-RX-blc">
-                                                                                                <rect key="frame" x="34" y="29" width="35.5" height="73"/>
+                                                                                                <rect key="frame" x="34.5" y="28" width="34" height="71"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="60.700000762939453"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsD-Vm-CDa">
-                                                                                                <rect key="frame" x="75.5" y="56.5" width="19.5" height="18"/>
+                                                                                                <rect key="frame" x="74.5" y="55" width="18" height="17.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -296,7 +296,7 @@ LOCATIONS</string>
                                                                                         <rect key="frame" x="129" y="0.0" width="123" height="98"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhV-Pm-obR">
-                                                                                                <rect key="frame" x="33.5" y="10" width="56.5" height="29"/>
+                                                                                                <rect key="frame" x="33" y="10" width="57" height="28"/>
                                                                                                 <string key="text">MY
 VEHICLES</string>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
@@ -304,13 +304,13 @@ VEHICLES</string>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-OL-mcf">
-                                                                                                <rect key="frame" x="34" y="29" width="35.5" height="73"/>
+                                                                                                <rect key="frame" x="34.5" y="28" width="34" height="71"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="60.700000762939453"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMH-NG-2Kv">
-                                                                                                <rect key="frame" x="75.5" y="56.5" width="19.5" height="18"/>
+                                                                                                <rect key="frame" x="74.5" y="55" width="18" height="17.5"/>
                                                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -494,7 +494,7 @@ VEHICLES</string>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version: v7.12.86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-l1-XaA">
-                                                                <rect key="frame" x="48" y="170" width="136" height="18.5"/>
+                                                                <rect key="frame" x="48" y="170" width="137" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -550,7 +550,7 @@ VEHICLES</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.026992011815309525" green="0.0" blue="0.62296575307846069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="C4u-p4-DtT" secondAttribute="bottom" id="3hQ-av-OJd"/>
                                     <constraint firstItem="C4u-p4-DtT" firstAttribute="top" secondItem="qa5-e2-AdD" secondAttribute="top" id="8It-fh-1M0"/>
@@ -595,6 +595,7 @@ VEHICLES</string>
                         <outlet property="labelVehicles" destination="UwE-OL-mcf" id="FOw-z6-QlH"/>
                         <outlet property="labelVehiclesTotal" destination="ZMH-NG-2Kv" id="pki-H3-Hh6"/>
                         <outlet property="labelVersion" destination="p8J-l1-XaA" id="r6v-aX-s9i"/>
+                        <outlet property="mainView" destination="80Y-5S-mzK" id="h5G-Lk-e94"/>
                         <outlet property="overlapView" destination="34m-8b-cMz" id="UvJ-bF-Hwq"/>
                         <outlet property="progressView" destination="Pdp-HZ-wdf" id="rQH-FH-x4A"/>
                         <outlet property="rewardsView" destination="0qu-aG-fKi" id="6vG-Be-BtG"/>
@@ -3673,13 +3674,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="10" width="136" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-Rs-n0q">
-                                                                <rect key="frame" x="46.5" y="0.0" width="43" height="11"/>
+                                                                <rect key="frame" x="46.5" y="0.0" width="43.5" height="10.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-su-SvG">
-                                                                <rect key="frame" x="28.5" y="13.5" width="79" height="14.5"/>
+                                                                <rect key="frame" x="30" y="14" width="76.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -3733,13 +3734,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="150" y="10" width="135" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-E4-IE0">
-                                                                <rect key="frame" x="49" y="0.0" width="37" height="11"/>
+                                                                <rect key="frame" x="49" y="0.0" width="37.5" height="10.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-lX-UKX">
-                                                                <rect key="frame" x="28" y="13.5" width="79" height="14.5"/>
+                                                                <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -4173,6 +4174,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                         <outlet property="checkBtnPaved" destination="RV4-eT-5Jo" id="Two-fq-WWJ"/>
                         <outlet property="checkBtnTesla" destination="ELF-NK-bxM" id="uyt-b7-glH"/>
                         <outlet property="checkBtnValet" destination="iU7-Wt-XF6" id="aKc-Yf-23H"/>
+                        <outlet property="filterView" destination="BGn-lJ-BV8" id="eTr-Di-J3E"/>
                         <outlet property="filterWidthConstraint" destination="yGG-g2-xcZ" id="MU1-Pq-YZU"/>
                         <outlet property="hoursImageView" destination="0At-Qb-vCy" id="2NZ-Qr-ZpQ"/>
                         <outlet property="listView" destination="7vD-JL-HF5" id="bLT-GW-5bI"/>

@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
     static let storyboardId = "\(MenuViewController.self)"
     
     @IBOutlet weak var overlapView: UIView!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var closeBtn: FlatButton!
     @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     /// Before Login
@@ -56,6 +57,8 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        prepareMainView()
         prepareCloseButton()
         
         if Global.isLoggedIn {
@@ -114,7 +117,11 @@ class MenuViewController: UIViewController {
     
     /// IBActions
     @IBAction func onClose(_ sender: Any) {
-        self.view.window?.rootViewController?.dismiss(animated: true)
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+            self.mainView.transform = CGAffineTransform(translationX: 300, y: 0)
+        }) { _ in
+            self.view.window?.rootViewController?.dismiss(animated: true)
+        }
     }
     
     @IBAction func oniParkBtnClick(_ sender: Any) {
@@ -250,6 +257,13 @@ class MenuViewController: UIViewController {
 }
 
 fileprivate extension MenuViewController {
+    func prepareMainView() {
+        mainView.transform = CGAffineTransform(translationX: 300, y: 0)
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+            self.mainView.transform = CGAffineTransform(translationX: 0, y: 0)
+        })
+    }
+    
     func prepareCloseButton() {
         closeBtn.setImage(UIImage(named: "icon-close")?.withRenderingMode(.alwaysTemplate), for: .normal)
         closeBtn.tintColor = UIColor.white

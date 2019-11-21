@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var viewDetails: UIView!
     @IBOutlet weak var btnArrow: FlatButton!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var filterView: UIScrollView!
     @IBOutlet weak var bottomHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var filterWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewContainer: UIView!
@@ -42,20 +43,21 @@ class HomeViewController: UIViewController {
     /// Toggle bottom shown/hidden parameter
     private var isShowBottomView: Bool = false {
         didSet {
-            bottomView.layoutIfNeeded()
             if isShowBottomView {
-                UIView.animate(withDuration: 1) {
-                    self.bottomHeightConstraint.constant = 160
-                    self.bottomView.layoutIfNeeded()
-                    self.btnArrow.setImage(UIImage(named: "icon-arrow-down")?.withRenderingMode(.alwaysTemplate), for: .normal)
-                    self.btnArrow.tintColor = UIColor.iBlack90
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: 0)
+                }) { _ in
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: false)
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
                 }
             } else {
-                UIView.animate(withDuration: 1) {
-                    self.bottomHeightConstraint.constant = 0
-                    self.bottomView.layoutIfNeeded()
-                    self.btnArrow.setImage(UIImage(named: "icon-arrow-up")?.withRenderingMode(.alwaysTemplate), for: .normal)
-                    self.btnArrow.tintColor = UIColor.iBlack90
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: 160)
+                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: 160)
+                }) { _ in
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: false)
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: true)
                 }
             }
         }
@@ -65,18 +67,24 @@ class HomeViewController: UIViewController {
     private var isShowFilter: Bool = false {
         didSet {
             if isShowFilter {
-                UIView.animate(withDuration: 1) {
-                    self.filterWidthConstraint.constant = 270
+                let left = CGAffineTransform(translationX: 0, y: 0)
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.filterView.transform = left
+                }, completion: { _ in
                     self.btnFilters.setTitle("CLOSE", for: .normal)
                     self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
                     self.btnFilters.tintColor = UIColor.iDarkBlue
-                }
+                    self.btnFilters.imageView!.rotate(withAngle: CGFloat(0), animated: false)
+                    self.btnFilters.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
+                })
             } else {
-                UIView.animate(withDuration: 1) {
-                    self.filterWidthConstraint.constant = 0
+                let right = CGAffineTransform(translationX: 270, y: 0)
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.filterView.transform = right
+                }, completion: { _ in
                     self.btnFilters.setTitle("FILTERS", for: .normal)
                     self.btnFilters.setImage(UIImage(), for: .normal)
-                }
+                })
             }
         }
     }
@@ -238,6 +246,14 @@ fileprivate extension HomeViewController {
         viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
         viewDetails.layer.cornerRadius = 8.0
         viewDetails.layer.masksToBounds = true
+        
+        filterWidthConstraint.constant = 270
+        filterView.transform = CGAffineTransform(translationX: 270, y: 0)
+        
+        bottomHeightConstraint.constant = 160
+        bottomView.transform = CGAffineTransform(translationX: 0, y: 160)
+        
+        btnArrow.transform = CGAffineTransform(translationX: 0, y: 160)
     }
     
     func prepareSearchButton() {
