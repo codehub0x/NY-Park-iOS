@@ -74,6 +74,10 @@ extension UIColor {
         return UIColor(rgb: 0x000203)
     }
     
+    open class var iBlack95: UIColor {
+        return UIColor(rgb: 0x343F4B)
+    }
+    
     open class var iBlack90: UIColor {
         return UIColor(rgb: 0x47525E)
     }
@@ -245,4 +249,12 @@ extension BidirectionalCollection {
         guard !isEmpty, let i = index(startIndex, offsetBy: offset, limitedBy: index(before: endIndex)) else { return nil }
         return self[i]
     }
+}
+
+extension UIImageView {
+  func rotate(withAngle angle: CGFloat, animated: Bool) {
+    UIView.animate(withDuration: animated ? 0.5 : 0, animations: {
+       self.transform = CGAffineTransform(rotationAngle: angle)
+    })
+  }
 }

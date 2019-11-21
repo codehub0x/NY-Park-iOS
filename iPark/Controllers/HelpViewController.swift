@@ -22,9 +22,12 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var privacyBtn: FlatButton!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
+    fileprivate var mainStoryboard: UIStoryboard!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         adjustUIHeight()
         
         prepareNavigation()
@@ -72,7 +75,14 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func onFaqBtnClick(_ sender: Any) {
-        
+        let newVC: UIViewController!
+        if #available(iOS 13.0, *) {
+            newVC = mainStoryboard.instantiateViewController(identifier: FAQViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            newVC = mainStoryboard.instantiateViewController(withIdentifier: FAQViewController.storyboardId)
+        }
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onPhoneBtnClick(_ sender: Any) {

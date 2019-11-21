@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ReservationCell.prepareButtons():ReservationCell.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "btnDirections.titleColor(for: .normal)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -19,18 +11,56 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "StatusBarController.layoutSubviews():StatusBarController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "rootViewController">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "VehiclesViewController.adjustUIHeight():VehiclesViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.topbarHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FAQSectionCell.expand(animated:):FAQSectionCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "faqView.tableView.frame.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FAQViewController.updateSection(_:):FAQViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "expandedSections">
+            </PersistentString>
+            <PersistentString
+               value = "expandedCells">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReservationCell.prepareButtons():ReservationCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "btnDirections.titleColor(for: .normal)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FAQViewController.tableView(_:cellForRowAt:):FAQViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "expandedCells">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StatusBarController.layoutSubviews():StatusBarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rootViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
