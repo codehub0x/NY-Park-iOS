@@ -83,6 +83,7 @@ class MenuViewController: UIViewController {
             prepareButton2()
         }
         
+        labelVersion.text = "App Version: \(getVersion())"
         adjustUIHeight()
         
     }
@@ -324,6 +325,20 @@ fileprivate extension MenuViewController {
         button2.layer.borderWidth = 1
         button2.layer.borderColor = UIColor.iBlack50.cgColor
         button2.layer.masksToBounds = true
+    }
+    
+    func getVersion() -> String {
+        let versionNumber = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        if let versionNumber = versionNumber, let buildNumber = buildNumber {
+            return "v\(versionNumber).\(buildNumber)"
+        } else if let versionNumber = versionNumber {
+          return "v\(versionNumber)"
+        } else if let buildNumber = buildNumber {
+          return "v1.0.\(buildNumber)"
+        } else {
+          return "v1.0"
+        }
     }
     
 }
