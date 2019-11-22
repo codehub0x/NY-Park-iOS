@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import FSPagerView
 
 class UpcomingDetailsViewController: UIViewController {
     
@@ -30,6 +31,24 @@ class UpcomingDetailsViewController: UIViewController {
     @IBOutlet weak var qrcodeImageView: UIImageView!
     @IBOutlet weak var barcodeImageView: UIImageView!
     
+    @IBOutlet weak var pagerView: FSPagerView! {
+        didSet {
+            self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+            self.pagerView.isInfinite = true
+        }
+    }
+    @IBOutlet weak var pageControl: FSPageControl! {
+        didSet {
+            self.pageControl.numberOfPages = self.images.count
+            self.pageControl.contentHorizontalAlignment = .center
+            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            self.pageControl.hidesForSinglePage = true
+            self.pageControl.setStrokeColor(.white, for: .normal)
+            self.pageControl.setStrokeColor(.white, for: .selected)
+            self.pageControl.setFillColor(.white, for: .selected)
+        }
+    }
+    
     @IBOutlet weak var labelVehicleTitle: UILabel!
     @IBOutlet weak var labelAmenitiesTitle: UILabel!
     @IBOutlet weak var labelHoursOfOperationTitle: UILabel!
@@ -38,6 +57,11 @@ class UpcomingDetailsViewController: UIViewController {
     
     @IBOutlet weak var btnCancelReservation: FlatButton!
     @IBOutlet weak var btnPaid: FlatButton!
+    
+    var images = [
+        UIImage(named: "image1"),
+        UIImage(named: "image2")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +101,31 @@ class UpcomingDetailsViewController: UIViewController {
     
     @IBAction func onPaidBtnClick(_ sender: Any) {
         
+    }
+}
+
+// MARK: - FSPagerView data source
+extension UpcomingDetailsViewController: FSPagerViewDataSource {
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return images.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.image = images[index]
+        cell.imageView?.contentMode = .scaleAspectFill
+        return cell
+    }
+}
+
+// MARK: - FSPagerView delegate
+extension UpcomingDetailsViewController: FSPagerViewDelegate {
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        pagerView.deselectItem(at: index, animated: true)
+    }
+    
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        self.pageControl.currentPage = targetIndex
     }
 }
 

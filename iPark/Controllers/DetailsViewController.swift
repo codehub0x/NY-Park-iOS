@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import FSPagerView
 
 class DetailsViewController: UIViewController {
     
@@ -25,6 +26,23 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var hoursImageView: UIImageView!
     @IBOutlet weak var locationImageView: UIImageView!
+    @IBOutlet weak var pagerView: FSPagerView! {
+        didSet {
+            self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+            self.pagerView.isInfinite = true
+        }
+    }
+    @IBOutlet weak var pageControl: FSPageControl! {
+        didSet {
+            self.pageControl.numberOfPages = self.images.count
+            self.pageControl.contentHorizontalAlignment = .center
+            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            self.pageControl.hidesForSinglePage = true
+            self.pageControl.setStrokeColor(.white, for: .normal)
+            self.pageControl.setStrokeColor(.white, for: .selected)
+            self.pageControl.setFillColor(.white, for: .selected)
+        }
+    }
     
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var labelHours: UILabel!
@@ -41,6 +59,10 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var scrollHeight: NSLayoutConstraint!
     
+    var images = [
+        UIImage(named: "image1"),
+        UIImage(named: "image2")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +139,31 @@ class DetailsViewController: UIViewController {
         default:
             break
         }
+    }
+}
+
+// MARK: - FSPagerView data source
+extension DetailsViewController: FSPagerViewDataSource {
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return images.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.image = images[index]
+        cell.imageView?.contentMode = .scaleAspectFill
+        return cell
+    }
+}
+
+// MARK: - FSPagerView delegate
+extension DetailsViewController: FSPagerViewDelegate {
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        pagerView.deselectItem(at: index, animated: true)
+    }
+    
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        self.pageControl.currentPage = targetIndex
     }
 }
 
