@@ -21,7 +21,6 @@ class TabBarController: UITabBarController {
         return .lightContent
     }
     
-
 }
 
 extension TabBarController: UITabBarControllerDelegate {
