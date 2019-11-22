@@ -20,6 +20,7 @@ class TabBarController: UITabBarController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
 }
 
 extension TabBarController: UITabBarControllerDelegate {
