@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '13.0'
+ platform :ios, '10.0'
 
 target 'iPark' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -11,4 +11,14 @@ target 'iPark' do
   pod 'FSPagerView'
   pod 'TPKeyboardAvoiding'
 
+  # Pods for Test
+
+  target 'iParkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'iParkUITests' do
+    # Pods for testing
+  end
 end
