@@ -45,51 +45,10 @@ class HomeViewController: UIViewController {
     let filterViewWidth: CGFloat = 270
     
     /// Toggle bottom shown/hidden parameter
-    private var isShowBottomView: Bool = false {
-        didSet {
-            if isShowBottomView {
-                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: 0)
-                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: 0)
-                }) { _ in
-                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: false)
-                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
-                }
-            } else {
-                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
-                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
-                }) { _ in
-                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: false)
-                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: true)
-                }
-            }
-        }
-    }
+    private var isShowBottomView: Bool = false
     
     /// Toggle Filter parameter
-    private var isShowFilter: Bool = false {
-        didSet {
-            if isShowFilter {
-                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.filterView.transform = CGAffineTransform(translationX: 0, y: 0)
-                }, completion: { _ in
-                    self.btnFilters.setTitle("CLOSE", for: .normal)
-                    self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
-                    self.btnFilters.tintColor = UIColor.iDarkBlue
-                    self.btnFilters.imageView!.rotate(withAngle: CGFloat(0), animated: false)
-                    self.btnFilters.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
-                })
-            } else {
-                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
-                    self.filterView.transform = CGAffineTransform(translationX: self.filterViewWidth, y: 0)
-                }, completion: { _ in
-                    self.btnFilters.setTitle("FILTERS", for: .normal)
-                    self.btnFilters.setImage(UIImage(), for: .normal)
-                })
-            }
-        }
-    }
+    private var isShowFilter: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +75,9 @@ class HomeViewController: UIViewController {
     
     /// Toggle to show the Map / List
     @IBAction func onClickToggle(_ sender: Any) {
+        updateBottomView(isShow: false, animate: false)
+        updateFilterView(isShow: false, animate: false)
+        
         if listView.isHidden {
             listView.showFlip()
             mkMapView.hideFlip()
@@ -129,12 +91,14 @@ class HomeViewController: UIViewController {
     
     /// Show / Hidden recently booked locations
     @IBAction func onClickArrow(_ sender: Any) {
-        isShowBottomView = !isShowBottomView
+        updateBottomView(isShow: !isShowBottomView)
+        updateFilterView(isShow: false, animate: false)
     }
     
     /// Toggle Filters
     @IBAction func onClickFilters(_ sender: Any) {
-        isShowFilter = !isShowFilter
+        updateFilterView(isShow: !isShowFilter)
+        updateBottomView(isShow: false, animate: false)
     }
 
     /// SegmentedControl value change event when click SORT BY DISTANCE / SORT BY PRICE
@@ -172,6 +136,75 @@ class HomeViewController: UIViewController {
     
     @IBAction func onFilterButtonChanged(_ sender: FlatButton) {
         sender.isSelected = !sender.isSelected
+    }
+    
+    func updateBottomView(isShow: Bool, animate: Bool = true) {
+        isShowBottomView = isShow
+        if isShowBottomView {
+            if animate {
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: 0)
+                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: 0)
+                }) { _ in
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: false)
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
+                }
+            } else {
+                self.bottomView.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.btnArrow.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: false)
+            }
+        } else {
+            if animate {
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.bottomView.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
+                    self.btnArrow.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
+                }) { _ in
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: false)
+                    self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: true)
+                }
+            } else {
+                self.bottomView.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
+                self.btnArrow.transform = CGAffineTransform(translationX: 0, y: self.bottomViewHeight)
+                self.btnArrow.imageView!.rotate(withAngle: CGFloat(0), animated: false)
+            }
+            
+        }
+    }
+    
+    func updateFilterView(isShow: Bool, animate: Bool = true) {
+        isShowFilter = isShow
+        if isShowFilter {
+            if animate {
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.filterView.transform = CGAffineTransform(translationX: 0, y: 0)
+                }, completion: { _ in
+                    self.btnFilters.setTitle("CLOSE", for: .normal)
+                    self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                    self.btnFilters.tintColor = UIColor.iDarkBlue
+                    self.btnFilters.imageView!.rotate(withAngle: CGFloat(0), animated: false)
+                    self.btnFilters.imageView!.rotate(withAngle: CGFloat(Double.pi), animated: true)
+                })
+            } else {
+                self.filterView.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.btnFilters.setTitle("CLOSE", for: .normal)
+                self.btnFilters.setImage(UIImage(named: "icon-close-circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                self.btnFilters.tintColor = UIColor.iDarkBlue
+            }
+        } else {
+            if animate {
+                UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
+                    self.filterView.transform = CGAffineTransform(translationX: self.filterViewWidth, y: 0)
+                }, completion: { _ in
+                    self.btnFilters.setTitle("FILTERS", for: .normal)
+                    self.btnFilters.setImage(UIImage(), for: .normal)
+                })
+            } else {
+                self.filterView.transform = CGAffineTransform(translationX: self.filterViewWidth, y: 0)
+                self.btnFilters.setTitle("FILTERS", for: .normal)
+                self.btnFilters.setImage(UIImage(), for: .normal)
+            }
+        }
     }
 
 }
