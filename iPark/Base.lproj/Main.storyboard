@@ -3875,7 +3875,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                         <state key="normal" image="ic_user_location"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
-                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                                 <color key="value" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4018,11 +4018,112 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                     <constraint firstItem="GPj-dC-paL" firstAttribute="leading" secondItem="3ga-EK-uHZ" secondAttribute="leading" constant="16" id="q5v-7O-ism"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsX-l6-Abf">
-                                <rect key="frame" x="8" y="673" width="398" height="120"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zo8-TW-4vZ">
+                                <rect key="frame" x="8" y="683" width="398" height="106"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="R7h-vV-r3Z">
+                                        <rect key="frame" x="310" y="10" width="80" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="4u0-n9-YnK"/>
+                                            <constraint firstAttribute="width" constant="80" id="rLu-HX-15M"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.62 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l3-Ux-cpn">
+                                        <rect key="frame" x="319.5" y="80" width="70.5" height="12"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
+                                        <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-U4-I7T">
+                                        <rect key="frame" x="303.5" y="80" width="12" height="12"/>
+                                        <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="E8L-d7-s3M"/>
+                                            <constraint firstAttribute="height" constant="12" id="amN-wJ-w8b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jal-wc-UyJ">
+                                        <rect key="frame" x="12" y="12" width="286" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Fao-wj-i4J"/>
+                                        </constraints>
+                                        <string key="text">113 West 90th Street, 
+New York, NY 10024, USA</string>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
+                                        <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West 90TH Garage Corp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qg-Iy-Cn0">
+                                        <rect key="frame" x="12" y="50" width="122" height="13.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
+                                        <color key="textColor" red="0.039215686270000001" green="0.0" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2c-Mt-Eqr" customClass="RaisedButton" customModule="Material">
+                                        <rect key="frame" x="12" y="74" width="116" height="20"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="BKL-11-hG7"/>
+                                            <constraint firstAttribute="height" constant="20" id="Xnb-7A-s3E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="9"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="BOOK NOW">
+                                            <color key="titleColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onInfoBookBtnClick:" destination="z24-As-qFl" eventType="touchUpInside" id="q7K-uG-Pnp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEa-PT-brY">
+                                        <rect key="frame" x="24" y="76" width="23" height="16"/>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
+                                        <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPK-ZP-c9S" customClass="FlatButton" customModule="Material">
+                                        <rect key="frame" x="144" y="74" width="90" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Gic-fF-l7h"/>
+                                            <constraint firstAttribute="width" constant="90" id="Ixg-yn-7rv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="9"/>
+                                        <color key="tintColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="DETAILS" image="icon-details">
+                                            <color key="titleColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onInfoDetailsBtnClick:" destination="z24-As-qFl" eventType="touchUpInside" id="qkP-Qb-TMz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="bRq-U9-XAo"/>
+                                    <constraint firstItem="JEa-PT-brY" firstAttribute="leading" secondItem="n2c-Mt-Eqr" secondAttribute="leading" constant="12" id="2UX-MV-OPd"/>
+                                    <constraint firstItem="YPK-ZP-c9S" firstAttribute="top" secondItem="n2c-Mt-Eqr" secondAttribute="top" id="3Nb-Ex-3LG"/>
+                                    <constraint firstItem="R7h-vV-r3Z" firstAttribute="leading" secondItem="jal-wc-UyJ" secondAttribute="trailing" constant="12" id="5x2-SR-pFG"/>
+                                    <constraint firstItem="YPK-ZP-c9S" firstAttribute="leading" secondItem="n2c-Mt-Eqr" secondAttribute="trailing" constant="16" id="Bns-Et-s54"/>
+                                    <constraint firstItem="n2c-Mt-Eqr" firstAttribute="leading" secondItem="3qg-Iy-Cn0" secondAttribute="leading" id="Boj-fp-0dO"/>
+                                    <constraint firstItem="R7h-vV-r3Z" firstAttribute="top" secondItem="Zo8-TW-4vZ" secondAttribute="top" constant="10" id="Cf8-2M-SPe"/>
+                                    <constraint firstAttribute="trailing" secondItem="7l3-Ux-cpn" secondAttribute="trailing" constant="8" id="DLe-t7-EgD"/>
+                                    <constraint firstItem="n2c-Mt-Eqr" firstAttribute="top" secondItem="R7h-vV-r3Z" secondAttribute="bottom" id="IGP-5i-6dF"/>
+                                    <constraint firstItem="jal-wc-UyJ" firstAttribute="leading" secondItem="Zo8-TW-4vZ" secondAttribute="leading" constant="12" id="Ip7-nl-yal"/>
+                                    <constraint firstItem="7l3-Ux-cpn" firstAttribute="top" secondItem="R7h-vV-r3Z" secondAttribute="bottom" constant="6" id="N0J-WW-VWy"/>
+                                    <constraint firstItem="JEa-PT-brY" firstAttribute="top" secondItem="n2c-Mt-Eqr" secondAttribute="top" constant="2" id="Omq-0M-SAL"/>
+                                    <constraint firstItem="Khg-U4-I7T" firstAttribute="centerY" secondItem="7l3-Ux-cpn" secondAttribute="centerY" id="P74-Lc-6Wl"/>
+                                    <constraint firstItem="jal-wc-UyJ" firstAttribute="top" secondItem="Zo8-TW-4vZ" secondAttribute="top" constant="12" id="PMZ-23-krX"/>
+                                    <constraint firstItem="3qg-Iy-Cn0" firstAttribute="leading" secondItem="Zo8-TW-4vZ" secondAttribute="leading" constant="12" id="a0e-0G-Um9"/>
+                                    <constraint firstItem="Khg-U4-I7T" firstAttribute="trailing" secondItem="7l3-Ux-cpn" secondAttribute="leading" constant="-4" id="beI-g3-l61"/>
+                                    <constraint firstItem="3qg-Iy-Cn0" firstAttribute="top" secondItem="jal-wc-UyJ" secondAttribute="bottom" constant="8" id="f2k-eq-5dY"/>
+                                    <constraint firstAttribute="height" constant="106" id="gvO-B6-nYt"/>
+                                    <constraint firstAttribute="trailing" secondItem="R7h-vV-r3Z" secondAttribute="trailing" constant="8" id="nQM-Og-KM4"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-lJ-BV8">
@@ -4234,9 +4335,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                         </subviews>
                         <color key="backgroundColor" red="0.026992011815309525" green="0.0" blue="0.62296575307846069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="s07-zT-zMJ" firstAttribute="bottom" secondItem="IsX-l6-Abf" secondAttribute="bottom" constant="20" id="4sF-Qd-c5h"/>
                             <constraint firstItem="73c-MZ-YW0" firstAttribute="leading" secondItem="s07-zT-zMJ" secondAttribute="leading" id="8vD-M4-LUI"/>
-                            <constraint firstItem="IsX-l6-Abf" firstAttribute="leading" secondItem="s07-zT-zMJ" secondAttribute="leading" constant="8" id="9YM-vL-VJd"/>
                             <constraint firstItem="dNv-L2-a97" firstAttribute="centerX" secondItem="3Vi-lu-ITK" secondAttribute="centerX" id="EGE-Gr-LMB"/>
                             <constraint firstItem="dNv-L2-a97" firstAttribute="bottom" secondItem="3ga-EK-uHZ" secondAttribute="top" id="GXP-o7-Sl3"/>
                             <constraint firstItem="s07-zT-zMJ" firstAttribute="trailing" secondItem="BGn-lJ-BV8" secondAttribute="trailing" id="Grg-yx-Pfu"/>
@@ -4246,11 +4345,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                             <constraint firstItem="s07-zT-zMJ" firstAttribute="bottom" secondItem="3rE-g8-brh" secondAttribute="bottom" id="Vc3-08-YKx"/>
                             <constraint firstItem="3ga-EK-uHZ" firstAttribute="leading" secondItem="s07-zT-zMJ" secondAttribute="leading" id="YXV-yb-MvY"/>
                             <constraint firstItem="s07-zT-zMJ" firstAttribute="bottom" secondItem="BGn-lJ-BV8" secondAttribute="bottom" id="YdA-57-ERf"/>
-                            <constraint firstItem="s07-zT-zMJ" firstAttribute="trailing" secondItem="IsX-l6-Abf" secondAttribute="trailing" constant="8" id="YkL-An-8Rv"/>
                             <constraint firstItem="s07-zT-zMJ" firstAttribute="trailing" secondItem="3rE-g8-brh" secondAttribute="trailing" id="Z6q-Xt-Ucj"/>
+                            <constraint firstItem="s07-zT-zMJ" firstAttribute="trailing" secondItem="Zo8-TW-4vZ" secondAttribute="trailing" constant="8" id="py4-cE-eHX"/>
                             <constraint firstItem="73c-MZ-YW0" firstAttribute="top" secondItem="s07-zT-zMJ" secondAttribute="top" id="rY1-nw-UdP"/>
                             <constraint firstItem="s07-zT-zMJ" firstAttribute="bottom" secondItem="3ga-EK-uHZ" secondAttribute="bottom" id="ruo-0c-1RN"/>
+                            <constraint firstItem="s07-zT-zMJ" firstAttribute="bottom" secondItem="Zo8-TW-4vZ" secondAttribute="bottom" constant="24" id="vRH-e7-NOq"/>
                             <constraint firstItem="3rE-g8-brh" firstAttribute="top" secondItem="73c-MZ-YW0" secondAttribute="bottom" id="ve6-uS-u7n"/>
+                            <constraint firstItem="Zo8-TW-4vZ" firstAttribute="leading" secondItem="s07-zT-zMJ" secondAttribute="leading" constant="8" id="xiq-cX-8ih"/>
                             <constraint firstItem="s07-zT-zMJ" firstAttribute="trailing" secondItem="3ga-EK-uHZ" secondAttribute="trailing" id="zOx-vo-vLc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s07-zT-zMJ"/>
@@ -4262,6 +4363,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                         <outlet property="bottomView" destination="3ga-EK-uHZ" id="8P6-99-6zM"/>
                         <outlet property="btnArrow" destination="dNv-L2-a97" id="OYa-SO-GnO"/>
                         <outlet property="btnFilters" destination="iQO-GJ-KjR" id="Wtc-uK-Lwb"/>
+                        <outlet property="btnInfoBook" destination="n2c-Mt-Eqr" id="FIK-Kq-4sV"/>
+                        <outlet property="btnInfoDetails" destination="YPK-ZP-c9S" id="JHq-lH-kda"/>
                         <outlet property="btnToggle" destination="0ju-i7-3j3" id="cRh-Gj-yru"/>
                         <outlet property="checkBtn24Hours" destination="pg4-9u-rwq" id="vZ9-0b-dh6"/>
                         <outlet property="checkBtn7Days" destination="Q4I-BB-nYZ" id="srN-Wx-k8b"/>
@@ -4276,12 +4379,18 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                         <outlet property="filterView" destination="BGn-lJ-BV8" id="eTr-Di-J3E"/>
                         <outlet property="filterWidthConstraint" destination="yGG-g2-xcZ" id="MU1-Pq-YZU"/>
                         <outlet property="hoursImageView" destination="0At-Qb-vCy" id="2NZ-Qr-ZpQ"/>
+                        <outlet property="imageViewInfoItem" destination="R7h-vV-r3Z" id="yve-DE-qks"/>
+                        <outlet property="imageViewInfoLocation" destination="Khg-U4-I7T" id="jPd-GQ-JMY"/>
+                        <outlet property="labelInfoAddress" destination="jal-wc-UyJ" id="EWc-mw-A8m"/>
+                        <outlet property="labelInfoDistance" destination="7l3-Ux-cpn" id="Zk0-li-v8b"/>
+                        <outlet property="labelInfoPrice" destination="JEa-PT-brY" id="5Ef-PE-d6r"/>
+                        <outlet property="labelInfoTitle" destination="3qg-Iy-Cn0" id="tnT-Fk-RHA"/>
                         <outlet property="listView" destination="7vD-JL-HF5" id="bLT-GW-5bI"/>
                         <outlet property="mkMapView" destination="Uqy-gd-Rub" id="R9k-rx-gWD"/>
                         <outlet property="segmentedControl" destination="nDi-fy-hrh" id="vM0-Vb-0Mq"/>
                         <outlet property="tableView" destination="o4W-nh-1Nh" id="84x-MY-19x"/>
                         <outlet property="viewContainer" destination="3rE-g8-brh" id="5Y8-YM-BAS"/>
-                        <outlet property="viewDetails" destination="IsX-l6-Abf" id="nnd-Tc-KDJ"/>
+                        <outlet property="viewMarkerInfo" destination="Zo8-TW-4vZ" id="mN2-kv-egS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuU-Ak-oh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5317,6 +5426,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
         <image name="amex" width="134" height="88"/>
         <image name="avatar" width="68" height="68"/>
         <image name="bar-code" width="162" height="50"/>
+        <image name="dog" width="275" height="183"/>
         <image name="ic_user_location" width="32" height="32"/>
         <image name="icon-arrow-down" width="24" height="24"/>
         <image name="icon-arrow-right" width="36" height="36"/>
@@ -5324,6 +5434,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
         <image name="icon-check-on" width="24" height="24"/>
         <image name="icon-close" width="24" height="24"/>
         <image name="icon-covered" width="40.5" height="30"/>
+        <image name="icon-details" width="16" height="16"/>
         <image name="icon-email" width="32" height="25.5"/>
         <image name="icon-facebook" width="54" height="54"/>
         <image name="icon-favorite" width="24" height="24"/>

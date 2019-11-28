@@ -76,6 +76,8 @@
 		3CB69DBE237F87CF00E85702 /* SavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB69DBD237F87CF00E85702 /* SavedCell.xib */; };
 		3CB69DC0237F935500E85702 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DBF237F935500E85702 /* SavedViewController.swift */; };
 		3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */; };
+		3CBC15592390329900328CE6 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC15582390329900328CE6 /* CustomAnnotationView.swift */; };
+		3CBC155B23903B4400328CE6 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */; };
 		3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE4F6C23831F59005C45DF /* BookViewController.swift */; };
 		3CC8967F2386C7DA0085DCA1 /* FAQViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8967E2386C7DA0085DCA1 /* FAQViewCell.xib */; };
 		3CC896812386C7E70085DCA1 /* FAQViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC896802386C7E70085DCA1 /* FAQViewCell.swift */; };
@@ -185,6 +187,8 @@
 		3CB69DBD237F87CF00E85702 /* SavedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedCell.xib; sourceTree = "<group>"; };
 		3CB69DBF237F935500E85702 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3CBC15582390329900328CE6 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		3CBE4F6C23831F59005C45DF /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		3CC8967E2386C7DA0085DCA1 /* FAQViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQViewCell.xib; sourceTree = "<group>"; };
 		3CC896802386C7E70085DCA1 /* FAQViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewCell.swift; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 				3CB03861238724B20050130F /* BookedCell.xib */,
 				3C952FAC238FE73200D0A313 /* ImagePicker.swift */,
 				3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */,
+				3CBC15582390329900328CE6 /* CustomAnnotationView.swift */,
+				3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -745,8 +751,10 @@
 				3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */,
 				3C29BF14237DB43E009F46EC /* Fonts.swift in Sources */,
 				3CF6CF05237BFF1C00E53AC0 /* AppDelegate.swift in Sources */,
+				3CBC15592390329900328CE6 /* CustomAnnotationView.swift in Sources */,
 				3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */,
 				3C29BF12237DB3EC009F46EC /* RobottoFont.swift in Sources */,
+				3CBC155B23903B4400328CE6 /* CustomAnnotation.swift in Sources */,
 				3CEB5D412381BF4A0020CD14 /* SigninViewController.swift in Sources */,
 				3CF6CF07237BFF1C00E53AC0 /* SceneDelegate.swift in Sources */,
 				3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */,

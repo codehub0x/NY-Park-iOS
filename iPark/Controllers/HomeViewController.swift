@@ -15,7 +15,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var btnToggle: RaisedButton!
     @IBOutlet weak var btnFilters: RaisedButton!
     @IBOutlet weak var hoursImageView: UIImageView!
-    @IBOutlet weak var viewDetails: UIView!
     @IBOutlet weak var btnArrow: FlatButton!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomCollectionView: UICollectionView!
@@ -38,21 +37,32 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var checkBtnTesla: FlatButton!
     @IBOutlet weak var checkBtnOutdoors: FlatButton!
     @IBOutlet weak var checkBtnOnSiteStaff: FlatButton!
+    // MarkerInfos
+    @IBOutlet weak var viewMarkerInfo: UIView!
+    @IBOutlet weak var labelInfoAddress: UIView!
+    @IBOutlet weak var labelInfoTitle: UIView!
+    @IBOutlet weak var imageViewInfoItem: UIImageView!
+    @IBOutlet weak var imageViewInfoLocation: UIImageView!
+    @IBOutlet weak var labelInfoDistance: UILabel!
+    @IBOutlet weak var labelInfoPrice: UILabel!
+    @IBOutlet weak var btnInfoBook: RaisedButton!
+    @IBOutlet weak var btnInfoDetails: FlatButton!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
     let locationManager = CLLocationManager()
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 2000
     var userLocation = CLLocationCoordinate2D(latitude: 40.71, longitude: -74.01)
     
     let bottomViewHeight: CGFloat = 185
     let filterViewWidth: CGFloat = 270
     
-    /// Toggle bottom shown/hidden parameter
+    /// Toggle bottom show/hide parameter
     private var isShowBottomView: Bool = false
-    
     /// Toggle Filter parameter
     private var isShowFilter: Bool = false
+    /// Toggle MarkerInfo view show/hide parameter
+    private var isShowMarkerInfo: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +73,8 @@ class HomeViewController: UIViewController {
         prepareUI()
         prepareHoursImageView()
         prepareArrowButton()
-        
         prepareSegmentedControl()
+        prepareMarkerInfoView()
         
         /// Register table view xib
         tableView.register(UINib(nibName: "\(HomeCell.self)", bundle: Bundle.main), forCellReuseIdentifier: HomeCell.reuseIdentifier)
@@ -76,6 +86,7 @@ class HomeViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         checkLocationService()
         
+        addDummyMarkers()
     }
     
     // Set the status bar style as light
@@ -95,6 +106,7 @@ class HomeViewController: UIViewController {
     @IBAction func onClickToggle(_ sender: Any) {
         updateBottomView(isShow: false, animate: false)
         updateFilterView(isShow: false, animate: false)
+        hideMakerInfoView(animate: false)
         
         if listView.isHidden {
             listView.showFlip()
@@ -115,12 +127,14 @@ class HomeViewController: UIViewController {
     @IBAction func onClickArrow(_ sender: Any) {
         updateBottomView(isShow: !isShowBottomView)
         updateFilterView(isShow: false, animate: false)
+        hideMakerInfoView(animate: false)
     }
     
     /// Toggle Filters
     @IBAction func onClickFilters(_ sender: Any) {
         updateFilterView(isShow: !isShowFilter)
         updateBottomView(isShow: false, animate: false)
+        hideMakerInfoView(animate: false)
     }
 
     /// SegmentedControl value change event when click SORT BY DISTANCE / SORT BY PRICE
@@ -140,7 +154,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onApplyFiltersBtnClick(_ sender: Any) {
-        isShowFilter = false
+        updateFilterView(isShow: false)
     }
     
     @IBAction func onClearBtnClick(_ sender: Any) {
@@ -158,6 +172,36 @@ class HomeViewController: UIViewController {
     
     @IBAction func onFilterButtonChanged(_ sender: FlatButton) {
         sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func onInfoBookBtnClick(_ sender: Any) {
+        var vc: UIViewController!
+        if #available(iOS 13.0, *) {
+            vc = mainStoryboard.instantiateViewController(identifier: BookViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            vc = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
+        }
+        if let newVC = vc {
+            let navVC = newVC.getNavigationController()
+            navVC.modalPresentationStyle = .overFullScreen
+            self.present(navVC, animated: true)
+        }
+    }
+    
+    @IBAction func onInfoDetailsBtnClick(_ sender: Any) {
+        var vc: UIViewController!
+        if #available(iOS 13.0, *) {
+            vc = mainStoryboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
+        } else {
+            // Fallback on earlier versions
+            vc = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
+        }
+        if let newVC = vc {
+            let navVC = newVC.getNavigationController()
+            navVC.modalPresentationStyle = .overFullScreen
+            self.present(navVC, animated: true)
+        }
     }
     
     func updateBottomView(isShow: Bool, animate: Bool = true) {
@@ -229,9 +273,52 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func showMarkerInfoView(price: String) {
+        isShowMarkerInfo = true
+        labelInfoPrice.text = price
+        viewMarkerInfo.isHidden = false
+        viewMarkerInfo.alpha = 0
+        UIView.animate(withDuration: 0.3, delay: 0.2, animations: {
+            self.viewMarkerInfo.alpha = 1
+        })
+    }
+    
+    func hideMakerInfoView(animate: Bool = true) {
+        isShowMarkerInfo = false
+        viewMarkerInfo.isHidden = true
+    }
+    
     func showLocation(_ coordinate: CLLocationCoordinate2D) {
         let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mkMapView.setRegion(region, animated: true)
+    }
+    
+    func addDummyMarkers() {
+        let annotation1 = CustomAnnotation()
+        annotation1.coordinate = CLLocationCoordinate2D(latitude: 40.7578, longitude: -74.0123)
+        annotation1.price = "$35"
+        
+        let annotation2 = CustomAnnotation()
+        annotation2.coordinate = CLLocationCoordinate2D(latitude: 40.7575, longitude: -73.9523)
+        annotation2.price = "$14"
+        
+        let annotation3 = CustomAnnotation()
+        annotation3.coordinate = CLLocationCoordinate2D(latitude: 40.7548, longitude: -74.0323)
+        annotation3.price = "$25"
+        
+        let annotation4 = CustomAnnotation()
+        annotation4.coordinate = CLLocationCoordinate2D(latitude: 40.7568, longitude: -74.0223)
+        annotation4.price = "$28"
+        
+        let annotation5 = CustomAnnotation()
+        annotation5.coordinate = CLLocationCoordinate2D(latitude: 40.7565, longitude: -73.9753)
+        annotation5.price = "$34"
+        
+        mkMapView.addAnnotation(annotation1)
+        mkMapView.addAnnotation(annotation2)
+        mkMapView.addAnnotation(annotation3)
+        mkMapView.addAnnotation(annotation4)
+        mkMapView.addAnnotation(annotation5)
     }
 
 }
@@ -362,15 +449,33 @@ extension HomeViewController: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - MKMapView delegate
+extension HomeViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !annotation.isKind(of: MKUserLocation.self) else {
+          return nil
+        }
+        
+        let annotationView = CustomAnnotationView(annotation: annotation as? CustomAnnotation)
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? CustomAnnotation {
+            showMarkerInfoView(price: annotation.price)
+            updateBottomView(isShow: false, animate: false)
+            updateFilterView(isShow: false, animate: false)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        hideMakerInfoView()
+    }
+}
+
 // Initialize the UI settings
 fileprivate extension HomeViewController {
     func prepareUI() {
-        viewDetails.roundCorners(corners: [.allCorners], radius: 8.0)
-        viewDetails.layer.borderWidth = 0.5
-        viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
-        viewDetails.layer.cornerRadius = 8.0
-        viewDetails.layer.masksToBounds = true
-        
         filterWidthConstraint.constant = 270
         filterView.transform = CGAffineTransform(translationX: filterViewWidth, y: 0)
         
@@ -397,6 +502,60 @@ fileprivate extension HomeViewController {
         segmentedControl.setBackgroundImage(imageWithColor(color: UIColor(rgb: 0xEFF2F7)), for: .normal, barMetrics: .default)
         segmentedControl.setBackgroundImage(imageWithColor(color: UIColor(rgb: 0xEFF2F7)), for: .selected, barMetrics: .default)
         segmentedControl.setBackgroundImage(imageWithColor(color: UIColor(rgb: 0xEFF2F7)), for: .highlighted, barMetrics: .default)
+    }
+    
+    func prepareMarkerInfoView() {
+        viewMarkerInfo.roundCorners(corners: [.allCorners], radius: 8.0)
+        viewMarkerInfo.layer.borderWidth = 0.5
+        viewMarkerInfo.layer.borderColor = UIColor.iBlack60.cgColor
+        viewMarkerInfo.layer.cornerRadius = 8.0
+        viewMarkerInfo.layer.masksToBounds = true
+        viewMarkerInfo.isHidden = true
+        
+        imageViewInfoLocation.image = imageViewInfoLocation.image?.withRenderingMode(.alwaysTemplate)
+        imageViewInfoLocation.tintColor = UIColor.iGray
+        
+        prepareInfoBookButton()
+        prepareInfoDetailsButton()
+    }
+    
+    func prepareInfoBookButton() {
+        let textString = NSMutableAttributedString(
+            string: btnInfoBook.title(for: .normal)!,
+            attributes: [
+                NSAttributedString.Key.font: LatoFont.black(with: 9),
+                NSAttributedString.Key.foregroundColor: btnInfoBook.titleColor(for: .normal)!
+            ]
+        )
+        let textRange = NSRange(location: 0, length: textString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        btnInfoBook.setAttributedTitle(textString, for: .normal)
+        btnInfoBook.layer.cornerRadius = 2
+    }
+    
+    func prepareInfoDetailsButton() {
+        let textString = NSMutableAttributedString(
+            string: btnInfoDetails.title(for: .normal)!,
+            attributes: [
+                NSAttributedString.Key.font: LatoFont.black(with: 9),
+                NSAttributedString.Key.foregroundColor: btnInfoDetails.titleColor(for: .normal)!
+            ]
+        )
+        let textRange = NSRange(location: 0, length: textString.length)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 0
+        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        btnInfoDetails.setAttributedTitle(textString, for: .normal)
+        btnInfoDetails.layer.borderWidth = 1
+        btnInfoDetails.layer.cornerRadius = 2
+        btnInfoDetails.layer.borderColor = UIColor.iBlack70.cgColor
+        
+        btnInfoDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        btnInfoDetails.tintColor = UIColor.iBlack90
     }
     
     func imageWithColor(color: UIColor) -> UIImage {
