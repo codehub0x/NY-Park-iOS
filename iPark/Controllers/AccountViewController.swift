@@ -22,11 +22,16 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var repeatField: TextField!
     @IBOutlet weak var notificationSwitch: UISwitch!
     
+    var imagePicker: ImagePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        
         prepareNavigation()
         prepareInfoView()
+        prepareAvatar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,10 +44,6 @@ class AccountViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func onAvatarClick(_ sender: Any) {
-        
-    }
-    
     @IBAction func onSaveBtnClick(_ sender: Any) {
         
     }
@@ -53,6 +54,18 @@ class AccountViewController: UIViewController {
     
     @IBAction func onValueChanged(_ sender: Any) {
         
+    }
+    
+    @objc func onAvatarClick(_ gesture: UITapGestureRecognizer) {
+        self.imagePicker.present(from: avatarImageView)
+    }
+}
+
+extension AccountViewController: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
+        if let img = image {
+            self.avatarImageView.image = img
+        }
     }
 }
 
@@ -70,6 +83,12 @@ fileprivate extension AccountViewController {
         infoView.layer.borderColor = UIColor.iBlack70.cgColor
         infoView.layer.borderWidth = 0.5
         infoView.layer.masksToBounds = true
+    }
+    
+    func prepareAvatar() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onAvatarClick(_:)))
+        avatarImageView.isUserInteractionEnabled = true
+        avatarImageView.addGestureRecognizer(tapGesture)
     }
 }
 

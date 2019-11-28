@@ -139,7 +139,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-mq-LUY">
-                                                                                <rect key="frame" x="120" y="25" width="130" height="50"/>
+                                                                                <rect key="frame" x="120" y="22" width="130" height="56.5"/>
                                                                                 <string key="text">Lev
 Vakulin</string>
                                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="21.299999237060547"/>
@@ -494,7 +494,7 @@ VEHICLES</string>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version: v7.12.86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-l1-XaA">
-                                                                <rect key="frame" x="48" y="170" width="136" height="16.5"/>
+                                                                <rect key="frame" x="48" y="170" width="136" height="18.5"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1011,7 +1011,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNy-U2-J9a" userLabel="Info View">
                                                 <rect key="frame" x="8" y="8" width="398" height="623"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="eLN-Kf-1Vp">
+                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="eLN-Kf-1Vp">
                                                         <rect key="frame" x="30" y="36" width="68" height="68"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="68" id="pyt-B2-rwV"/>
@@ -1024,13 +1024,6 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pas-VN-Lap" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="30" y="36" width="68" height="68"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <connections>
-                                                            <action selector="onAvatarClick:" destination="5eF-dZ-4as" eventType="touchUpInside" id="LWN-L9-GE7"/>
-                                                        </connections>
-                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb5-xQ-msr">
                                                         <rect key="frame" x="112" y="60" width="109" height="20"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -1132,7 +1125,6 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                     <constraint firstAttribute="trailing" secondItem="0hu-Zg-vdI" secondAttribute="trailing" constant="30" id="EeX-hP-feE"/>
                                                     <constraint firstItem="NHf-zH-apF" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="JKk-QL-q91"/>
                                                     <constraint firstItem="Z2A-td-N36" firstAttribute="top" secondItem="7iy-vU-fXk" secondAttribute="bottom" constant="24" id="MYt-j9-hVX"/>
-                                                    <constraint firstItem="pas-VN-Lap" firstAttribute="bottom" secondItem="eLN-Kf-1Vp" secondAttribute="bottom" id="QZD-3m-mN1"/>
                                                     <constraint firstItem="tz8-5C-IAg" firstAttribute="top" secondItem="0hu-Zg-vdI" secondAttribute="bottom" constant="12" id="UiU-Fb-oaJ"/>
                                                     <constraint firstItem="HnA-tq-nTf" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="Ux0-0L-15L"/>
                                                     <constraint firstItem="HnA-tq-nTf" firstAttribute="trailing" secondItem="0hu-Zg-vdI" secondAttribute="trailing" id="Vsu-bh-3xb"/>
@@ -1142,14 +1134,11 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                     <constraint firstItem="7iy-vU-fXk" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="dz6-Vc-bdd"/>
                                                     <constraint firstItem="NHf-zH-apF" firstAttribute="top" secondItem="tz8-5C-IAg" secondAttribute="bottom" constant="24" id="e96-5C-XoG"/>
                                                     <constraint firstItem="3gr-f0-FgC" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="fPp-Po-8cc"/>
-                                                    <constraint firstItem="pas-VN-Lap" firstAttribute="top" secondItem="eLN-Kf-1Vp" secondAttribute="top" id="faM-67-GTK"/>
                                                     <constraint firstItem="eLN-Kf-1Vp" firstAttribute="top" secondItem="hNy-U2-J9a" secondAttribute="top" constant="36" id="fjj-xo-jrW"/>
                                                     <constraint firstItem="0hu-Zg-vdI" firstAttribute="top" secondItem="eLN-Kf-1Vp" secondAttribute="bottom" constant="32" id="gAi-As-2BT"/>
                                                     <constraint firstItem="tz8-5C-IAg" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="h85-Td-f5U"/>
                                                     <constraint firstItem="0hu-Zg-vdI" firstAttribute="leading" secondItem="hNy-U2-J9a" secondAttribute="leading" constant="36" id="kTh-5I-dwe"/>
                                                     <constraint firstItem="Z2A-td-N36" firstAttribute="trailing" secondItem="0hu-Zg-vdI" secondAttribute="trailing" id="krP-KG-qou"/>
-                                                    <constraint firstItem="pas-VN-Lap" firstAttribute="leading" secondItem="eLN-Kf-1Vp" secondAttribute="leading" id="mdI-Xs-CVT"/>
-                                                    <constraint firstItem="pas-VN-Lap" firstAttribute="trailing" secondItem="eLN-Kf-1Vp" secondAttribute="trailing" id="oMT-rH-lEL"/>
                                                     <constraint firstItem="Z2A-td-N36" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="s25-3b-zl0"/>
                                                     <constraint firstItem="7iy-vU-fXk" firstAttribute="top" secondItem="HnA-tq-nTf" secondAttribute="bottom" constant="24" id="t8K-ZS-735"/>
                                                     <constraint firstAttribute="height" constant="623" id="tt2-Vn-V3d"/>
@@ -1767,13 +1756,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <rect key="frame" x="0.0" y="9" width="136" height="28"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ1-n8-tnL">
-                                                        <rect key="frame" x="46" y="0.0" width="43.5" height="10.5"/>
+                                                        <rect key="frame" x="46.5" y="0.0" width="43" height="11"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLk-z2-qyV">
-                                                        <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
+                                                        <rect key="frame" x="28.5" y="13.5" width="79" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1827,13 +1816,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <rect key="frame" x="150" y="9" width="135.5" height="28"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-vE-fo2">
-                                                        <rect key="frame" x="49" y="0.0" width="37.5" height="10.5"/>
+                                                        <rect key="frame" x="49" y="0.0" width="37" height="11"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPX-Oz-3ZH">
-                                                        <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
+                                                        <rect key="frame" x="28" y="13.5" width="79" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1899,19 +1888,19 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMZ-Yw-9wb">
-                                                        <rect key="frame" x="32" y="14" width="67.5" height="15.5"/>
+                                                        <rect key="frame" x="32" y="14" width="64.5" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                         <color key="textColor" red="0.20784313725490194" green="0.19607843137254902" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pp-sj-5Wo">
-                                                        <rect key="frame" x="115.5" y="14" width="48" height="15.5"/>
+                                                        <rect key="frame" x="112.5" y="14" width="49" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                                         <color key="textColor" red="0.20784313730000001" green="0.1960784314" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-ao-kMN">
-                                                        <rect key="frame" x="270.5" y="15" width="14" height="14"/>
+                                                        <rect key="frame" x="272.5" y="15" width="14" height="14"/>
                                                         <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="14" id="HAD-rH-xfU"/>
@@ -1919,7 +1908,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.62 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea4-gW-u3R">
-                                                        <rect key="frame" x="288.5" y="14" width="93.5" height="15.5"/>
+                                                        <rect key="frame" x="290.5" y="14" width="91.5" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1984,25 +1973,25 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Included:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PN-Da-5Oa">
-                                                <rect key="frame" x="107.5" y="151" width="50" height="14"/>
+                                                <rect key="frame" x="108.5" y="151" width="49" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="12"/>
                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUV: $10.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emZ-aU-DwI">
-                                                <rect key="frame" x="173.5" y="151" width="67" height="14"/>
+                                                <rect key="frame" x="173.5" y="151" width="67" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                 <color key="textColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.55 Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1i-lh-kdw">
-                                                <rect key="frame" x="264.5" y="151" width="52" height="14"/>
+                                                <rect key="frame" x="264.5" y="151" width="51.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                 <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A4z-qe-80Q">
-                                                <rect key="frame" x="16" y="189" width="382" height="33"/>
+                                                <rect key="frame" x="16" y="189.5" width="382" height="33"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="w7q-gm-qzS"/>
@@ -2019,7 +2008,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </connections>
                                             </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Is6-VU-CLl" customClass="FSPagerView" customModule="FSPagerView">
-                                                <rect key="frame" x="16" y="237" width="382" height="238.5"/>
+                                                <rect key="frame" x="16" y="237.5" width="382" height="238.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Is6-VU-CLl" secondAttribute="height" multiplier="8:5" id="xf0-eU-Idw"/>
                                                 </constraints>
@@ -2029,14 +2018,14 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjH-gj-7fp" customClass="FSPageControl" customModule="FSPagerView">
-                                                <rect key="frame" x="16" y="450.5" width="382" height="25"/>
+                                                <rect key="frame" x="16" y="451" width="382" height="25"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="X8B-gS-HUa"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9G-q0-lYo">
-                                                <rect key="frame" x="32" y="475.5" width="366" height="652.5"/>
+                                                <rect key="frame" x="32" y="476" width="366" height="652"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NoX-Yp-OJs">
                                                         <rect key="frame" x="0.0" y="16" width="366" height="60"/>
@@ -2052,7 +2041,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMv-OS-qi8">
-                                                                        <rect key="frame" x="30.5" y="32" width="30.5" height="28"/>
+                                                                        <rect key="frame" x="30" y="32" width="31.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2070,7 +2059,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Site Staff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-xp-NQK">
-                                                                        <rect key="frame" x="6" y="32" width="79.5" height="28"/>
+                                                                        <rect key="frame" x="7" y="32" width="78" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2088,7 +2077,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDF-Ra-Npj">
-                                                                        <rect key="frame" x="19.5" y="32" width="53" height="28"/>
+                                                                        <rect key="frame" x="20" y="32" width="51.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2106,7 +2095,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItI-HT-HIi">
-                                                                        <rect key="frame" x="26" y="32" width="39.5" height="28"/>
+                                                                        <rect key="frame" x="27" y="32" width="37.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2129,13 +2118,13 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <rect key="frame" x="0.0" y="100.5" width="366" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS OF OPERATION:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxK-bP-ejm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="15.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="149.5" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7AM - Midnight / 7 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZk-SN-HBL">
-                                                                <rect key="frame" x="0.0" y="23.5" width="185.5" height="20"/>
+                                                                <rect key="frame" x="0.0" y="24" width="187" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2161,7 +2150,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <rect key="frame" x="0.0" y="175" width="366" height="110"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-g8-kH5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="15.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2181,7 +2170,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkV-EF-Chd">
-                                                                <rect key="frame" x="0.0" y="23.5" width="226" height="79.5"/>
+                                                                <rect key="frame" x="0.0" y="24" width="226" height="82"/>
                                                                 <string key="text">7 East 14th Street, 
 New York, NY 10003
 Between 2nd Ave. and 3rd Ave.</string>
@@ -2213,13 +2202,13 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         <rect key="frame" x="0.0" y="309.5" width="366" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65B-Aa-nxI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="15.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8u-3L-Wvt">
-                                                                <rect key="frame" x="0.0" y="23.5" width="115" height="40"/>
+                                                                <rect key="frame" x="0.0" y="24" width="118.5" height="41"/>
                                                                 <string key="text">(212) 861-0510
 (212) 472-4701</string>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -2247,13 +2236,13 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         <rect key="frame" x="0.0" y="414" width="366" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Things You Should Know:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-Yx-sDe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7O-ye-Bq0">
-                                                                <rect key="frame" x="0.0" y="29" width="366" height="122.5"/>
+                                                                <rect key="frame" x="0.0" y="30" width="366" height="126"/>
                                                                 <string key="text">This facility does NOT allow in/out privileges. 
 You CANNOT enter &amp; exit more than once.
 
@@ -2308,11 +2297,11 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaC-5m-I3e">
-                                                <rect key="frame" x="0.0" y="475.5" width="414" height="684.5"/>
+                                                <rect key="frame" x="0.0" y="476" width="414" height="684"/>
                                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-lg-tQy">
-                                                <rect key="frame" x="0.0" y="475.5" width="414" height="684.5"/>
+                                                <rect key="frame" x="0.0" y="476" width="414" height="684"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -2443,13 +2432,13 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <rect key="frame" x="0.0" y="9" width="136" height="28"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-vj-dW3">
-                                                        <rect key="frame" x="46" y="0.0" width="43.5" height="10.5"/>
+                                                        <rect key="frame" x="46.5" y="0.0" width="43" height="11"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0p-IP-n4T">
-                                                        <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
+                                                        <rect key="frame" x="28.5" y="13.5" width="79" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2503,13 +2492,13 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <rect key="frame" x="150" y="9" width="135.5" height="28"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hX-ja-Kyo">
-                                                        <rect key="frame" x="49" y="0.0" width="37.5" height="10.5"/>
+                                                        <rect key="frame" x="49" y="0.0" width="37" height="11"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRk-Tc-dZu">
-                                                        <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
+                                                        <rect key="frame" x="28" y="13.5" width="79" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2586,19 +2575,19 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyN-XT-VlR">
-                                                        <rect key="frame" x="32" y="14" width="67.5" height="15.5"/>
+                                                        <rect key="frame" x="32" y="14" width="64.5" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                         <color key="textColor" red="0.20784313730000001" green="0.1960784314" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4g-lz-Gk9">
-                                                        <rect key="frame" x="115.5" y="14" width="48" height="15.5"/>
+                                                        <rect key="frame" x="112.5" y="14" width="49" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                                         <color key="textColor" red="0.20784313730000001" green="0.1960784314" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="Eqw-FT-Zoj">
-                                                        <rect key="frame" x="270.5" y="15" width="14" height="14"/>
+                                                        <rect key="frame" x="272.5" y="15" width="14" height="14"/>
                                                         <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="14" id="tNp-4N-ibd"/>
@@ -2606,7 +2595,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.62 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN5-MU-UGI">
-                                                        <rect key="frame" x="288.5" y="14" width="93.5" height="15.5"/>
+                                                        <rect key="frame" x="290.5" y="14" width="91.5" height="16"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2645,7 +2634,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <rect key="frame" x="0.0" y="354.5" width="414" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VEHICLE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULT-4y-M81">
-                                                        <rect key="frame" x="24" y="24" width="72" height="16.5"/>
+                                                        <rect key="frame" x="24" y="24" width="72" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="72" id="rFI-lU-DPO"/>
                                                         </constraints>
@@ -2654,7 +2643,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular, Bentley FANCY, Color: Black, Plate: Testing" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-2T-llC">
-                                                        <rect key="frame" x="120" y="20" width="270" height="40"/>
+                                                        <rect key="frame" x="120" y="20" width="270" height="41"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2693,13 +2682,13 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <rect key="frame" x="0.0" y="524.5" width="414" height="1151.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMENITIES:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-1a-MIB">
-                                                        <rect key="frame" x="24" y="0.0" width="366" height="16.5"/>
+                                                        <rect key="frame" x="24" y="0.0" width="366" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4bd-m5-pUm">
-                                                        <rect key="frame" x="24" y="28.5" width="366" height="60"/>
+                                                        <rect key="frame" x="24" y="29" width="366" height="60"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vsn-or-xUv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="60"/>
@@ -2712,7 +2701,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7am-SE-soY">
-                                                                        <rect key="frame" x="30.5" y="32" width="30.5" height="28"/>
+                                                                        <rect key="frame" x="30" y="32" width="31.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2730,7 +2719,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Site Staff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zq-yY-iNe">
-                                                                        <rect key="frame" x="6" y="32" width="79.5" height="28"/>
+                                                                        <rect key="frame" x="6.5" y="32" width="78" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2748,7 +2737,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56f-pF-sWG">
-                                                                        <rect key="frame" x="19" y="32" width="53" height="28"/>
+                                                                        <rect key="frame" x="20" y="32" width="51.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2766,7 +2755,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYm-5Y-NVq">
-                                                                        <rect key="frame" x="26" y="32" width="39.5" height="28"/>
+                                                                        <rect key="frame" x="27" y="32" width="37.5" height="28"/>
                                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2779,39 +2768,39 @@ All SUVs oversized fee of $12.00 daily</string>
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67V-pU-5iz" userLabel="Split View">
-                                                        <rect key="frame" x="24" y="96.5" width="366" height="0.5"/>
+                                                        <rect key="frame" x="24" y="97" width="366" height="0.5"/>
                                                         <color key="backgroundColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="awZ-WS-4qk"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS OF OPERATION:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFV-xz-i5k">
-                                                        <rect key="frame" x="24" y="117" width="366" height="16.5"/>
+                                                        <rect key="frame" x="24" y="117.5" width="366" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7AM - Midnight / 7 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfn-7w-XXD">
-                                                        <rect key="frame" x="24" y="141.5" width="366" height="20"/>
+                                                        <rect key="frame" x="24" y="142.5" width="366" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Frf-QD-8ym" userLabel="Split View">
-                                                        <rect key="frame" x="24" y="173.5" width="366" height="0.5"/>
+                                                        <rect key="frame" x="24" y="175" width="366" height="0.5"/>
                                                         <color key="backgroundColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="xZD-57-MKv"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-gb-joq">
-                                                        <rect key="frame" x="24" y="194" width="366" height="16.5"/>
+                                                        <rect key="frame" x="24" y="195.5" width="366" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uY-7t-NmG">
-                                                        <rect key="frame" x="24" y="218.5" width="366" height="59.5"/>
+                                                        <rect key="frame" x="24" y="220.5" width="366" height="61.5"/>
                                                         <string key="text">7 East 14th Street, 
 New York, NY 10003
 Between 2nd Ave. and 3rd Ave.</string>
@@ -2820,7 +2809,7 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-Wx-zWs" customClass="RaisedButton" customModule="Material">
-                                                        <rect key="frame" x="16" y="298" width="382" height="50"/>
+                                                        <rect key="frame" x="16" y="302" width="382" height="50"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="tpz-rB-4LV"/>
@@ -2839,13 +2828,13 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-aF-cVb">
-                                                        <rect key="frame" x="24" y="368" width="366" height="16.5"/>
+                                                        <rect key="frame" x="24" y="372" width="366" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dy-5E-Sy6">
-                                                        <rect key="frame" x="24" y="392.5" width="366" height="40"/>
+                                                        <rect key="frame" x="24" y="397" width="366" height="41"/>
                                                         <string key="text">(212) 861-0510
 (212) 472-4701</string>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -2853,20 +2842,20 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-sf-4W4" userLabel="Split View">
-                                                        <rect key="frame" x="24" y="444.5" width="366" height="0.5"/>
+                                                        <rect key="frame" x="24" y="450" width="366" height="0.5"/>
                                                         <color key="backgroundColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="er5-dz-gg5"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Things You Should Know:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGM-ed-I93">
-                                                        <rect key="frame" x="24" y="465" width="366" height="21"/>
+                                                        <rect key="frame" x="24" y="470.5" width="366" height="22"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                                         <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TO-MU-CJS">
-                                                        <rect key="frame" x="24" y="494" width="366" height="139"/>
+                                                        <rect key="frame" x="24" y="500.5" width="366" height="143"/>
                                                         <string key="text">This facility does NOT allow in/out privileges. 
 You CANNOT enter &amp; exit more than once.
 
@@ -2878,14 +2867,14 @@ All SUVs oversized fee of $12.00 daily</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-fd-fh0" userLabel="Split View">
-                                                        <rect key="frame" x="24" y="645" width="366" height="0.5"/>
+                                                        <rect key="frame" x="24" y="655.5" width="366" height="0.5"/>
                                                         <color key="backgroundColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="ZdV-jt-Vtc"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bx7-KK-DHH">
-                                                        <rect key="frame" x="24" y="645.5" width="366" height="180"/>
+                                                        <rect key="frame" x="24" y="656" width="366" height="180"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr-code" translatesAutoresizingMaskIntoConstraints="NO" id="1pz-pY-SEw">
                                                                 <rect key="frame" x="246" y="8" width="120" height="120"/>
@@ -2895,7 +2884,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAV-nr-Rvw">
-                                                                <rect key="frame" x="0.0" y="20" width="72" height="20"/>
+                                                                <rect key="frame" x="0.0" y="20" width="72" height="20.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="72" id="czP-I5-JBP"/>
                                                                 </constraints>
@@ -2904,13 +2893,13 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-of-oV0">
-                                                                <rect key="frame" x="80" y="20" width="52" height="20"/>
+                                                                <rect key="frame" x="80" y="20" width="53.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2Z-rN-vuD">
-                                                                <rect key="frame" x="0.0" y="52" width="72" height="20"/>
+                                                                <rect key="frame" x="0.0" y="52.5" width="72" height="20.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="72" id="Mai-wZ-lgz"/>
                                                                 </constraints>
@@ -2919,13 +2908,13 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOz-Zh-DTe">
-                                                                <rect key="frame" x="80" y="52" width="43" height="20"/>
+                                                                <rect key="frame" x="80" y="52.5" width="43.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcE-G0-6Fc">
-                                                                <rect key="frame" x="0.0" y="84" width="72" height="20"/>
+                                                                <rect key="frame" x="0.0" y="85" width="72" height="20.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="72" id="yFE-fI-4UQ"/>
                                                                 </constraints>
@@ -2934,13 +2923,13 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-fz-Z0r">
-                                                                <rect key="frame" x="80" y="84" width="52" height="20"/>
+                                                                <rect key="frame" x="80" y="85" width="53.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GX-Gg-aWm" customClass="FlatButton" customModule="Material">
-                                                                <rect key="frame" x="20" y="128" width="180" height="30"/>
+                                                                <rect key="frame" x="20" y="129.5" width="180" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="180" id="KzI-aC-Xwy"/>
                                                                     <constraint firstAttribute="height" constant="30" id="xpb-0D-140"/>
@@ -2954,7 +2943,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-5Q-XdG" customClass="FlatButton" customModule="Material">
-                                                                <rect key="frame" x="262" y="128" width="88" height="30"/>
+                                                                <rect key="frame" x="262" y="129.5" width="88" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="88" id="UMl-Rx-ufv"/>
                                                                     <constraint firstAttribute="height" constant="30" id="kSd-YP-qGG"/>
@@ -2992,7 +2981,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-oI-DpI">
-                                                        <rect key="frame" x="24" y="833.5" width="366" height="82"/>
+                                                        <rect key="frame" x="24" y="844" width="366" height="84"/>
                                                         <string key="text">Reserved Stay Periods: One entry and exit permitted per transaction.
 NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTACT THE BOOKED LOCATION IN ADVANCE TO CONFIRM THE VEHICLE WILL CLEAR THE HEIGHT LIMITS OF THE BOOKED FACILITY. LARGE SUV'S ARE DEFINED SUCH AS CHEVY SUBURBAN (224.4" LENGTH, 74.4" HEIGHT, 80.5" WIDTH) OR OF SIMILAR TYPE. IF YOU STAY LONGER THAN YOUR RESERVATION YOU WILL BE CHARGED AT BOARD RATES.</string>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
@@ -3000,13 +2989,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar-code" translatesAutoresizingMaskIntoConstraints="NO" id="VBA-7y-CeC">
-                                                        <rect key="frame" x="40" y="939.5" width="334" height="111"/>
+                                                        <rect key="frame" x="40" y="952" width="334" height="111"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="VBA-7y-CeC" secondAttribute="height" multiplier="3:1" id="2nm-4e-0Hg"/>
                                                         </constraints>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIf-Jo-c26">
-                                                        <rect key="frame" x="0.0" y="1090.5" width="414" height="40"/>
+                                                        <rect key="frame" x="0.0" y="1103" width="414" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have any questions contact us by email reservations@ipark.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2y-z6-RTa">
                                                                 <rect key="frame" x="24" y="14" width="366" height="12"/>
@@ -3708,13 +3697,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="10" width="136" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-Rs-n0q">
-                                                                <rect key="frame" x="46.5" y="0.0" width="43.5" height="10.5"/>
+                                                                <rect key="frame" x="46.5" y="0.0" width="43" height="11"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-su-SvG">
-                                                                <rect key="frame" x="30" y="14" width="76.5" height="14"/>
+                                                                <rect key="frame" x="28.5" y="13.5" width="79" height="14.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -3768,13 +3757,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="150" y="10" width="135" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-E4-IE0">
-                                                                <rect key="frame" x="49" y="0.0" width="37.5" height="10.5"/>
+                                                                <rect key="frame" x="49" y="0.0" width="37" height="11"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-lX-UKX">
-                                                                <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
+                                                                <rect key="frame" x="28" y="13.5" width="79" height="14.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -3949,13 +3938,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                 <rect key="frame" x="0.0" y="628" width="414" height="185"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently booked locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPj-dC-paL">
-                                        <rect key="frame" x="16" y="16" width="166.5" height="16.5"/>
+                                        <rect key="frame" x="16" y="16" width="161" height="17"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XEn-7E-jpD">
-                                        <rect key="frame" x="8" y="44.5" width="398" height="140.5"/>
+                                        <rect key="frame" x="8" y="45" width="398" height="140"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RGd-qb-dT6">
                                             <size key="itemSize" width="50" height="50"/>
@@ -4006,8 +3995,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-GJ-0v8">
                                                 <rect key="frame" x="24" y="24" width="200" height="450"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4019,8 +4008,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="oOm-ta-q3X"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-BB-nYZ" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="42" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-BB-nYZ" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="47.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4032,8 +4021,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="5Xy-cE-YgE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-Pv-Rfv" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="90" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-Pv-Rfv" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="94.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4045,8 +4034,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="YKR-Vy-aRk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-eT-5Jo" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="132" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-eT-5Jo" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="142" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4058,8 +4047,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="bvz-04-Atg"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-Wt-XF6" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-Wt-XF6" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="189.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4071,8 +4060,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="LIF-hN-kr7"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-NG-c9e" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="222" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-NG-c9e" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="236.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4084,8 +4073,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="cyf-19-Zk2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-H3-S5i" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="270" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-H3-S5i" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="284" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4097,8 +4086,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="T4z-t7-PYq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-NK-bxM" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="312" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-NK-bxM" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="331.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4110,8 +4099,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="Thf-bn-JJh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-4c-rjz" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="360" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-4c-rjz" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="378.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4123,8 +4112,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="AYp-8h-3MQ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-DJ-MQr" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="402" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-DJ-MQr" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="426" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>

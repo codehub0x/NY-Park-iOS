@@ -285,9 +285,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 // Initialize the UI settings
 fileprivate extension HomeViewController {
     func prepareUI() {
-        btnToggle.roundCorners(corners: [.allCorners], radius: 4.0)
-        btnFilters.roundCorners(corners: [.allCorners], radius: 4.0)
-        
         viewDetails.roundCorners(corners: [.allCorners], radius: 8.0)
         viewDetails.layer.borderWidth = 0.5
         viewDetails.layer.borderColor = UIColor.iBlack60.cgColor
