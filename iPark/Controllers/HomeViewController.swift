@@ -41,6 +41,10 @@ class HomeViewController: UIViewController {
     
     fileprivate var mainStoryboard: UIStoryboard!
     
+    let locationManager = CLLocationManager()
+    let regionRadius: CLLocationDistance = 1000
+    var userLocation = CLLocationCoordinate2D(latitude: 40.71, longitude: -74.01)
+    
     let bottomViewHeight: CGFloat = 185
     let filterViewWidth: CGFloat = 270
     
@@ -66,11 +70,25 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "\(HomeCell.self)", bundle: Bundle.main), forCellReuseIdentifier: HomeCell.reuseIdentifier)
         /// Register collection view xib
         bottomCollectionView.register(UINib(nibName: "\(BookedCell.self)", bundle: Bundle.main), forCellWithReuseIdentifier: BookedCell.reuseIdentifier)
+        
+        /// Set LocationManager
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        checkLocationService()
+        
     }
     
     // Set the status bar style as light
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    func checkLocationService() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestLocation()
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
     
     /// Toggle to show the Map / List
@@ -87,6 +105,10 @@ class HomeViewController: UIViewController {
             listView.hideFlip()
             btnToggle.setTitle("LIST", for: .normal)
         }
+    }
+    
+    @IBAction func onClickUserLocation(_ sender: Any) {
+        showLocation(userLocation)
     }
     
     /// Show / Hidden recently booked locations
@@ -206,6 +228,11 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    func showLocation(_ coordinate: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mkMapView.setRegion(region, animated: true)
+    }
 
 }
 
@@ -312,6 +339,26 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
       return 10
+    }
+}
+
+// MARK: - LocatioinManager delegate
+extension HomeViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            self.userLocation = location.coordinate
+            showLocation(location.coordinate)
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("error:: \(error)")
     }
 }
 
