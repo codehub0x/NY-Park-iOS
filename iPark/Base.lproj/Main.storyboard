@@ -146,14 +146,26 @@ Vakulin</string>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-HZ-wdf">
-                                                                                <rect key="frame" x="32" y="100" width="236" height="9"/>
+                                                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="3fV-Lg-oj0" customClass="ThumbTextSlider" customModule="iPark" customModuleProvider="target">
+                                                                                <rect key="frame" x="30" y="100" width="240" height="9"/>
                                                                                 <color key="tintColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="8" id="7NO-xQ-OQP"/>
+                                                                                    <constraint firstAttribute="height" constant="8" id="At5-Zd-v4N"/>
                                                                                 </constraints>
-                                                                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            </progressView>
+                                                                                <color key="thumbTintColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </slider>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri3-0v-cCW">
+                                                                                <rect key="frame" x="19" y="97" width="7" height="14.5"/>
+                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBl-34-glf">
+                                                                                <rect key="frame" x="274" y="97" width="14" height="14.5"/>
+                                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ap6-PH-XyP">
                                                                                 <rect key="frame" x="24" y="132" width="252" height="98"/>
                                                                                 <subviews>
@@ -346,20 +358,24 @@ VEHICLES</string>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstItem="xAH-Lw-D8F" firstAttribute="leading" secondItem="tPZ-7G-hTq" secondAttribute="leading" constant="34" id="2NX-k6-hq3"/>
+                                                                            <constraint firstItem="3fV-Lg-oj0" firstAttribute="leading" secondItem="tPZ-7G-hTq" secondAttribute="leading" constant="32" id="6W9-he-VjR"/>
+                                                                            <constraint firstItem="GBl-34-glf" firstAttribute="leading" secondItem="3fV-Lg-oj0" secondAttribute="trailing" constant="6" id="9ot-Fh-n1q"/>
+                                                                            <constraint firstItem="GBl-34-glf" firstAttribute="centerY" secondItem="3fV-Lg-oj0" secondAttribute="centerY" id="AOC-wc-zKb"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="3fV-Lg-oj0" secondAttribute="trailing" constant="32" id="DNp-pO-T7s"/>
                                                                             <constraint firstItem="E2t-mq-LUY" firstAttribute="leading" secondItem="xAH-Lw-D8F" secondAttribute="trailing" constant="18" id="EEQ-AH-Rac"/>
                                                                             <constraint firstAttribute="trailing" secondItem="sEJ-qk-9Z2" secondAttribute="trailing" constant="24" id="N14-07-rk1"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="Pdp-HZ-wdf" secondAttribute="trailing" constant="32" id="OkC-6T-nJW"/>
+                                                                            <constraint firstItem="3fV-Lg-oj0" firstAttribute="top" secondItem="xAH-Lw-D8F" secondAttribute="bottom" constant="16" id="RMQ-iR-SGL"/>
                                                                             <constraint firstItem="ap6-PH-XyP" firstAttribute="leading" secondItem="tPZ-7G-hTq" secondAttribute="leading" constant="24" id="VXg-xO-8dI"/>
                                                                             <constraint firstAttribute="height" constant="360" id="WQi-wg-29P"/>
                                                                             <constraint firstItem="sEJ-qk-9Z2" firstAttribute="leading" secondItem="tPZ-7G-hTq" secondAttribute="leading" constant="24" id="WoJ-6g-GvN"/>
                                                                             <constraint firstItem="E2t-mq-LUY" firstAttribute="centerY" secondItem="xAH-Lw-D8F" secondAttribute="centerY" id="Wyz-v5-q1Q"/>
                                                                             <constraint firstAttribute="trailing" secondItem="ap6-PH-XyP" secondAttribute="trailing" constant="24" id="YFO-fU-onF"/>
                                                                             <constraint firstItem="sEJ-qk-9Z2" firstAttribute="top" secondItem="ap6-PH-XyP" secondAttribute="bottom" constant="6" id="ZDR-ox-xp7"/>
-                                                                            <constraint firstItem="Pdp-HZ-wdf" firstAttribute="leading" secondItem="tPZ-7G-hTq" secondAttribute="leading" constant="32" id="aeD-Rl-Ulj"/>
                                                                             <constraint firstAttribute="trailing" secondItem="E2t-mq-LUY" secondAttribute="trailing" constant="50" id="d9q-TZ-zN7"/>
-                                                                            <constraint firstItem="Pdp-HZ-wdf" firstAttribute="top" secondItem="xAH-Lw-D8F" secondAttribute="bottom" constant="16" id="dfw-6Y-aUP"/>
+                                                                            <constraint firstItem="ri3-0v-cCW" firstAttribute="trailing" secondItem="3fV-Lg-oj0" secondAttribute="leading" constant="-6" id="qW7-dT-C1H"/>
+                                                                            <constraint firstItem="ri3-0v-cCW" firstAttribute="centerY" secondItem="3fV-Lg-oj0" secondAttribute="centerY" id="uSL-81-KjM"/>
                                                                             <constraint firstItem="xAH-Lw-D8F" firstAttribute="top" secondItem="tPZ-7G-hTq" secondAttribute="top" constant="16" id="upC-Pd-WZP"/>
-                                                                            <constraint firstItem="ap6-PH-XyP" firstAttribute="top" secondItem="Pdp-HZ-wdf" secondAttribute="bottom" constant="24" id="z38-OQ-6t0"/>
+                                                                            <constraint firstItem="3fV-Lg-oj0" firstAttribute="bottom" secondItem="ap6-PH-XyP" secondAttribute="top" constant="-24" id="xSD-7W-GIi"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
@@ -596,10 +612,10 @@ VEHICLES</string>
                         <outlet property="labelVersion" destination="p8J-l1-XaA" id="r6v-aX-s9i"/>
                         <outlet property="mainView" destination="80Y-5S-mzK" id="h5G-Lk-e94"/>
                         <outlet property="overlapView" destination="34m-8b-cMz" id="UvJ-bF-Hwq"/>
-                        <outlet property="progressView" destination="Pdp-HZ-wdf" id="rQH-FH-x4A"/>
                         <outlet property="rewardsView" destination="0qu-aG-fKi" id="6vG-Be-BtG"/>
                         <outlet property="rightArrowImageView" destination="j7P-Wp-c3v" id="Ahm-8y-T2L"/>
                         <outlet property="savedView" destination="z7k-j0-FBH" id="vh8-8N-uPm"/>
+                        <outlet property="slider" destination="3fV-Lg-oj0" id="2u2-tt-99U"/>
                         <outlet property="topViewHeight" destination="4PN-E5-axz" id="Gdk-Tg-Jmr"/>
                         <outlet property="upcomingView" destination="JsT-4o-d9u" id="db2-V9-M7M"/>
                         <outlet property="vehiclesView" destination="TML-ts-DuY" id="x3v-Ja-VSL"/>

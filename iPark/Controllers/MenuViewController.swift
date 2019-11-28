@@ -25,7 +25,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var infoView2: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var slider: ThumbTextSlider!
     /// Rewards Points
     @IBOutlet weak var rewardsView: UIView!
     @IBOutlet weak var labelRewardsPoint: UILabel!
