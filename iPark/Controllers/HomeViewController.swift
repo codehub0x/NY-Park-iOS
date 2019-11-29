@@ -403,11 +403,13 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - SearchViewController delegate
 extension HomeViewController: SearchDelegate {
     func onDailySearch(mapItem: MKMapItem, startTime: Date, endTime: Date) {
-        
+        let coordinate = mapItem.placemark.coordinate
+        mkMapView.setCenter(coordinate, animated: true)
     }
     
     func onMonthlySearch(mapItem: MKMapItem, startDate: Date) {
-        
+        let coordinate = mapItem.placemark.coordinate
+        mkMapView.setCenter(coordinate, animated: true)
     }
 }
 
@@ -456,7 +458,7 @@ extension HomeViewController: MKMapViewDelegate {
     }
 }
 
-// Initialize the UI settings
+// MARK: - Initialize the UI settings
 fileprivate extension HomeViewController {
     func prepareUI() {
         filterWidthConstraint.constant = 270
