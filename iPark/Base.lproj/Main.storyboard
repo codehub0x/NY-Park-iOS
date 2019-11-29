@@ -675,10 +675,10 @@ VEHICLES</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDD-W4-Q7w">
-                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kir-I0-ssC">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1160"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-Ue-IiM">
                                                 <rect key="frame" x="8" y="8" width="398" height="200"/>
@@ -961,7 +961,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                             <constraint firstItem="zbT-Ue-IiM" firstAttribute="leading" secondItem="kir-I0-ssC" secondAttribute="leading" constant="8" id="Dgg-9n-d3e"/>
                                             <constraint firstItem="zbT-Ue-IiM" firstAttribute="top" secondItem="kir-I0-ssC" secondAttribute="top" constant="8" id="GeO-iU-6IQ"/>
                                             <constraint firstItem="BVa-F6-1eH" firstAttribute="top" secondItem="zbT-Ue-IiM" secondAttribute="bottom" constant="10" id="KEB-XM-ha0"/>
-                                            <constraint firstAttribute="height" constant="1140" id="ish-Cv-jkG"/>
+                                            <constraint firstAttribute="height" constant="1160" id="ish-Cv-jkG"/>
                                             <constraint firstAttribute="trailing" secondItem="BVa-F6-1eH" secondAttribute="trailing" constant="8" id="k2D-lz-o7G"/>
                                             <constraint firstAttribute="trailing" secondItem="Bjw-Wo-c6x" secondAttribute="trailing" constant="8" id="m6n-32-oVt"/>
                                             <constraint firstItem="BVa-F6-1eH" firstAttribute="leading" secondItem="kir-I0-ssC" secondAttribute="leading" constant="8" id="psP-gQ-AnR"/>
@@ -983,7 +983,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941180000006" green="0.85490196080000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ErM-sI-YgT" firstAttribute="bottom" secondItem="fDD-W4-Q7w" secondAttribute="bottom" id="6X5-XY-Bo8"/>
+                            <constraint firstAttribute="bottom" secondItem="fDD-W4-Q7w" secondAttribute="bottom" id="6X5-XY-Bo8"/>
                             <constraint firstItem="wyf-XQ-Ghl" firstAttribute="top" secondItem="ErM-sI-YgT" secondAttribute="top" constant="-0.10000000000000001" id="AoS-Ce-lUd"/>
                             <constraint firstItem="ErM-sI-YgT" firstAttribute="trailing" secondItem="wyf-XQ-Ghl" secondAttribute="trailing" id="B5w-b8-RoK"/>
                             <constraint firstItem="fDD-W4-Q7w" firstAttribute="leading" secondItem="ErM-sI-YgT" secondAttribute="leading" id="TDh-Ah-hsF"/>
@@ -3887,31 +3887,45 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rE-g8-brh">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uqy-gd-Rub">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MR-wT-mZP">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="z24-As-qFl" id="5Tu-F5-fWs"/>
-                                        </connections>
-                                    </mapView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-xg-WC3" customClass="FABButton" customModule="Material">
-                                        <rect key="frame" x="350" y="609" width="48" height="48"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uqy-gd-Rub">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="z24-As-qFl" id="5Tu-F5-fWs"/>
+                                                </connections>
+                                            </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-xg-WC3" customClass="FABButton" customModule="Material">
+                                                <rect key="frame" x="350" y="609" width="48" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="t4O-NI-qE8"/>
+                                                    <constraint firstAttribute="width" constant="48" id="vCt-lm-uF3"/>
+                                                </constraints>
+                                                <state key="normal" image="ic_user_location"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                                        <color key="value" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                        <color key="value" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClickUserLocation:" destination="z24-As-qFl" eventType="touchUpInside" id="HaQ-Fl-nSt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="t4O-NI-qE8"/>
-                                            <constraint firstAttribute="width" constant="48" id="vCt-lm-uF3"/>
+                                            <constraint firstItem="Uqy-gd-Rub" firstAttribute="top" secondItem="6MR-wT-mZP" secondAttribute="top" id="1KC-6i-vrF"/>
+                                            <constraint firstAttribute="bottom" secondItem="Uqy-gd-Rub" secondAttribute="bottom" id="5bS-yn-X9w"/>
+                                            <constraint firstItem="Uqy-gd-Rub" firstAttribute="leading" secondItem="6MR-wT-mZP" secondAttribute="leading" id="AIc-ad-QpH"/>
+                                            <constraint firstAttribute="trailing" secondItem="RPr-xg-WC3" secondAttribute="trailing" constant="16" id="O4G-oe-9nu"/>
+                                            <constraint firstAttribute="bottom" secondItem="RPr-xg-WC3" secondAttribute="bottom" constant="16" id="hua-nu-nMZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uqy-gd-Rub" secondAttribute="trailing" id="sZt-GS-4jD"/>
                                         </constraints>
-                                        <state key="normal" image="ic_user_location"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
-                                                <color key="value" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                <color key="value" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="onClickUserLocation:" destination="z24-As-qFl" eventType="touchUpInside" id="HaQ-Fl-nSt"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vD-JL-HF5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                         <subviews>
@@ -3974,18 +3988,16 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="RPr-xg-WC3" secondAttribute="bottom" constant="16" id="3JK-Jv-lte"/>
-                                    <constraint firstItem="Uqy-gd-Rub" firstAttribute="top" secondItem="3rE-g8-brh" secondAttribute="top" id="ADO-mN-Dek"/>
-                                    <constraint firstAttribute="bottom" secondItem="Uqy-gd-Rub" secondAttribute="bottom" id="Nc2-b2-NLg"/>
+                                    <constraint firstAttribute="trailing" secondItem="6MR-wT-mZP" secondAttribute="trailing" id="I3z-m3-wvP"/>
                                     <constraint firstItem="7vD-JL-HF5" firstAttribute="leading" secondItem="3rE-g8-brh" secondAttribute="leading" id="PfT-WK-Sig"/>
+                                    <constraint firstItem="6MR-wT-mZP" firstAttribute="leading" secondItem="3rE-g8-brh" secondAttribute="leading" id="VOw-3G-2Vh"/>
                                     <constraint firstAttribute="bottom" secondItem="7vD-JL-HF5" secondAttribute="bottom" id="aWz-zG-rZy"/>
                                     <constraint firstAttribute="trailing" secondItem="7vD-JL-HF5" secondAttribute="trailing" id="c6U-0i-vLv"/>
-                                    <constraint firstItem="Uqy-gd-Rub" firstAttribute="leading" secondItem="3rE-g8-brh" secondAttribute="leading" id="e43-oM-2sV"/>
+                                    <constraint firstItem="6MR-wT-mZP" firstAttribute="top" secondItem="3rE-g8-brh" secondAttribute="top" id="hkb-GG-vPu"/>
+                                    <constraint firstAttribute="bottom" secondItem="6MR-wT-mZP" secondAttribute="bottom" id="rL2-Ff-umB"/>
                                     <constraint firstItem="7vD-JL-HF5" firstAttribute="top" secondItem="3rE-g8-brh" secondAttribute="top" id="sgh-cJ-eSE"/>
-                                    <constraint firstAttribute="trailing" secondItem="RPr-xg-WC3" secondAttribute="trailing" constant="16" id="tgc-dN-NUa"/>
-                                    <constraint firstAttribute="trailing" secondItem="Uqy-gd-Rub" secondAttribute="trailing" id="v4U-ck-4hM"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNv-L2-a97" customClass="FlatButton" customModule="Material">
@@ -4160,10 +4172,10 @@ New York, NY 10024, USA</string>
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="570"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-GJ-0v8">
-                                                <rect key="frame" x="24" y="24" width="200" height="450"/>
+                                                <rect key="frame" x="24" y="24" width="222" height="450"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4176,7 +4188,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-BB-nYZ" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="45" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="45" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4189,7 +4201,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-Pv-Rfv" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="90" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="90" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4202,7 +4214,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-eT-5Jo" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="135" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="135" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4215,7 +4227,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-Wt-XF6" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="180" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4228,7 +4240,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-NG-c9e" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="225" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="225" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4241,7 +4253,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-H3-S5i" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="270" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="270" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4254,7 +4266,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-NK-bxM" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="315" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="315" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4267,7 +4279,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-4c-rjz" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="360" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="360" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4280,7 +4292,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-DJ-MQr" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="405" width="200" height="45"/>
+                                                        <rect key="frame" x="0.0" y="405" width="222" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4295,7 +4307,6 @@ New York, NY 10024, USA</string>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="NDl-mT-x6b"/>
-                                                    <constraint firstAttribute="width" constant="200" id="tuy-Z7-J8j"/>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8a-g6-Xtx" customClass="RaisedButton" customModule="Material">
@@ -4337,6 +4348,7 @@ New York, NY 10024, USA</string>
                                             <constraint firstItem="H8a-g6-Xtx" firstAttribute="leading" secondItem="2EQ-JD-fWB" secondAttribute="leading" constant="24" id="3iY-ym-ZuU"/>
                                             <constraint firstItem="W7l-GJ-0v8" firstAttribute="top" secondItem="2EQ-JD-fWB" secondAttribute="top" constant="24" id="45D-AD-2xZ"/>
                                             <constraint firstAttribute="height" constant="570" id="4BB-3y-yRP"/>
+                                            <constraint firstAttribute="trailing" secondItem="W7l-GJ-0v8" secondAttribute="trailing" constant="24" id="ACG-yh-m8F"/>
                                             <constraint firstItem="W7l-GJ-0v8" firstAttribute="leading" secondItem="2EQ-JD-fWB" secondAttribute="leading" constant="24" id="Fns-ra-WzO"/>
                                             <constraint firstItem="bSZ-Su-qYT" firstAttribute="top" secondItem="H8a-g6-Xtx" secondAttribute="top" id="IOi-UC-79E"/>
                                             <constraint firstItem="H8a-g6-Xtx" firstAttribute="top" secondItem="W7l-GJ-0v8" secondAttribute="bottom" constant="36" id="TeH-Bl-YF5"/>
@@ -4413,6 +4425,7 @@ New York, NY 10024, USA</string>
                         <outlet property="labelInfoPrice" destination="JEa-PT-brY" id="5Ef-PE-d6r"/>
                         <outlet property="labelInfoTitle" destination="3qg-Iy-Cn0" id="tnT-Fk-RHA"/>
                         <outlet property="listView" destination="7vD-JL-HF5" id="bLT-GW-5bI"/>
+                        <outlet property="mapContainer" destination="6MR-wT-mZP" id="Sbb-mp-mrp"/>
                         <outlet property="mkMapView" destination="Uqy-gd-Rub" id="R9k-rx-gWD"/>
                         <outlet property="segmentedControl" destination="nDi-fy-hrh" id="vM0-Vb-0Mq"/>
                         <outlet property="tableView" destination="o4W-nh-1Nh" id="84x-MY-19x"/>
@@ -5084,10 +5097,10 @@ New York, NY 10024, USA</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkP-US-ms5">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-F5-FFa" userLabel="Terms Button" customClass="FlatButton" customModule="Material">
-                                                <rect key="frame" x="8" y="584" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="536" width="398" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="ta2-QE-dPN"/>
@@ -5100,13 +5113,13 @@ New York, NY 10024, USA</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-rY-Vxe">
-                                                <rect key="frame" x="32" y="602.5" width="159.5" height="21.5"/>
+                                                <rect key="frame" x="32" y="554" width="157.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18.299999237060547"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-X0-Nan" userLabel="Privacy Button" customClass="FlatButton" customModule="Material">
-                                                <rect key="frame" x="8" y="652" width="398" height="58"/>
+                                                <rect key="frame" x="8" y="604" width="398" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="jmy-eR-DHP"/>
@@ -5119,13 +5132,13 @@ New York, NY 10024, USA</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Po5-rw-voC">
-                                                <rect key="frame" x="32" y="670.5" width="115" height="21.5"/>
+                                                <rect key="frame" x="32" y="622" width="110.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18.299999237060547"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55E-ME-gJf" userLabel="Bottom View">
-                                                <rect key="frame" x="0.0" y="734" width="414" height="60"/>
+                                                <rect key="frame" x="0.0" y="686" width="414" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-Ga-GMa" customClass="RaisedButton" customModule="Material">
                                                         <rect key="frame" x="154" y="6" width="48" height="48"/>
@@ -5160,7 +5173,7 @@ New York, NY 10024, USA</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbr-ky-eRt">
-                                                <rect key="frame" x="8" y="8" width="398" height="564"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="516"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="81h-mq-cge">
                                                         <rect key="frame" x="64" y="64" width="270" height="108"/>
@@ -5169,7 +5182,7 @@ New York, NY 10024, USA</string>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UZf-YQ-9md">
-                                                        <rect key="frame" x="16" y="404" width="366" height="70"/>
+                                                        <rect key="frame" x="16" y="356" width="366" height="70"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-T4-JOd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="70"/>
@@ -5317,7 +5330,7 @@ New York, NY 10024, USA</string>
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-Hq-bty" customClass="RaisedButton" customModule="Material">
-                                                        <rect key="frame" x="6" y="506" width="386" height="52"/>
+                                                        <rect key="frame" x="6" y="458" width="386" height="52"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="jSH-A5-Xz7"/>
@@ -5367,7 +5380,7 @@ New York, NY 10024, USA</string>
                                             <constraint firstAttribute="trailing" secondItem="FKh-X0-Nan" secondAttribute="trailing" constant="8" id="P5f-Ht-81t"/>
                                             <constraint firstAttribute="trailing" secondItem="Hbr-ky-eRt" secondAttribute="trailing" constant="8" id="TRh-7K-HQo"/>
                                             <constraint firstItem="FKh-X0-Nan" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" constant="8" id="Zzu-rU-Ssa"/>
-                                            <constraint firstAttribute="height" constant="818" id="c1Z-jc-nxm"/>
+                                            <constraint firstAttribute="height" constant="770" id="c1Z-jc-nxm"/>
                                             <constraint firstItem="k6o-rY-Vxe" firstAttribute="centerY" secondItem="f4v-F5-FFa" secondAttribute="centerY" id="c7a-eI-eFH"/>
                                             <constraint firstItem="Hbr-ky-eRt" firstAttribute="top" secondItem="ZkP-US-ms5" secondAttribute="top" constant="8" id="vgX-D8-WSr"/>
                                             <constraint firstItem="55E-ME-gJf" firstAttribute="top" secondItem="FKh-X0-Nan" secondAttribute="bottom" constant="24" id="zqX-Gz-8fd"/>

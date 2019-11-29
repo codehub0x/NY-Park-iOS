@@ -16,17 +16,20 @@ extension UIView {
         self.layer.mask = mask
     }
     
-    func showFlip(){
+    func showFlip() {
         if self.isHidden {
-            UIView.transition(with: self, duration: 0.5, options: [.transitionFlipFromRight,.allowUserInteraction], animations: nil, completion: nil)
-            self.isHidden = false
+            UIView.transition(with: self, duration: 1, options: [.transitionFlipFromRight,.allowUserInteraction], animations: {
+                self.isHidden = false
+            })
         }
     }
     
-    func hideFlip(){
+    func hideFlip() {
         if !self.isHidden {
-            UIView.transition(with: self, duration: 0.5, options: [.transitionFlipFromLeft,.allowUserInteraction], animations: nil,  completion: nil)
-            self.isHidden = true
+            UIView.transition(with: self, duration: 1, options: [.transitionFlipFromRight,.allowUserInteraction], animations: nil, completion: { _ in
+                self.isHidden = true
+            })
+            
         }
     }
     

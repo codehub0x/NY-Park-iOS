@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var filterWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var mkMapView: MKMapView!
+    @IBOutlet weak var mapContainer: UIView!
     @IBOutlet weak var listView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
@@ -109,11 +110,13 @@ class HomeViewController: UIViewController {
         hideMakerInfoView(animate: false)
         
         if listView.isHidden {
+            viewContainer.bringSubviewToFront(listView)
             listView.showFlip()
-            mkMapView.hideFlip()
+            mapContainer.hideFlip()
             btnToggle.setTitle("MAP", for: .normal)
-        } else if mkMapView.isHidden {
-            mkMapView.showFlip()
+        } else if mapContainer.isHidden {
+            viewContainer.bringSubviewToFront(mapContainer)
+            mapContainer.showFlip()
             listView.hideFlip()
             btnToggle.setTitle("LIST", for: .normal)
         }

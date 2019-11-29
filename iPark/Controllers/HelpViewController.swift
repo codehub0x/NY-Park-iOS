@@ -45,12 +45,11 @@ class HelpViewController: UIViewController {
     
     func adjustUIHeight() {
         let windowSize = UIScreen.main.bounds
-        var padding: CGFloat = 0
+        var padding: CGFloat = topbarHeight
         if #available(iOS 11.0, *) {
             let window = UIApplication.shared.keyWindow
-            let topPadding = window?.safeAreaInsets.top ?? 0
             let bottomPadding = window?.safeAreaInsets.bottom ?? 0
-            padding = topPadding + bottomPadding
+            padding = padding + bottomPadding
         }
         var height = windowSize.height - padding
         if height < 650 {
