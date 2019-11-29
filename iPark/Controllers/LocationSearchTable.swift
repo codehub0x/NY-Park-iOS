@@ -44,10 +44,8 @@ class LocationSearchTable: UITableViewController {
     }
     
     @objc fileprivate func onBackClick() {
-        resultSearchController.dismiss(animated: true) {
-            self.navigationController?.popViewController(animated: true)
-        }
-        
+        resultSearchController.dismiss(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK - UITableView DataSource & Delegate
@@ -71,9 +69,8 @@ class LocationSearchTable: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.onClickAddress(searchType: searchType, mapItem: matchingItems[indexPath.row])
-        resultSearchController.dismiss(animated: true) {
-            self.navigationController?.popViewController(animated: true)
-        }
+        resultSearchController.dismiss(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
