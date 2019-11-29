@@ -4757,8 +4757,8 @@ New York, NY 10024, USA</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.51764705882352935" green="0.5725490196078431" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="0.026992011815309525" green="0.0" blue="0.62296575307846069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="z24-As-qFl" kind="relationship" relationship="viewControllers" id="6TK-v4-XGg"/>

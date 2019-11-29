@@ -52,7 +52,6 @@ class HomeViewController: UIViewController {
     fileprivate var mainStoryboard: UIStoryboard!
     
     let locationManager = CLLocationManager()
-    let regionRadius: CLLocationDistance = 2000
     var userLocation = CLLocationCoordinate2D()
     
     let bottomViewHeight: CGFloat = 185
@@ -284,7 +283,7 @@ class HomeViewController: UIViewController {
     }
     
     func showLocation(_ coordinate: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: Global.defaultRegionRadius, longitudinalMeters: Global.defaultRegionRadius)
         mkMapView.setRegion(region, animated: true)
     }
     
