@@ -15,12 +15,14 @@ enum SearchType {
     case Monthly
 }
 
+protocol SearchDelegate {
+    func onDailySearch(mapItem: MKMapItem, startTime: Date, endTime: Date)
+    func onMonthlySearch(mapItem: MKMapItem, startDate: Date)
+}
+
 class SearchViewController: UIViewController {
     
     static let storyboardId = "\(SearchViewController.self)"
-    
-    fileprivate var buttons = [TabItem]()
-    fileprivate var selectedTag = 1
     
     @IBOutlet weak var tabBar: TabBar!
     @IBOutlet weak var dailyView: UIView!
@@ -33,21 +35,33 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var dailySearchButton: FlatButton!
     @IBOutlet weak var monthlySearchButton: FlatButton!
     
-    open var startTime: Date = Date() {
+    fileprivate var buttons = [TabItem]()
+    fileprivate var selectedTag = 1
+    
+    let datePicker = UIDatePicker()
+    
+    var delegate: SearchDelegate?
+    var dailyMapItem: MKMapItem?
+    var monthlyMapItem: MKMapItem?
+    
+    open var startTime: Date? {
         didSet {
-            startTimeField.text = startTime.dateString()
+            startTimeField.text = startTime!.dateString()
+            startTimeField.detail = ""
         }
     }
     
-    open var endTime: Date = Date() {
+    open var endTime: Date? {
         didSet {
-            endTimeField.text = endTime.dateString()
+            endTimeField.text = endTime!.dateString()
+            endTimeField.detail = ""
         }
     }
     
-    open var startDate: Date = Date() {
+    open var startDate: Date? {
         didSet {
-            mStartTimeField.text = startDate.dateString("EEE, MMM dd")
+            mStartTimeField.text = startDate!.dateString("EEE, MMM dd")
+            mStartTimeField.detail = ""
         }
     }
     
@@ -66,6 +80,8 @@ class SearchViewController: UIViewController {
         prepareMStartTimeField()
         
         prepareSearchButton()
+        
+        prepareDatePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,19 +90,68 @@ class SearchViewController: UIViewController {
     }
     
     @objc fileprivate func onBackClick() {
-        if let count = self.navigationController?.viewControllers.count, count > 1 {
-            self.navigationController?.popViewController(animated: true)
-        } else {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func onDailySearchClick(_ sender: Any) {
+        self.view.endEditing(true)
+        
+        var valid = true
+        if addressField.isEmpty {
+            addressField.detail = "Empty Address"
+            valid = false
+        }
+        
+        if startTimeField.isEmpty {
+            startTimeField.detail = "Empty Start Time"
+            valid = false
+        }
+        
+        if endTimeField.isEmpty {
+            endTimeField.detail = "Empty End Time"
+            valid = false
+        }
+        
+        if valid {
+            self.delegate?.onDailySearch(mapItem: dailyMapItem!, startTime: startTime!, endTime: endTime!)
             self.dismiss(animated: true)
         }
     }
     
-    @IBAction func onDailySearchClick(_ sender: Any) {
+    @IBAction func onMonthlySearchClick(_ sender: Any) {
+        self.view.endEditing(true)
         
+        var valid = true
+        if mAddressField.isEmpty {
+            mAddressField.detail = "Empty Address"
+            valid = false
+        }
+        
+        if mStartTimeField.isEmpty {
+            mStartTimeField.detail = "Empty Start Parking On"
+            valid = false
+        }
+        
+        if valid {
+            self.delegate?.onMonthlySearch(mapItem: monthlyMapItem!, startDate: startDate!)
+            self.dismiss(animated: true)
+        }
     }
     
-    @IBAction func onMonthlySearchClick(_ sender: Any) {
+    @objc func donePicker() {
+        if startTimeField.isFirstResponder {
+            startTime = datePicker.date
+        } else if endTimeField.isFirstResponder {
+            endTime = datePicker.date
+        } else if mStartTimeField.isFirstResponder {
+            startDate = datePicker.date
+        }
         
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelPicker() {
+        self.view.endEditing(true)
     }
 }
 
@@ -112,8 +177,6 @@ extension SearchViewController: TabBarDelegate {
 
 extension SearchViewController: TextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
         switch textField.tag {
         case 11:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -121,35 +184,55 @@ extension SearchViewController: TextFieldDelegate {
             newVC.searchType = SearchType.Daily
             newVC.delegate = self
             self.navigationController?.pushViewController(newVC, animated: true)
-            break
-        case 12:
-            RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: startTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
-                self.startTime = selectedDate
-            }
-            break
-        case 13:
-            RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: endTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
-                self.endTime = selectedDate
-            }
-            break
+            return false
         case 21:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId) as! LocationSearchTable
             newVC.searchType = SearchType.Monthly
             newVC.delegate = self
             self.navigationController?.pushViewController(newVC, animated: true)
+            return false
+        case 12:
+            // Set picker mode
+            datePicker.datePickerMode = .dateAndTime
+            // Set minimum date
+            datePicker.minimumDate = Date()
+            // Set selected date
+            if let date = startTime {
+                datePicker.date = date
+            }
+            break
+        case 13:
+            // Set picker mode
+            datePicker.datePickerMode = .dateAndTime
+            // Set minimum date
+            if let minDate = startTime {
+                datePicker.minimumDate = minDate.add(minutes: 30)
+            } else {
+                datePicker.minimumDate = Date().add(minutes: 30)
+            }
+            // Set selected date
+            if let date = endTime {
+                datePicker.date = date
+            }
             break
         case 22:
-            RPicker.selectDate(title: "Select Date", hideCancel: false, datePickerMode: .date, selectedDate: startDate, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
-                self.startDate = selectedDate
+            // Set picker mode
+            datePicker.datePickerMode = .date
+            // Set minimum date
+            datePicker.minimumDate = Date()
+            // Set selected date
+            if let date = startDate {
+                datePicker.date = date
             }
             break
         default:
             break
         }
         
-        return false
+        return true
     }
+    
 }
 
 extension SearchViewController: LocationSearchDelegate {
@@ -157,10 +240,14 @@ extension SearchViewController: LocationSearchDelegate {
         let address = parseAddress(selectedItem: mapItem.placemark)
         switch searchType {
         case .Daily:
+            self.dailyMapItem = mapItem
             self.addressField.text = address
+            self.addressField.detail = ""
             break
         case .Monthly:
+            self.monthlyMapItem = mapItem
             self.mAddressField.text = address
+            self.mAddressField.detail = ""
             break
         }
     }
@@ -169,7 +256,7 @@ extension SearchViewController: LocationSearchDelegate {
 fileprivate extension SearchViewController {
     func prepareNavigation() {
         let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
-        leftButton.tintColor = UIColor.white
+        leftButton.tintColor = .white
         self.navigationItem.leftBarButtonItem = leftButton
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: LatoFont.bold(with: 20)]
     }
@@ -177,16 +264,16 @@ fileprivate extension SearchViewController {
     func prepareButtons() {
         let btn1 = TabItem(title: "Daily", titleColor: Color.white)
         btn1.pulseAnimation = .centerRadialBeyondBounds
-        btn1.setTabItemColor(UIColor.iYellow, for: .selected)
-        btn1.setTabItemColor(UIColor.white, for: .normal)
+        btn1.setTabItemColor(.iYellow, for: .selected)
+        btn1.setTabItemColor(.white, for: .normal)
         btn1.titleLabel?.font = LatoFont.bold(with: 15)
         btn1.tag = 1
         buttons.append(btn1)
        
         let btn2 = TabItem(title: "Monthly", titleColor: Color.white)
         btn2.pulseAnimation = .centerRadialBeyondBounds
-        btn2.setTabItemColor(UIColor.iYellow, for: .selected)
-        btn2.setTabItemColor(UIColor.white, for: .normal)
+        btn2.setTabItemColor(.iYellow, for: .selected)
+        btn2.setTabItemColor(.white, for: .normal)
         btn2.titleLabel?.font = LatoFont.bold(with: 15)
         btn2.tag = 2
         buttons.append(btn2)
@@ -195,135 +282,167 @@ fileprivate extension SearchViewController {
     func prepareTabBar() {
         tabBar.delegate = self
         
-        tabBar.dividerColor = UIColor.iBlack80
+        tabBar.dividerColor = .iBlack80
         tabBar.dividerAlignment = .top
         tabBar.dividerThickness = 0.3
         
-        tabBar.lineColor = UIColor.iYellow
+        tabBar.lineColor = .iYellow
         tabBar.lineAlignment = .bottom
         tabBar.lineHeight = 4
         
         tabBar.tabItems = buttons
     }
     
+    func prepareDatePicker() {
+        // Toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        // Done & Cancel button
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPicker))
+        
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        
+        startTimeField.inputAccessoryView = toolbar
+        startTimeField.inputView = datePicker
+        
+        endTimeField.inputAccessoryView = toolbar
+        endTimeField.inputView = datePicker
+        
+        mStartTimeField.inputAccessoryView = toolbar
+        mStartTimeField.inputView = datePicker
+    }
+    
     func prepareAddressField() {
         addressField.placeholder = "Enter Address, Venue, or Airport"
         addressField.placeholderLabel.font = LatoFont.regular(with: 15)
         addressField.placeholderActiveScale = 0.7
-        addressField.placeholderNormalColor = UIColor.iBlack50
-        addressField.placeholderActiveColor = UIColor.iBlack50
+        addressField.placeholderNormalColor = .iBlack50
+        addressField.placeholderActiveColor = .iDarkBlue
+        addressField.placeholderHorizontalOffset = -12
         
         addressField.font = LatoFont.regular(with: 15)
-        addressField.textColor = UIColor.black
-        addressField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        addressField.textColor = .black
+        addressField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        addressField.detailColor = .red
         
         addressField.dividerNormalHeight = 1
         addressField.dividerActiveHeight = 2
-        addressField.dividerNormalColor = UIColor.iBlack50
-        addressField.dividerActiveColor = UIColor.iDarkBlue
+        addressField.dividerNormalColor = .iBlack50
+        addressField.dividerActiveColor = .iDarkBlue
         
         let leftView = UIImageView()
         leftView.image = UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate)
         addressField.leftView = leftView
         addressField.leftViewOffset = -8
-        addressField.leftViewNormalColor = UIColor.iBlack50
-        addressField.leftViewActiveColor = UIColor.iDarkBlue
+        addressField.leftViewNormalColor = .iBlack50
+        addressField.leftViewActiveColor = .iDarkBlue
     }
     
     func prepareStartTimeField() {
         startTimeField.placeholder = "Start Time"
         startTimeField.placeholderLabel.font = LatoFont.regular(with: 15)
         startTimeField.placeholderActiveScale = 0.7
-        startTimeField.placeholderNormalColor = UIColor.iBlack50
-        startTimeField.placeholderActiveColor = UIColor.iBlack50
+        startTimeField.placeholderNormalColor = .iBlack50
+        startTimeField.placeholderActiveColor = .iDarkBlue
+        startTimeField.placeholderHorizontalOffset = -12
         
         startTimeField.font = LatoFont.regular(with: 15)
-        startTimeField.textColor = UIColor.black
-        startTimeField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        startTimeField.textColor = .black
+        startTimeField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        startTimeField.detailColor = .red
         
         startTimeField.dividerNormalHeight = 1
         startTimeField.dividerActiveHeight = 2
-        startTimeField.dividerNormalColor = UIColor.iBlack50
-        startTimeField.dividerActiveColor = UIColor.iDarkBlue
+        startTimeField.dividerNormalColor = .iBlack50
+        startTimeField.dividerActiveColor = .iDarkBlue
         
         let leftView = UIImageView()
         leftView.image = UIImage(named: "icon-time")?.withRenderingMode(.alwaysTemplate)
         startTimeField.leftView = leftView
         startTimeField.leftViewOffset = -8
-        startTimeField.leftViewNormalColor = UIColor.iBlack50
-        startTimeField.leftViewActiveColor = UIColor.iDarkBlue
+        startTimeField.leftViewNormalColor = .iBlack50
+        startTimeField.leftViewActiveColor = .iDarkBlue
     }
     
     func prepareEndTimeField() {
         endTimeField.placeholder = "End Time"
         endTimeField.placeholderLabel.font = LatoFont.regular(with: 15)
         endTimeField.placeholderActiveScale = 0.7
-        endTimeField.placeholderNormalColor = UIColor.iBlack50
-        endTimeField.placeholderActiveColor = UIColor.iBlack50
+        endTimeField.placeholderNormalColor = .iBlack50
+        endTimeField.placeholderActiveColor = .iDarkBlue
+        endTimeField.placeholderHorizontalOffset = -12
         
         endTimeField.font = LatoFont.regular(with: 15)
-        endTimeField.textColor = UIColor.black
-        endTimeField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        endTimeField.textColor = .black
+        endTimeField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        endTimeField.detailColor = .red
         
         endTimeField.dividerNormalHeight = 1
         endTimeField.dividerActiveHeight = 2
-        endTimeField.dividerNormalColor = UIColor.iBlack50
-        endTimeField.dividerActiveColor = UIColor.iDarkBlue
+        endTimeField.dividerNormalColor = .iBlack50
+        endTimeField.dividerActiveColor = .iDarkBlue
         
         let leftView = UIImageView()
         leftView.image = UIImage(named: "icon-time")?.withRenderingMode(.alwaysTemplate)
         endTimeField.leftView = leftView
         endTimeField.leftViewOffset = -8
-        endTimeField.leftViewNormalColor = UIColor.iBlack50
-        endTimeField.leftViewActiveColor = UIColor.iDarkBlue
+        endTimeField.leftViewNormalColor = .iBlack50
+        endTimeField.leftViewActiveColor = .iDarkBlue
     }
     
     func prepareMAddressField() {
         mAddressField.placeholder = "Enter Address, Venue, or Airport"
         mAddressField.placeholderLabel.font = LatoFont.regular(with: 15)
         mAddressField.placeholderActiveScale = 0.7
-        mAddressField.placeholderNormalColor = UIColor.iBlack50
-        mAddressField.placeholderActiveColor = UIColor.iBlack50
+        mAddressField.placeholderNormalColor = .iBlack50
+        mAddressField.placeholderActiveColor = .iDarkBlue
+        mAddressField.placeholderHorizontalOffset = -12
         
         mAddressField.font = LatoFont.regular(with: 15)
-        mAddressField.textColor = UIColor.black
-        mAddressField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        mAddressField.textColor = .black
+        mAddressField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        mAddressField.detailColor = .red
         
         mAddressField.dividerNormalHeight = 1
         mAddressField.dividerActiveHeight = 2
-        mAddressField.dividerNormalColor = UIColor.iBlack50
-        mAddressField.dividerActiveColor = UIColor.iDarkBlue
+        mAddressField.dividerNormalColor = .iBlack50
+        mAddressField.dividerActiveColor = .iDarkBlue
         
         let leftView = UIImageView()
         leftView.image = UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate)
         mAddressField.leftView = leftView
         mAddressField.leftViewOffset = -8
-        mAddressField.leftViewNormalColor = UIColor.iBlack50
-        mAddressField.leftViewActiveColor = UIColor.iDarkBlue
+        mAddressField.leftViewNormalColor = .iBlack50
+        mAddressField.leftViewActiveColor = .iDarkBlue
     }
     
     func prepareMStartTimeField() {
         mStartTimeField.placeholder = "Start Parking On"
         mStartTimeField.placeholderLabel.font = LatoFont.regular(with: 15)
         mStartTimeField.placeholderActiveScale = 0.7
-        mStartTimeField.placeholderNormalColor = UIColor.iBlack50
-        mStartTimeField.placeholderActiveColor = UIColor.iBlack50
+        mStartTimeField.placeholderNormalColor = .iBlack50
+        mStartTimeField.placeholderActiveColor = .iDarkBlue
+        mStartTimeField.placeholderHorizontalOffset = -12
         
         mStartTimeField.font = LatoFont.regular(with: 15)
-        mStartTimeField.textColor = UIColor.black
-        mStartTimeField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        mStartTimeField.textColor = .black
+        mStartTimeField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        mStartTimeField.detailColor = .red
         
         mStartTimeField.dividerNormalHeight = 1
         mStartTimeField.dividerActiveHeight = 2
-        mStartTimeField.dividerNormalColor = UIColor.iBlack50
-        mStartTimeField.dividerActiveColor = UIColor.iDarkBlue
+        mStartTimeField.dividerNormalColor = .iBlack50
+        mStartTimeField.dividerActiveColor = .iDarkBlue
         
         let leftView = UIImageView()
         leftView.image = UIImage(named: "icon-calendar")?.withRenderingMode(.alwaysTemplate)
         mStartTimeField.leftView = leftView
         mStartTimeField.leftViewOffset = -8
-        mStartTimeField.leftViewNormalColor = UIColor.iBlack50
-        mStartTimeField.leftViewActiveColor = UIColor.iDarkBlue
+        mStartTimeField.leftViewNormalColor = .iBlack50
+        mStartTimeField.leftViewActiveColor = .iDarkBlue
     }
     
     func prepareSearchButton() {

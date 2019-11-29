@@ -28,53 +28,26 @@ extension TabBarController: UITabBarControllerDelegate {
         let tag = viewController.tabBarItem.tag
         switch tag {
         case 2:
-            var vc: UIViewController!
-            if #available(iOS 13.0, *) {
-                vc = tabBarController.storyboard?.instantiateViewController(identifier: ReservationsViewController.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: ReservationsViewController.storyboardId)
-            }
-            if let newVC = vc {
-                let navVC = newVC.getNavigationController()
-                navVC.modalPresentationStyle = .overFullScreen
-                tabBarController.present(navVC, animated: true)
-                return false
-            }
-            break;
+            let newVC = tabBarController.storyboard?.instantiateViewController(withIdentifier: ReservationsViewController.storyboardId)
+            let navVC = newVC!.getNavigationController()
+            navVC.modalPresentationStyle = .overFullScreen
+            tabBarController.present(navVC, animated: true)
+            return false
         case 3:
-            var vc: UIViewController!
-            if #available(iOS 13.0, *) {
-                vc = tabBarController.storyboard?.instantiateViewController(identifier: RewardsViewController.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
-            }
-            if let newVC = vc {
-                let navVC = newVC.getNavigationController()
-                navVC.modalPresentationStyle = .overFullScreen
-                tabBarController.present(navVC, animated: true)
-                return false
-            }
-            break;
+            let newVC = tabBarController.storyboard?.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
+            let navVC = newVC!.getNavigationController()
+            navVC.modalPresentationStyle = .overFullScreen
+            tabBarController.present(navVC, animated: true)
+            return false
         case 4:
-            var vc: UIViewController!
-            if #available(iOS 13.0, *) {
-                vc = tabBarController.storyboard?.instantiateViewController(identifier: MenuViewController.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                vc = tabBarController.storyboard?.instantiateViewController(withIdentifier: MenuViewController.storyboardId)
-            }
-            if let newVC = vc {
-                let navVC = newVC.getNavigationController()
-                navVC.modalPresentationStyle = .overFullScreen
-                navVC.modalTransitionStyle = .crossDissolve
-                tabBarController.present(navVC, animated: true)
-                return false
-            }
-            break;
+            let newVC = tabBarController.storyboard?.instantiateViewController(withIdentifier: MenuViewController.storyboardId)
+            let navVC = newVC!.getNavigationController()
+            navVC.modalPresentationStyle = .overFullScreen
+            navVC.modalTransitionStyle = .crossDissolve
+            tabBarController.present(navVC, animated: true)
+            return false
         default:
-            break;
+            break
         }
         return true
     }

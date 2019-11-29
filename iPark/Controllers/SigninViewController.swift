@@ -45,13 +45,7 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func onSigninBtnClick(_ sender: Any) {
-        let newVC: MenuViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: MenuViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: MenuViewController.storyboardId) as? MenuViewController
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: MenuViewController.storyboardId) as! MenuViewController
         
         Global.isLoggedIn = true
         
@@ -67,13 +61,7 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func onRegisterBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: SignupViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: SignupViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: SignupViewController.storyboardId)
         newVC.modalPresentationStyle = .overFullScreen
         newVC.modalTransitionStyle = .flipHorizontal
         weak var pvc = self.presentingViewController

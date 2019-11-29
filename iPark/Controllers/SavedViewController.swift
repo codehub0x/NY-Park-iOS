@@ -56,25 +56,13 @@ extension SavedViewController: UITableViewDelegate {
 extension SavedViewController: SavedCellDelegate {
     func onDetails() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var detailsVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            detailsVC = storyboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            detailsVC = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
-        }
+        let detailsVC = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     
     func onBook() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var detailsVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            detailsVC = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            detailsVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
-        }
+        let detailsVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     

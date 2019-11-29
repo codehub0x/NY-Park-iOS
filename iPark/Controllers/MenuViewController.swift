@@ -124,57 +124,27 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func oniParkBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: RewardsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onRewardsBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: RewardsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: RewardsViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onUpcomingBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: ReservationsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: ReservationsViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: ReservationsViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onSavedLocationsBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: SavedViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: SavedViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: SavedViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onVehiclesBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: VehiclesViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: VehiclesViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: VehiclesViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
@@ -183,13 +153,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onFAQBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: FAQViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: FAQViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: FAQViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
@@ -198,36 +162,18 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func onHelpBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: HelpViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: HelpViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: HelpViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onBtn1Click(_ sender: Any) {
         if Global.isLoggedIn {
             /// Go to the AccountViewController
-            let newVC: UIViewController!
-            if #available(iOS 13.0, *) {
-                newVC = mainStoryboard.instantiateViewController(identifier: AccountViewController.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                newVC = mainStoryboard.instantiateViewController(withIdentifier: AccountViewController.storyboardId)
-            }
+            let newVC = mainStoryboard.instantiateViewController(withIdentifier: AccountViewController.storyboardId)
             self.navigationController?.pushViewController(newVC, animated: true)
         } else {
             /// Go to the SignupViewController
-            let newVC: UIViewController!
-            if #available(iOS 13.0, *) {
-                newVC = mainStoryboard.instantiateViewController(identifier: SignupViewController.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                newVC = mainStoryboard.instantiateViewController(withIdentifier: SignupViewController.storyboardId)
-            }
+            let newVC = mainStoryboard.instantiateViewController(withIdentifier: SignupViewController.storyboardId)
             newVC.modalPresentationStyle = .overFullScreen
             newVC.modalTransitionStyle = .flipHorizontal
             self.present(newVC, animated: true)
@@ -241,13 +187,7 @@ class MenuViewController: UIViewController {
             self.view.window?.rootViewController?.dismiss(animated: true)
         } else {
             /// Go to the SigninViewController
-            let newVC: UIViewController!
-            if #available(iOS 13.0, *) {
-                newVC = mainStoryboard.instantiateViewController(identifier: SigninViewController.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                newVC = mainStoryboard.instantiateViewController(withIdentifier: SigninViewController.storyboardId)
-            }
+            let newVC = mainStoryboard.instantiateViewController(withIdentifier: SigninViewController.storyboardId)
             newVC.modalPresentationStyle = .overFullScreen
             newVC.modalTransitionStyle = .flipHorizontal
             self.present(newVC, animated: true)

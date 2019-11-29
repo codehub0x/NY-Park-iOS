@@ -81,40 +81,38 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func onFaqBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: FAQViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: FAQViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: FAQViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onPhoneBtnClick(_ sender: Any) {
-        guard let url = URL(string: "tel://8554727569"),
+        openURL(url: URL(string: "tel://8554727569"))
+    }
+    
+    @IBAction func onTermsBtnClick(_ sender: Any) {
+        openURL(url: URL(string: "https://ipark.com/terms-and-conditions/"))
+    }
+    
+    @IBAction func onPrivacyBtnClick(_ sender: Any) {
+        openURL(url: URL(string: "https://ipark.com/privacy-policy/"))
+    }
+    
+    @IBAction func onFacebookBtnClick(_ sender: Any) {
+        openURL(url: URL(string: "https://www.facebook.com/pages/IPark/606293799431302"))
+    }
+    
+    @IBAction func onTwitterBtnClick(_ sender: Any) {
+        openURL(url: URL(string: "https://twitter.com/imperialparking"))
+    }
+    
+    func openURL(url: URL?) {
+        guard let url = url,
             UIApplication.shared.canOpenURL(url) else { return }
         if #available(iOS 10, *) {
             UIApplication.shared.open(url)
         } else {
             UIApplication.shared.openURL(url)
         }
-    }
-    
-    @IBAction func onTermsBtnClick(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://ipark.com/terms-and-conditions/")!, options: [:], completionHandler: nil)
-    }
-    
-    @IBAction func onPrivacyBtnClick(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://ipark.com/privacy-policy/")!, options: [:], completionHandler: nil)
-    }
-    
-    @IBAction func onFacebookBtnClick(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.facebook.com/pages/IPark/606293799431302")!, options: [:], completionHandler: nil)
-    }
-    
-    @IBAction func onTwitterBtnClick(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://twitter.com/imperialparking")!, options: [:], completionHandler: nil)
     }
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {

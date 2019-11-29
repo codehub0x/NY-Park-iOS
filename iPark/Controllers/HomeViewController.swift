@@ -123,6 +123,14 @@ class HomeViewController: UIViewController {
         showLocation(userLocation)
     }
     
+    @IBAction func onClickSearch(_ sender: Any) {
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: SearchViewController.storyboardId) as! SearchViewController
+        newVC.delegate = self
+        let navVC = newVC.getNavigationController()
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true)
+    }
+    
     /// Show / Hidden recently booked locations
     @IBAction func onClickArrow(_ sender: Any) {
         updateBottomView(isShow: !isShowBottomView)
@@ -175,33 +183,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onInfoBookBtnClick(_ sender: Any) {
-        var vc: UIViewController!
-        if #available(iOS 13.0, *) {
-            vc = mainStoryboard.instantiateViewController(identifier: BookViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            vc = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
-        }
-        if let newVC = vc {
-            let navVC = newVC.getNavigationController()
-            navVC.modalPresentationStyle = .overFullScreen
-            self.present(navVC, animated: true)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
+        let navVC = newVC.getNavigationController()
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true)
     }
     
     @IBAction func onInfoDetailsBtnClick(_ sender: Any) {
-        var vc: UIViewController!
-        if #available(iOS 13.0, *) {
-            vc = mainStoryboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            vc = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
-        }
-        if let newVC = vc {
-            let navVC = newVC.getNavigationController()
-            navVC.modalPresentationStyle = .overFullScreen
-            self.present(navVC, animated: true)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
+        let navVC = newVC.getNavigationController()
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true)
     }
     
     func updateBottomView(isShow: Bool, animate: Bool = true) {
@@ -323,7 +315,7 @@ class HomeViewController: UIViewController {
 
 }
 
-/// TableView dataSource
+// MARK: - TableView dataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -336,43 +328,27 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
-/// TableView delegate
+// MARK: - TableView delegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 116
     }
 }
 
-/// TableViewCell delegate
+// MARK: - TableViewCell delegate
 extension HomeViewController: HomeCellDelegate {
     func onDetails() {
-        var vc: UIViewController!
-        if #available(iOS 13.0, *) {
-            vc = mainStoryboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            vc = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
-        }
-        if let newVC = vc {
-            let navVC = newVC.getNavigationController()
-            navVC.modalPresentationStyle = .overFullScreen
-            self.present(navVC, animated: true)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
+        let navVC = newVC.getNavigationController()
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true)
     }
     
     func onBook() {
-        var vc: UIViewController!
-        if #available(iOS 13.0, *) {
-            vc = mainStoryboard.instantiateViewController(identifier: BookViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            vc = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
-        }
-        if let newVC = vc {
-            let navVC = newVC.getNavigationController()
-            navVC.modalPresentationStyle = .overFullScreen
-            self.present(navVC, animated: true)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
+        let navVC = newVC.getNavigationController()
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true)
     }
     
 }
@@ -393,18 +369,10 @@ extension HomeViewController: UICollectionViewDataSource {
 // MARK: - CollectionView delegate
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var vc: UIViewController!
-        if #available(iOS 13.0, *) {
-            vc = mainStoryboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            vc = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
-        }
-        if let newVC = vc {
-            let navVC = newVC.getNavigationController()
-            navVC.modalPresentationStyle = .overFullScreen
-            self.present(navVC, animated: true)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
+        let navVC = newVC.getNavigationController()
+        navVC.modalPresentationStyle = .overFullScreen
+        self.present(navVC, animated: true)
     }
 }
 
@@ -426,6 +394,17 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
       return 10
+    }
+}
+
+// MARK: - SearchViewController delegate
+extension HomeViewController: SearchDelegate {
+    func onDailySearch(mapItem: MKMapItem, startTime: Date, endTime: Date) {
+        
+    }
+    
+    func onMonthlySearch(mapItem: MKMapItem, startDate: Date) {
+        
     }
 }
 

@@ -68,13 +68,7 @@ class BookViewController: UIViewController {
     }
     
     @IBAction func onVehicleBtnClick(_ sender: Any) {
-        let newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = mainStoryboard.instantiateViewController(identifier: VehiclesViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = mainStoryboard.instantiateViewController(withIdentifier: VehiclesViewController.storyboardId)
-        }
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: VehiclesViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     

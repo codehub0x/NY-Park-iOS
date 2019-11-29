@@ -149,19 +149,10 @@ extension ReservationsViewController: ReservationCellDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var detailsVC: UIViewController!
         let tag = tabBar.selectedTabItem?.tag
-        if #available(iOS 13.0, *) {
-            if tag == 1 {
-                detailsVC = storyboard.instantiateViewController(identifier: UpcomingDetailsViewController.storyboardId)
-            } else {
-                detailsVC = storyboard.instantiateViewController(identifier: DetailsViewController.storyboardId)
-            }
+        if tag == 1 {
+            detailsVC = storyboard.instantiateViewController(withIdentifier: UpcomingDetailsViewController.storyboardId)
         } else {
-            // Fallback on earlier versions
-            if tag == 1 {
-                detailsVC = storyboard.instantiateViewController(withIdentifier: UpcomingDetailsViewController.storyboardId)
-            } else {
-                detailsVC = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
-            }
+            detailsVC = storyboard.instantiateViewController(withIdentifier: DetailsViewController.storyboardId)
         }
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
@@ -172,13 +163,7 @@ extension ReservationsViewController: ReservationCellDelegate {
     
     func onRebook() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
-        }
+        let newVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
 }

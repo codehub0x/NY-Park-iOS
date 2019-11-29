@@ -102,13 +102,7 @@ class DetailsViewController: UIViewController {
     
     @IBAction func onBookClick(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var newVC: UIViewController!
-        if #available(iOS 13.0, *) {
-            newVC = storyboard.instantiateViewController(identifier: BookViewController.storyboardId)
-        } else {
-            // Fallback on earlier versions
-            newVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
-        }
+        let newVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
