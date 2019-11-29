@@ -139,7 +139,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-mq-LUY">
-                                                                                <rect key="frame" x="120" y="22" width="130" height="56.5"/>
+                                                                                <rect key="frame" x="120" y="25" width="130" height="50"/>
                                                                                 <string key="text">Lev
 Vakulin</string>
                                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="21.299999237060547"/>
@@ -510,7 +510,7 @@ VEHICLES</string>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version: v7.12.86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-l1-XaA">
-                                                                <rect key="frame" x="48" y="170" width="136" height="18.5"/>
+                                                                <rect key="frame" x="48" y="170" width="136" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1344,7 +1344,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <rect key="frame" x="0.0" y="295" width="414" height="523"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyE-XK-hWW">
-                                                        <rect key="frame" x="36" y="26" width="104" height="24"/>
+                                                        <rect key="frame" x="36" y="26" width="106" height="24"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1409,7 +1409,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can add up to 3 vehicles " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR9-tN-LgC">
-                                                        <rect key="frame" x="131" y="448" width="152.5" height="14"/>
+                                                        <rect key="frame" x="128" y="448" width="158.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -3226,13 +3226,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="46"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 1, 4, 6, 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDs-nh-Xyf">
-                                                <rect key="frame" x="40" y="6" width="89" height="18"/>
+                                                <rect key="frame" x="40" y="6" width="91.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 - 18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX7-Mf-7xT">
-                                                <rect key="frame" x="40" y="24" width="90.5" height="18"/>
+                                                <rect key="frame" x="40" y="24" width="89.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -3296,7 +3296,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ford Mustang, 124356" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUs-Jr-lvp">
-                                                                <rect key="frame" x="40" y="38" width="187" height="22"/>
+                                                                <rect key="frame" x="40" y="38" width="185.5" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="18.299999237060547"/>
                                                                 <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3345,7 +3345,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="80" width="414" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWP-As-XZ5">
-                                                                <rect key="frame" x="40" y="20" width="114" height="18"/>
+                                                                <rect key="frame" x="40" y="20" width="115.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3358,7 +3358,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMEX*2014" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncR-8D-MGN">
-                                                                <rect key="frame" x="76" y="38" width="104" height="22"/>
+                                                                <rect key="frame" x="76" y="38" width="97.5" height="22"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="18.299999237060547"/>
                                                                 <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3409,7 +3409,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="160" width="414" height="160"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book on Multiple Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noM-94-7S0">
-                                                                <rect key="frame" x="40" y="24" width="150" height="18"/>
+                                                                <rect key="frame" x="40" y="24" width="151.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3472,7 +3472,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="320" width="414" height="54"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag5-Tm-deO">
-                                                                <rect key="frame" x="40" y="18" width="113" height="18"/>
+                                                                <rect key="frame" x="40" y="18" width="117" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3519,13 +3519,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="374" width="414" height="56"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Day Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Up-UE-uxP">
-                                                                <rect key="frame" x="40" y="19" width="77.5" height="18"/>
+                                                                <rect key="frame" x="40" y="19" width="79" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcG-00-ST3">
-                                                                <rect key="frame" x="363.5" y="19" width="26.5" height="18"/>
+                                                                <rect key="frame" x="364.5" y="19" width="25.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                                 <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -4159,11 +4159,11 @@ New York, NY 10024, USA</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-JD-fWB">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="570"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-GJ-0v8">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-GJ-0v8">
                                                 <rect key="frame" x="24" y="24" width="200" height="450"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4176,7 +4176,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-BB-nYZ" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="47.5" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="45" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4189,7 +4189,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-Pv-Rfv" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="94.5" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="90" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4202,7 +4202,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-eT-5Jo" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="142" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="135" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4215,7 +4215,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-Wt-XF6" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="189.5" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="180" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4228,7 +4228,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-NG-c9e" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="236.5" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="225" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4241,7 +4241,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-H3-S5i" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="284" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="270" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4254,7 +4254,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-NK-bxM" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="331.5" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="315" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4267,7 +4267,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-4c-rjz" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="378.5" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="360" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4280,7 +4280,7 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-DJ-MQr" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="426" width="200" height="24"/>
+                                                        <rect key="frame" x="0.0" y="405" width="200" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4319,9 +4319,8 @@ New York, NY 10024, USA</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSZ-Su-qYT" customClass="FlatButton" customModule="Material">
-                                                <rect key="frame" x="176" y="510" width="64" height="36"/>
+                                                <rect key="frame" x="176" y="510" width="70" height="36"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="4hk-Ms-y3H"/>
                                                     <constraint firstAttribute="height" constant="36" id="UZQ-ak-Jaw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
@@ -4341,6 +4340,7 @@ New York, NY 10024, USA</string>
                                             <constraint firstItem="W7l-GJ-0v8" firstAttribute="leading" secondItem="2EQ-JD-fWB" secondAttribute="leading" constant="24" id="Fns-ra-WzO"/>
                                             <constraint firstItem="bSZ-Su-qYT" firstAttribute="top" secondItem="H8a-g6-Xtx" secondAttribute="top" id="IOi-UC-79E"/>
                                             <constraint firstItem="H8a-g6-Xtx" firstAttribute="top" secondItem="W7l-GJ-0v8" secondAttribute="bottom" constant="36" id="TeH-Bl-YF5"/>
+                                            <constraint firstAttribute="trailing" secondItem="bSZ-Su-qYT" secondAttribute="trailing" constant="24" id="Zyz-Wr-UUE"/>
                                             <constraint firstItem="bSZ-Su-qYT" firstAttribute="leading" secondItem="H8a-g6-Xtx" secondAttribute="trailing" constant="16" id="yaB-Jx-pQ9"/>
                                         </constraints>
                                     </view>
@@ -4859,35 +4859,53 @@ New York, NY 10024, USA</string>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-bu-2Lj">
-                                                        <rect key="frame" x="45" y="173" width="324" height="50"/>
+                                                    <textField opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8B-bu-2Lj" customClass="TextField" customModule="Material">
+                                                        <rect key="frame" x="45" y="198" width="324" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="1xY-1E-dLi"/>
+                                                            <constraint firstAttribute="height" constant="36" id="1xY-1E-dLi"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Full Name"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="H2c-SF-Uai" id="uaJ-AV-ulL"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-iD-LlB">
-                                                        <rect key="frame" x="45" y="235" width="324" height="50"/>
+                                                    <textField opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVD-iD-LlB" customClass="TextField" customModule="Material">
+                                                        <rect key="frame" x="45" y="279" width="324" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="16D-eh-Ur7"/>
+                                                            <constraint firstAttribute="height" constant="36" id="16D-eh-Ur7"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="H2c-SF-Uai" id="khc-9f-Hza"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-8y-Wla">
-                                                        <rect key="frame" x="45" y="297" width="324" height="50"/>
+                                                    <textField opaque="NO" tag="53" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeK-8y-Wla" customClass="TextField" customModule="Material">
+                                                        <rect key="frame" x="45" y="360" width="324" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="Ui9-NS-4z0"/>
+                                                            <constraint firstAttribute="height" constant="36" id="Ui9-NS-4z0"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="H2c-SF-Uai" id="ZeS-70-RxZ"/>
+                                                        </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8U-Gy-41j" customClass="RaisedButton" customModule="Material">
-                                                        <rect key="frame" x="45" y="367" width="324" height="40"/>
+                                                        <rect key="frame" x="45" y="436" width="324" height="40"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="fAs-Gw-EDM"/>
@@ -4906,13 +4924,13 @@ New York, NY 10024, USA</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By creating an account, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWg-DY-1T9">
-                                                        <rect key="frame" x="90" y="427" width="194" height="13"/>
+                                                        <rect key="frame" x="90" y="496" width="194" height="13"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                                         <color key="textColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqW-t1-bm0" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="288" y="418.5" width="50" height="30"/>
+                                                        <rect key="frame" x="288" y="487.5" width="50" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="YBE-go-htK"/>
                                                             <constraint firstAttribute="width" constant="50" id="mrU-eq-gBI"/>
@@ -4928,7 +4946,7 @@ New York, NY 10024, USA</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="yVD-iD-LlB" firstAttribute="top" secondItem="Y8B-bu-2Lj" secondAttribute="bottom" constant="12" id="1Np-3z-PEL"/>
+                                                    <constraint firstItem="yVD-iD-LlB" firstAttribute="top" secondItem="Y8B-bu-2Lj" secondAttribute="bottom" constant="45" id="1Np-3z-PEL"/>
                                                     <constraint firstItem="Eru-HA-X5E" firstAttribute="top" secondItem="nT8-GW-Kth" secondAttribute="bottom" constant="8" id="9An-1J-RGq"/>
                                                     <constraint firstItem="F8j-WD-317" firstAttribute="top" secondItem="Vpw-Gi-jll" secondAttribute="top" id="BTM-N8-6Dx"/>
                                                     <constraint firstItem="CqW-t1-bm0" firstAttribute="leading" secondItem="mWg-DY-1T9" secondAttribute="trailing" constant="4" id="Bv2-Ua-DuW"/>
@@ -4938,7 +4956,7 @@ New York, NY 10024, USA</string>
                                                     <constraint firstItem="UeK-8y-Wla" firstAttribute="trailing" secondItem="Y8B-bu-2Lj" secondAttribute="trailing" id="N0O-LG-6rz"/>
                                                     <constraint firstItem="mWg-DY-1T9" firstAttribute="centerX" secondItem="Vpw-Gi-jll" secondAttribute="centerX" constant="-20" id="OZh-bi-h3p"/>
                                                     <constraint firstItem="a8U-Gy-41j" firstAttribute="trailing" secondItem="Y8B-bu-2Lj" secondAttribute="trailing" id="P3I-MZ-pYs"/>
-                                                    <constraint firstItem="Y8B-bu-2Lj" firstAttribute="top" secondItem="Eru-HA-X5E" secondAttribute="bottom" constant="20" id="PTG-eV-htR"/>
+                                                    <constraint firstItem="Y8B-bu-2Lj" firstAttribute="top" secondItem="Eru-HA-X5E" secondAttribute="bottom" constant="45" id="PTG-eV-htR"/>
                                                     <constraint firstItem="Y8B-bu-2Lj" firstAttribute="leading" secondItem="Vpw-Gi-jll" secondAttribute="leading" constant="45" id="Qrw-fb-X8B"/>
                                                     <constraint firstItem="mWg-DY-1T9" firstAttribute="top" secondItem="a8U-Gy-41j" secondAttribute="bottom" constant="20" id="V55-j7-6gl"/>
                                                     <constraint firstItem="yVD-iD-LlB" firstAttribute="trailing" secondItem="Y8B-bu-2Lj" secondAttribute="trailing" id="czo-jB-hve"/>
@@ -4946,10 +4964,10 @@ New York, NY 10024, USA</string>
                                                     <constraint firstAttribute="height" constant="470" id="hAs-M3-gZp"/>
                                                     <constraint firstItem="Eru-HA-X5E" firstAttribute="centerX" secondItem="Vpw-Gi-jll" secondAttribute="centerX" id="ii2-jq-wm5"/>
                                                     <constraint firstItem="UeK-8y-Wla" firstAttribute="leading" secondItem="Y8B-bu-2Lj" secondAttribute="leading" id="lAU-4o-tId"/>
-                                                    <constraint firstItem="UeK-8y-Wla" firstAttribute="top" secondItem="yVD-iD-LlB" secondAttribute="bottom" constant="12" id="mca-KR-Wbh"/>
+                                                    <constraint firstItem="UeK-8y-Wla" firstAttribute="top" secondItem="yVD-iD-LlB" secondAttribute="bottom" constant="45" id="mca-KR-Wbh"/>
                                                     <constraint firstItem="CqW-t1-bm0" firstAttribute="centerY" secondItem="mWg-DY-1T9" secondAttribute="centerY" id="n7X-bK-biD"/>
                                                     <constraint firstItem="a8U-Gy-41j" firstAttribute="leading" secondItem="Y8B-bu-2Lj" secondAttribute="leading" id="pk7-tn-mKf"/>
-                                                    <constraint firstItem="a8U-Gy-41j" firstAttribute="top" secondItem="UeK-8y-Wla" secondAttribute="bottom" constant="20" id="x4x-7V-bAO"/>
+                                                    <constraint firstItem="a8U-Gy-41j" firstAttribute="top" secondItem="UeK-8y-Wla" secondAttribute="bottom" constant="40" id="x4x-7V-bAO"/>
                                                     <constraint firstItem="nT8-GW-Kth" firstAttribute="centerX" secondItem="Vpw-Gi-jll" secondAttribute="centerX" id="xpL-L7-tYm"/>
                                                 </constraints>
                                             </view>
@@ -5043,10 +5061,10 @@ New York, NY 10024, USA</string>
                         <viewLayoutGuide key="safeArea" id="Bdy-EF-tkw"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="yVD-iD-LlB" id="0cz-oC-8B0"/>
+                        <outlet property="emailField" destination="yVD-iD-LlB" id="NuH-eU-4Wd"/>
                         <outlet property="heightConstraint" destination="djb-Wz-H7e" id="1C8-h9-C7u"/>
-                        <outlet property="nameTextField" destination="Y8B-bu-2Lj" id="k5o-ng-Mqx"/>
-                        <outlet property="passwordTextField" destination="UeK-8y-Wla" id="HuG-vD-hWB"/>
+                        <outlet property="nameField" destination="Y8B-bu-2Lj" id="Udg-fo-cIF"/>
+                        <outlet property="passwordField" destination="UeK-8y-Wla" id="wLW-c5-mKs"/>
                         <outlet property="termsBtn" destination="CqW-t1-bm0" id="Day-Dd-PVT"/>
                     </connections>
                 </viewController>
@@ -5082,7 +5100,7 @@ New York, NY 10024, USA</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-rY-Vxe">
-                                                <rect key="frame" x="32" y="602" width="157.5" height="22"/>
+                                                <rect key="frame" x="32" y="602.5" width="159.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18.299999237060547"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -5101,7 +5119,7 @@ New York, NY 10024, USA</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Po5-rw-voC">
-                                                <rect key="frame" x="32" y="670" width="110.5" height="22"/>
+                                                <rect key="frame" x="32" y="670.5" width="115" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18.299999237060547"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>

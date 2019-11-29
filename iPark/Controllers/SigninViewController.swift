@@ -61,7 +61,7 @@ class SigninViewController: UIViewController {
         }
         
         if passwordField.isEmpty {
-            passwordField.detail = "Password is required"
+            passwordField.detail = "Password is required."
             valid = false
         }
         
@@ -124,7 +124,7 @@ extension SigninViewController: TextFieldDelegate {
             break
         case 52:
             if passwordField.isEmpty {
-                passwordField.detail = "Password is required"
+                passwordField.detail = "Password is required."
             }
             break
         default:

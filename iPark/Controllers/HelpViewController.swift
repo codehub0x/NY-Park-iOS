@@ -64,7 +64,7 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func onWebsiteBtnClick(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://ipark.com/")!, options: [:], completionHandler: nil)
+        openURL(url: URL(string: "https://ipark.com/"))
     }
     
     @IBAction func onEmailBtnClick(_ sender: Any) {

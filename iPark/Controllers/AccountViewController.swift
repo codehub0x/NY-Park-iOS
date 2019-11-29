@@ -54,7 +54,7 @@ class AccountViewController: UIViewController {
         }
         
         if emailField.isEmpty {
-            emailField.detail = "Email is required"
+            emailField.detail = "Email is required."
             valid = false
         } else if !emailField.text!.isValidEmail() {
             emailField.detail = "Email is invalid."
@@ -156,7 +156,7 @@ extension AccountViewController: TextFieldDelegate{
             break
         case 52:
             if emailField.isEmpty {
-                emailField.detail = "Email is required"
+                emailField.detail = "Email is required."
             } else if !emailField.text!.isValidEmail() {
                 emailField.detail = "Email is invalid."
             }
