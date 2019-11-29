@@ -40,10 +40,12 @@ class AccountViewController: UIViewController {
     }
     
     @objc func onBackClick() {
+        self.view.endEditing(true)
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onSaveBtnClick(_ sender: Any) {
+        self.view.endEditing(true)
         var valid = true
         
         if nameField.isEmpty {
@@ -96,6 +98,7 @@ class AccountViewController: UIViewController {
     }
     
     @objc func onAvatarClick(_ gesture: UITapGestureRecognizer) {
+        self.view.endEditing(true)
         self.imagePicker.present(from: avatarImageView)
     }
 }

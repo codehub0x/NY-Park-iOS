@@ -1059,7 +1059,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </constraints>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Full Name"/>
                                                         </userDefinedRuntimeAttributes>
@@ -1074,7 +1074,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </constraints>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
                                                         </userDefinedRuntimeAttributes>
@@ -1089,7 +1089,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </constraints>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Phone"/>
                                                         </userDefinedRuntimeAttributes>
@@ -1104,7 +1104,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </constraints>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
                                                         </userDefinedRuntimeAttributes>
@@ -1119,7 +1119,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </constraints>
                                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Repeat Password"/>
                                                         </userDefinedRuntimeAttributes>
@@ -1525,26 +1525,38 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-XA-l85">
-                                                        <rect key="frame" x="45" y="193" width="324" height="50"/>
+                                                    <textField opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-XA-l85" customClass="TextField" customModule="Material">
+                                                        <rect key="frame" x="45" y="214" width="324" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="96F-Ud-au1"/>
+                                                            <constraint firstAttribute="height" constant="36" id="96F-Ud-au1"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="G1W-CK-rqH" id="a7K-ti-QxJ"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-dS-zgv">
-                                                        <rect key="frame" x="45" y="263" width="324" height="50"/>
+                                                    <textField opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-dS-zgv" customClass="TextField" customModule="Material">
+                                                        <rect key="frame" x="45" y="295" width="324" height="36"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="dhL-8m-dEG"/>
+                                                            <constraint firstAttribute="height" constant="36" id="dhL-8m-dEG"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="G1W-CK-rqH" id="bHJ-ZV-h8r"/>
+                                                        </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-go-g7y" customClass="RaisedButton" customModule="Material">
-                                                        <rect key="frame" x="45" y="337" width="324" height="40"/>
+                                                        <rect key="frame" x="45" y="376" width="324" height="40"/>
                                                         <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="1O5-AF-bKB"/>
@@ -1563,7 +1575,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-mb-BG6" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="45" y="385" width="324" height="30"/>
+                                                        <rect key="frame" x="45" y="424" width="324" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="ars-DA-aI6"/>
                                                         </constraints>
@@ -1579,16 +1591,16 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="21J-pG-rIv" firstAttribute="centerX" secondItem="6J0-h1-TTu" secondAttribute="centerX" id="1yT-Iq-9zy"/>
-                                                    <constraint firstItem="5Kf-dS-zgv" firstAttribute="top" secondItem="fQd-XA-l85" secondAttribute="bottom" constant="20" id="4Cv-Ot-foN"/>
+                                                    <constraint firstItem="5Kf-dS-zgv" firstAttribute="top" secondItem="fQd-XA-l85" secondAttribute="bottom" constant="45" id="4Cv-Ot-foN"/>
                                                     <constraint firstAttribute="trailing" secondItem="5Kf-dS-zgv" secondAttribute="trailing" constant="45" id="77n-Ic-20V"/>
                                                     <constraint firstItem="umX-go-g7y" firstAttribute="leading" secondItem="6J0-h1-TTu" secondAttribute="leading" constant="45" id="AsE-Ib-w17"/>
-                                                    <constraint firstItem="umX-go-g7y" firstAttribute="top" secondItem="5Kf-dS-zgv" secondAttribute="bottom" constant="24" id="Brw-0s-3yR"/>
+                                                    <constraint firstItem="umX-go-g7y" firstAttribute="top" secondItem="5Kf-dS-zgv" secondAttribute="bottom" constant="45" id="Brw-0s-3yR"/>
                                                     <constraint firstItem="fCx-Bs-XTZ" firstAttribute="centerX" secondItem="6J0-h1-TTu" secondAttribute="centerX" id="DC3-71-HSe"/>
                                                     <constraint firstItem="a9T-mb-BG6" firstAttribute="top" secondItem="umX-go-g7y" secondAttribute="bottom" constant="8" id="GTn-MF-kAe"/>
                                                     <constraint firstItem="KK1-AM-ZYt" firstAttribute="centerX" secondItem="6J0-h1-TTu" secondAttribute="centerX" id="O23-7g-Cjl"/>
                                                     <constraint firstItem="KK1-AM-ZYt" firstAttribute="top" secondItem="6J0-h1-TTu" secondAttribute="top" id="R4O-3z-bDg"/>
                                                     <constraint firstItem="5Kf-dS-zgv" firstAttribute="leading" secondItem="6J0-h1-TTu" secondAttribute="leading" constant="45" id="RSS-cc-lSd"/>
-                                                    <constraint firstItem="fQd-XA-l85" firstAttribute="top" secondItem="fCx-Bs-XTZ" secondAttribute="bottom" constant="24" id="gA6-87-uKr"/>
+                                                    <constraint firstItem="fQd-XA-l85" firstAttribute="top" secondItem="fCx-Bs-XTZ" secondAttribute="bottom" constant="45" id="gA6-87-uKr"/>
                                                     <constraint firstAttribute="trailing" secondItem="fQd-XA-l85" secondAttribute="trailing" constant="45" id="hUM-iU-RTR"/>
                                                     <constraint firstAttribute="height" constant="450" id="oWK-GR-QPe"/>
                                                     <constraint firstItem="21J-pG-rIv" firstAttribute="top" secondItem="KK1-AM-ZYt" secondAttribute="bottom" constant="40" id="pFr-Wi-wxZ"/>
@@ -1690,9 +1702,9 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                         <viewLayoutGuide key="safeArea" id="Lho-hU-1Z9"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="fQd-XA-l85" id="CpW-gy-cco"/>
+                        <outlet property="emailField" destination="fQd-XA-l85" id="fv8-Ei-MiV"/>
                         <outlet property="heightConstraint" destination="2oT-7B-YLZ" id="D45-WE-9vx"/>
-                        <outlet property="passwordTextField" destination="5Kf-dS-zgv" id="XVJ-bZ-GJc"/>
+                        <outlet property="passwordField" destination="5Kf-dS-zgv" id="JWN-Ha-UNz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQJ-Gr-r2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
