@@ -60,12 +60,6 @@ class SearchViewController: UIViewController {
         prepareMStartTimeField()
         
         prepareSearchButton()
-        
-        addressField.delegate = self
-        mAddressField.delegate = self
-        
-        startTimeField.isEnabled = false
-        endTimeField.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,25 +75,6 @@ class SearchViewController: UIViewController {
         }
     }
     
-    @IBAction func onStartTimeFieldClick(_ sender: Any) {
-        RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: startTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
-            self.startTime = selectedDate
-        }
-    }
-    
-    @IBAction func onEndTimeFieldClick(_ sender: Any) {
-        RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: endTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
-            self.endTime = selectedDate
-        }
-    }
-    
-    @IBAction func onMStartTimeFieldClick(_ sender: Any) {
-        RPicker.selectDate(title: "Select Date", hideCancel: false, datePickerMode: .date, selectedDate: startDate, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
-            self.startDate = selectedDate
-        }
-        self.view.endEditing(true)
-    }
-    
     @IBAction func onDailySearchClick(_ sender: Any) {
         
     }
@@ -107,17 +82,57 @@ class SearchViewController: UIViewController {
     @IBAction func onMonthlySearchClick(_ sender: Any) {
         
     }
-    
 }
 
-extension SearchViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+extension SearchViewController: TextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.resignFirstResponder()
+        
+        switch textField.tag {
+        case 11:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC: UIViewController!
+            if #available(iOS 13.0, *) {
+                newVC = storyboard.instantiateViewController(identifier: LocationSearchTable.storyboardId)
+            } else {
+                // Fallback on earlier versions
+                newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId)
+            }
+            
+            self.navigationController?.pushViewController(newVC, animated: true)
+            break
+        case 12:
+            RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: startTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
+                self.startTime = selectedDate
+            }
+            break
+        case 13:
+            RPicker.selectDate(title: "Select Date & Time", hideCancel: false, datePickerMode: .dateAndTime, selectedDate: endTime, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
+                self.endTime = selectedDate
+            }
+            break
+        case 21:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newVC: UIViewController!
+            if #available(iOS 13.0, *) {
+                newVC = storyboard.instantiateViewController(identifier: LocationSearchTable.storyboardId)
+            } else {
+                // Fallback on earlier versions
+                newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId)
+            }
+            
+            self.navigationController?.pushViewController(newVC, animated: true)
+            break
+        case 22:
+            RPicker.selectDate(title: "Select Date", hideCancel: false, datePickerMode: .date, selectedDate: startDate, minDate: Date(), maxDate: Date().add(years: 1)) { (selectedDate) in
+                self.startDate = selectedDate
+            }
+            break
+        default:
+            break
+        }
+        
+        return false
     }
 }
 
@@ -168,7 +183,6 @@ fileprivate extension SearchViewController {
         addressField.placeholderNormalColor = UIColor.iBlack50
         addressField.placeholderActiveColor = UIColor.iBlack50
         
-        addressField.isClearIconButtonEnabled = true
         addressField.font = LatoFont.regular(with: 15)
         addressField.textColor = UIColor.black
         addressField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
@@ -193,7 +207,6 @@ fileprivate extension SearchViewController {
         startTimeField.placeholderNormalColor = UIColor.iBlack50
         startTimeField.placeholderActiveColor = UIColor.iBlack50
         
-        startTimeField.isClearIconButtonEnabled = true
         startTimeField.font = LatoFont.regular(with: 15)
         startTimeField.textColor = UIColor.black
         startTimeField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
@@ -218,7 +231,6 @@ fileprivate extension SearchViewController {
         endTimeField.placeholderNormalColor = UIColor.iBlack50
         endTimeField.placeholderActiveColor = UIColor.iBlack50
         
-        endTimeField.isClearIconButtonEnabled = true
         endTimeField.font = LatoFont.regular(with: 15)
         endTimeField.textColor = UIColor.black
         endTimeField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
@@ -243,7 +255,6 @@ fileprivate extension SearchViewController {
         mAddressField.placeholderNormalColor = UIColor.iBlack50
         mAddressField.placeholderActiveColor = UIColor.iBlack50
         
-        mAddressField.isClearIconButtonEnabled = true
         mAddressField.font = LatoFont.regular(with: 15)
         mAddressField.textColor = UIColor.black
         mAddressField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
@@ -268,7 +279,6 @@ fileprivate extension SearchViewController {
         mStartTimeField.placeholderNormalColor = UIColor.iBlack50
         mStartTimeField.placeholderActiveColor = UIColor.iBlack50
         
-        mStartTimeField.isClearIconButtonEnabled = true
         mStartTimeField.font = LatoFont.regular(with: 15)
         mStartTimeField.textColor = UIColor.black
         mStartTimeField.textInsets = EdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
@@ -297,14 +307,11 @@ fileprivate extension SearchViewController {
 }
 
 extension SearchViewController: TabBarDelegate {
-    @objc
-    func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
-        print("will select")
+    @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
+        
     }
     
-    @objc
-    func tabBar(tabBar: TabBar, didSelect tabItem: TabItem) {
-        print("did select")
+    @objc func tabBar(tabBar: TabBar, didSelect tabItem: TabItem) {
         let tag = tabItem.tag
         if tag != selectedTag {
             if tag == 1 {
@@ -314,9 +321,7 @@ extension SearchViewController: TabBarDelegate {
                 dailyView.hideFade()
                 monthlyView.showFade()
             }
-            
             selectedTag = tag
         }
-        
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */; };
 		3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29BEBA237DA110009F46EC /* ReservationCell.swift */; };
 		3C29BEBD237DA141009F46EC /* ReservationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BEBC237DA141009F46EC /* ReservationCell.xib */; };
 		3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29BF0F237DB3D9009F46EC /* LatoFont.swift */; };
@@ -118,6 +119,7 @@
 /* Begin PBXFileReference section */
 		1720BBF31089ACA62486D7B1 /* Pods_iPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		365F335D586FC0C3930DAE5A /* Pods-iParkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iParkTests.release.xcconfig"; path = "Target Support Files/Pods-iParkTests/Pods-iParkTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		3C29BEBA237DA110009F46EC /* ReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
 		3C29BEBC237DA141009F46EC /* ReservationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCell.xib; sourceTree = "<group>"; };
 		3C29BF0F237DB3D9009F46EC /* LatoFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoFont.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				3CA30A942384495A0046CCD5 /* AccountViewController.swift */,
 				3C42AFC32384723000C8582C /* VehiclesViewController.swift */,
 				3CA6F6A72386D3E900A24521 /* FAQViewController.swift */,
+				3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				3CA30A952384495A0046CCD5 /* AccountViewController.swift in Sources */,
 				3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */,
 				3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */,
+				3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */,
 				3C37A7172385044A00159022 /* RPicker.swift in Sources */,
 				3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */,
 				3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */,
