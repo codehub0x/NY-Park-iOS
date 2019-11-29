@@ -36,6 +36,8 @@ class FAQViewController: UIViewController {
     var heightAtIndexPath = NSMutableDictionary()
     var multipleSelect = false
     
+    let headerStr = "Choose the topic you are interested in:"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,12 +45,20 @@ class FAQViewController: UIViewController {
         
         tableView.register(UINib(nibName: "\(FAQViewCell.self)", bundle: Bundle.main), forCellReuseIdentifier: FAQViewCell.reuseIdentifier)
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        
         initData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        guard let header = tableView.tableHeaderView else { return }
+        header.frame.size.height = headerStr.height(withConstrainedWidth: view.bounds.width - 64, font: LatoFont.black(with: 20))
     }
     
     func initData() {
@@ -68,6 +78,12 @@ class FAQViewController: UIViewController {
         for (index, item) in data.enumerated() {
             expandedCells[index] = Array(repeating: CellOperation.collapsed, count: item.items.count)
         }
+        
+        let headerView = FAQHeader(frame: .zero)
+        headerView.configure(text: headerStr)
+        tableView.tableHeaderView = headerView
+        tableView.tableHeaderView?.backgroundColor = .clear
+        
         tableView.reloadData()
     }
     

@@ -80,6 +80,7 @@
 		3CBC15592390329900328CE6 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC15582390329900328CE6 /* CustomAnnotationView.swift */; };
 		3CBC155B23903B4400328CE6 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */; };
 		3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE4F6C23831F59005C45DF /* BookViewController.swift */; };
+		3CC83A6923918B6200C339CF /* FAQHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC83A6823918B6200C339CF /* FAQHeader.swift */; };
 		3CC8967F2386C7DA0085DCA1 /* FAQViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8967E2386C7DA0085DCA1 /* FAQViewCell.xib */; };
 		3CC896812386C7E70085DCA1 /* FAQViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC896802386C7E70085DCA1 /* FAQViewCell.swift */; };
 		3CEB5D412381BF4A0020CD14 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */; };
@@ -192,6 +193,7 @@
 		3CBC15582390329900328CE6 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		3CBE4F6C23831F59005C45DF /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		3CC83A6823918B6200C339CF /* FAQHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQHeader.swift; sourceTree = "<group>"; };
 		3CC8967E2386C7DA0085DCA1 /* FAQViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQViewCell.xib; sourceTree = "<group>"; };
 		3CC896802386C7E70085DCA1 /* FAQViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewCell.swift; sourceTree = "<group>"; };
 		3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			children = (
 				3CC896802386C7E70085DCA1 /* FAQViewCell.swift */,
 				3CC8967E2386C7DA0085DCA1 /* FAQViewCell.xib */,
+				3CC83A6823918B6200C339CF /* FAQHeader.swift */,
 				3C37A7162385044900159022 /* RPicker.swift */,
 				3C8924FD237C31D4004F7E97 /* Helpers.swift */,
 				3CABA6862382A3C000EB368E /* HomeCell.swift */,
@@ -733,6 +736,7 @@
 				3CEB5D432381C0FB0020CD14 /* SignupViewController.swift in Sources */,
 				3CA30A952384495A0046CCD5 /* AccountViewController.swift in Sources */,
 				3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */,
+				3CC83A6923918B6200C339CF /* FAQHeader.swift in Sources */,
 				3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */,
 				3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */,
 				3C37A7172385044A00159022 /* RPicker.swift in Sources */,

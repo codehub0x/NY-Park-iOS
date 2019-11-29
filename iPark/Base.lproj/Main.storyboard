@@ -5434,14 +5434,8 @@ New York, NY 10024, USA</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the topic you are interested in:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-eP-smc">
-                                <rect key="frame" x="32" y="76" width="350" height="24"/>
-                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zOE-dm-xCy">
-                                <rect key="frame" x="0.0" y="112" width="414" height="750"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5463,13 +5457,10 @@ New York, NY 10024, USA</string>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8Gm-y9-EBX" firstAttribute="trailing" secondItem="EYg-eP-smc" secondAttribute="trailing" constant="32" id="1JT-xa-yjc"/>
                             <constraint firstItem="8Gm-y9-EBX" firstAttribute="bottom" secondItem="zOE-dm-xCy" secondAttribute="bottom" id="FOW-dg-Xt3"/>
-                            <constraint firstItem="EYg-eP-smc" firstAttribute="top" secondItem="8Gm-y9-EBX" secondAttribute="top" constant="32" id="LmW-NJ-pf1"/>
-                            <constraint firstItem="EYg-eP-smc" firstAttribute="leading" secondItem="8Gm-y9-EBX" secondAttribute="leading" constant="32" id="PtA-Pn-Wsv"/>
                             <constraint firstItem="8Gm-y9-EBX" firstAttribute="trailing" secondItem="zOE-dm-xCy" secondAttribute="trailing" id="Px0-2R-sdT"/>
                             <constraint firstItem="zOE-dm-xCy" firstAttribute="leading" secondItem="8Gm-y9-EBX" secondAttribute="leading" id="WXr-pG-EBs"/>
-                            <constraint firstItem="zOE-dm-xCy" firstAttribute="top" secondItem="EYg-eP-smc" secondAttribute="bottom" constant="12" id="aNI-yL-bzy"/>
+                            <constraint firstItem="zOE-dm-xCy" firstAttribute="top" secondItem="8Gm-y9-EBX" secondAttribute="top" id="Ww1-cb-m8h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Gm-y9-EBX"/>
                     </view>
