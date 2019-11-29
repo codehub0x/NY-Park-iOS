@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
+         contextName = "BookViewController.initBookData():BookViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "pvc?.navigationController">
+               value = "bookData">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -15,6 +15,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.topbarHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LocationSearchTable.updateSearchResults(for:):LocationSearchTable.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Global.currentLocation">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -65,10 +73,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "BookViewController.initBookData():BookViewController.swift">
+         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "bookData">
+               value = "pvc?.navigationController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

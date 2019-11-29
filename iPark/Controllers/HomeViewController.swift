@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 2000
-    var userLocation = CLLocationCoordinate2D(latitude: 40.71, longitude: -74.01)
+    var userLocation = CLLocationCoordinate2D()
     
     let bottomViewHeight: CGFloat = 185
     let filterViewWidth: CGFloat = 270
@@ -440,6 +440,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             self.userLocation = location.coordinate
+            Global.currentLocation = location.coordinate
             showLocation(location.coordinate)
         }
     }

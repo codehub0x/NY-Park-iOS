@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import MapKit
 
 struct Global {
     static var isLoggedIn = false
+    static var currentLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.71, longitude: -74.01)
+    static var searchRegionRadius: CLLocationDistance = 100000
 }

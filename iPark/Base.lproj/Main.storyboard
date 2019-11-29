@@ -3713,13 +3713,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="0.0" y="10" width="136" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-Rs-n0q">
-                                                                <rect key="frame" x="46.5" y="0.0" width="43.5" height="10.5"/>
+                                                                <rect key="frame" x="46.5" y="0.0" width="43" height="11"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-su-SvG">
-                                                                <rect key="frame" x="30" y="14" width="76.5" height="14"/>
+                                                                <rect key="frame" x="28.5" y="13.5" width="79" height="14.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -3773,13 +3773,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <rect key="frame" x="150" y="10" width="135" height="28"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-E4-IE0">
-                                                                <rect key="frame" x="49" y="0.0" width="37.5" height="10.5"/>
+                                                                <rect key="frame" x="49" y="0.0" width="37" height="11"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr 29 / 08:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-lX-UKX">
-                                                                <rect key="frame" x="29.5" y="14" width="76.5" height="14"/>
+                                                                <rect key="frame" x="28" y="13.5" width="79" height="14.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="12"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -3977,13 +3977,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                 <rect key="frame" x="0.0" y="628" width="414" height="185"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently booked locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPj-dC-paL">
-                                        <rect key="frame" x="16" y="16" width="166.5" height="16.5"/>
+                                        <rect key="frame" x="16" y="16" width="161" height="17"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XEn-7E-jpD">
-                                        <rect key="frame" x="8" y="44.5" width="398" height="140.5"/>
+                                        <rect key="frame" x="8" y="45" width="398" height="140"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RGd-qb-dT6">
                                             <size key="itemSize" width="50" height="50"/>
@@ -4034,13 +4034,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.62 miles away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l3-Ux-cpn">
-                                        <rect key="frame" x="318" y="80" width="72" height="12"/>
+                                        <rect key="frame" x="319.5" y="80" width="70.5" height="12"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-U4-I7T">
-                                        <rect key="frame" x="302" y="80" width="12" height="12"/>
+                                        <rect key="frame" x="303.5" y="80" width="12" height="12"/>
                                         <color key="tintColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="E8L-d7-s3M"/>
@@ -4059,7 +4059,7 @@ New York, NY 10024, USA</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West 90TH Garage Corp." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qg-Iy-Cn0">
-                                        <rect key="frame" x="12" y="50" width="124" height="13"/>
+                                        <rect key="frame" x="12" y="50" width="122" height="13.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                         <color key="textColor" red="0.039215686270000001" green="0.0" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4081,7 +4081,7 @@ New York, NY 10024, USA</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEa-PT-brY">
-                                        <rect key="frame" x="24" y="76" width="22" height="15.5"/>
+                                        <rect key="frame" x="24" y="76" width="23" height="16"/>
                                         <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="13"/>
                                         <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4127,16 +4127,16 @@ New York, NY 10024, USA</string>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-lJ-BV8">
-                                <rect key="frame" x="414" y="140" width="0.0" height="673"/>
+                                <rect key="frame" x="144" y="140" width="270" height="673"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-JD-fWB">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="570"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="570"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="W7l-GJ-0v8">
                                                 <rect key="frame" x="24" y="24" width="200" height="450"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-9u-rwq" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4148,8 +4148,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="oOm-ta-q3X"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-BB-nYZ" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="42" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-BB-nYZ" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="47.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4161,8 +4161,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="5Xy-cE-YgE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-Pv-Rfv" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="90" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-Pv-Rfv" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="94.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4174,8 +4174,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="YKR-Vy-aRk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-eT-5Jo" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="132" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV4-eT-5Jo" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="142" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4187,8 +4187,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="bvz-04-Atg"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-Wt-XF6" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="180" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU7-Wt-XF6" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="189.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4200,8 +4200,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="LIF-hN-kr7"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-NG-c9e" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="222" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-NG-c9e" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="236.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4213,8 +4213,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="cyf-19-Zk2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-H3-S5i" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="270" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLA-H3-S5i" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="284" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4226,8 +4226,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="T4z-t7-PYq"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-NK-bxM" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="312" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELF-NK-bxM" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="331.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4239,8 +4239,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="Thf-bn-JJh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-4c-rjz" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="360" width="200" height="42"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-4c-rjz" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="378.5" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4252,8 +4252,8 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFilterButtonChanged:" destination="z24-As-qFl" eventType="touchUpInside" id="AYp-8h-3MQ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-DJ-MQr" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="0.0" y="402" width="200" height="48"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-DJ-MQr" customClass="FlatButton" customModule="Material">
+                                                        <rect key="frame" x="0.0" y="426" width="200" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -4327,7 +4327,7 @@ New York, NY 10024, USA</string>
                                     <constraint firstAttribute="bottom" secondItem="2EQ-JD-fWB" secondAttribute="bottom" id="fYw-rH-slE"/>
                                     <constraint firstItem="2EQ-JD-fWB" firstAttribute="width" secondItem="BGn-lJ-BV8" secondAttribute="width" id="gYC-VE-fDB"/>
                                     <constraint firstItem="2EQ-JD-fWB" firstAttribute="top" secondItem="BGn-lJ-BV8" secondAttribute="top" id="sGA-zV-rjW"/>
-                                    <constraint firstAttribute="width" id="yGG-g2-xcZ"/>
+                                    <constraint firstAttribute="width" constant="270" id="yGG-g2-xcZ"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ibB-wZ-pXP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Shk-y1-MMd"/>
@@ -4673,7 +4673,7 @@ New York, NY 10024, USA</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uqO-kl-qG2" detailTextLabel="qZX-Db-QhJ" style="IBUITableViewCellStyleSubtitle" id="f1W-Bb-K3a">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocaionSearchCell" textLabel="uqO-kl-qG2" detailTextLabel="qZX-Db-QhJ" style="IBUITableViewCellStyleSubtitle" id="f1W-Bb-K3a">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f1W-Bb-K3a" id="b1l-MT-dz8">
@@ -4683,14 +4683,14 @@ New York, NY 10024, USA</string>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqO-kl-qG2">
                                             <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qZX-Db-QhJ">
-                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="20" y="31.5" width="41" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

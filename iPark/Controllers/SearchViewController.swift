@@ -8,6 +8,12 @@
 
 import UIKit
 import Material
+import MapKit
+
+enum SearchType {
+    case Daily
+    case Monthly
+}
 
 class SearchViewController: UIViewController {
     
@@ -84,6 +90,26 @@ class SearchViewController: UIViewController {
     }
 }
 
+extension SearchViewController: TabBarDelegate {
+    @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
+        
+    }
+    
+    @objc func tabBar(tabBar: TabBar, didSelect tabItem: TabItem) {
+        let tag = tabItem.tag
+        if tag != selectedTag {
+            if tag == 1 {
+                monthlyView.hideFade()
+                dailyView.showFade()
+            } else {
+                dailyView.hideFade()
+                monthlyView.showFade()
+            }
+            selectedTag = tag
+        }
+    }
+}
+
 extension SearchViewController: TextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -91,14 +117,9 @@ extension SearchViewController: TextFieldDelegate {
         switch textField.tag {
         case 11:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let newVC: UIViewController!
-            if #available(iOS 13.0, *) {
-                newVC = storyboard.instantiateViewController(identifier: LocationSearchTable.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId)
-            }
-            
+            let newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId) as! LocationSearchTable
+            newVC.searchType = SearchType.Daily
+            newVC.delegate = self
             self.navigationController?.pushViewController(newVC, animated: true)
             break
         case 12:
@@ -113,14 +134,9 @@ extension SearchViewController: TextFieldDelegate {
             break
         case 21:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let newVC: UIViewController!
-            if #available(iOS 13.0, *) {
-                newVC = storyboard.instantiateViewController(identifier: LocationSearchTable.storyboardId)
-            } else {
-                // Fallback on earlier versions
-                newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId)
-            }
-            
+            let newVC = storyboard.instantiateViewController(withIdentifier: LocationSearchTable.storyboardId) as! LocationSearchTable
+            newVC.searchType = SearchType.Monthly
+            newVC.delegate = self
             self.navigationController?.pushViewController(newVC, animated: true)
             break
         case 22:
@@ -133,6 +149,20 @@ extension SearchViewController: TextFieldDelegate {
         }
         
         return false
+    }
+}
+
+extension SearchViewController: LocationSearchDelegate {
+    func onClickAddress(searchType: SearchType, mapItem: MKMapItem) {
+        let address = parseAddress(selectedItem: mapItem.placemark)
+        switch searchType {
+        case .Daily:
+            self.addressField.text = address
+            break
+        case .Monthly:
+            self.mAddressField.text = address
+            break
+        }
     }
 }
 
@@ -304,24 +334,29 @@ fileprivate extension SearchViewController {
         monthlySearchButton.titleLabel?.font = LatoFont.black(with: 18)
     }
     
-}
-
-extension SearchViewController: TabBarDelegate {
-    @objc func tabBar(tabBar: TabBar, willSelect tabItem: TabItem) {
-        
+    func parseAddress(selectedItem:MKPlacemark) -> String {
+        // put a space between "4" and "Melrose Place"
+        let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : ""
+        // put a comma between street and city/state
+        let comma = (selectedItem.subThoroughfare != nil || selectedItem.thoroughfare != nil) && (selectedItem.subAdministrativeArea != nil || selectedItem.administrativeArea != nil) ? ", " : ""
+        // put a space between "Washington" and "DC"
+        let secondSpace = (selectedItem.subAdministrativeArea != nil && selectedItem.administrativeArea != nil) ? " " : ""
+        let addressLine = String(
+            format:"%@%@%@%@%@%@%@",
+            // street number
+            selectedItem.subThoroughfare ?? "",
+            firstSpace,
+            // street name
+            selectedItem.thoroughfare ?? "",
+            comma,
+            // city
+            selectedItem.locality ?? "",
+            secondSpace,
+            // state
+            selectedItem.administrativeArea ?? ""
+        )
+        return addressLine
     }
     
-    @objc func tabBar(tabBar: TabBar, didSelect tabItem: TabItem) {
-        let tag = tabItem.tag
-        if tag != selectedTag {
-            if tag == 1 {
-                monthlyView.hideFade()
-                dailyView.showFade()
-            } else {
-                dailyView.hideFade()
-                monthlyView.showFade()
-            }
-            selectedTag = tag
-        }
-    }
 }
+
