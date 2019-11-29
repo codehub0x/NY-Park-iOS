@@ -58,6 +58,7 @@ class MenuViewController: UIViewController {
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         prepareMainView()
+        prepareOverlapView()
         
         if Global.isLoggedIn {
             topViewHeight.constant = 360
@@ -114,13 +115,17 @@ class MenuViewController: UIViewController {
         heightConstraint.constant = height
     }
     
-    /// IBActions
-    @IBAction func onClose(_ sender: Any) {
+    @objc func onClose() {
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
             self.mainView.transform = CGAffineTransform(translationX: 300, y: 0)
         }) { _ in
             self.view.window?.rootViewController?.dismiss(animated: true)
         }
+    }
+    
+    /// IBActions
+    @IBAction func onCloseClick(_ sender: Any) {
+        onClose()
     }
     
     @IBAction func oniParkBtnClick(_ sender: Any) {
@@ -201,6 +206,12 @@ fileprivate extension MenuViewController {
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut, .allowUserInteraction], animations: {
             self.mainView.transform = CGAffineTransform(translationX: 0, y: 0)
         })
+    }
+    
+    func prepareOverlapView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClose))
+        overlapView.isUserInteractionEnabled = true
+        overlapView.addGestureRecognizer(tapGesture)
     }
     
     func prepareiParkView() {

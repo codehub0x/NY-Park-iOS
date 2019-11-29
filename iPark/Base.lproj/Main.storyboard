@@ -562,7 +562,7 @@ VEHICLES</string>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="icon-close"/>
                                         <connections>
-                                            <action selector="onClose:" destination="bLq-t2-sEs" eventType="touchUpInside" id="sFn-FW-5Eb"/>
+                                            <action selector="onCloseClick:" destination="bLq-t2-sEs" eventType="touchUpInside" id="4S3-A1-0iC"/>
                                         </connections>
                                     </button>
                                 </subviews>
