@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import Material
 
 enum ReservationType {
@@ -158,7 +159,16 @@ extension ReservationsViewController: ReservationCellDelegate {
     }
     
     func onDirections() {
+        let destLocation = CLLocationCoordinate2D(latitude: 40.748441, longitude: -73.985564)
         
+        let urlStr = "http://maps.apple.com/maps?daddr=" + destLocation.latitude.string + "," + destLocation.longitude.string  + "&dirflg=d&t=m"
+        guard let url = URL(string: urlStr),
+            UIApplication.shared.canOpenURL(url) else { return }
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func onRebook() {

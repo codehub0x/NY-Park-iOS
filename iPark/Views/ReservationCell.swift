@@ -92,7 +92,11 @@ class ReservationCell: UITableViewCell {
     
     @IBAction func onDirectionsClick(_ sender: Any) {
         if delegate != nil {
-            delegate.onRebook()
+            if reservationType == .past {
+                delegate.onRebook()
+            } else {
+                delegate.onDirections()
+            }
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import Material
 import FSPagerView
 
@@ -59,6 +60,8 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var scrollHeight: NSLayoutConstraint!
     
+    var mainStoryboard: UIStoryboard!
+    
     var images = [
         UIImage(named: "image1"),
         UIImage(named: "image2")
@@ -66,6 +69,8 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         prepareNavigation(title: "West 90TH Garage Corp.", subTitle: "7 East 14th Street, New York, NY...")
         prepareHoursImageView()
@@ -101,13 +106,21 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func onBookClick(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let newVC = storyboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: BookViewController.storyboardId)
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onDirectionsClick(_ sender: Any) {
+        let destLocation = CLLocationCoordinate2D(latitude: 40.748441, longitude: -73.985564)
         
+        let urlStr = "http://maps.apple.com/maps?daddr=" + destLocation.latitude.string + "," + destLocation.longitude.string  + "&dirflg=d&t=m"
+        guard let url = URL(string: urlStr),
+            UIApplication.shared.canOpenURL(url) else { return }
+        if #available(iOS 10, *) {
+            UIApplication.shared.open(url)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     @IBAction func onViewIndexChanged(_ sender: Any) {
