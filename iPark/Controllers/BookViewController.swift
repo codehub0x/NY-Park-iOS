@@ -73,7 +73,8 @@ class BookViewController: UIViewController {
     }
     
     @IBAction func onPaymentBtnClick(_ sender: Any) {
-        
+        let newVC = mainStoryboard.instantiateViewController(withIdentifier: BillingViewController.storyboardId)
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onPromoCodeBtnClick(_ sender: Any) {

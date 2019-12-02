@@ -1,4 +1,6 @@
 PODS:
+  - CardIO (5.4.1)
+  - CountryPickerView (3.0.4)
   - FSPagerView (0.8.3)
   - Material (3.1.8):
     - Material/Core (= 3.1.8)
@@ -7,26 +9,45 @@ PODS:
   - Motion (3.1.3):
     - Motion/Core (= 3.1.3)
   - Motion/Core (3.1.3)
+  - PhoneNumberKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.1.0)
+    - PhoneNumberKit/UIKit (= 3.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.1.0)
+  - PhoneNumberKit/UIKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - Stripe (18.2.0)
   - TPKeyboardAvoiding (1.3.3)
 
 DEPENDENCIES:
+  - CardIO
+  - CountryPickerView
   - FSPagerView
   - Material (~> 3.1.0)
+  - PhoneNumberKit
+  - Stripe
   - TPKeyboardAvoiding
 
 SPEC REPOS:
   trunk:
+    - CardIO
+    - CountryPickerView
     - FSPagerView
     - Material
     - Motion
+    - PhoneNumberKit
+    - Stripe
     - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  CountryPickerView: 43142f2a31a20860939ec54f6e22d4b92a35b488
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
+  PhoneNumberKit: adffe4e128af1918386e09e7421d3d851a2987af
+  Stripe: a468d5f39703807e840fdfed39572ffad0aaf053
   TPKeyboardAvoiding: 6dd3fe3268b8f2627beb7ff3d82a3cacbdf66a36
 
-PODFILE CHECKSUM: 8988c3166b23dbd5a18baa1f686fb5fa0e0743d1
+PODFILE CHECKSUM: abf72ea4cb84428182cfe1acbb12d0cdbc643b63
 
 COCOAPODS: 1.8.3

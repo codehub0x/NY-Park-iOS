@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "BookViewController.initBookData():BookViewController.swift">
+         contextName = "StatusBarController.layoutSubviews():StatusBarController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "bookData">
+               value = "rootViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -19,10 +19,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LocationSearchTable.updateSearchResults(for:):LocationSearchTable.swift">
+         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "Global.currentLocation">
+               value = "pvc?.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static CreditCard.performAlgorithm(with:):CreditCard.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "formattedCardNumber.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -65,18 +73,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "StatusBarController.layoutSubviews():StatusBarController.swift">
+         contextName = "LocationSearchTable.updateSearchResults(for:):LocationSearchTable.swift">
          <PersistentStrings>
             <PersistentString
-               value = "rootViewController">
+               value = "Global.currentLocation">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in SigninViewController.onSigninBtnClick(_:):SigninViewController.swift">
+         contextName = "BookViewController.initBookData():BookViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "pvc?.navigationController">
+               value = "bookData">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -11,6 +11,10 @@ target 'iPark' do
   pod 'Material', '~> 3.1.0'
   pod 'FSPagerView'
   pod 'TPKeyboardAvoiding'
+  pod 'Stripe'
+  pod 'CardIO'
+  pod 'CountryPickerView'
+  pod 'PhoneNumberKit'
 
   # Pods for Test
 

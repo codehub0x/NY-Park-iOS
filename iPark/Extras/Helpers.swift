@@ -279,6 +279,122 @@ extension String {
 
         return ceil(boundingBox.width)
     }
+    
+    func isValidCardNumber() -> Bool {
+        do {
+            try CreditCard.performAlgorithm(with: self)
+            return true
+        }
+        catch {
+            return false
+        }
+    }
+    
+    func cardType() -> CreditCard.CardType? {
+        let cardType = try? CreditCard.cardType(for: self)
+        return cardType
+    }
+    func suggestedCardType() -> CreditCard.CardType? {
+        let cardType = try? CreditCard.cardType(for: self, suggest: true)
+        return cardType
+    }
+    
+    func formattedCardNumber() -> String {
+        let cleanCardNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "XXXX XXXX XXXX XXXX"
+
+        var result = ""
+        var index = cleanCardNumber.startIndex
+        for ch in mask where index < cleanCardNumber.endIndex {
+            if ch == "X" {
+                result.append(cleanCardNumber[index])
+                index = cleanCardNumber.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
+    }
+    
+    func isValidExpDate() -> Bool {
+
+        let currentYear = Calendar.current.component(.year, from: Date()) % 100   // This will give you current year (i.e. if 2019 then it will be 19)
+        let currentMonth = Calendar.current.component(.month, from: Date()) // This will give you current month (i.e if June then it will be 6)
+
+        let enterdYr = Int(self.suffix(2)) ?? 0   // get last two digit from entered string as year
+        let enterdMonth = Int(self.prefix(2)) ?? 0  // get first two digit from entered string as month
+        print(self) // This is MM/YY Entered by user
+
+        if enterdYr > currentYear {
+            if (1 ... 12).contains(enterdMonth){
+                return true
+            } else {
+                return false
+            }
+        } else  if currentYear == enterdYr {
+            if enterdMonth >= currentMonth
+            {
+                if (1 ... 12).contains(enterdMonth) {
+                   return true
+                }  else {
+                   return false
+                }
+            } else {
+                return false
+            }
+        } else {
+           return false
+        }
+    }
+    
+    func formattedExpDate() -> String {
+        var cleanDate = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "XX/XX"
+
+        var result = ""
+        if cleanDate.count == 2 {
+            let intVal = Int(cleanDate)
+            if (intVal! > 12) {
+                cleanDate = "0" + cleanDate
+            }
+        }
+        var index = cleanDate.startIndex
+        for ch in mask where index < cleanDate.endIndex {
+            if ch == "X" {
+                result.append(cleanDate[index])
+                index = cleanDate.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
+    }
+    
+    func isValidCVV() -> Bool {
+        let cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        
+        if cleanCVV.count == 3 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func formattedCVV() -> String {
+        var cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "XXX"
+        
+        var result = ""
+        var index = cleanCVV.startIndex
+        for ch in mask where index < cleanCVV.endIndex {
+            if ch == "X" {
+                result.append(cleanCVV[index])
+                index = cleanCVV.index(after: index)
+            }
+        }
+        
+        return result
+    }
 }
 
 extension StringProtocol {
@@ -307,4 +423,21 @@ extension UIImageView {
        self.transform = CGAffineTransform(rotationAngle: angle)
     })
   }
+}
+
+extension UITextField {
+    func showDoneButtonOnKeyboard() {
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(resignFirstResponder))
+        
+        var toolBarItems = [UIBarButtonItem]()
+        toolBarItems.append(flexSpace)
+        toolBarItems.append(doneButton)
+        
+        let doneToolbar = UIToolbar()
+        doneToolbar.items = toolBarItems
+        doneToolbar.sizeToFit()
+        
+        inputAccessoryView = doneToolbar
+    }
 }
