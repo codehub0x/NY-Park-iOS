@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CountryPickerView
-
+import PhoneNumberKit
 
 class BillingViewController: UIViewController {
     
@@ -25,20 +25,26 @@ class BillingViewController: UIViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var phoneView: UIView!
+    @IBOutlet weak var phoneTextField: PhoneNumberTextField!
     let cpvInternal = CountryPickerView()
-    @IBOutlet weak var phoneTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareNavigation()
         prepareCardViews()
         prepareCPVInternal()
         prepareTextFields()
+        preparePhoneTextField()
     }
     
-    func initialize() {
-        cardNumberTextField.text = "378282246310005"
-        updateLabel(cardNumberTextField.text!.isValidCardNumber(), textField: cardNumberTextField)
+    @IBAction func onClickSave(_ sender: Any) {
+        
+    }
+    
+    @objc func onBackClick() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
@@ -134,11 +140,29 @@ extension BillingViewController: CountryPickerViewDataSource {
 }
 
 fileprivate extension BillingViewController {
+    func prepareNavigation() {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.title = "Billing Settings"
+        
+        let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
+        self.navigationItem.leftBarButtonItem = leftButton
+    }
+    
     func prepareCardViews() {
         cardInfoView.layer.cornerRadius = 8.0
-        cardInfoView.layer.borderColor = UIColor.iBlack50.cgColor
+        cardInfoView.layer.borderColor = UIColor.iBlack70.cgColor
         cardInfoView.layer.borderWidth = 0.5
         cardInfoView.layer.masksToBounds = true
+        
+        billingInfoView.layer.cornerRadius = 8.0
+        billingInfoView.layer.borderColor = UIColor.iBlack70.cgColor
+        billingInfoView.layer.borderWidth = 0.5
+        billingInfoView.layer.masksToBounds = true
+        
+        phoneView.layer.cornerRadius = 8.0
+        phoneView.layer.borderColor = UIColor.iBlack70.cgColor
+        phoneView.layer.borderWidth = 0.5
+        phoneView.layer.masksToBounds = true
     }
     
     func prepareCPVInternal() {
@@ -150,10 +174,43 @@ fileprivate extension BillingViewController {
     }
     
     func prepareTextFields() {
+        fullNameTextField.setLeftPaddingPoints(16)
+        fullNameTextField.setRightPaddingPoints(16)
+        
+        cardNumberTextField.setLeftPaddingPoints(16)
+        cardNumberTextField.setRightPaddingPoints(16)
+        
+        expDateTextField.setLeftPaddingPoints(16)
+        expDateTextField.setRightPaddingPoints(16)
+        
+        cvvTextField.setLeftPaddingPoints(16)
+        cvvTextField.setRightPaddingPoints(16)
+        
+        cityTextField.setLeftPaddingPoints(16)
+        cityTextField.setRightPaddingPoints(16)
+        
+        stateTextField.setLeftPaddingPoints(16)
+        stateTextField.setRightPaddingPoints(16)
+        
+        zipCodeTextField.setLeftPaddingPoints(16)
+        zipCodeTextField.setRightPaddingPoints(16)
+        
+        countryTextField.setLeftPaddingPoints(16)
+        countryTextField.setRightPaddingPoints(16)
+        
         cardNumberTextField.showDoneButtonOnKeyboard()
         expDateTextField.showDoneButtonOnKeyboard()
         cvvTextField.showDoneButtonOnKeyboard()
         zipCodeTextField.showDoneButtonOnKeyboard()
+    }
+    
+    func preparePhoneTextField() {
+        phoneTextField.withFlag = true
+        phoneTextField.withPrefix = true
+        phoneTextField.withExamplePlaceholder = true
+        phoneTextField.placeholder = "Enter phone number"
+        phoneTextField.showDoneButtonOnKeyboard()
+        phoneTextField.isPartialFormatterEnabled = true
     }
     
     func updateLabel(_ isValid: Bool, textField: UITextField) {
