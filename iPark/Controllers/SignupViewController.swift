@@ -59,19 +59,29 @@ class SignupViewController: UIViewController {
         
         if nameField.isEmpty {
             nameField.detail = "Full name is required."
+            let _ = nameField.becomeFirstResponder()
             valid = false
         }
         
         if emailField.isEmpty {
             emailField.detail = "Email is required."
+            if valid {
+                let _ = emailField.becomeFirstResponder()
+            }
             valid = false
         } else if !emailField.text!.isValidEmail() {
             emailField.detail = "Email is invalid."
+            if valid {
+                let _ = emailField.becomeFirstResponder()
+            }
             valid = false
         }
         
         if passwordField.isEmpty {
             passwordField.detail = "Password is required."
+            if valid {
+                let _ = passwordField.becomeFirstResponder()
+            }
             valid = false
         }
         

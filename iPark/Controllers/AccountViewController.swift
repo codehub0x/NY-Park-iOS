@@ -50,35 +50,57 @@ class AccountViewController: UIViewController {
         
         if nameField.isEmpty {
             nameField.detail = "Full name is required."
+            let _ = nameField.becomeFirstResponder()
             valid = false
         }
         
         if emailField.isEmpty {
             emailField.detail = "Email is required."
+            if valid {
+                let _ = emailField.becomeFirstResponder()
+            }
             valid = false
         } else if !emailField.text!.isValidEmail() {
             emailField.detail = "Email is invalid."
+            if valid {
+                let _ = emailField.becomeFirstResponder()
+            }
             valid = false
         }
         
         if phoneField.isEmpty {
             phoneField.detail = "Phone number is required."
+            if valid {
+                let _ = phoneField.becomeFirstResponder()
+            }
             valid = false
         } else if !phoneField.text!.isValidPhone() {
             phoneField.detail = "Phone number is invalid."
+            if valid {
+                let _ = phoneField.becomeFirstResponder()
+            }
             valid = false
         }
         
         if passwordField.isEmpty {
             passwordField.detail = "Password is required."
+            if valid {
+                let _ = passwordField.becomeFirstResponder()
+            }
             valid = false
         }
         
         if repeatField.isEmpty {
             repeatField.detail = "Repeat password is required."
+            if valid {
+                let _ = repeatField.becomeFirstResponder()
+            }
             valid = false
         } else if repeatField.text! != passwordField.text! {
             repeatField.detail = "The specified password do not match."
+            if valid {
+                let _ = repeatField.becomeFirstResponder()
+            }
             valid = false
         }
         

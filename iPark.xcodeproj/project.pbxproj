@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C011431239683BA0055BC2A /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C011430239683BA0055BC2A /* ErrorTextField.swift */; };
 		3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */; };
 		3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29BEBA237DA110009F46EC /* ReservationCell.swift */; };
 		3C29BEBD237DA141009F46EC /* ReservationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BEBC237DA141009F46EC /* ReservationCell.xib */; };
@@ -123,6 +124,7 @@
 /* Begin PBXFileReference section */
 		1720BBF31089ACA62486D7B1 /* Pods_iPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		365F335D586FC0C3930DAE5A /* Pods-iParkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iParkTests.release.xcconfig"; path = "Target Support Files/Pods-iParkTests/Pods-iParkTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C011430239683BA0055BC2A /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		3C29BEBA237DA110009F46EC /* ReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
 		3C29BEBC237DA141009F46EC /* ReservationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCell.xib; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */,
 				3CBC15582390329900328CE6 /* CustomAnnotationView.swift */,
 				3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */,
+				3C011430239683BA0055BC2A /* ErrorTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,23 +356,23 @@
 			isa = PBXGroup;
 			children = (
 				3CF6CF08237BFF1C00E53AC0 /* TabBarController.swift */,
+				3CA30A942384495A0046CCD5 /* AccountViewController.swift */,
+				3CFE874B239498BB0080DEAC /* BillingViewController.swift */,
+				3CBE4F6C23831F59005C45DF /* BookViewController.swift */,
+				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
+				3CA6F6A72386D3E900A24521 /* FAQViewController.swift */,
+				3CB4DB15238429690037B033 /* HelpViewController.swift */,
 				3C8924FF237C364B004F7E97 /* HomeViewController.swift */,
+				3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */,
 				3C892506237C693F004F7E97 /* MenuViewController.swift */,
 				3C892502237C51BE004F7E97 /* ReservationsViewController.swift */,
 				3C892504237C53E9004F7E97 /* RewardsViewController.swift */,
-				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
 				3CB69DBF237F935500E85702 /* SavedViewController.swift */,
-				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
-				3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */,
+				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
 				3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */,
 				3CEB5D422381C0FB0020CD14 /* SignupViewController.swift */,
-				3CBE4F6C23831F59005C45DF /* BookViewController.swift */,
-				3CB4DB15238429690037B033 /* HelpViewController.swift */,
-				3CA30A942384495A0046CCD5 /* AccountViewController.swift */,
+				3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */,
 				3C42AFC32384723000C8582C /* VehiclesViewController.swift */,
-				3CA6F6A72386D3E900A24521 /* FAQViewController.swift */,
-				3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */,
-				3CFE874B239498BB0080DEAC /* BillingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -773,6 +776,7 @@
 				3C8D2D4F2385769200B91F09 /* VehicleCell.swift in Sources */,
 				3CC896812386C7E70085DCA1 /* FAQViewCell.swift in Sources */,
 				3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */,
+				3C011431239683BA0055BC2A /* ErrorTextField.swift in Sources */,
 				3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */,
 				3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */,
 				3CFE874A239443720080DEAC /* CreditCard.swift in Sources */,

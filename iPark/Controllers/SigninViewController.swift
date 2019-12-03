@@ -54,14 +54,19 @@ class SigninViewController: UIViewController {
         
         if emailField.isEmpty {
             emailField.detail = "Email is required."
+            let _ = emailField.becomeFirstResponder()
             valid = false
         } else if !emailField.text!.isValidEmail() {
             emailField.detail = "Email is invalid."
+            let _ = emailField.becomeFirstResponder()
             valid = false
         }
         
         if passwordField.isEmpty {
             passwordField.detail = "Password is required."
+            if valid {
+                let _ = passwordField.becomeFirstResponder()
+            }
             valid = false
         }
         

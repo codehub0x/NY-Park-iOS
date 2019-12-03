@@ -16,15 +16,15 @@ class BillingViewController: UIViewController {
     static let storyboardId = "\(BillingViewController.self)"
     
     @IBOutlet weak var cardInfoView: UIView!
-    @IBOutlet weak var fullNameTextField: UITextField!
-    @IBOutlet weak var cardNumberTextField: UITextField!
-    @IBOutlet weak var expDateTextField: UITextField!
-    @IBOutlet weak var cvvTextField: UITextField!
-    @IBOutlet weak var billingInfoView: UIView!
-    @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var fullNameTextField: ErrorTextField!
+    @IBOutlet weak var cardNumberTextField: ErrorTextField!
+    @IBOutlet weak var expDateTextField: ErrorTextField!
+    @IBOutlet weak var cvvTextField: ErrorTextField!
+    @IBOutlet weak var billingInfoView: ErrorTextField!
+    @IBOutlet weak var cityTextField: ErrorTextField!
+    @IBOutlet weak var stateTextField: ErrorTextField!
+    @IBOutlet weak var zipCodeTextField: ErrorTextField!
+    @IBOutlet weak var countryTextField: ErrorTextField!
     @IBOutlet weak var phoneView: UIView!
     @IBOutlet weak var phoneTextField: PhoneNumberTextField!
     let cpvInternal = CountryPickerView()
@@ -40,7 +40,109 @@ class BillingViewController: UIViewController {
     }
     
     @IBAction func onClickSave(_ sender: Any) {
+        var valid = true
+        let fullName = fullNameTextField.text!.trimmed
+        if fullName.isEmpty {
+            fullNameTextField.rightView?.isHidden = false
+            fullNameTextField.becomeFirstResponder()
+            valid = false
+        } else {
+            fullNameTextField.rightView?.isHidden = true
+        }
         
+        let cardNumber = cardNumberTextField.text!.trimmed
+        if cardNumber.isValidCardNumber() {
+            cardNumberTextField.rightView?.isHidden = true
+        } else {
+            cardNumberTextField.rightView?.isHidden = false
+            if valid {
+                cardNumberTextField.becomeFirstResponder()
+            }
+            valid = false
+        }
+        
+        let expDate = expDateTextField.text!.trimmed
+        if expDate.isValidExpDate() {
+            expDateTextField.rightView?.isHidden = true
+        } else {
+            expDateTextField.rightView?.isHidden = false
+            if valid {
+                expDateTextField.becomeFirstResponder()
+            }
+            valid = false
+        }
+        
+        let cvv = cvvTextField.text!.trimmed
+        if cvv.isValidCVV() {
+            cvvTextField.rightView?.isHidden = true
+        } else {
+            cvvTextField.rightView?.isHidden = false
+            if valid {
+                cvvTextField.becomeFirstResponder()
+            }
+            valid = false
+        }
+        
+        let city = cityTextField.text!.trimmed
+        if city.isEmpty {
+            cityTextField.rightView?.isHidden = false
+            if valid {
+                cityTextField.becomeFirstResponder()
+            }
+            valid = false
+        } else {
+            cityTextField.rightView?.isHidden = true
+        }
+        
+        let state = stateTextField.text!.trimmed
+        if state.isEmpty {
+            stateTextField.rightView?.isHidden = false
+            if valid {
+                stateTextField.becomeFirstResponder()
+            }
+            valid = false
+        } else {
+            stateTextField.rightView?.isHidden = true
+        }
+        
+        let zipCode = zipCodeTextField.text!.trimmed
+        if zipCode.count != 5 {
+            zipCodeTextField.rightView?.isHidden = false
+            if valid {
+                zipCodeTextField.becomeFirstResponder()
+            }
+            valid = false
+        } else {
+            zipCodeTextField.rightView?.isHidden = true
+        }
+        
+        let country = countryTextField.text!.trimmed
+        if country.isEmpty {
+            countryTextField.rightView?.isHidden = false
+            if valid {
+                countryTextField.becomeFirstResponder()
+            }
+            valid = false
+        } else {
+            countryTextField.rightView?.isHidden = true
+        }
+        
+        let phoneNumber = phoneTextField.text!.trimmed
+        if !phoneNumber.isValidPhone() {
+            phoneTextField.rightView?.isHidden = false
+            if valid {
+                phoneTextField.becomeFirstResponder()
+            }
+            valid = false
+        } else {
+            phoneTextField.rightView?.isHidden = true
+        }
+        
+        if valid {
+            // TODO: Save billing settings
+            
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @objc func onBackClick() {
@@ -69,9 +171,12 @@ extension BillingViewController: UITextFieldDelegate {
             updateLabel(isValid, textField: textField)
             textField.text = cardNumber
             if isValid {
+                cardNumberTextField.textColor = .iBlack95
                 let cardType = cardNumber.cardType()?.stringValue() ?? ""
                 print(cardType)
                 expDateTextField.becomeFirstResponder()
+            } else {
+                cardNumberTextField.textColor = .red
             }
             return false
         } else if textField == expDateTextField {
@@ -80,7 +185,11 @@ extension BillingViewController: UITextFieldDelegate {
             updateLabel(isValid, textField: textField)
             textField.text = expDate
             if isValid {
+                expDateTextField.textColor = .iBlack95
+                expDateTextField.rightView?.isHidden = true
                 cvvTextField.becomeFirstResponder()
+            } else {
+                expDateTextField.textColor = .red
             }
             return false
         } else if textField == cvvTextField {
@@ -89,7 +198,10 @@ extension BillingViewController: UITextFieldDelegate {
             updateLabel(isValid, textField: textField)
             textField.text = cvv
             if isValid {
+                cvvTextField.textColor = .iBlack95
                 cityTextField.becomeFirstResponder()
+            } else {
+                cvvTextField.textColor = .red
             }
         } else if textField == zipCodeTextField {
             let isValid = updatedString.count >= 5
@@ -100,11 +212,60 @@ extension BillingViewController: UITextFieldDelegate {
             }
             textField.text = zipCode
             if isValid {
-                
+                zipCodeTextField.textColor = .iBlack95
+                countryTextField.becomeFirstResponder()
+            } else {
+                zipCodeTextField.textColor = .red
             }
             return false
         }
         
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let str = textField.text!.trimmed
+        if textField == fullNameTextField {
+            textField.rightView?.isHidden = !str.isEmpty
+        } else if textField == cardNumberTextField {
+            textField.rightView?.isHidden = str.isValidCardNumber()
+        } else if textField == expDateTextField {
+            textField.rightView?.isHidden = str.isValidExpDate()
+        } else if textField == cvvTextField {
+            textField.rightView?.isHidden = str.isValidCVV()
+        } else if textField == cityTextField {
+            textField.rightView?.isHidden = !str.isEmpty
+        } else if textField == stateTextField {
+            textField.rightView?.isHidden = !str.isEmpty
+        } else if textField == zipCodeTextField {
+            textField.rightView?.isHidden = str.count == 5
+        } else if textField == countryTextField {
+            textField.rightView?.isHidden = !str.isEmpty
+        } else if textField == phoneTextField {
+            textField.rightView?.isHidden = str.isValidPhone()
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == fullNameTextField {
+            cardNumberTextField.becomeFirstResponder()
+        } else if textField == cardNumberTextField {
+            expDateTextField.becomeFirstResponder()
+        } else if textField == expDateTextField {
+            cvvTextField.becomeFirstResponder()
+        } else if textField == cvvTextField {
+            cityTextField.becomeFirstResponder()
+        } else if textField == cityTextField {
+            stateTextField.becomeFirstResponder()
+        } else if textField == stateTextField {
+            zipCodeTextField.becomeFirstResponder()
+        } else if textField == zipCodeTextField {
+            countryTextField.becomeFirstResponder()
+        } else if textField == countryTextField {
+            phoneTextField.becomeFirstResponder()
+        } else if textField == phoneTextField {
+            phoneTextField.resignFirstResponder()
+        }
         return true
     }
 }
@@ -112,6 +273,11 @@ extension BillingViewController: UITextFieldDelegate {
 extension BillingViewController: CountryPickerViewDelegate {
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         countryTextField.text = country.name
+        let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 32, height: 12))
+        leftImageView.image = country.flag
+        leftImageView.contentMode = .scaleAspectFit
+        countryTextField.leftView = leftImageView
+        countryTextField.leftViewMode = .always
     }
 }
 
@@ -175,28 +341,12 @@ fileprivate extension BillingViewController {
     
     func prepareTextFields() {
         fullNameTextField.setLeftPaddingPoints(16)
-        fullNameTextField.setRightPaddingPoints(16)
-        
         cardNumberTextField.setLeftPaddingPoints(16)
-        cardNumberTextField.setRightPaddingPoints(16)
-        
         expDateTextField.setLeftPaddingPoints(16)
-        expDateTextField.setRightPaddingPoints(16)
-        
         cvvTextField.setLeftPaddingPoints(16)
-        cvvTextField.setRightPaddingPoints(16)
-        
         cityTextField.setLeftPaddingPoints(16)
-        cityTextField.setRightPaddingPoints(16)
-        
         stateTextField.setLeftPaddingPoints(16)
-        stateTextField.setRightPaddingPoints(16)
-        
         zipCodeTextField.setLeftPaddingPoints(16)
-        zipCodeTextField.setRightPaddingPoints(16)
-        
-        countryTextField.setLeftPaddingPoints(16)
-        countryTextField.setRightPaddingPoints(16)
         
         cardNumberTextField.showDoneButtonOnKeyboard()
         expDateTextField.showDoneButtonOnKeyboard()
@@ -211,6 +361,15 @@ fileprivate extension BillingViewController {
         phoneTextField.placeholder = "Enter phone number"
         phoneTextField.showDoneButtonOnKeyboard()
         phoneTextField.isPartialFormatterEnabled = true
+        
+        // set right view
+        let errorImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+        errorImageView.image = UIImage(named: "ic_error")
+        errorImageView.contentMode = .center
+        
+        phoneTextField.rightView = errorImageView
+        phoneTextField.rightViewMode = .always
+        phoneTextField.rightView?.isHidden = true
     }
     
     func updateLabel(_ isValid: Bool, textField: UITextField) {
