@@ -14,7 +14,7 @@ class CustomAnnotationView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: nil)
         
         // Set custom image
-        self.image = UIImage(named: "ic_mark")
+        self.image = UIImage(named: "icon-mark")
         
         // Set extra settings
         self.canShowCallout = false
@@ -34,23 +34,4 @@ class CustomAnnotationView: MKAnnotationView {
         super.init(coder: aDecoder)
     }
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//        // Set custom image
-//        self.image = UIImage(named: "ic_mark")
-//
-//        // Set extra settings
-//        self.canShowCallout = false
-//        self.isEnabled = true
-//
-//        // Add label
-//        let label = UILabel(frame: CGRect(x: 10, y: 0, width: 35, height: 20))
-//        label.font = LatoFont.bold(with: 15)
-//        label.textColor = UIColor.iDarkBlue
-//        label.textAlignment = .center
-//        label.text = price
-//
-//        self.addSubview(label)
-//    }
 }

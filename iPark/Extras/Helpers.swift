@@ -326,7 +326,7 @@ extension String {
         let enterdMonth = Int(self.prefix(2)) ?? 0  // get first two digit from entered string as month
         print(self) // This is MM/YY Entered by user
 
-        if enterdYr > currentYear {
+        if enterdYr > currentYear && enterdYr <= currentYear + 15 {
             if (1 ... 12).contains(enterdMonth){
                 return true
             } else {
@@ -352,7 +352,7 @@ extension String {
         var str = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         let mask = "##/##"
 
-        if str.count < 3 {
+        if str.count > 0 && str.count < 3 {
             let month = Int(str)!
             if str.count == 1 && month >= 2{
                 str = "0" + str
@@ -377,7 +377,7 @@ extension String {
     func isValidCVV() -> Bool {
         let cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         
-        if cleanCVV.count == 3 {
+        if cleanCVV.count == 4 {
             return true
         } else {
             return false
@@ -386,7 +386,7 @@ extension String {
     
     func formattedCVV() -> String {
         let cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "###"
+        let mask = "####"
         
         var result = ""
         var index = cleanCVV.startIndex
@@ -394,6 +394,34 @@ extension String {
             if ch == "#" {
                 result.append(cleanCVV[index])
                 index = cleanCVV.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        
+        return result
+    }
+    
+    func isValidZipCode() -> Bool {
+        let clean = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        
+        if clean.count == 5 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func formattedZipCode() -> String {
+        let clean = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "#####"
+        
+        var result = ""
+        var index = clean.startIndex
+        for ch in mask where index < clean.endIndex {
+            if ch == "#" {
+                result.append(clean[index])
+                index = clean.index(after: index)
             } else {
                 result.append(ch)
             }

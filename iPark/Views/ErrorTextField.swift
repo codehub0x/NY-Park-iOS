@@ -22,7 +22,7 @@ class ErrorTextField: UITextField {
     
     func initialErrorIcon() {
         let errorImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-        errorImageView.image = UIImage(named: "ic_error")
+        errorImageView.image = UIImage(named: "icon-error")
         errorImageView.contentMode = .center
         
         self.rightView = errorImageView

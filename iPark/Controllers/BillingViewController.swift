@@ -32,6 +32,8 @@ class BillingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        CardIOUtilities.preload()
+        
         prepareNavigation()
         prepareCardViews()
         prepareCPVInternal()
@@ -149,6 +151,12 @@ class BillingViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc func onScanClick() {
+        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
+        cardIOVC.modalPresentationStyle = .currentContext
+        self.present(cardIOVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension BillingViewController: UITextFieldDelegate {
@@ -171,12 +179,9 @@ extension BillingViewController: UITextFieldDelegate {
             updateLabel(isValid, textField: textField)
             textField.text = cardNumber
             if isValid {
-                cardNumberTextField.textColor = .iBlack95
                 let cardType = cardNumber.cardType()?.stringValue() ?? ""
                 print(cardType)
                 expDateTextField.becomeFirstResponder()
-            } else {
-                cardNumberTextField.textColor = .red
             }
             return false
         } else if textField == expDateTextField {
@@ -185,11 +190,8 @@ extension BillingViewController: UITextFieldDelegate {
             updateLabel(isValid, textField: textField)
             textField.text = expDate
             if isValid {
-                expDateTextField.textColor = .iBlack95
                 expDateTextField.rightView?.isHidden = true
                 cvvTextField.becomeFirstResponder()
-            } else {
-                expDateTextField.textColor = .red
             }
             return false
         } else if textField == cvvTextField {
@@ -198,24 +200,16 @@ extension BillingViewController: UITextFieldDelegate {
             updateLabel(isValid, textField: textField)
             textField.text = cvv
             if isValid {
-                cvvTextField.textColor = .iBlack95
                 cityTextField.becomeFirstResponder()
-            } else {
-                cvvTextField.textColor = .red
             }
+            return false
         } else if textField == zipCodeTextField {
-            let isValid = updatedString.count >= 5
+            let zipCode = updatedString.formattedZipCode()
+            let isValid = zipCode.isValidZipCode()
             updateLabel(isValid, textField: textField)
-            var zipCode = updatedString
-            if zipCode.count > 5 {
-                zipCode = String(zipCode.prefix(5))
-            }
             textField.text = zipCode
             if isValid {
-                zipCodeTextField.textColor = .iBlack95
                 countryTextField.becomeFirstResponder()
-            } else {
-                zipCodeTextField.textColor = .red
             }
             return false
         }
@@ -270,6 +264,25 @@ extension BillingViewController: UITextFieldDelegate {
     }
 }
 
+extension BillingViewController: CardIOPaymentViewControllerDelegate {
+    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+        print("userDidCancel")
+        paymentViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+        print("userDidProvide")
+        let expiryMonth = cardInfo.expiryMonth > 9 ? "\(cardInfo.expiryMonth)" : "0\(cardInfo.expiryMonth)"
+        let expiryYear = cardInfo.expiryYear - 2000
+        let expDate = "\(expiryMonth)/\(expiryYear)"
+        
+        cardNumberTextField.text = cardInfo.cardNumber.formattedCardNumber()
+        expDateTextField.text = expDate
+        cvvTextField.text = cardInfo.cvv
+        paymentViewController.dismiss(animated: true, completion: nil)
+    }
+}
+
 extension BillingViewController: CountryPickerViewDelegate {
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         countryTextField.text = country.name
@@ -312,6 +325,9 @@ fileprivate extension BillingViewController {
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         self.navigationItem.leftBarButtonItem = leftButton
+        
+        let rightButton = UIBarButtonItem(image: UIImage(named: "icon-scan"), style: .plain, target: self, action: #selector(onScanClick))
+        self.navigationItem.rightBarButtonItem = rightButton
     }
     
     func prepareCardViews() {
@@ -364,7 +380,7 @@ fileprivate extension BillingViewController {
         
         // set right view
         let errorImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-        errorImageView.image = UIImage(named: "ic_error")
+        errorImageView.image = UIImage(named: "icon-error")
         errorImageView.contentMode = .center
         
         phoneTextField.rightView = errorImageView

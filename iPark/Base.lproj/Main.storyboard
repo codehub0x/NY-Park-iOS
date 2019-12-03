@@ -4249,7 +4249,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                     <constraint firstAttribute="height" constant="48" id="t4O-NI-qE8"/>
                                                     <constraint firstAttribute="width" constant="48" id="vCt-lm-uF3"/>
                                                 </constraints>
-                                                <state key="normal" image="ic_user_location"/>
+                                                <state key="normal" image="icon-user-location"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
                                                         <color key="value" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5796,7 +5796,6 @@ New York, NY 10024, USA</string>
         <image name="avatar" width="68" height="68"/>
         <image name="bar-code" width="162" height="50"/>
         <image name="dog" width="275" height="183"/>
-        <image name="ic_user_location" width="32" height="32"/>
         <image name="icon-arrow-down" width="24" height="24"/>
         <image name="icon-arrow-right" width="36" height="36"/>
         <image name="icon-check-off" width="24" height="24"/>
@@ -5821,6 +5820,7 @@ New York, NY 10024, USA</string>
         <image name="icon-staff" width="28.5" height="33"/>
         <image name="icon-time" width="16" height="16"/>
         <image name="icon-twitter" width="54" height="54"/>
+        <image name="icon-user-location" width="32" height="32"/>
         <image name="icon-valet" width="28.5" height="28"/>
         <image name="icon-website" width="32" height="32"/>
         <image name="logo" width="333" height="133"/>
