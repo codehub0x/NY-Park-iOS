@@ -111,7 +111,7 @@ class SignupViewController: UIViewController {
     
 }
 
-extension SignupViewController: TextFieldDelegate {
+extension SignupViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField.tag {
         case 51:
@@ -128,8 +128,12 @@ extension SignupViewController: TextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let textField = textField as? TextField {
-            textField.detail = ""
+        if textField.tag == 51 {
+            nameFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 52 {
+            emailFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 53 {
+            passwordFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         }
         return true
     }
@@ -142,9 +146,10 @@ extension SignupViewController: TextFieldDelegate {
             }
             break
         case 52:
-            if emailField.text!.isEmpty {
+            let email = emailField.text?.trimmed ?? ""
+            if email.isEmpty {
                 emailFieldController.setErrorText("Email is required.", errorAccessibilityValue: "Email is required.")
-            } else if !emailField.text!.isValidEmail() {
+            } else if !email.isValidEmail() {
                 emailFieldController.setErrorText("Email is invalid.", errorAccessibilityValue: "Email is invalid.")
             }
             break

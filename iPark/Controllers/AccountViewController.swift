@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import MaterialComponents.MaterialTextFields
 
 class AccountViewController: UIViewController {
     
@@ -15,12 +16,18 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var nameField: TextField!
-    @IBOutlet weak var emailField: TextField!
-    @IBOutlet weak var phoneField: TextField!
-    @IBOutlet weak var passwordField: TextField!
-    @IBOutlet weak var repeatField: TextField!
+    @IBOutlet weak var nameField: MDCTextField!
+    @IBOutlet weak var emailField: MDCTextField!
+    @IBOutlet weak var phoneField: MDCTextField!
+    @IBOutlet weak var passwordField: MDCTextField!
+    @IBOutlet weak var repeatField: MDCTextField!
     @IBOutlet weak var notificationSwitch: UISwitch!
+    
+    var nameFieldController: MDCTextInputControllerOutlined!
+    var emailFieldController: MDCTextInputControllerOutlined!
+    var phoneFieldController: MDCTextInputControllerOutlined!
+    var passwordFieldController: MDCTextInputControllerOutlined!
+    var repeatFieldController: MDCTextInputControllerOutlined!
     
     var imagePicker: ImagePicker!
     
@@ -48,56 +55,62 @@ class AccountViewController: UIViewController {
         self.view.endEditing(true)
         var valid = true
         
-        if nameField.isEmpty {
-            nameField.detail = "Full name is required."
+        let fullName = nameField.text?.trimmed ?? ""
+        let email = emailField.text?.trimmed ?? ""
+        let phone = phoneField.text?.trimmed ?? ""
+        let password = passwordField.text ?? ""
+        let repeatPassword = repeatField.text ?? ""
+        
+        if fullName.isEmpty {
+            nameFieldController.setErrorText("Full Name is required.", errorAccessibilityValue: "Full Name is required.")
             let _ = nameField.becomeFirstResponder()
             valid = false
         }
         
-        if emailField.isEmpty {
-            emailField.detail = "Email is required."
+        if email.isEmpty {
+            emailFieldController.setErrorText("Email is required.", errorAccessibilityValue: "Email is required.")
             if valid {
                 let _ = emailField.becomeFirstResponder()
             }
             valid = false
         } else if !emailField.text!.isValidEmail() {
-            emailField.detail = "Email is invalid."
+            emailFieldController.setErrorText("Email is invalid.", errorAccessibilityValue: "Email is invalid.")
             if valid {
                 let _ = emailField.becomeFirstResponder()
             }
             valid = false
         }
         
-        if phoneField.isEmpty {
-            phoneField.detail = "Phone number is required."
+        if phone.isEmpty {
+            phoneFieldController.setErrorText("Phone number is required.", errorAccessibilityValue: "Phone number is required.")
             if valid {
                 let _ = phoneField.becomeFirstResponder()
             }
             valid = false
         } else if !phoneField.text!.isValidPhone() {
-            phoneField.detail = "Phone number is invalid."
+            phoneFieldController.setErrorText("Phone number is invalid.", errorAccessibilityValue: "Phone number is invalid.")
             if valid {
                 let _ = phoneField.becomeFirstResponder()
             }
             valid = false
         }
         
-        if passwordField.isEmpty {
-            passwordField.detail = "Password is required."
+        if password.isEmpty {
+            passwordFieldController.setErrorText("Password is required.", errorAccessibilityValue: "Password is required.")
             if valid {
                 let _ = passwordField.becomeFirstResponder()
             }
             valid = false
         }
         
-        if repeatField.isEmpty {
-            repeatField.detail = "Repeat password is required."
+        if repeatPassword.isEmpty {
+            repeatFieldController.setErrorText("Repeat password is required.", errorAccessibilityValue: "Repeat password is required.")
             if valid {
                 let _ = repeatField.becomeFirstResponder()
             }
             valid = false
-        } else if repeatField.text! != passwordField.text! {
-            repeatField.detail = "The specified password do not match."
+        } else if repeatPassword != password {
+            repeatFieldController.setErrorText("The specified password do not match.", errorAccessibilityValue: "The specified password do not match.")
             if valid {
                 let _ = repeatField.becomeFirstResponder()
             }
@@ -112,7 +125,9 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func onPaymentBtnClick(_ sender: Any) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: BillingViewController.storyboardId)
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     @IBAction func onValueChanged(_ sender: Any) {
@@ -157,10 +172,15 @@ extension AccountViewController: TextFieldDelegate{
     
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let textField = textField as? TextField {
-            textField.detail = ""
-        }
-        if textField.tag == 53 {
+        if textField.tag == 51 {
+            nameFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 52 {
+            emailFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 54 {
+            passwordFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 55 {
+            repeatFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 53 {
             guard let text = textField.text else { return false }
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
             textField.text = newString.formattedNumber()
@@ -172,34 +192,35 @@ extension AccountViewController: TextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.tag {
         case 51:
-            if nameField.isEmpty {
-                nameField.detail = "Full name is required."
+            if nameField.text!.isEmpty {
+                nameFieldController.setErrorText("Full Name is required.", errorAccessibilityValue: "Full Name is required.")
             }
             break
         case 52:
-            if emailField.isEmpty {
-                emailField.detail = "Email is required."
-            } else if !emailField.text!.isValidEmail() {
-                emailField.detail = "Email is invalid."
+            let email = emailField.text?.trimmed ?? ""
+            if email.isEmpty {
+                emailFieldController.setErrorText("Email is required.", errorAccessibilityValue: "Email is required.")
+            } else if !email.isValidEmail() {
+                emailFieldController.setErrorText("Email is invalid.", errorAccessibilityValue: "Email is invalid.")
             }
             break
         case 53:
-            if phoneField.isEmpty {
-                phoneField.detail = "Phone number is required."
+            if phoneField.text!.isEmpty {
+                phoneFieldController.setErrorText("Phone number is required.", errorAccessibilityValue: "Phone number is required.")
             } else if !phoneField.text!.isValidPhone() {
-                phoneField.detail = "Phone number is invalid."
+                phoneFieldController.setErrorText("Phone number is invalid.", errorAccessibilityValue: "Phone number is invalid.")
             }
             break
         case 54:
-            if passwordField.isEmpty {
-                passwordField.detail = "Password is required."
+            if passwordField.text!.isEmpty {
+                passwordFieldController.setErrorText("Password is required.", errorAccessibilityValue: "Password is required.")
             }
             break
         case 55:
-            if repeatField.isEmpty {
-                repeatField.detail = "Repeat password is required."
+            if repeatField.text!.isEmpty {
+                repeatFieldController.setErrorText("Repeat password is required.", errorAccessibilityValue: "Repeat password is required.")
             } else if repeatField.text! != passwordField.text! {
-                repeatField.detail = "The specified password do not match."
+                repeatFieldController.setErrorText("The specified password do not match.", errorAccessibilityValue: "The specified password do not match.")
             }
             break
         default:
@@ -238,85 +259,83 @@ fileprivate extension AccountViewController {
     }
     
     func prepareNameTextField() {
-        nameField.placeholderLabel.font = LatoFont.regular(with: 15)
-        nameField.placeholderActiveScale = 0.7
-        nameField.placeholderNormalColor = .iBlack50
-        nameField.placeholderActiveColor = .iDarkBlue
+        nameField.font = LatoFont.regular(with: 17)
+        nameField.textColor = .iBlack95
         
-        nameField.font = LatoFont.regular(with: 15)
-        nameField.textColor = .black
-        nameField.detailColor = .red
-        
-        nameField.dividerNormalHeight = 1
-        nameField.dividerActiveHeight = 2
-        nameField.dividerNormalColor = .iBlack50
-        nameField.dividerActiveColor = .iDarkBlue
+        nameFieldController = MDCTextInputControllerOutlined(textInput: nameField)
+        nameFieldController.placeholderText = "Full Name"
+        nameFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        nameFieldController.inlinePlaceholderColor = .iBlack70
+        nameFieldController.floatingPlaceholderNormalColor = .iBlack70
+        nameFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        nameFieldController.floatingPlaceholderErrorActiveColor = .red
+        nameFieldController.errorColor = .red
+        nameFieldController.normalColor = .iBlack70
+        nameFieldController.activeColor = .iDarkBlue
     }
     
     func prepareEmailTextField() {
-        emailField.placeholderLabel.font = LatoFont.regular(with: 15)
-        emailField.placeholderActiveScale = 0.7
-        emailField.placeholderNormalColor = .iBlack50
-        emailField.placeholderActiveColor = .iDarkBlue
+        emailField.font = LatoFont.regular(with: 17)
+        emailField.textColor = .iBlack95
         
-        emailField.font = LatoFont.regular(with: 15)
-        emailField.textColor = .black
-        emailField.detailColor = .red
-        
-        emailField.dividerNormalHeight = 1
-        emailField.dividerActiveHeight = 2
-        emailField.dividerNormalColor = .iBlack50
-        emailField.dividerActiveColor = .iDarkBlue
+        emailFieldController = MDCTextInputControllerOutlined(textInput: emailField)
+        emailFieldController.placeholderText = "Email"
+        emailFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        emailFieldController.inlinePlaceholderColor = .iBlack70
+        emailFieldController.floatingPlaceholderNormalColor = .iBlack70
+        emailFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        emailFieldController.floatingPlaceholderErrorActiveColor = .red
+        emailFieldController.errorColor = .red
+        emailFieldController.activeColor = .iDarkBlue
+        emailFieldController.normalColor = .iBlack70
     }
     
     func preparePhoneTextField() {
-        phoneField.placeholderLabel.font = LatoFont.regular(with: 15)
-        phoneField.placeholderActiveScale = 0.7
-        phoneField.placeholderNormalColor = .iBlack50
-        phoneField.placeholderActiveColor = .iDarkBlue
+        phoneField.font = LatoFont.regular(with: 17)
+        phoneField.textColor = .iBlack95
         
-        phoneField.font = LatoFont.regular(with: 15)
-        phoneField.textColor = .black
-        phoneField.detailColor = .red
-        
-        phoneField.dividerNormalHeight = 1
-        phoneField.dividerActiveHeight = 2
-        phoneField.dividerNormalColor = .iBlack50
-        phoneField.dividerActiveColor = .iDarkBlue
+        phoneFieldController = MDCTextInputControllerOutlined(textInput: phoneField)
+        phoneFieldController.placeholderText = "Phone Number"
+        phoneFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        phoneFieldController.inlinePlaceholderColor = .iBlack70
+        phoneFieldController.floatingPlaceholderNormalColor = .iBlack70
+        phoneFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        phoneFieldController.floatingPlaceholderErrorActiveColor = .red
+        phoneFieldController.errorColor = .red
+        phoneFieldController.normalColor = .iBlack70
+        phoneFieldController.activeColor = .iDarkBlue
     }
     
     func preparePasswordTextField() {
-        passwordField.placeholderLabel.font = LatoFont.regular(with: 15)
-        passwordField.placeholderActiveScale = 0.7
-        passwordField.placeholderNormalColor = .iBlack50
-        passwordField.placeholderActiveColor = .iDarkBlue
+        passwordField.font = LatoFont.regular(with: 17)
+        passwordField.textColor = .iBlack95
         
-        passwordField.font = LatoFont.regular(with: 15)
-        passwordField.textColor = .black
-        passwordField.detailColor = .red
-        passwordField.isVisibilityIconButtonEnabled = true
-        
-        passwordField.dividerNormalHeight = 1
-        passwordField.dividerActiveHeight = 2
-        passwordField.dividerNormalColor = .iBlack50
-        passwordField.dividerActiveColor = .iDarkBlue
+        passwordFieldController = MDCTextInputControllerOutlined(textInput: passwordField)
+        passwordFieldController.placeholderText = "Password"
+        passwordFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        passwordFieldController.inlinePlaceholderColor = .iBlack70
+        passwordFieldController.floatingPlaceholderNormalColor = .iBlack70
+        passwordFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        passwordFieldController.floatingPlaceholderErrorActiveColor = .red
+        passwordFieldController.errorColor = .red
+        passwordFieldController.normalColor = .iBlack70
+        passwordFieldController.activeColor = .iDarkBlue
     }
     
     func prepareRepeatTextField() {
-        repeatField.placeholderLabel.font = LatoFont.regular(with: 15)
-        repeatField.placeholderActiveScale = 0.7
-        repeatField.placeholderNormalColor = .iBlack50
-        repeatField.placeholderActiveColor = .iDarkBlue
+        repeatField.font = LatoFont.regular(with: 17)
+        repeatField.textColor = .iBlack95
         
-        repeatField.font = LatoFont.regular(with: 15)
-        repeatField.textColor = .black
-        repeatField.detailColor = .red
-        repeatField.isVisibilityIconButtonEnabled = true
-        
-        repeatField.dividerNormalHeight = 1
-        repeatField.dividerActiveHeight = 2
-        repeatField.dividerNormalColor = .iBlack50
-        repeatField.dividerActiveColor = .iDarkBlue
+        repeatFieldController = MDCTextInputControllerOutlined(textInput: repeatField)
+        repeatFieldController.placeholderText = "Repeat Password"
+        repeatFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        repeatFieldController.inlinePlaceholderColor = .iBlack70
+        repeatFieldController.floatingPlaceholderNormalColor = .iBlack70
+        repeatFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        repeatFieldController.floatingPlaceholderErrorActiveColor = .red
+        repeatFieldController.errorColor = .red
+        repeatFieldController.normalColor = .iBlack70
+        repeatFieldController.activeColor = .iDarkBlue
     }
 }
 

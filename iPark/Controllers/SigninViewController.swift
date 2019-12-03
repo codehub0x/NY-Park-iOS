@@ -114,9 +114,10 @@ extension SigninViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.tag {
         case 51:
-            if emailField.text!.isEmpty {
+            let email = emailField.text?.trimmed ?? ""
+            if email.isEmpty {
                 emailFieldController.setErrorText("Email is required.", errorAccessibilityValue: "Email is required.")
-            } else if !emailField.text!.isValidEmail() {
+            } else if !email.isValidEmail() {
                 emailFieldController.setErrorText("Email is invalid.", errorAccessibilityValue: "Email is invalid.")
             }
             break
