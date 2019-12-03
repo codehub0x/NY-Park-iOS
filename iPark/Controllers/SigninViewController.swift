@@ -15,7 +15,6 @@ class SigninViewController: UIViewController {
     
     @IBOutlet weak var emailField: MDCTextField!
     @IBOutlet weak var passwordField: MDCTextField!
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     var emailFieldController: MDCTextInputControllerOutlined!
     var passwordFieldController: MDCTextInputControllerOutlined!
@@ -26,25 +25,10 @@ class SigninViewController: UIViewController {
         super.viewDidLoad()
         
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        adjustUIHeight()
         
         prepareEmailFieldController()
         preparePasswordFieldController()
         
-    }
-    
-    func adjustUIHeight() {
-        let windowSize = UIScreen.main.bounds
-        var topPadding: CGFloat = 0
-        if #available(iOS 11.0, *) {
-            let window = UIApplication.shared.keyWindow
-            topPadding = window?.safeAreaInsets.top ?? 0
-        }
-        var height = windowSize.height - topPadding
-        if height < 600 {
-            height = 600
-        }
-        heightConstraint.constant = height
     }
     
     @IBAction func onCloseBtnClick(_ sender: Any) {
