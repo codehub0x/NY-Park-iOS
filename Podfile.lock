@@ -6,6 +6,52 @@ PODS:
     - Material/Core (= 3.1.8)
   - Material/Core (3.1.8):
     - Motion (~> 3.1.1)
+  - MaterialComponents/AnimationTiming (94.4.0)
+  - MaterialComponents/Buttons (94.4.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (94.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (94.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (94.4.0)
+  - MaterialComponents/private/Application (94.4.0)
+  - MaterialComponents/private/Color (94.4.0)
+  - MaterialComponents/private/Math (94.4.0)
+  - MaterialComponents/Ripple (94.4.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (94.4.0)
+  - MaterialComponents/ShadowLayer (94.4.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (94.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/TextFields (94.4.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Buttons
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Typography (94.4.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - Motion (3.1.3):
     - Motion/Core (= 3.1.3)
   - Motion/Core (3.1.3)
@@ -23,6 +69,7 @@ DEPENDENCIES:
   - CountryPickerView
   - FSPagerView
   - Material (~> 3.1.0)
+  - MaterialComponents/TextFields
   - PhoneNumberKit
   - Stripe
   - TPKeyboardAvoiding
@@ -33,6 +80,9 @@ SPEC REPOS:
     - CountryPickerView
     - FSPagerView
     - Material
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - Motion
     - PhoneNumberKit
     - Stripe
@@ -43,11 +93,14 @@ SPEC CHECKSUMS:
   CountryPickerView: 43142f2a31a20860939ec54f6e22d4b92a35b488
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
+  MaterialComponents: 3ee5327e02dc3f34df48c68205b5fd7dce171744
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   PhoneNumberKit: adffe4e128af1918386e09e7421d3d851a2987af
   Stripe: a468d5f39703807e840fdfed39572ffad0aaf053
   TPKeyboardAvoiding: 6dd3fe3268b8f2627beb7ff3d82a3cacbdf66a36
 
-PODFILE CHECKSUM: abf72ea4cb84428182cfe1acbb12d0cdbc643b63
+PODFILE CHECKSUM: 65e5e9212bb6e8ff1aa8884a56ce5d416e7a1959
 
 COCOAPODS: 1.8.3

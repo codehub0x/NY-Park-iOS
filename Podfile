@@ -9,6 +9,7 @@ target 'iPark' do
   # Pods for iPark
 
   pod 'Material', '~> 3.1.0'
+  pod 'MaterialComponents/TextFields'
   pod 'FSPagerView'
   pod 'TPKeyboardAvoiding'
   pod 'Stripe'

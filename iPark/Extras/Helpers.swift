@@ -243,7 +243,7 @@ extension String {
     }
     
     func isValidPhone() -> Bool {
-        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
+        let PHONE_REGEX = "^[(]([2-9][0-8][0-9])[)] ([2-9][0-9]{2})-([0-9]{4})$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         let result =  phoneTest.evaluate(with: self)
         return result
@@ -251,7 +251,7 @@ extension String {
     
     func formattedNumber() -> String {
         let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "###-###-####"
+        let mask = "(###) ###-####"
 
         var result = ""
         var index = cleanPhoneNumber.startIndex

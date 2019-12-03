@@ -7,15 +7,18 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialTextFields
 
 class SigninViewController: UIViewController {
     
     static let storyboardId = "\(SigninViewController.self)"
     
-    @IBOutlet weak var emailField: TextField!
-    @IBOutlet weak var passwordField: TextField!
+    @IBOutlet weak var emailField: MDCTextField!
+    @IBOutlet weak var passwordField: MDCTextField!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
+    var emailFieldController: MDCTextInputControllerOutlined!
+    var passwordFieldController: MDCTextInputControllerOutlined!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
@@ -25,8 +28,9 @@ class SigninViewController: UIViewController {
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         adjustUIHeight()
         
-        prepareEmailField()
-        preparePasswordField()
+        prepareEmailFieldController()
+        preparePasswordFieldController()
+        
     }
     
     func adjustUIHeight() {
@@ -52,18 +56,21 @@ class SigninViewController: UIViewController {
         self.view.endEditing(true)
         var valid = true
         
-        if emailField.isEmpty {
-            emailField.detail = "Email is required."
+        let email = emailField.text?.trimmed ?? ""
+        let password = passwordField.text ?? ""
+        
+        if email.isEmpty {
+            emailFieldController.setErrorText("Email is required.", errorAccessibilityValue: "Email is required.")
             let _ = emailField.becomeFirstResponder()
             valid = false
-        } else if !emailField.text!.isValidEmail() {
-            emailField.detail = "Email is invalid."
+        } else if !email.isValidEmail() {
+            emailFieldController.setErrorText("Email is invalid.", errorAccessibilityValue: "Email is invalid.")
             let _ = emailField.becomeFirstResponder()
             valid = false
         }
         
-        if passwordField.isEmpty {
-            passwordField.detail = "Password is required."
+        if password.isEmpty {
+            passwordFieldController.setErrorText("Password is required.", errorAccessibilityValue: "Password is required.")
             if valid {
                 let _ = passwordField.becomeFirstResponder()
             }
@@ -98,7 +105,7 @@ class SigninViewController: UIViewController {
     
 }
 
-extension SigninViewController: TextFieldDelegate {
+extension SigninViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField.tag {
         case 51:
@@ -112,8 +119,10 @@ extension SigninViewController: TextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let textField = textField as? TextField {
-            textField.detail = ""
+        if textField.tag == 51 {
+            emailFieldController.setErrorText(nil, errorAccessibilityValue: nil)
+        } else if textField.tag == 52 {
+            passwordFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         }
         return true
     }
@@ -121,15 +130,15 @@ extension SigninViewController: TextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.tag {
         case 51:
-            if emailField.isEmpty {
-                emailField.detail = "Email is required."
+            if emailField.text!.isEmpty {
+                emailFieldController.setErrorText("Email is required.", errorAccessibilityValue: "Email is required.")
             } else if !emailField.text!.isValidEmail() {
-                emailField.detail = "Email is invalid."
+                emailFieldController.setErrorText("Email is invalid.", errorAccessibilityValue: "Email is invalid.")
             }
             break
         case 52:
-            if passwordField.isEmpty {
-                passwordField.detail = "Password is required."
+            if passwordField.text!.isEmpty {
+                passwordFieldController.setErrorText("Password is required.", errorAccessibilityValue: "Password is required.")
             }
             break
         default:
@@ -139,34 +148,35 @@ extension SigninViewController: TextFieldDelegate {
 }
 
 fileprivate extension SigninViewController {
-    func prepareEmailField() {
-        emailField.placeholderLabel.font = LatoFont.regular(with: 17)
-        emailField.placeholderNormalColor = .iBlack50
-        emailField.placeholderActiveColor = .iDarkBlue
-        
+    func prepareEmailFieldController() {
         emailField.font = LatoFont.regular(with: 17)
-        emailField.textColor = .black
-        emailField.detailColor = .red
+        emailField.textColor = .iBlack95
         
-        emailField.dividerNormalHeight = 1
-        emailField.dividerActiveHeight = 2
-        emailField.dividerNormalColor = .iBlack50
-        emailField.dividerActiveColor = .iDarkBlue
+        emailFieldController = MDCTextInputControllerOutlined(textInput: emailField)
+        emailFieldController.placeholderText = "Email"
+        emailFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        emailFieldController.inlinePlaceholderColor = .iBlack70
+        emailFieldController.floatingPlaceholderNormalColor = .iBlack70
+        emailFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        emailFieldController.floatingPlaceholderErrorActiveColor = .red
+        emailFieldController.errorColor = .red
+        emailFieldController.activeColor = .iDarkBlue
+        emailFieldController.normalColor = .iBlack70
     }
     
-    func preparePasswordField() {
-        passwordField.placeholderLabel.font = LatoFont.regular(with: 17)
-        passwordField.placeholderNormalColor = .iBlack50
-        passwordField.placeholderActiveColor = .iDarkBlue
-        
+    func preparePasswordFieldController() {
         passwordField.font = LatoFont.regular(with: 17)
-        passwordField.textColor = .black
-        passwordField.detailColor = .red
-        passwordField.isVisibilityIconButtonEnabled = true
+        passwordField.textColor = .iBlack95
         
-        passwordField.dividerNormalHeight = 1
-        passwordField.dividerActiveHeight = 2
-        passwordField.dividerNormalColor = .iBlack50
-        passwordField.dividerActiveColor = .iDarkBlue
+        passwordFieldController = MDCTextInputControllerOutlined(textInput: passwordField)
+        passwordFieldController.placeholderText = "Password"
+        passwordFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
+        passwordFieldController.inlinePlaceholderColor = .iBlack70
+        passwordFieldController.floatingPlaceholderNormalColor = .iBlack70
+        passwordFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        passwordFieldController.floatingPlaceholderErrorActiveColor = .red
+        passwordFieldController.errorColor = .red
+        passwordFieldController.normalColor = .iBlack70
+        passwordFieldController.activeColor = .iDarkBlue
     }
 }

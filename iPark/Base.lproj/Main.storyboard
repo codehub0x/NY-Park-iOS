@@ -139,7 +139,7 @@
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-mq-LUY">
-                                                                                <rect key="frame" x="120" y="25" width="130" height="50"/>
+                                                                                <rect key="frame" x="120" y="22" width="130" height="56.5"/>
                                                                                 <string key="text">Lev
 Vakulin</string>
                                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="21.299999237060547"/>
@@ -510,7 +510,7 @@ VEHICLES</string>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Version: v7.12.86" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-l1-XaA">
-                                                                <rect key="frame" x="48" y="170" width="136" height="16.5"/>
+                                                                <rect key="frame" x="48" y="170" width="136" height="18.5"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1525,10 +1525,10 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-XA-l85" customClass="TextField" customModule="Material">
-                                                        <rect key="frame" x="45" y="214" width="324" height="36"/>
+                                                    <textField opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-XA-l85" customClass="MDCTextField">
+                                                        <rect key="frame" x="45" y="201" width="324" height="90"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="36" id="96F-Ud-au1"/>
+                                                            <constraint firstAttribute="height" constant="90" id="96F-Ud-au1"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -1540,10 +1540,10 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                             <outlet property="delegate" destination="G1W-CK-rqH" id="a7K-ti-QxJ"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-dS-zgv" customClass="TextField" customModule="Material">
-                                                        <rect key="frame" x="45" y="295" width="324" height="36"/>
+                                                    <textField opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-dS-zgv" customClass="MDCTextField">
+                                                        <rect key="frame" x="45" y="291" width="324" height="90"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="36" id="dhL-8m-dEG"/>
+                                                            <constraint firstAttribute="height" constant="90" id="dhL-8m-dEG"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
@@ -1556,10 +1556,10 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-go-g7y" customClass="RaisedButton" customModule="Material">
-                                                        <rect key="frame" x="45" y="376" width="324" height="40"/>
+                                                        <rect key="frame" x="45" y="397" width="324" height="50"/>
                                                         <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="1O5-AF-bKB"/>
+                                                            <constraint firstAttribute="height" constant="50" id="1O5-AF-bKB"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                                         <state key="normal" title="Sign in">
@@ -1575,7 +1575,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-mb-BG6" customClass="FlatButton" customModule="Material">
-                                                        <rect key="frame" x="45" y="424" width="324" height="30"/>
+                                                        <rect key="frame" x="45" y="455" width="324" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="ars-DA-aI6"/>
                                                         </constraints>
@@ -1591,16 +1591,16 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="21J-pG-rIv" firstAttribute="centerX" secondItem="6J0-h1-TTu" secondAttribute="centerX" id="1yT-Iq-9zy"/>
-                                                    <constraint firstItem="5Kf-dS-zgv" firstAttribute="top" secondItem="fQd-XA-l85" secondAttribute="bottom" constant="45" id="4Cv-Ot-foN"/>
+                                                    <constraint firstItem="5Kf-dS-zgv" firstAttribute="top" secondItem="fQd-XA-l85" secondAttribute="bottom" id="4Cv-Ot-foN"/>
                                                     <constraint firstAttribute="trailing" secondItem="5Kf-dS-zgv" secondAttribute="trailing" constant="45" id="77n-Ic-20V"/>
                                                     <constraint firstItem="umX-go-g7y" firstAttribute="leading" secondItem="6J0-h1-TTu" secondAttribute="leading" constant="45" id="AsE-Ib-w17"/>
-                                                    <constraint firstItem="umX-go-g7y" firstAttribute="top" secondItem="5Kf-dS-zgv" secondAttribute="bottom" constant="45" id="Brw-0s-3yR"/>
+                                                    <constraint firstItem="umX-go-g7y" firstAttribute="top" secondItem="5Kf-dS-zgv" secondAttribute="bottom" constant="16" id="Brw-0s-3yR"/>
                                                     <constraint firstItem="fCx-Bs-XTZ" firstAttribute="centerX" secondItem="6J0-h1-TTu" secondAttribute="centerX" id="DC3-71-HSe"/>
                                                     <constraint firstItem="a9T-mb-BG6" firstAttribute="top" secondItem="umX-go-g7y" secondAttribute="bottom" constant="8" id="GTn-MF-kAe"/>
                                                     <constraint firstItem="KK1-AM-ZYt" firstAttribute="centerX" secondItem="6J0-h1-TTu" secondAttribute="centerX" id="O23-7g-Cjl"/>
                                                     <constraint firstItem="KK1-AM-ZYt" firstAttribute="top" secondItem="6J0-h1-TTu" secondAttribute="top" id="R4O-3z-bDg"/>
                                                     <constraint firstItem="5Kf-dS-zgv" firstAttribute="leading" secondItem="6J0-h1-TTu" secondAttribute="leading" constant="45" id="RSS-cc-lSd"/>
-                                                    <constraint firstItem="fQd-XA-l85" firstAttribute="top" secondItem="fCx-Bs-XTZ" secondAttribute="bottom" constant="45" id="gA6-87-uKr"/>
+                                                    <constraint firstItem="fQd-XA-l85" firstAttribute="top" secondItem="fCx-Bs-XTZ" secondAttribute="bottom" constant="32" id="gA6-87-uKr"/>
                                                     <constraint firstAttribute="trailing" secondItem="fQd-XA-l85" secondAttribute="trailing" constant="45" id="hUM-iU-RTR"/>
                                                     <constraint firstAttribute="height" constant="450" id="oWK-GR-QPe"/>
                                                     <constraint firstItem="21J-pG-rIv" firstAttribute="top" secondItem="KK1-AM-ZYt" secondAttribute="bottom" constant="40" id="pFr-Wi-wxZ"/>
