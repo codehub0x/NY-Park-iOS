@@ -251,12 +251,12 @@ extension String {
     
     func formattedNumber() -> String {
         let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "XXX-XXX-XXXX"
+        let mask = "###-###-####"
 
         var result = ""
         var index = cleanPhoneNumber.startIndex
         for ch in mask where index < cleanPhoneNumber.endIndex {
-            if ch == "X" {
+            if ch == "#" {
                 result.append(cleanPhoneNumber[index])
                 index = cleanPhoneNumber.index(after: index)
             } else {
@@ -299,14 +299,15 @@ extension String {
         return cardType
     }
     
+    // AMEX card format
     func formattedCardNumber() -> String {
         let cleanCardNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "XXXX XXXX XXXX XXXX"
+        let mask = "#### ###### #####"
 
         var result = ""
         var index = cleanCardNumber.startIndex
         for ch in mask where index < cleanCardNumber.endIndex {
-            if ch == "X" {
+            if ch == "#" {
                 result.append(cleanCardNumber[index])
                 index = cleanCardNumber.index(after: index)
             } else {
@@ -348,21 +349,24 @@ extension String {
     }
     
     func formattedExpDate() -> String {
-        var cleanDate = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "XX/XX"
+        var str = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "##/##"
 
-        var result = ""
-        if cleanDate.count == 2 {
-            let intVal = Int(cleanDate)
-            if (intVal! > 12) {
-                cleanDate = "0" + cleanDate
+        if str.count < 3 {
+            let month = Int(str)!
+            if str.count == 1 && month >= 2{
+                str = "0" + str
+            } else if str.count == 2 && month > 12 {
+                str = "0" + str
             }
         }
-        var index = cleanDate.startIndex
-        for ch in mask where index < cleanDate.endIndex {
-            if ch == "X" {
-                result.append(cleanDate[index])
-                index = cleanDate.index(after: index)
+        
+        var result = ""
+        var index = str.startIndex
+        for ch in mask where index < str.endIndex {
+            if ch == "#" {
+                result.append(str[index])
+                index = str.index(after: index)
             } else {
                 result.append(ch)
             }
@@ -381,15 +385,17 @@ extension String {
     }
     
     func formattedCVV() -> String {
-        var cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "XXX"
+        let cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "###"
         
         var result = ""
         var index = cleanCVV.startIndex
         for ch in mask where index < cleanCVV.endIndex {
-            if ch == "X" {
+            if ch == "#" {
                 result.append(cleanCVV[index])
                 index = cleanCVV.index(after: index)
+            } else {
+                result.append(ch)
             }
         }
         
