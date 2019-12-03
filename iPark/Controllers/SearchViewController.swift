@@ -32,8 +32,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var endTimeField: TextField!
     @IBOutlet weak var mAddressField: TextField!
     @IBOutlet weak var mStartTimeField: TextField!
-    @IBOutlet weak var dailySearchButton: FlatButton!
-    @IBOutlet weak var monthlySearchButton: FlatButton!
+    @IBOutlet weak var searchButton: FlatButton!
     
     fileprivate var buttons = [TabItem]()
     fileprivate var selectedTag = 1
@@ -93,49 +92,47 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-    @IBAction func onDailySearchClick(_ sender: Any) {
+    @IBAction func onClickSearchBtn(_ sender: Any) {
         self.view.endEditing(true)
-        
+
         var valid = true
-        if addressField.isEmpty {
-            addressField.detail = "Empty Address"
-            valid = false
+        if selectedTag == 1 {
+            if addressField.isEmpty {
+                addressField.detail = "Empty Address"
+                valid = false
+            }
+            
+            if startTimeField.isEmpty {
+                startTimeField.detail = "Empty Start Time"
+                valid = false
+            }
+            
+            if endTimeField.isEmpty {
+                endTimeField.detail = "Empty End Time"
+                valid = false
+            }
+            
+            if valid {
+                self.delegate?.onDailySearch(mapItem: dailyMapItem!, startTime: startTime!, endTime: endTime!)
+                self.dismiss(animated: true)
+            }
+        } else {
+            if mAddressField.isEmpty {
+                mAddressField.detail = "Empty Address"
+                valid = false
+            }
+            
+            if mStartTimeField.isEmpty {
+                mStartTimeField.detail = "Empty Start Parking On"
+                valid = false
+            }
+            
+            if valid {
+                self.delegate?.onMonthlySearch(mapItem: monthlyMapItem!, startDate: startDate!)
+                self.dismiss(animated: true)
+            }
         }
         
-        if startTimeField.isEmpty {
-            startTimeField.detail = "Empty Start Time"
-            valid = false
-        }
-        
-        if endTimeField.isEmpty {
-            endTimeField.detail = "Empty End Time"
-            valid = false
-        }
-        
-        if valid {
-            self.delegate?.onDailySearch(mapItem: dailyMapItem!, startTime: startTime!, endTime: endTime!)
-            self.dismiss(animated: true)
-        }
-    }
-    
-    @IBAction func onMonthlySearchClick(_ sender: Any) {
-        self.view.endEditing(true)
-        
-        var valid = true
-        if mAddressField.isEmpty {
-            mAddressField.detail = "Empty Address"
-            valid = false
-        }
-        
-        if mStartTimeField.isEmpty {
-            mStartTimeField.detail = "Empty Start Parking On"
-            valid = false
-        }
-        
-        if valid {
-            self.delegate?.onMonthlySearch(mapItem: monthlyMapItem!, startDate: startDate!)
-            self.dismiss(animated: true)
-        }
     }
     
     @objc func donePicker() {
@@ -446,11 +443,8 @@ fileprivate extension SearchViewController {
     }
     
     func prepareSearchButton() {
-        dailySearchButton.roundCorners(corners: [.allCorners], radius: 4)
-        dailySearchButton.titleLabel?.font = LatoFont.black(with: 18)
-        
-        monthlySearchButton.roundCorners(corners: [.allCorners], radius: 4)
-        monthlySearchButton.titleLabel?.font = LatoFont.black(with: 18)
+        searchButton.roundCorners(corners: [.allCorners], radius: 4)
+        searchButton.titleLabel?.font = LatoFont.black(with: 18)
     }
     
     func parseAddress(selectedItem:MKPlacemark) -> String {
