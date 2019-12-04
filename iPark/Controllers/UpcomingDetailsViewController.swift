@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import Material
 import FSPagerView
 
 class UpcomingDetailsViewController: UIViewController {
@@ -56,8 +55,8 @@ class UpcomingDetailsViewController: UIViewController {
     @IBOutlet weak var labelAddressTitle: UILabel!
     @IBOutlet weak var labelPhoneTitle: UILabel!
     
-    @IBOutlet weak var btnCancelReservation: FlatButton!
-    @IBOutlet weak var btnPaid: FlatButton!
+    @IBOutlet weak var btnCancelReservation: UIButton!
+    @IBOutlet weak var btnPaid: UIButton!
     
     var images = [
         UIImage(named: "image1"),
@@ -173,7 +172,7 @@ fileprivate extension UpcomingDetailsViewController {
         textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
         btnCancelReservation.setAttributedTitle(textString, for: .normal)
         btnCancelReservation.layer.borderWidth = 1
-        btnCancelReservation.layer.cornerRadius = 2
+        btnCancelReservation.layer.cornerRadius = 4
         btnCancelReservation.layer.borderColor = UIColor.iBlack70.cgColor
     }
     
@@ -192,7 +191,7 @@ fileprivate extension UpcomingDetailsViewController {
         textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
         btnPaid.setAttributedTitle(textString, for: .normal)
         btnPaid.layer.borderWidth = 1
-        btnPaid.layer.cornerRadius = 2
+        btnPaid.layer.cornerRadius = 4
         btnPaid.layer.borderColor = UIColor.iBlack70.cgColor
     }
     

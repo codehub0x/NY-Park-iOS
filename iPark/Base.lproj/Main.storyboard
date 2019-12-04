@@ -1022,10 +1022,10 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNp-VX-U03">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="903.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="911.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNy-U2-J9a" userLabel="Info View">
-                                                <rect key="frame" x="8" y="8" width="398" height="711.5"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="719.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="eLN-Kf-1Vp">
                                                         <rect key="frame" x="30" y="36" width="68" height="68"/>
@@ -1127,7 +1127,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                             <outlet property="delegate" destination="5eF-dZ-4as" id="LgT-of-KYe"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-f0-FgC" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-f0-FgC" customClass="MDCButton">
                                                         <rect key="frame" x="36" y="637.5" width="332" height="50"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -1156,7 +1156,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                     <constraint firstAttribute="trailing" secondItem="0hu-Zg-vdI" secondAttribute="trailing" constant="30" id="EeX-hP-feE"/>
                                                     <constraint firstItem="NHf-zH-apF" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="JKk-QL-q91"/>
                                                     <constraint firstItem="Z2A-td-N36" firstAttribute="top" secondItem="7iy-vU-fXk" secondAttribute="bottom" id="MYt-j9-hVX"/>
-                                                    <constraint firstAttribute="bottom" secondItem="3gr-f0-FgC" secondAttribute="bottom" constant="24" id="P4u-Km-uBt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3gr-f0-FgC" secondAttribute="bottom" constant="32" id="P4u-Km-uBt"/>
                                                     <constraint firstItem="tz8-5C-IAg" firstAttribute="top" secondItem="0hu-Zg-vdI" secondAttribute="bottom" constant="12" id="UiU-Fb-oaJ"/>
                                                     <constraint firstItem="HnA-tq-nTf" firstAttribute="leading" secondItem="0hu-Zg-vdI" secondAttribute="leading" id="Ux0-0L-15L"/>
                                                     <constraint firstItem="HnA-tq-nTf" firstAttribute="trailing" secondItem="0hu-Zg-vdI" secondAttribute="trailing" id="Vsu-bh-3xb"/>
@@ -1178,7 +1178,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl9-da-Cqq" userLabel="Payment View">
-                                                <rect key="frame" x="8" y="735.5" width="398" height="80"/>
+                                                <rect key="frame" x="8" y="743.5" width="398" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91M-W3-TjJ">
                                                         <rect key="frame" x="40" y="20" width="114" height="18"/>
@@ -1226,7 +1226,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VK5-F1-GDe">
-                                                <rect key="frame" x="0.0" y="831.5" width="414" height="72"/>
+                                                <rect key="frame" x="0.0" y="839.5" width="414" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjZ-X1-bPm">
                                                         <rect key="frame" x="30" y="24" width="161" height="24"/>
@@ -1389,7 +1389,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2h-GE-Z1x" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2h-GE-Z1x" customClass="MDCButton">
                                                         <rect key="frame" x="36" y="348" width="348" height="50"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -1401,7 +1401,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="6"/>
+                                                                <integer key="value" value="8"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -1923,7 +1923,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                 <rect key="frame" x="0.0" y="90.5" width="414" height="771.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-7x-Z4M">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1066"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-aE-gcD">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -1968,8 +1968,9 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                     <constraint firstItem="2pp-sj-5Wo" firstAttribute="centerY" secondItem="gOe-aE-gcD" secondAttribute="centerY" id="u5V-1H-Eeu"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-Oh-AcO" customClass="FlatButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-Oh-AcO">
                                                 <rect key="frame" x="363" y="44" width="35" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="7Uc-3F-0Yx"/>
                                                     <constraint firstAttribute="height" constant="30" id="cGp-wC-uAa"/>
@@ -1994,7 +1995,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="selectedSegmentTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.63" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k97-bg-NB9" customClass="RaisedButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k97-bg-NB9" customClass="MDCButton">
                                                 <rect key="frame" x="16" y="90" width="382" height="45"/>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -2006,7 +2007,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="4"/>
+                                                        <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -2066,7 +2067,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9G-q0-lYo">
-                                                <rect key="frame" x="32" y="476" width="366" height="652"/>
+                                                <rect key="frame" x="32" y="476" width="366" height="590"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NoX-Yp-OJs">
                                                         <rect key="frame" x="0.0" y="16" width="366" height="60"/>
@@ -2196,8 +2197,9 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-in-l8N" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-in-l8N">
                                                                 <rect key="frame" x="226" y="0.0" width="140" height="30"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="140" id="cU3-Wg-lEp"/>
                                                                     <constraint firstAttribute="height" constant="30" id="t7C-6a-IFY"/>
@@ -2274,7 +2276,7 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QG-uB-rVl">
-                                                        <rect key="frame" x="0.0" y="414" width="366" height="80"/>
+                                                        <rect key="frame" x="0.0" y="414" width="366" height="176"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Things You Should Know:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-Yx-sDe">
                                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="22"/>
@@ -2298,11 +2300,11 @@ All SUVs oversized fee of $12.00 daily</string>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="D7O-ye-Bq0" secondAttribute="trailing" id="9Tg-k4-pOa"/>
-                                                            <constraint firstAttribute="height" constant="80" id="Aqy-5T-GbS"/>
                                                             <constraint firstItem="D7O-ye-Bq0" firstAttribute="top" secondItem="Yd5-Yx-sDe" secondAttribute="bottom" constant="8" id="KPV-4x-x3b"/>
                                                             <constraint firstItem="Yd5-Yx-sDe" firstAttribute="top" secondItem="5QG-uB-rVl" secondAttribute="top" id="R5e-PC-up6"/>
                                                             <constraint firstItem="Yd5-Yx-sDe" firstAttribute="leading" secondItem="5QG-uB-rVl" secondAttribute="leading" id="S54-Xs-iM2"/>
                                                             <constraint firstItem="D7O-ye-Bq0" firstAttribute="leading" secondItem="5QG-uB-rVl" secondAttribute="leading" id="SP6-iO-THx"/>
+                                                            <constraint firstAttribute="bottom" secondItem="D7O-ye-Bq0" secondAttribute="bottom" constant="20" id="jOK-Iu-g08"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -2330,6 +2332,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                     <constraint firstItem="lkM-sh-DFF" firstAttribute="leading" secondItem="m9G-q0-lYo" secondAttribute="leading" id="Zb5-1t-Rix"/>
                                                     <constraint firstItem="x4X-Er-uN3" firstAttribute="top" secondItem="NoX-Yp-OJs" secondAttribute="bottom" constant="8" id="b8q-Oy-vsu"/>
                                                     <constraint firstItem="NoX-Yp-OJs" firstAttribute="leading" secondItem="m9G-q0-lYo" secondAttribute="leading" id="cQL-vs-683"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5QG-uB-rVl" secondAttribute="bottom" id="da4-Bi-HZ6"/>
                                                     <constraint firstItem="hZX-lk-Keg" firstAttribute="leading" secondItem="m9G-q0-lYo" secondAttribute="leading" id="dkL-XS-76r"/>
                                                     <constraint firstItem="zjz-Ve-15p" firstAttribute="leading" secondItem="m9G-q0-lYo" secondAttribute="leading" id="fzf-wb-VQu"/>
                                                     <constraint firstAttribute="trailing" secondItem="zjz-Ve-15p" secondAttribute="trailing" id="ipS-K2-Swz"/>
@@ -2338,11 +2341,11 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaC-5m-I3e">
-                                                <rect key="frame" x="0.0" y="476" width="414" height="684"/>
+                                                <rect key="frame" x="0.0" y="476" width="414" height="590"/>
                                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-lg-tQy">
-                                                <rect key="frame" x="0.0" y="476" width="414" height="684"/>
+                                                <rect key="frame" x="0.0" y="476" width="414" height="590"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -2356,7 +2359,6 @@ All SUVs oversized fee of $12.00 daily</string>
                                             <constraint firstItem="A4z-qe-80Q" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" constant="16" id="9T5-AG-H2b"/>
                                             <constraint firstItem="k97-bg-NB9" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" constant="16" id="AhR-wC-LKE"/>
                                             <constraint firstItem="gOe-aE-gcD" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" id="BcN-2d-dtG"/>
-                                            <constraint firstAttribute="height" constant="1160" id="BtF-4a-G7t"/>
                                             <constraint firstItem="emZ-aU-DwI" firstAttribute="top" secondItem="k97-bg-NB9" secondAttribute="bottom" constant="16" id="DuZ-xc-yVE"/>
                                             <constraint firstItem="dX8-L5-Maq" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" constant="16" id="Hsf-0u-UxG"/>
                                             <constraint firstAttribute="bottom" secondItem="A5b-lg-tQy" secondAttribute="bottom" id="ITb-B9-yay"/>
@@ -2365,7 +2367,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                             <constraint firstItem="dX8-L5-Maq" firstAttribute="centerY" secondItem="1Zc-Oh-AcO" secondAttribute="centerY" id="KCA-Ep-UvW"/>
                                             <constraint firstItem="m9G-q0-lYo" firstAttribute="top" secondItem="Is6-VU-CLl" secondAttribute="bottom" id="MZf-UB-72w"/>
                                             <constraint firstAttribute="trailing" secondItem="k97-bg-NB9" secondAttribute="trailing" constant="16" id="NEx-BU-dMX"/>
-                                            <constraint firstAttribute="bottom" secondItem="m9G-q0-lYo" secondAttribute="bottom" constant="32" id="Q5T-lG-gve"/>
+                                            <constraint firstAttribute="bottom" secondItem="m9G-q0-lYo" secondAttribute="bottom" id="Q5T-lG-gve"/>
                                             <constraint firstAttribute="trailing" secondItem="m9G-q0-lYo" secondAttribute="trailing" constant="16" id="QJ9-Fw-Dw6"/>
                                             <constraint firstAttribute="trailing" secondItem="Is6-VU-CLl" secondAttribute="trailing" constant="16" id="QTg-37-WNK"/>
                                             <constraint firstItem="A5b-lg-tQy" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" id="SMH-Cv-8Ij"/>
@@ -2438,7 +2440,6 @@ All SUVs oversized fee of $12.00 daily</string>
                         <outlet property="pageControl" destination="qjH-gj-7fp" id="jSH-QQ-wGb"/>
                         <outlet property="pagerView" destination="Is6-VU-CLl" id="PDb-e2-ntr"/>
                         <outlet property="ratesView" destination="RaC-5m-I3e" id="bpr-lc-7Jw"/>
-                        <outlet property="scrollHeight" destination="BtF-4a-G7t" id="l89-cp-Geb"/>
                         <outlet property="segmentedControl" destination="A4z-qe-80Q" id="nsv-zt-EHQ"/>
                         <outlet property="specialsView" destination="A5b-lg-tQy" id="uqV-uV-sNc"/>
                         <outlet property="typeSegmentedControl" destination="dX8-L5-Maq" id="XuF-CP-0l8"/>
@@ -2610,7 +2611,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                 <rect key="frame" x="0.0" y="90.5" width="414" height="771.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpK-zT-top">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1691.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUR-XQ-yNO" userLabel="Info View">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2700,7 +2701,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                     <constraint firstItem="n7Y-2T-llC" firstAttribute="top" secondItem="N6f-Hj-YFv" secondAttribute="top" constant="20" id="uyg-fg-qib"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYK-xV-km3" customClass="RaisedButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYK-xV-km3" customClass="MDCButton">
                                                 <rect key="frame" x="16" y="450.5" width="382" height="50"/>
                                                 <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -2712,7 +2713,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="4"/>
+                                                        <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
@@ -2720,7 +2721,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-V7-xNa">
-                                                <rect key="frame" x="0.0" y="524.5" width="414" height="1151.5"/>
+                                                <rect key="frame" x="0.0" y="524.5" width="414" height="1143"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMENITIES:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-1a-MIB">
                                                         <rect key="frame" x="24" y="0.0" width="366" height="17"/>
@@ -2849,7 +2850,7 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-Wx-zWs" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-Wx-zWs" customClass="MDCButton">
                                                         <rect key="frame" x="16" y="302" width="382" height="50"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -2969,8 +2970,9 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GX-Gg-aWm" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GX-Gg-aWm">
                                                                 <rect key="frame" x="20" y="129.5" width="180" height="30"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="180" id="KzI-aC-Xwy"/>
                                                                     <constraint firstAttribute="height" constant="30" id="xpb-0D-140"/>
@@ -2983,8 +2985,9 @@ All SUVs oversized fee of $12.00 daily</string>
                                                                     <action selector="onCancelReservationBtnClick:" destination="H2T-hW-pgo" eventType="touchUpInside" id="WJB-UU-mbA"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-5Q-XdG" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-5Q-XdG">
                                                                 <rect key="frame" x="262" y="129.5" width="88" height="30"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="88" id="UMl-Rx-ufv"/>
                                                                     <constraint firstAttribute="height" constant="30" id="kSd-YP-qGG"/>
@@ -3062,6 +3065,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                     <constraint firstItem="PZq-sf-4W4" firstAttribute="top" secondItem="6dy-5E-Sy6" secondAttribute="bottom" constant="12" id="46V-Bn-kZe"/>
                                                     <constraint firstItem="67V-pU-5iz" firstAttribute="leading" secondItem="ceH-1a-MIB" secondAttribute="leading" id="570-T9-5pG"/>
                                                     <constraint firstItem="kq1-oI-DpI" firstAttribute="trailing" secondItem="Bx7-KK-DHH" secondAttribute="trailing" id="5Lq-4Q-s5h"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OIf-Jo-c26" secondAttribute="bottom" id="704-Qt-NFO"/>
                                                     <constraint firstItem="nGM-ed-I93" firstAttribute="trailing" secondItem="PZq-sf-4W4" secondAttribute="trailing" id="8xG-4U-5o5"/>
                                                     <constraint firstItem="FPW-Wx-zWs" firstAttribute="top" secondItem="3uY-7t-NmG" secondAttribute="bottom" constant="20" id="9Vd-RS-qX2"/>
                                                     <constraint firstItem="FPW-Wx-zWs" firstAttribute="leading" secondItem="dtU-V7-xNa" secondAttribute="leading" constant="16" id="CKc-Va-dnL"/>
@@ -3133,7 +3137,6 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                             <constraint firstItem="N6f-Hj-YFv" firstAttribute="top" secondItem="3F1-CC-6yU" secondAttribute="bottom" id="d5f-DM-XhA"/>
                                             <constraint firstItem="dtU-V7-xNa" firstAttribute="top" secondItem="bYK-xV-km3" secondAttribute="bottom" constant="24" id="g3x-Gi-QFn"/>
                                             <constraint firstItem="SWl-g0-6sj" firstAttribute="leading" secondItem="3F1-CC-6yU" secondAttribute="leading" id="gwc-dA-16X"/>
-                                            <constraint firstAttribute="height" constant="1700" id="hIV-4F-bcq"/>
                                             <constraint firstItem="cUR-XQ-yNO" firstAttribute="top" secondItem="EpK-zT-top" secondAttribute="top" id="l0Q-v2-7h8"/>
                                             <constraint firstItem="bYK-xV-km3" firstAttribute="leading" secondItem="EpK-zT-top" secondAttribute="leading" constant="16" id="mWi-6n-mcD"/>
                                             <constraint firstItem="N6f-Hj-YFv" firstAttribute="leading" secondItem="EpK-zT-top" secondAttribute="leading" id="oFV-Yf-NP3"/>
@@ -3538,7 +3541,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <constraint firstAttribute="height" constant="56" id="hbF-BO-NVF"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRB-N1-4Q7" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRB-N1-4Q7" customClass="MDCButton">
                                                         <rect key="frame" x="16" y="530" width="382" height="50"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -3550,7 +3553,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="4"/>
+                                                                <integer key="value" value="8"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
@@ -3911,7 +3914,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                 <color key="textColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myM-Xj-mz3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myM-Xj-mz3" customClass="MDCButton">
                                                 <rect key="frame" x="8" y="601.5" width="398" height="50"/>
                                                 <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -4984,7 +4987,7 @@ New York, NY 10024, USA</string>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="4"/>
+                                        <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -5019,7 +5022,6 @@ New York, NY 10024, USA</string>
                         <outlet property="mStartTimeField" destination="Ef1-Uu-Y6a" id="Bq5-Lf-l0q"/>
                         <outlet property="mStartTimeImageView" destination="r4W-et-Qmt" id="wgD-lM-5dn"/>
                         <outlet property="monthlyView" destination="Jz8-PT-7SE" id="1z2-9w-aXW"/>
-                        <outlet property="searchButton" destination="wJ6-y8-OYE" id="jKP-41-keD"/>
                         <outlet property="startTimeField" destination="Gfh-L4-cWU" id="HN5-h5-UG7"/>
                         <outlet property="startTimeImageView" destination="qla-vK-UcW" id="H8J-aG-Ksb"/>
                         <outlet property="tabBar" destination="beN-cO-eAq" id="KkS-xQ-qZj"/>

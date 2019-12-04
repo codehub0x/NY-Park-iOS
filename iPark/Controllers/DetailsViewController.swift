@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import Material
 import FSPagerView
 
 class DetailsViewController: UIViewController {
@@ -21,7 +20,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var labelStayPayload: UILabel!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var btnHelp: FlatButton!
+    @IBOutlet weak var btnHelp: UIButton!
     @IBOutlet weak var labelSuv: UILabel!
     @IBOutlet weak var labelTax: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -48,7 +47,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var labelHours: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
-    @IBOutlet weak var btnDirections: FlatButton!
+    @IBOutlet weak var btnDirections: UIButton!
     @IBOutlet weak var labelPhone: UILabel!
     @IBOutlet weak var labelHoursTitle: UILabel!
     @IBOutlet weak var labelAddressTitle: UILabel!
@@ -58,7 +57,7 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var specialsView: UIView!
     
-    @IBOutlet weak var scrollHeight: NSLayoutConstraint!
+//    @IBOutlet weak var scrollHeight: NSLayoutConstraint!
     
     var mainStoryboard: UIStoryboard!
     
@@ -129,19 +128,19 @@ class DetailsViewController: UIViewController {
             infoView.isHidden = false
             ratesView.isHidden = true
             specialsView.isHidden = true
-            scrollHeight.constant = 1160
+//            scrollHeight.constant = 1160
             break
         case 1:
             infoView.isHidden = true
             ratesView.isHidden = false
             specialsView.isHidden = true
-            scrollHeight.constant = 900
+//            scrollHeight.constant = 900
             break
         case 2:
             infoView.isHidden = true
             ratesView.isHidden = true
             specialsView.isHidden = false
-            scrollHeight.constant = 700
+//            scrollHeight.constant = 700
             break
         default:
             break
@@ -234,6 +233,7 @@ fileprivate extension DetailsViewController {
         
         btnHelp.setImage(UIImage(named: "icon-questionmark")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnHelp.tintColor = UIColor.iBlack90
+        btnHelp.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func prepareGetDirectionsButton() {
@@ -253,6 +253,7 @@ fileprivate extension DetailsViewController {
         btnDirections.layer.borderWidth = 1
         btnDirections.layer.cornerRadius = 4
         btnDirections.layer.borderColor = UIColor.iBlack70.cgColor
+        btnDirections.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func prepareHoursTitle() {

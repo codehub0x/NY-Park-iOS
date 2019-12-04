@@ -34,7 +34,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var endTimeField: MDCTextField!
     @IBOutlet weak var mAddressField: MDCTextField!
     @IBOutlet weak var mStartTimeField: MDCTextField!
-    @IBOutlet weak var searchButton: MDCButton!
     
     @IBOutlet weak var addressImageView: UIImageView!
     @IBOutlet weak var startTimeImageView: UIImageView!
@@ -91,8 +90,6 @@ class SearchViewController: UIViewController {
         
         prepareMAddressField()
         prepareMStartTimeField()
-        
-//        prepareSearchButton()
         
         prepareDatePicker()
     }
@@ -438,12 +435,6 @@ fileprivate extension SearchViewController {
         
         mStartTimeImageView.image = mStartTimeImageView.image?.withRenderingMode(.alwaysTemplate)
         mStartTimeImageView.tintColor = .iBlack70
-    }
-    
-    func prepareSearchButton() {
-//        searchButton.roundCorners(corners: [.allCorners], radius: 4)
-        searchButton.layer.cornerRadius = 8
-        searchButton.layer.masksToBounds = true
     }
     
     func parseAddress(selectedItem:MKPlacemark) -> String {

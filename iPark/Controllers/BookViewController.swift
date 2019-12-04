@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 
 class BookViewController: UIViewController {
     
@@ -21,7 +21,7 @@ class BookViewController: UIViewController {
     @IBOutlet weak var switchMultipleDays: UISwitch!
     @IBOutlet weak var labelTotalName: UILabel!
     @IBOutlet weak var labelTotalPrice: UILabel!
-    @IBOutlet weak var btnAddpayment: UIButton!
+    @IBOutlet weak var btnAddpayment: MDCButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var bookData: [Any]! = []

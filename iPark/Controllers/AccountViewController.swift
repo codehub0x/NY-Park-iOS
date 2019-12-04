@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Material
 import MaterialComponents.MaterialTextFields
 
 class AccountViewController: UIViewController {

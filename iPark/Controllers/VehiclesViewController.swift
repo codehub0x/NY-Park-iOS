@@ -46,9 +46,7 @@ class VehiclesViewController: UIViewController {
         var bottomPadding: CGFloat = 0
         if #available(iOS 11.0, *) {
             let window = UIApplication.shared.keyWindow
-//            let topPadding = window?.safeAreaInsets.top ?? 0
             bottomPadding = window?.safeAreaInsets.bottom ?? 0
-//            padding = topPadding + bottomPadding
         }
         var viewHeight = windowSize.height - bottomPadding - self.topbarHeight
         
