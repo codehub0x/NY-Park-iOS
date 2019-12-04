@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CountryPickerView
 import PhoneNumberKit
+import MaterialComponents.MaterialButtons
 
 class BillingViewController: UIViewController {
     
@@ -27,6 +28,8 @@ class BillingViewController: UIViewController {
     @IBOutlet weak var countryTextField: ErrorTextField!
     @IBOutlet weak var phoneView: UIView!
     @IBOutlet weak var phoneTextField: PhoneNumberTextField!
+    @IBOutlet weak var btnSave: MDCButton!
+    
     let cpvInternal = CountryPickerView()
     
     override func viewDidLoad() {
@@ -39,6 +42,7 @@ class BillingViewController: UIViewController {
         prepareCPVInternal()
         prepareTextFields()
         preparePhoneTextField()
+        prepareButton()
     }
     
     @IBAction func onClickSave(_ sender: Any) {
@@ -386,6 +390,10 @@ fileprivate extension BillingViewController {
         phoneTextField.rightView = errorImageView
         phoneTextField.rightViewMode = .always
         phoneTextField.rightView?.isHidden = true
+    }
+    
+    func prepareButton() {
+        btnSave.applyContainedTheme(withScheme: Global.defaultButtonScheme())
     }
     
     func updateLabel(_ isValid: Bool, textField: UITextField) {

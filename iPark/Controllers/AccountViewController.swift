@@ -8,6 +8,7 @@
 
 import UIKit
 import MaterialComponents.MaterialTextFields
+import MaterialComponents.MaterialButtons
 
 class AccountViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var passwordField: MDCTextField!
     @IBOutlet weak var repeatField: MDCTextField!
     @IBOutlet weak var notificationSwitch: UISwitch!
+    @IBOutlet weak var btnSave: MDCButton!
+    @IBOutlet weak var btnPaymentMethod: MDCButton!
     
     var nameFieldController: MDCTextInputControllerOutlined!
     var emailFieldController: MDCTextInputControllerOutlined!
@@ -37,6 +40,7 @@ class AccountViewController: UIViewController {
         
         prepareNavigation()
         prepareInfoView()
+        prepareButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -335,6 +339,11 @@ fileprivate extension AccountViewController {
         repeatFieldController.errorColor = .red
         repeatFieldController.normalColor = .iBlack70
         repeatFieldController.activeColor = .iDarkBlue
+    }
+    
+    func prepareButtons() {
+        btnSave.applyContainedTheme(withScheme: Global.defaultButtonScheme())
+        btnPaymentMethod.applyTextTheme(withScheme: Global.textButtonScheme())
     }
 }
 
