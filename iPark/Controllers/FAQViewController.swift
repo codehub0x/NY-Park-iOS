@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Material
 
 struct FAQSection {
     let title: String

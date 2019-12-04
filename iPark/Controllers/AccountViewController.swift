@@ -173,8 +173,7 @@ extension AccountViewController: UITextFieldDelegate {
         return true
     }
     
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField.tag == 51 {
             nameFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         } else if textField.tag == 52 {
@@ -183,7 +182,12 @@ extension AccountViewController: UITextFieldDelegate {
             passwordFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         } else if textField.tag == 55 {
             repeatFieldController.setErrorText(nil, errorAccessibilityValue: nil)
-        } else if textField.tag == 53 {
+        }
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.tag == 53 {
             guard let text = textField.text else { return false }
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
             textField.text = newString.formattedNumber()
