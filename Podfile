@@ -10,6 +10,8 @@ target 'iPark' do
 
   pod 'Material', '~> 3.1.0'
   pod 'MaterialComponents/TextFields'
+  pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/Buttons+Theming'
   pod 'FSPagerView'
   pod 'TPKeyboardAvoiding'
   pod 'Stripe'

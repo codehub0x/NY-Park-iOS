@@ -18,6 +18,22 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - "MaterialComponents/Buttons+ColorThemer (94.4.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Color
+  - "MaterialComponents/Buttons+ShapeThemer (94.4.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Shape
+  - "MaterialComponents/Buttons+Theming (94.4.0)":
+    - MaterialComponents/Buttons
+    - "MaterialComponents/Buttons+ColorThemer"
+    - "MaterialComponents/Buttons+ShapeThemer"
+    - "MaterialComponents/Buttons+TypographyThemer"
+    - MaterialComponents/schemes/Container
+    - MaterialComponents/ShadowElevations
+  - "MaterialComponents/Buttons+TypographyThemer (94.4.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Typography
   - MaterialComponents/Elevation (94.4.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
@@ -32,9 +48,27 @@ PODS:
     - MaterialComponents/AnimationTiming
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/schemes/Color (94.4.0):
+    - MaterialComponents/private/Color
+  - MaterialComponents/schemes/Container (94.4.0):
+    - MaterialComponents/schemes/Color
+    - MaterialComponents/schemes/Shape
+    - MaterialComponents/schemes/Typography
+  - MaterialComponents/schemes/Shape (94.4.0):
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/schemes/Typography (94.4.0):
+    - "MaterialComponents/schemes/Typography+BasicFontScheme"
+    - "MaterialComponents/schemes/Typography+Scheming"
+    - MaterialComponents/Typography
+  - "MaterialComponents/schemes/Typography+BasicFontScheme (94.4.0)"
+  - "MaterialComponents/schemes/Typography+Scheming (94.4.0)"
   - MaterialComponents/ShadowElevations (94.4.0)
   - MaterialComponents/ShadowLayer (94.4.0):
     - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (94.4.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
   - MaterialComponents/Shapes (94.4.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
@@ -69,6 +103,8 @@ DEPENDENCIES:
   - CountryPickerView
   - FSPagerView
   - Material (~> 3.1.0)
+  - MaterialComponents/Buttons
+  - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/TextFields
   - PhoneNumberKit
   - Stripe
@@ -101,6 +137,6 @@ SPEC CHECKSUMS:
   Stripe: a468d5f39703807e840fdfed39572ffad0aaf053
   TPKeyboardAvoiding: 6dd3fe3268b8f2627beb7ff3d82a3cacbdf66a36
 
-PODFILE CHECKSUM: 65e5e9212bb6e8ff1aa8884a56ce5d416e7a1959
+PODFILE CHECKSUM: eb4fa3e63a75e36f30da56b634091e164f48d23e
 
 COCOAPODS: 1.8.3

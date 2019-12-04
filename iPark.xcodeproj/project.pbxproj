@@ -55,11 +55,11 @@
 		3C29BFAD237DBC9E009F46EC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF86237DBC9E009F46EC /* README.txt */; };
 		3C37A7172385044A00159022 /* RPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C37A7162385044900159022 /* RPicker.swift */; };
 		3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */; };
+		3C3FAC972397F6A80049E2BE /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */; };
 		3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42AFC32384723000C8582C /* VehiclesViewController.swift */; };
 		3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8924FD237C31D4004F7E97 /* Helpers.swift */; };
 		3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8924FF237C364B004F7E97 /* HomeViewController.swift */; };
 		3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892502237C51BE004F7E97 /* ReservationsViewController.swift */; };
-		3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892504237C53E9004F7E97 /* RewardsViewController.swift */; };
 		3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892506237C693F004F7E97 /* MenuViewController.swift */; };
 		3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892508237CF3BF004F7E97 /* SearchViewController.swift */; };
 		3C8D2D4D2385768500B91F09 /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D2D4C2385768500B91F09 /* VehicleCell.xib */; };
@@ -172,11 +172,11 @@
 		3C29BF86237DBC9E009F46EC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		3C37A7162385044900159022 /* RPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPicker.swift; sourceTree = "<group>"; };
 		3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingDetailsViewController.swift; sourceTree = "<group>"; };
+		3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		3C42AFC32384723000C8582C /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		3C8924FD237C31D4004F7E97 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		3C8924FF237C364B004F7E97 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3C892502237C51BE004F7E97 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
-		3C892504237C53E9004F7E97 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		3C892506237C693F004F7E97 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C892508237CF3BF004F7E97 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3C8D2D4C2385768500B91F09 /* VehicleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
@@ -367,7 +367,7 @@
 				3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */,
 				3C892506237C693F004F7E97 /* MenuViewController.swift */,
 				3C892502237C51BE004F7E97 /* ReservationsViewController.swift */,
-				3C892504237C53E9004F7E97 /* RewardsViewController.swift */,
+				3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */,
 				3CB69DBF237F935500E85702 /* SavedViewController.swift */,
 				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
 				3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */,
@@ -414,7 +414,6 @@
 				3CF6CF0D237BFF4C00E53AC0 /* Assets.xcassets */,
 				3CF6CF0F237BFF4C00E53AC0 /* LaunchScreen.storyboard */,
 				3CF6CF12237BFF4C00E53AC0 /* Info.plist */,
-				3CB4DB13238400820037B033 /* Global.swift */,
 			);
 			path = iPark;
 			sourceTree = "<group>";
@@ -440,6 +439,7 @@
 		3CFE8748239442D40080DEAC /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				3CB4DB13238400820037B033 /* Global.swift */,
 				3CFE8746239409350080DEAC /* MyAPIClient.swift */,
 				3C8924FD237C31D4004F7E97 /* Helpers.swift */,
 				3CFE8749239443720080DEAC /* CreditCard.swift */,
@@ -765,10 +765,10 @@
 				3C37A7172385044A00159022 /* RPicker.swift in Sources */,
 				3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */,
 				3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */,
-				3C892505237C53E9004F7E97 /* RewardsViewController.swift in Sources */,
 				3CA6F6A82386D3E900A24521 /* FAQViewController.swift in Sources */,
 				3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */,
 				3CB4DB14238400820037B033 /* Global.swift in Sources */,
+				3C3FAC972397F6A80049E2BE /* RewardsViewController.swift in Sources */,
 				3CF87AE82384C95E00DE9995 /* BookCell.swift in Sources */,
 				3CFE874C239498BB0080DEAC /* BillingViewController.swift in Sources */,
 				3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */,

@@ -34,6 +34,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var endTimeField: MDCTextField!
     @IBOutlet weak var mAddressField: MDCTextField!
     @IBOutlet weak var mStartTimeField: MDCTextField!
+    @IBOutlet weak var btnSearch: MDCButton!
     
     @IBOutlet weak var addressImageView: UIImageView!
     @IBOutlet weak var startTimeImageView: UIImageView!
@@ -79,6 +80,8 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnSearch.applyContainedTheme(withScheme: Global.defaultButtonScheme())
         
         prepareNavigation()
         prepareButtons()
