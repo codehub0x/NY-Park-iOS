@@ -8,14 +8,18 @@
 
 import UIKit
 import MapKit
-import Material
+import MaterialComponents.MaterialButtons
+import MaterialComponents.MaterialContainerScheme
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var btnToggle: RaisedButton!
-    @IBOutlet weak var btnFilters: RaisedButton!
+    @IBOutlet weak var btnToggle: MDCButton!
+    @IBOutlet weak var btnSearch: MDCButton!
+    @IBOutlet weak var btnFilters: MDCButton!
+    @IBOutlet weak var btnFavorite: MDCButton!
+    @IBOutlet weak var btnHours: MDCButton!
     @IBOutlet weak var hoursImageView: UIImageView!
-    @IBOutlet weak var btnArrow: FlatButton!
+    @IBOutlet weak var btnArrow: UIButton!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomCollectionView: UICollectionView!
     @IBOutlet weak var filterView: UIScrollView!
@@ -28,16 +32,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var checkBtn24Hours: FlatButton!
-    @IBOutlet weak var checkBtn7Days: FlatButton!
-    @IBOutlet weak var checkBtnCovered: FlatButton!
-    @IBOutlet weak var checkBtnPaved: FlatButton!
-    @IBOutlet weak var checkBtnValet: FlatButton!
-    @IBOutlet weak var checkBtnOversizedVehicles: FlatButton!
-    @IBOutlet weak var checkBtnGreen: FlatButton!
-    @IBOutlet weak var checkBtnTesla: FlatButton!
-    @IBOutlet weak var checkBtnOutdoors: FlatButton!
-    @IBOutlet weak var checkBtnOnSiteStaff: FlatButton!
+    @IBOutlet weak var btnApplyFilters: MDCButton!
+    @IBOutlet weak var btnClear: MDCButton!
+    @IBOutlet weak var checkBtn24Hours: MDCButton!
+    @IBOutlet weak var checkBtn7Days: MDCButton!
+    @IBOutlet weak var checkBtnCovered: MDCButton!
+    @IBOutlet weak var checkBtnPaved: MDCButton!
+    @IBOutlet weak var checkBtnValet: MDCButton!
+    @IBOutlet weak var checkBtnOversizedVehicles: MDCButton!
+    @IBOutlet weak var checkBtnGreen: MDCButton!
+    @IBOutlet weak var checkBtnTesla: MDCButton!
+    @IBOutlet weak var checkBtnOutdoors: MDCButton!
+    @IBOutlet weak var checkBtnOnSiteStaff: MDCButton!
     // MarkerInfos
     @IBOutlet weak var viewMarkerInfo: UIView!
     @IBOutlet weak var labelInfoAddress: UIView!
@@ -46,8 +52,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imageViewInfoLocation: UIImageView!
     @IBOutlet weak var labelInfoDistance: UILabel!
     @IBOutlet weak var labelInfoPrice: UILabel!
-    @IBOutlet weak var btnInfoBook: RaisedButton!
-    @IBOutlet weak var btnInfoDetails: FlatButton!
+    @IBOutlet weak var btnInfoBook: MDCButton!
+    @IBOutlet weak var btnInfoDetails: MDCButton!
+    @IBOutlet weak var btnCurrentLocation: MDCFloatingButton!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
@@ -72,6 +79,9 @@ class HomeViewController: UIViewController {
         /// Initialize the UI Settings
         prepareUI()
         prepareHoursImageView()
+        prepareHeaderButtons()
+        prepareFilterButtons()
+        prepareCurrentLocationButton()
         prepareArrowButton()
         prepareSegmentedControl()
         prepareMarkerInfoView()
@@ -180,7 +190,7 @@ class HomeViewController: UIViewController {
         checkBtnOnSiteStaff.isSelected = false
     }
     
-    @IBAction func onFilterButtonChanged(_ sender: FlatButton) {
+    @IBAction func onFilterButtonChanged(_ sender: MDCButton) {
         sender.isSelected = !sender.isSelected
     }
     
@@ -503,6 +513,69 @@ fileprivate extension HomeViewController {
         prepareInfoDetailsButton()
     }
     
+    func prepareHeaderButtons() {
+        let scheme = MDCContainerScheme()
+        scheme.colorScheme.primaryColor = .white
+        scheme.colorScheme.onPrimaryColor = .iBlack90
+        scheme.typographyScheme.button = LatoFont.medium(with: 11)
+        btnToggle.applyContainedTheme(withScheme: scheme)
+        btnToggle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        btnSearch.applyContainedTheme(withScheme: scheme)
+        btnSearch.isUppercaseTitle = false
+        
+        btnFavorite.applyTextTheme(withScheme: Global.textButtonScheme())
+        btnFavorite.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        btnHours.applyTextTheme(withScheme: Global.textButtonScheme())
+        
+        btnFilters.applyContainedTheme(withScheme: Global.mediumButtonScheme())
+    }
+    
+    func prepareFilterButtons() {
+        btnApplyFilters.applyContainedTheme(withScheme: Global.mediumButtonScheme())
+        
+        btnClear.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        btnClear.isUppercaseTitle = false
+        
+        checkBtn24Hours.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtn24Hours.isUppercaseTitle = false
+        
+        checkBtn7Days.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtn7Days.isUppercaseTitle = false
+        
+        checkBtnCovered.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnCovered.isUppercaseTitle = false
+        
+        checkBtnPaved.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnPaved.isUppercaseTitle = false
+        
+        checkBtnValet.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnValet.isUppercaseTitle = false
+        
+        checkBtnOversizedVehicles.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnOversizedVehicles.isUppercaseTitle = false
+        
+        checkBtnGreen.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnGreen.isUppercaseTitle = false
+        
+        checkBtnTesla.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnTesla.isUppercaseTitle = false
+        
+        checkBtnOutdoors.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnOutdoors.isUppercaseTitle = false
+        
+        checkBtnOnSiteStaff.applyTextTheme(withScheme: Global.mediumTextButtonScheme())
+        checkBtnOnSiteStaff.isUppercaseTitle = false
+        
+    }
+    
+    func prepareCurrentLocationButton() {
+        let scheme = MDCContainerScheme()
+        scheme.colorScheme.primaryColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.8)
+        btnCurrentLocation.applyContainedTheme(withScheme: scheme)
+    }
+    
     func prepareInfoBookButton() {
         let textString = NSMutableAttributedString(
             string: btnInfoBook.title(for: .normal)!,
@@ -517,7 +590,8 @@ fileprivate extension HomeViewController {
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
         textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
         btnInfoBook.setAttributedTitle(textString, for: .normal)
-        btnInfoBook.layer.cornerRadius = 2
+        btnInfoBook.applyContainedTheme(withScheme: Global.tinyButtonScheme())
+        btnInfoBook.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
     
     func prepareInfoDetailsButton() {
@@ -534,12 +608,11 @@ fileprivate extension HomeViewController {
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
         textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
         btnInfoDetails.setAttributedTitle(textString, for: .normal)
-        btnInfoDetails.layer.borderWidth = 1
-        btnInfoDetails.layer.cornerRadius = 2
-        btnInfoDetails.layer.borderColor = UIColor.iBlack70.cgColor
-        
         btnInfoDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnInfoDetails.tintColor = UIColor.iBlack90
+        btnInfoDetails.applyOutlinedTheme(withScheme: Global.tinyOutlinedButtonScheme())
+        btnInfoDetails.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        btnInfoDetails.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
     
     func imageWithColor(color: UIColor) -> UIImage {

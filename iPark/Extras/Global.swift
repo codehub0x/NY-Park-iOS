@@ -73,6 +73,14 @@ struct Global {
         return scheme
     }
     
+    static func mediumTextButtonScheme() -> MDCContainerScheme {
+        let scheme = MDCContainerScheme()
+        scheme.colorScheme.primaryColor = .iBlack90
+        scheme.typographyScheme.button = LatoFont.regular(with: 14)
+        
+        return scheme
+    }
+    
     static func smallOutlinedButtonScheme() -> MDCContainerScheme {
         let scheme = MDCContainerScheme()
         scheme.colorScheme.primaryColor = .iDarkBlue
@@ -85,7 +93,7 @@ struct Global {
         let scheme = MDCContainerScheme()
         scheme.colorScheme.primaryColor = .iYellow
         scheme.colorScheme.onPrimaryColor = .iDarkBlue
-        scheme.typographyScheme.button = LatoFont.bold(with: 9)
+        scheme.typographyScheme.button = LatoFont.black(with: 9)
         
         return scheme
     }
@@ -94,7 +102,7 @@ struct Global {
         let scheme = MDCContainerScheme()
         scheme.colorScheme.primaryColor = .iDarkBlue
         scheme.colorScheme.onPrimaryColor = .white
-        scheme.typographyScheme.button = LatoFont.bold(with: 9)
+        scheme.typographyScheme.button = LatoFont.black(with: 9)
         
         return scheme
     }
