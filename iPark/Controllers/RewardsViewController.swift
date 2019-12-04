@@ -65,13 +65,13 @@ fileprivate extension RewardsViewController {
     func prepareCreateAccountButton() {
         btnCreateAccount.applyOutlinedTheme(withScheme: Global.outlinedYellowButtonScheme())
         btnCreateAccount.setBorderColor(.iYellow, for: .normal)
-        btnCreateAccount.setBorderWidth(1, for: .normal)
+        btnCreateAccount.setBorderWidth(0.5, for: .normal)
     }
     
     func prepareLoginButton() {
         btnLogin.applyOutlinedTheme(withScheme: Global.outlinedYellowButtonScheme())
         btnLogin.setBorderColor(.iYellow, for: .normal)
-        btnLogin.setBorderWidth(1, for: .normal)
+        btnLogin.setBorderWidth(0.5, for: .normal)
     }
     
     func prepareEarnView() {

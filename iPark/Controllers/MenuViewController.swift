@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 
 class MenuViewController: UIViewController {
     
@@ -42,10 +42,15 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var labelVehicles: UILabel!
     @IBOutlet weak var labelVehiclesTotal: UILabel!
     
+    @IBOutlet weak var btnClose: MDCButton!
+    @IBOutlet weak var btnMonthlyParking: MDCButton!
+    @IBOutlet weak var btnFAQ: MDCButton!
+    @IBOutlet weak var btnPromoCodes: MDCButton!
+    @IBOutlet weak var btnHelp: MDCButton!
     /// If logged in, "My Account", else "Create Account"
-    @IBOutlet weak var button1: FlatButton!
+    @IBOutlet weak var button1: MDCButton!
     /// If logged in, "Logout", else "Login"
-    @IBOutlet weak var button2: FlatButton!
+    @IBOutlet weak var button2: MDCButton!
     /// App version
     @IBOutlet weak var labelVersion: UILabel!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -69,8 +74,7 @@ class MenuViewController: UIViewController {
             button2.setTitle("Logout", for: .normal)
             
             prepareInfoView()
-            prepareButton1()
-            prepareButton2()
+            prepareButtons()
         } else {
             topViewHeight.constant = 190
             infoView1.isHidden = false
@@ -80,8 +84,7 @@ class MenuViewController: UIViewController {
             button2.setTitle("Login", for: .normal)
             
             prepareiParkView()
-            prepareButton1()
-            prepareButton2()
+            prepareButtons()
         }
         
         labelVersion.text = "App Version: \(getVersion())"
@@ -264,18 +267,32 @@ fileprivate extension MenuViewController {
         prepareVehiclesView()
     }
     
-    func prepareButton1() {
-        button1.layer.cornerRadius = 6
-        button1.layer.borderWidth = 1
-        button1.layer.borderColor = UIColor.iBlack50.cgColor
-        button1.layer.masksToBounds = true
-    }
-    
-    func prepareButton2() {
-        button2.layer.cornerRadius = 6
-        button2.layer.borderWidth = 1
-        button2.layer.borderColor = UIColor.iBlack50.cgColor
-        button2.layer.masksToBounds = true
+    func prepareButtons() {
+        let textScheme = Global.textButtonScheme()
+        btnClose.applyTextTheme(withScheme: textScheme)
+        btnClose.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        textScheme.colorScheme.primaryColor = .iDarkBlue
+        textScheme.typographyScheme.button = LatoFont.regular(with: 19)
+        
+        let edgeInsets = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 0)
+        btnMonthlyParking.applyTextTheme(withScheme: textScheme)
+        btnMonthlyParking.contentEdgeInsets = edgeInsets
+        
+        btnFAQ.applyTextTheme(withScheme: textScheme)
+        btnFAQ.contentEdgeInsets = edgeInsets
+        
+        btnPromoCodes.applyTextTheme(withScheme: textScheme)
+        btnPromoCodes.contentEdgeInsets = edgeInsets
+        
+        btnHelp.applyTextTheme(withScheme: textScheme)
+        btnHelp.contentEdgeInsets = edgeInsets
+        
+        button1.applyOutlinedTheme(withScheme: Global.outlinedButtonScheme())
+        button1.isUppercaseTitle = false
+        
+        button2.applyOutlinedTheme(withScheme: Global.outlinedButtonScheme())
+        button2.isUppercaseTitle = false
     }
     
     func getVersion() -> String {

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Material
 import MaterialComponents.MaterialTextFields
+import MaterialComponents.MaterialButtons
 
 class SignupViewController: UIViewController {
     
@@ -17,7 +17,10 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var nameField: MDCTextField!
     @IBOutlet weak var emailField: MDCTextField!
     @IBOutlet weak var passwordField: MDCTextField!
-    @IBOutlet weak var termsBtn: FlatButton!
+    @IBOutlet weak var btnCreate: MDCButton!
+    @IBOutlet weak var btnLogin: MDCButton!
+    @IBOutlet weak var btnTerms: UIButton!
+    @IBOutlet weak var btnClose: MDCButton!
     
     var nameFieldController: MDCTextInputControllerOutlined!
     var emailFieldController: MDCTextInputControllerOutlined!
@@ -30,7 +33,7 @@ class SignupViewController: UIViewController {
         
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        prepareTermsButton()
+        prepareButtons()
         prepareNameField()
         prepareEmailField()
         preparePasswordField()
@@ -165,7 +168,7 @@ extension SignupViewController: UITextFieldDelegate {
 }
 
 fileprivate extension SignupViewController {
-    func prepareTermsButton() {
+    func prepareButtons() {
         let attrs = [
             NSAttributedString.Key.font: LatoFont.regular(with: 11),
             NSAttributedString.Key.foregroundColor: UIColor.iBlack50,
@@ -173,7 +176,13 @@ fileprivate extension SignupViewController {
             ] as [NSAttributedString.Key : Any]
         
         let btnTitleStr = NSMutableAttributedString(string: "Terms", attributes: attrs)
-        termsBtn.setAttributedTitle(btnTitleStr, for: .normal)
+        btnTerms.setAttributedTitle(btnTitleStr, for: .normal)
+        
+        btnClose.applyTextTheme(withScheme: Global.textButtonScheme())
+        btnClose.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        btnCreate.applyContainedTheme(withScheme: Global.defaultButtonScheme())
+        btnLogin.applyContainedTheme(withScheme: Global.mediumSecondaryButtonScheme())
     }
     
     func prepareNameField() {

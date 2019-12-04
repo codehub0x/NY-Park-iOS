@@ -8,6 +8,7 @@
 
 import UIKit
 import MaterialComponents.MaterialTextFields
+import MaterialComponents.MaterialButtons
 
 class SigninViewController: UIViewController {
     
@@ -15,6 +16,10 @@ class SigninViewController: UIViewController {
     
     @IBOutlet weak var emailField: MDCTextField!
     @IBOutlet weak var passwordField: MDCTextField!
+    @IBOutlet weak var btnSignin: MDCButton!
+    @IBOutlet weak var btnRegister: MDCButton!
+    @IBOutlet weak var btnForgotPassword: MDCButton!
+    @IBOutlet weak var btnClose: MDCButton!
     
     var emailFieldController: MDCTextInputControllerOutlined!
     var passwordFieldController: MDCTextInputControllerOutlined!
@@ -28,7 +33,7 @@ class SigninViewController: UIViewController {
         
         prepareEmailFieldController()
         preparePasswordFieldController()
-        
+        prepareButtons()
     }
     
     @IBAction func onCloseBtnClick(_ sender: Any) {
@@ -163,5 +168,19 @@ fileprivate extension SigninViewController {
         passwordFieldController.errorColor = .red
         passwordFieldController.normalColor = .iBlack70
         passwordFieldController.activeColor = .iDarkBlue
+    }
+    
+    func prepareButtons() {
+        btnSignin.applyContainedTheme(withScheme: Global.secondaryButtonScheme())
+        btnSignin.isUppercaseTitle = false
+        btnRegister.applyContainedTheme(withScheme: Global.mediumButtonScheme())
+        btnRegister.isUppercaseTitle = false
+        let textScheme = Global.textButtonScheme()
+        btnClose.applyTextTheme(withScheme: textScheme)
+        btnClose.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        textScheme.typographyScheme.button = LatoFont.regular(with: 11)
+        btnForgotPassword.applyTextTheme(withScheme: textScheme)
+        btnForgotPassword.isUppercaseTitle = false
     }
 }

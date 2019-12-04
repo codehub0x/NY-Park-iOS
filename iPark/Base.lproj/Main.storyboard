@@ -87,7 +87,7 @@
                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U10-sX-DhU" customClass="FlatButton" customModule="Material">
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U10-sX-DhU">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="252" height="96"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <connections>
@@ -192,7 +192,7 @@ POINTS</string>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-08-5Le" customClass="FlatButton" customModule="Material">
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-08-5Le">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="98"/>
                                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <connections>
@@ -231,7 +231,7 @@ RESERVATIONS</string>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-zZ-NJN" customClass="FlatButton" customModule="Material">
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-zZ-NJN">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="98"/>
                                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <connections>
@@ -282,7 +282,7 @@ LOCATIONS</string>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-u9-eXy" customClass="FlatButton" customModule="Material">
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-u9-eXy">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="98"/>
                                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <connections>
@@ -327,7 +327,7 @@ VEHICLES</string>
                                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
-                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdO-NY-WZN" customClass="FlatButton" customModule="Material">
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdO-NY-WZN">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="123" height="98"/>
                                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <connections>
@@ -393,7 +393,7 @@ VEHICLES</string>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIJ-gE-SJi">
                                                                 <rect key="frame" x="0.0" y="360" width="300" height="272"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL9-J8-yme" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL9-J8-yme" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="24" width="300" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="EcL-tQ-Cau"/>
@@ -407,7 +407,7 @@ VEHICLES</string>
                                                                             <action selector="onMonthlyParkingBtnClick:" destination="bLq-t2-sEs" eventType="touchUpInside" id="oAE-cV-u8K"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spN-5p-qNd" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spN-5p-qNd" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="74" width="300" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="QcM-Ap-hll"/>
@@ -421,7 +421,7 @@ VEHICLES</string>
                                                                             <action selector="onFAQBtnClick:" destination="bLq-t2-sEs" eventType="touchUpInside" id="Adn-qn-8e2"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu5-BJ-hfH" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu5-BJ-hfH" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="124" width="300" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="g8d-PR-gmn"/>
@@ -435,7 +435,7 @@ VEHICLES</string>
                                                                             <action selector="onPromoCodeBtnClick:" destination="bLq-t2-sEs" eventType="touchUpInside" id="BfJ-Ep-ARK"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xd-IZ-1TU" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xd-IZ-1TU" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="174" width="300" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="tnv-10-iWP"/>
@@ -481,7 +481,7 @@ VEHICLES</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9O-jH-veV" userLabel="BottomView">
                                                         <rect key="frame" x="0.0" y="632" width="300" height="220"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipd-5V-Dwh" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipd-5V-Dwh" customClass="MDCButton">
                                                                 <rect key="frame" x="24" y="30" width="252" height="48"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="48" id="OdQ-5Z-fUQ"/>
@@ -495,7 +495,7 @@ VEHICLES</string>
                                                                     <action selector="onBtn1Click:" destination="bLq-t2-sEs" eventType="touchUpInside" id="K6V-S7-sj1"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-jc-oBL" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-jc-oBL" customClass="MDCButton">
                                                                 <rect key="frame" x="24" y="90" width="252" height="48"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="48" id="6zg-5D-3zO"/>
@@ -553,7 +553,7 @@ VEHICLES</string>
                                         <viewLayoutGuide key="contentLayoutGuide" id="iRX-3Z-j3u"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="dzb-E9-dOt"/>
                                     </scrollView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-UG-6xx" customClass="FlatButton" customModule="Material">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-UG-6xx" customClass="MDCButton">
                                         <rect key="frame" x="248" y="52" width="36" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="JY5-wc-qTL"/>
@@ -595,6 +595,11 @@ VEHICLES</string>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="avatarImageView" destination="xAH-Lw-D8F" id="WCa-jh-cVv"/>
+                        <outlet property="btnClose" destination="AYW-UG-6xx" id="Biz-xp-QZP"/>
+                        <outlet property="btnFAQ" destination="spN-5p-qNd" id="KMy-dN-hNU"/>
+                        <outlet property="btnHelp" destination="0xd-IZ-1TU" id="lKH-YD-W3C"/>
+                        <outlet property="btnMonthlyParking" destination="GL9-J8-yme" id="JzZ-cr-0ht"/>
+                        <outlet property="btnPromoCodes" destination="uu5-BJ-hfH" id="ZUs-le-P5h"/>
                         <outlet property="button1" destination="Ipd-5V-Dwh" id="2wK-Vs-ctV"/>
                         <outlet property="button2" destination="p9y-jc-oBL" id="8W1-ea-I6Z"/>
                         <outlet property="heightConstraint" destination="3ya-8c-dxn" id="Jy7-xh-kyS"/>
@@ -1555,7 +1560,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                             <outlet property="delegate" destination="G1W-CK-rqH" id="bHJ-ZV-h8r"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-go-g7y" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umX-go-g7y" customClass="MDCButton">
                                                         <rect key="frame" x="45" y="397" width="324" height="50"/>
                                                         <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -1565,16 +1570,11 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <state key="normal" title="Sign in">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onSigninBtnClick:" destination="G1W-CK-rqH" eventType="touchUpInside" id="1Bk-dP-NDX"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-mb-BG6" customClass="FlatButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9T-mb-BG6" customClass="MDCButton">
                                                         <rect key="frame" x="45" y="455" width="324" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="ars-DA-aI6"/>
@@ -1636,7 +1636,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yun-t4-Xny" userLabel="Bottom View">
                                 <rect key="frame" x="0.0" y="832" width="414" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-mg-qg3" customClass="RaisedButton" customModule="Material">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-mg-qg3" customClass="MDCButton">
                                         <rect key="frame" x="253" y="16" width="116" height="32"/>
                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1647,11 +1647,6 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onRegisterBtnClick:" destination="G1W-CK-rqH" eventType="touchUpInside" id="HGv-1j-jPz"/>
                                         </connections>
@@ -1672,8 +1667,9 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                     <constraint firstItem="MxK-9k-IFQ" firstAttribute="leading" secondItem="Yun-t4-Xny" secondAttribute="leading" constant="45" id="wji-bH-JjH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-5E-9ih" customClass="FlatButton" customModule="Material">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-5E-9ih" customClass="MDCButton">
                                 <rect key="frame" x="368" y="60" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="NPW-cj-Ro0"/>
                                     <constraint firstAttribute="height" constant="30" id="awR-lL-isW"/>
@@ -1701,6 +1697,10 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                         <viewLayoutGuide key="safeArea" id="Lho-hU-1Z9"/>
                     </view>
                     <connections>
+                        <outlet property="btnClose" destination="pfX-5E-9ih" id="wQZ-vK-ciX"/>
+                        <outlet property="btnForgotPassword" destination="a9T-mb-BG6" id="QDg-VZ-lAN"/>
+                        <outlet property="btnRegister" destination="dTi-mg-qg3" id="LNr-hR-U4p"/>
+                        <outlet property="btnSignin" destination="umX-go-g7y" id="MPq-W7-igv"/>
                         <outlet property="emailField" destination="fQd-XA-l85" id="fv8-Ei-MiV"/>
                         <outlet property="passwordField" destination="5Kf-dS-zgv" id="JWN-Ha-UNz"/>
                     </connections>
@@ -5240,7 +5240,7 @@ New York, NY 10024, USA</string>
                                                             <outlet property="delegate" destination="H2c-SF-Uai" id="ZeS-70-RxZ"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8U-Gy-41j" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8U-Gy-41j" customClass="MDCButton">
                                                         <rect key="frame" x="45" y="471" width="324" height="50"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -5265,7 +5265,7 @@ New York, NY 10024, USA</string>
                                                         <color key="textColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqW-t1-bm0" customClass="FlatButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqW-t1-bm0">
                                                         <rect key="frame" x="288" y="532.5" width="50" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="YBE-go-htK"/>
@@ -5338,7 +5338,7 @@ New York, NY 10024, USA</string>
                                         <color key="textColor" red="0.58823529409999997" green="0.62352941179999999" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-6n-n7E" customClass="RaisedButton" customModule="Material">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-6n-n7E" customClass="MDCButton">
                                         <rect key="frame" x="253" y="16" width="116" height="32"/>
                                         <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -5368,8 +5368,9 @@ New York, NY 10024, USA</string>
                                     <constraint firstItem="lgD-6n-n7E" firstAttribute="centerY" secondItem="mSS-en-V1e" secondAttribute="centerY" id="tVw-JL-AwS"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-nx-4Ml" customClass="FlatButton" customModule="Material">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-nx-4Ml" customClass="MDCButton">
                                 <rect key="frame" x="368" y="60" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DnW-4n-eqC"/>
                                     <constraint firstAttribute="width" constant="30" id="cNU-aO-5La"/>
@@ -5396,10 +5397,13 @@ New York, NY 10024, USA</string>
                         <viewLayoutGuide key="safeArea" id="Bdy-EF-tkw"/>
                     </view>
                     <connections>
+                        <outlet property="btnClose" destination="ib6-nx-4Ml" id="wEM-UA-kwx"/>
+                        <outlet property="btnCreate" destination="a8U-Gy-41j" id="0pj-RK-ELq"/>
+                        <outlet property="btnLogin" destination="lgD-6n-n7E" id="Dv0-C0-hwY"/>
+                        <outlet property="btnTerms" destination="CqW-t1-bm0" id="j7h-Z6-vrx"/>
                         <outlet property="emailField" destination="yVD-iD-LlB" id="NuH-eU-4Wd"/>
                         <outlet property="nameField" destination="Y8B-bu-2Lj" id="Udg-fo-cIF"/>
                         <outlet property="passwordField" destination="UeK-8y-Wla" id="wLW-c5-mKs"/>
-                        <outlet property="termsBtn" destination="CqW-t1-bm0" id="Day-Dd-PVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgO-Er-heo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

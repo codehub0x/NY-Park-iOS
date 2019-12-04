@@ -85,6 +85,10 @@ extension UIColor {
         return UIColor(rgb: 0x47525E)
     }
     
+    open class var iBlack85: UIColor {
+        return UIColor(rgb: 0x5A6978)
+    }
+    
     open class var iBlack80: UIColor {
         return UIColor(rgb: 0x8190A5)
     }
