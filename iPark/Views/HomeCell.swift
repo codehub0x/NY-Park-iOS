@@ -86,7 +86,7 @@ fileprivate extension HomeCell {
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
         textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnBook.setAttributedTitle(textString, for: .normal)
-        btnBook.applyOutlinedTheme(withScheme: Global.tinyButtonScheme())
+        btnBook.applyContainedTheme(withScheme: Global.tinyButtonScheme())
         btnBook.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
     

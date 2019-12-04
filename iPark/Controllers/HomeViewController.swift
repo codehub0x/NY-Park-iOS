@@ -481,7 +481,10 @@ fileprivate extension HomeViewController {
         btnArrow.roundCorners(corners: [.topLeft, .topRight], radius: 18.0)
         btnArrow.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
         btnArrow.setImage(UIImage(named: "icon-arrow-up")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnArrow.tintColor = UIColor.iBlack90
+        btnArrow.tintColor = .iBlack90
+        btnArrow.layer.borderColor = UIColor.iBlack40.cgColor
+        btnArrow.layer.borderWidth = 1
+        btnArrow.layer.masksToBounds = true
     }
     
     func prepareHoursImageView() {
@@ -526,6 +529,8 @@ fileprivate extension HomeViewController {
         
         btnFavorite.applyTextTheme(withScheme: Global.textButtonScheme())
         btnFavorite.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        btnFavorite.setImageTintColor(.white, for: .normal)
+        btnFavorite.setImageTintColor(.white, for: .selected)
         
         btnHours.applyTextTheme(withScheme: Global.textButtonScheme())
         
