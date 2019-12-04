@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import FSPagerView
+import MaterialComponents.MaterialButtons
 
 class UpcomingDetailsViewController: UIViewController {
     
@@ -55,8 +56,10 @@ class UpcomingDetailsViewController: UIViewController {
     @IBOutlet weak var labelAddressTitle: UILabel!
     @IBOutlet weak var labelPhoneTitle: UILabel!
     
-    @IBOutlet weak var btnCancelReservation: UIButton!
-    @IBOutlet weak var btnPaid: UIButton!
+    @IBOutlet weak var btnAddCalendar: MDCButton!
+    @IBOutlet weak var btnGetDirections: MDCButton!
+    @IBOutlet weak var btnCancelReservation: MDCButton!
+    @IBOutlet weak var btnPaid: MDCButton!
     
     var images = [
         UIImage(named: "image1"),
@@ -69,8 +72,7 @@ class UpcomingDetailsViewController: UIViewController {
         prepareNavigation(title: "West 90TH Garage Corp.", subTitle: "7 East 14th Street, New York, NY...")
         prepareHoursImageView()
         prepareLocationImageView()
-        prepareCancelReservationButton()
-        preparePaidButton()
+        prepareButtons()
         prepareVehicleTitle()
         prepareAmenitiesTitle()
         prepareAddressTitle()
@@ -157,7 +159,10 @@ fileprivate extension UpcomingDetailsViewController {
         locationImageView.tintColor = UIColor.iGray
     }
     
-    func prepareCancelReservationButton() {
+    func prepareButtons() {
+        btnAddCalendar.applyContainedTheme(withScheme: Global.secondaryButtonScheme())
+        btnGetDirections.applyContainedTheme(withScheme: Global.defaultButtonScheme())
+        
         let textString = NSMutableAttributedString(
             string: btnCancelReservation.title(for: .normal)!,
             attributes: [
@@ -171,28 +176,22 @@ fileprivate extension UpcomingDetailsViewController {
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
         textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
         btnCancelReservation.setAttributedTitle(textString, for: .normal)
-        btnCancelReservation.layer.borderWidth = 1
-        btnCancelReservation.layer.cornerRadius = 4
-        btnCancelReservation.layer.borderColor = UIColor.iBlack70.cgColor
-    }
-    
-    func preparePaidButton() {
-        let textString = NSMutableAttributedString(
+        btnCancelReservation.applyOutlinedTheme(withScheme: Global.smallOutlinedButtonScheme())
+        
+        let textString1 = NSMutableAttributedString(
             string: btnPaid.title(for: .normal)!,
             attributes: [
                 NSAttributedString.Key.font: LatoFont.regular(with: 17),
                 NSAttributedString.Key.foregroundColor: btnPaid.titleColor(for: .normal)!
             ]
         )
-        let textRange = NSRange(location: 0, length: textString.length)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 0
-        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
-        btnPaid.setAttributedTitle(textString, for: .normal)
-        btnPaid.layer.borderWidth = 1
-        btnPaid.layer.cornerRadius = 4
-        btnPaid.layer.borderColor = UIColor.iBlack70.cgColor
+        let textRange1 = NSRange(location: 0, length: textString1.length)
+        let paragraphStyle1 = NSMutableParagraphStyle()
+        paragraphStyle1.lineSpacing = 0
+        textString1.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle1, range: textRange1)
+        textString1.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange1)
+        btnPaid.setAttributedTitle(textString1, for: .normal)
+        btnPaid.applyOutlinedTheme(withScheme: Global.outlinedButtonScheme())
     }
     
     func prepareVehicleTitle() {
