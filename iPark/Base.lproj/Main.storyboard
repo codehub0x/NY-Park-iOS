@@ -3314,12 +3314,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             </view>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="N1C-af-cHv">
                                                                 <rect key="frame" x="366" y="38" width="24" height="24"/>
+                                                                <color key="tintColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="24" id="8aM-pc-TN9"/>
                                                                     <constraint firstAttribute="width" constant="24" id="h3L-A7-Z16"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmJ-SS-nwY" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmJ-SS-nwY" customClass="MDCButton">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
@@ -3376,12 +3377,13 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             </view>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="MQJ-bI-wNa">
                                                                 <rect key="frame" x="366" y="38" width="24" height="24"/>
+                                                                <color key="tintColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="24" id="bjc-BQ-Nom"/>
                                                                     <constraint firstAttribute="height" constant="24" id="pW7-qY-w4L"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87J-gB-OVm" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87J-gB-OVm" customClass="MDCButton">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
@@ -3475,22 +3477,19 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-Fm-Xbr" userLabel="PromoCode View">
                                                         <rect key="frame" x="0.0" y="320" width="414" height="54"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Promo Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag5-Tm-deO">
-                                                                <rect key="frame" x="40" y="18" width="113" height="18"/>
-                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                                                <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-gL-uKn">
                                                                 <rect key="frame" x="366" y="15" width="24" height="24"/>
+                                                                <color key="tintColor" red="0.35294117650000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="24" id="2Nu-kc-4Vz"/>
                                                                     <constraint firstAttribute="height" constant="24" id="NPr-Gf-5Nj"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaT-16-2z4" customClass="FlatButton" customModule="Material">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaT-16-2z4" customClass="MDCButton">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                <state key="normal" title="Add Promo Code"/>
                                                                 <connections>
                                                                     <action selector="onPromoCodeBtnClick:" destination="0kw-bc-I4O" eventType="touchUpInside" id="yzK-eS-yVU"/>
                                                                 </connections>
@@ -3511,9 +3510,7 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                             <constraint firstAttribute="trailing" secondItem="TaT-16-2z4" secondAttribute="trailing" id="4hx-7E-JD1"/>
                                                             <constraint firstAttribute="trailing" secondItem="kwP-tL-2qQ" secondAttribute="trailing" constant="24" id="CNy-8t-Yi7"/>
                                                             <constraint firstItem="kwP-tL-2qQ" firstAttribute="leading" secondItem="yUU-Fm-Xbr" secondAttribute="leading" constant="40" id="KSy-Oo-6hF"/>
-                                                            <constraint firstItem="Ag5-Tm-deO" firstAttribute="centerY" secondItem="yUU-Fm-Xbr" secondAttribute="centerY" id="MPS-cI-fJD"/>
                                                             <constraint firstItem="tQk-gL-uKn" firstAttribute="centerY" secondItem="yUU-Fm-Xbr" secondAttribute="centerY" id="UqY-ka-sXD"/>
-                                                            <constraint firstItem="Ag5-Tm-deO" firstAttribute="leading" secondItem="yUU-Fm-Xbr" secondAttribute="leading" constant="40" id="ZYg-1K-dfL"/>
                                                             <constraint firstItem="kwP-tL-2qQ" firstAttribute="top" secondItem="TaT-16-2z4" secondAttribute="bottom" id="bE9-BQ-VSP"/>
                                                             <constraint firstAttribute="bottom" secondItem="kwP-tL-2qQ" secondAttribute="bottom" id="e2O-bY-oCY"/>
                                                             <constraint firstItem="TaT-16-2z4" firstAttribute="top" secondItem="yUU-Fm-Xbr" secondAttribute="top" id="tcw-Ot-id3"/>
@@ -3640,7 +3637,10 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                         <viewLayoutGuide key="safeArea" id="zu0-Be-Sjr"/>
                     </view>
                     <connections>
+                        <outlet property="btnAddPromoCode" destination="TaT-16-2z4" id="EFA-n0-Ij4"/>
                         <outlet property="btnAddpayment" destination="nRB-N1-4Q7" id="Hrc-vX-AYC"/>
+                        <outlet property="btnPaymentAmex" destination="87J-gB-OVm" id="1IS-B5-pgX"/>
+                        <outlet property="btnVehicles" destination="fmJ-SS-nwY" id="JYn-oF-t2a"/>
                         <outlet property="collectionView" destination="Fng-qu-tbi" id="gZu-wB-rKC"/>
                         <outlet property="labelDays" destination="TDs-nh-Xyf" id="Lxk-87-cgU"/>
                         <outlet property="labelHours" destination="pX7-Mf-7xT" id="Hmr-7p-qHp"/>

@@ -21,6 +21,9 @@ class BookViewController: UIViewController {
     @IBOutlet weak var switchMultipleDays: UISwitch!
     @IBOutlet weak var labelTotalName: UILabel!
     @IBOutlet weak var labelTotalPrice: UILabel!
+    @IBOutlet weak var btnVehicles: MDCButton!
+    @IBOutlet weak var btnPaymentAmex: MDCButton!
+    @IBOutlet weak var btnAddPromoCode: MDCButton!
     @IBOutlet weak var btnAddpayment: MDCButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,7 +37,7 @@ class BookViewController: UIViewController {
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         prepareNavigation(title: "West 90TH Garage Corp.", subTitle: "7 East 14th Street, New York, NY...")
-        prepareAddPaymentButton()
+        prepareButtons()
         
         collectionView.register(UINib(nibName: "\(BookCell.self)", bundle: Bundle.main), forCellWithReuseIdentifier: BookCell.reuseIdentifier)
         
@@ -156,19 +159,17 @@ fileprivate extension BookViewController {
         self.navigationItem.leftBarButtonItem = leftButton
     }
     
-    func prepareAddPaymentButton() {
-        let textString = NSMutableAttributedString(
-            string: btnAddpayment.title(for: .normal)!,
-            attributes: [
-                NSAttributedString.Key.font: LatoFont.black(with: 18),
-                NSAttributedString.Key.foregroundColor: btnAddpayment.titleColor(for: .normal)!
-            ]
-        )
-        let textRange = NSRange(location: 0, length: textString.length)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 0
-        textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
-        btnAddpayment.setAttributedTitle(textString, for: .normal)
+    func prepareButtons() {
+        btnVehicles.applyTextTheme(withScheme: Global.textButtonScheme())
+        btnPaymentAmex.applyTextTheme(withScheme: Global.textButtonScheme())
+        btnAddpayment.applyContainedTheme(withScheme: Global.defaultButtonScheme())
+        
+        let textButtonScheme = Global.textButtonScheme()
+        textButtonScheme.colorScheme.primaryColor = .iGray
+        textButtonScheme.typographyScheme.button = LatoFont.regular(with: 15)
+        btnAddPromoCode.applyTextTheme(withScheme: textButtonScheme)
+        btnAddPromoCode.isUppercaseTitle = false
+        btnAddPromoCode.contentEdgeInsets = UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 0)
     }
+    
 }
