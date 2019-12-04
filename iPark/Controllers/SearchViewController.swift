@@ -7,8 +7,10 @@
 //
 
 import UIKit
-import Material
 import MapKit
+import Material
+import MaterialComponents.MaterialTextFields
+import MaterialComponents.MaterialButtons
 
 enum SearchType {
     case Daily
@@ -27,12 +29,24 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tabBar: TabBar!
     @IBOutlet weak var dailyView: UIView!
     @IBOutlet weak var monthlyView: UIView!
-    @IBOutlet weak var addressField: TextField!
-    @IBOutlet weak var startTimeField: TextField!
-    @IBOutlet weak var endTimeField: TextField!
-    @IBOutlet weak var mAddressField: TextField!
-    @IBOutlet weak var mStartTimeField: TextField!
-    @IBOutlet weak var searchButton: FlatButton!
+    @IBOutlet weak var addressField: MDCTextField!
+    @IBOutlet weak var startTimeField: MDCTextField!
+    @IBOutlet weak var endTimeField: MDCTextField!
+    @IBOutlet weak var mAddressField: MDCTextField!
+    @IBOutlet weak var mStartTimeField: MDCTextField!
+    @IBOutlet weak var searchButton: MDCButton!
+    
+    @IBOutlet weak var addressImageView: UIImageView!
+    @IBOutlet weak var startTimeImageView: UIImageView!
+    @IBOutlet weak var endTimeImageView: UIImageView!
+    @IBOutlet weak var mAddressImageView: UIImageView!
+    @IBOutlet weak var mStartTimeImageView: UIImageView!
+    
+    var addressFieldController: MDCTextInputControllerUnderline!
+    var startTimeFieldController: MDCTextInputControllerUnderline!
+    var endTimeFieldController: MDCTextInputControllerUnderline!
+    var mAddressFieldController: MDCTextInputControllerUnderline!
+    var mStartTimeFieldController: MDCTextInputControllerUnderline!
     
     fileprivate var buttons = [TabItem]()
     fileprivate var selectedTag = 1
@@ -46,21 +60,21 @@ class SearchViewController: UIViewController {
     open var startTime: Date? {
         didSet {
             startTimeField.text = startTime!.dateString()
-            startTimeField.detail = ""
+            startTimeFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         }
     }
     
     open var endTime: Date? {
         didSet {
             endTimeField.text = endTime!.dateString()
-            endTimeField.detail = ""
+            endTimeFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         }
     }
     
     open var startDate: Date? {
         didSet {
             mStartTimeField.text = startDate!.dateString("EEE, MMM dd")
-            mStartTimeField.detail = ""
+            mStartTimeFieldController.setErrorText(nil, errorAccessibilityValue: nil)
         }
     }
     
@@ -78,7 +92,7 @@ class SearchViewController: UIViewController {
         prepareMAddressField()
         prepareMStartTimeField()
         
-        prepareSearchButton()
+//        prepareSearchButton()
         
         prepareDatePicker()
     }
@@ -97,18 +111,18 @@ class SearchViewController: UIViewController {
 
         var valid = true
         if selectedTag == 1 {
-            if addressField.isEmpty {
-                addressField.detail = "Empty Address"
+            if dailyMapItem == nil {
+                addressFieldController.setErrorText("Empty Address", errorAccessibilityValue: "Empty Address")
                 valid = false
             }
             
-            if startTimeField.isEmpty {
-                startTimeField.detail = "Empty Start Time"
+            if startTime == nil {
+                startTimeFieldController.setErrorText("Empty Start Time", errorAccessibilityValue: "Empty Start Time")
                 valid = false
             }
             
-            if endTimeField.isEmpty {
-                endTimeField.detail = "Empty End Time"
+            if endTime == nil {
+                endTimeFieldController.setErrorText("Empty End Time", errorAccessibilityValue: "Empty End Time")
                 valid = false
             }
             
@@ -117,13 +131,13 @@ class SearchViewController: UIViewController {
                 self.dismiss(animated: true)
             }
         } else {
-            if mAddressField.isEmpty {
-                mAddressField.detail = "Empty Address"
+            if monthlyMapItem == nil {
+                mAddressFieldController.setErrorText("Empty Address", errorAccessibilityValue: "Empty Address")
                 valid = false
             }
             
-            if mStartTimeField.isEmpty {
-                mStartTimeField.detail = "Empty Start Parking On"
+            if startDate == nil {
+                mStartTimeFieldController.setErrorText("Empty Start Parking On", errorAccessibilityValue: "Empty Start Parking On")
                 valid = false
             }
             
@@ -172,7 +186,7 @@ extension SearchViewController: TabBarDelegate {
     }
 }
 
-extension SearchViewController: TextFieldDelegate {
+extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         switch textField.tag {
         case 11:
@@ -198,6 +212,7 @@ extension SearchViewController: TextFieldDelegate {
             if let date = startTime {
                 datePicker.date = date
             }
+            startTimeImageView.tintColor = .iDarkBlue
             break
         case 13:
             // Set picker mode
@@ -212,6 +227,7 @@ extension SearchViewController: TextFieldDelegate {
             if let date = endTime {
                 datePicker.date = date
             }
+            endTimeImageView.tintColor = .iDarkBlue
             break
         case 22:
             // Set picker mode
@@ -222,12 +238,29 @@ extension SearchViewController: TextFieldDelegate {
             if let date = startDate {
                 datePicker.date = date
             }
+            mStartTimeImageView.tintColor = .iDarkBlue
             break
         default:
             break
         }
         
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+        case 12:
+            startTimeImageView.tintColor = .iBlack70
+            break
+        case 13:
+            endTimeImageView.tintColor = .iBlack70
+            break
+        case 22:
+            mStartTimeImageView.tintColor = .iBlack70
+            break
+        default:
+            break
+        }
     }
     
 }
@@ -239,12 +272,12 @@ extension SearchViewController: LocationSearchDelegate {
         case .Daily:
             self.dailyMapItem = mapItem
             self.addressField.text = address
-            self.addressField.detail = ""
+            self.addressFieldController.setErrorText(nil, errorAccessibilityValue: nil)
             break
         case .Monthly:
             self.monthlyMapItem = mapItem
             self.mAddressField.text = address
-            self.mAddressField.detail = ""
+            self.mAddressFieldController.setErrorText(nil, errorAccessibilityValue: nil)
             break
         }
     }
@@ -313,138 +346,104 @@ fileprivate extension SearchViewController {
     }
     
     func prepareAddressField() {
-        addressField.placeholder = "Enter Address, Venue, or Airport"
-        addressField.placeholderLabel.font = LatoFont.regular(with: 15)
-        addressField.placeholderActiveScale = 0.7
-        addressField.placeholderNormalColor = .iBlack50
-        addressField.placeholderActiveColor = .iDarkBlue
-        addressField.placeholderHorizontalOffset = -12
-        
         addressField.font = LatoFont.regular(with: 15)
         addressField.textColor = .black
-        addressField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        addressField.detailColor = .red
         
-        addressField.dividerNormalHeight = 1
-        addressField.dividerActiveHeight = 2
-        addressField.dividerNormalColor = .iBlack50
-        addressField.dividerActiveColor = .iDarkBlue
+        addressFieldController = MDCTextInputControllerUnderline(textInput: addressField)
+        addressFieldController.placeholderText = "Enter Address, Venue, or Airport"
+        addressFieldController.inlinePlaceholderFont = LatoFont.regular(with: 15)
+        addressFieldController.inlinePlaceholderColor = .iBlack70
+        addressFieldController.floatingPlaceholderNormalColor = .iBlack70
+        addressFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        addressFieldController.floatingPlaceholderErrorActiveColor = .red
+        addressFieldController.errorColor = .red
+        addressFieldController.activeColor = .iDarkBlue
+        addressFieldController.normalColor = .iBlack70
         
-        let leftView = UIImageView()
-        leftView.image = UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate)
-        addressField.leftView = leftView
-        addressField.leftViewOffset = -8
-        addressField.leftViewNormalColor = .iBlack50
-        addressField.leftViewActiveColor = .iDarkBlue
+        addressImageView.image = addressImageView.image?.withRenderingMode(.alwaysTemplate)
+        addressImageView.tintColor = .iBlack70
     }
     
     func prepareStartTimeField() {
-        startTimeField.placeholder = "Start Time"
-        startTimeField.placeholderLabel.font = LatoFont.regular(with: 15)
-        startTimeField.placeholderActiveScale = 0.7
-        startTimeField.placeholderNormalColor = .iBlack50
-        startTimeField.placeholderActiveColor = .iDarkBlue
-        startTimeField.placeholderHorizontalOffset = -12
-        
         startTimeField.font = LatoFont.regular(with: 15)
         startTimeField.textColor = .black
-        startTimeField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        startTimeField.detailColor = .red
         
-        startTimeField.dividerNormalHeight = 1
-        startTimeField.dividerActiveHeight = 2
-        startTimeField.dividerNormalColor = .iBlack50
-        startTimeField.dividerActiveColor = .iDarkBlue
+        startTimeFieldController = MDCTextInputControllerUnderline(textInput: startTimeField)
+        startTimeFieldController.placeholderText = "Start Time"
+        startTimeFieldController.inlinePlaceholderFont = LatoFont.regular(with: 15)
+        startTimeFieldController.inlinePlaceholderColor = .iBlack70
+        startTimeFieldController.floatingPlaceholderNormalColor = .iBlack70
+        startTimeFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        startTimeFieldController.floatingPlaceholderErrorActiveColor = .red
+        startTimeFieldController.errorColor = .red
+        startTimeFieldController.activeColor = .iDarkBlue
+        startTimeFieldController.normalColor = .iBlack70
         
-        let leftView = UIImageView()
-        leftView.image = UIImage(named: "icon-time")?.withRenderingMode(.alwaysTemplate)
-        startTimeField.leftView = leftView
-        startTimeField.leftViewOffset = -8
-        startTimeField.leftViewNormalColor = .iBlack50
-        startTimeField.leftViewActiveColor = .iDarkBlue
+        startTimeImageView.image = startTimeImageView.image?.withRenderingMode(.alwaysTemplate)
+        startTimeImageView.tintColor = .iBlack70
     }
     
     func prepareEndTimeField() {
-        endTimeField.placeholder = "End Time"
-        endTimeField.placeholderLabel.font = LatoFont.regular(with: 15)
-        endTimeField.placeholderActiveScale = 0.7
-        endTimeField.placeholderNormalColor = .iBlack50
-        endTimeField.placeholderActiveColor = .iDarkBlue
-        endTimeField.placeholderHorizontalOffset = -12
-        
         endTimeField.font = LatoFont.regular(with: 15)
         endTimeField.textColor = .black
-        endTimeField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        endTimeField.detailColor = .red
         
-        endTimeField.dividerNormalHeight = 1
-        endTimeField.dividerActiveHeight = 2
-        endTimeField.dividerNormalColor = .iBlack50
-        endTimeField.dividerActiveColor = .iDarkBlue
+        endTimeFieldController = MDCTextInputControllerUnderline(textInput: endTimeField)
+        endTimeFieldController.placeholderText = "End Time"
+        endTimeFieldController.inlinePlaceholderFont = LatoFont.regular(with: 15)
+        endTimeFieldController.inlinePlaceholderColor = .iBlack70
+        endTimeFieldController.floatingPlaceholderNormalColor = .iBlack70
+        endTimeFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        endTimeFieldController.floatingPlaceholderErrorActiveColor = .red
+        endTimeFieldController.errorColor = .red
+        endTimeFieldController.activeColor = .iDarkBlue
+        endTimeFieldController.normalColor = .iBlack70
         
-        let leftView = UIImageView()
-        leftView.image = UIImage(named: "icon-time")?.withRenderingMode(.alwaysTemplate)
-        endTimeField.leftView = leftView
-        endTimeField.leftViewOffset = -8
-        endTimeField.leftViewNormalColor = .iBlack50
-        endTimeField.leftViewActiveColor = .iDarkBlue
+        endTimeImageView.image = endTimeImageView.image?.withRenderingMode(.alwaysTemplate)
+        endTimeImageView.tintColor = .iBlack70
     }
     
     func prepareMAddressField() {
-        mAddressField.placeholder = "Enter Address, Venue, or Airport"
-        mAddressField.placeholderLabel.font = LatoFont.regular(with: 15)
-        mAddressField.placeholderActiveScale = 0.7
-        mAddressField.placeholderNormalColor = .iBlack50
-        mAddressField.placeholderActiveColor = .iDarkBlue
-        mAddressField.placeholderHorizontalOffset = -12
-        
         mAddressField.font = LatoFont.regular(with: 15)
         mAddressField.textColor = .black
-        mAddressField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        mAddressField.detailColor = .red
         
-        mAddressField.dividerNormalHeight = 1
-        mAddressField.dividerActiveHeight = 2
-        mAddressField.dividerNormalColor = .iBlack50
-        mAddressField.dividerActiveColor = .iDarkBlue
+        mAddressFieldController = MDCTextInputControllerUnderline(textInput: mAddressField)
+        mAddressFieldController.placeholderText = "Enter Address, Venue, or Airport"
+        mAddressFieldController.inlinePlaceholderFont = LatoFont.regular(with: 15)
+        mAddressFieldController.inlinePlaceholderColor = .iBlack70
+        mAddressFieldController.floatingPlaceholderNormalColor = .iBlack70
+        mAddressFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        mAddressFieldController.floatingPlaceholderErrorActiveColor = .red
+        mAddressFieldController.errorColor = .red
+        mAddressFieldController.activeColor = .iDarkBlue
+        mAddressFieldController.normalColor = .iBlack70
         
-        let leftView = UIImageView()
-        leftView.image = UIImage(named: "icon-search")?.withRenderingMode(.alwaysTemplate)
-        mAddressField.leftView = leftView
-        mAddressField.leftViewOffset = -8
-        mAddressField.leftViewNormalColor = .iBlack50
-        mAddressField.leftViewActiveColor = .iDarkBlue
+        mAddressImageView.image = mAddressImageView.image?.withRenderingMode(.alwaysTemplate)
+        mAddressImageView.tintColor = .iBlack70
     }
     
     func prepareMStartTimeField() {
-        mStartTimeField.placeholder = "Start Parking On"
-        mStartTimeField.placeholderLabel.font = LatoFont.regular(with: 15)
-        mStartTimeField.placeholderActiveScale = 0.7
-        mStartTimeField.placeholderNormalColor = .iBlack50
-        mStartTimeField.placeholderActiveColor = .iDarkBlue
-        mStartTimeField.placeholderHorizontalOffset = -12
-        
         mStartTimeField.font = LatoFont.regular(with: 15)
         mStartTimeField.textColor = .black
-        mStartTimeField.textInsets = EdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        mStartTimeField.detailColor = .red
         
-        mStartTimeField.dividerNormalHeight = 1
-        mStartTimeField.dividerActiveHeight = 2
-        mStartTimeField.dividerNormalColor = .iBlack50
-        mStartTimeField.dividerActiveColor = .iDarkBlue
+        mStartTimeFieldController = MDCTextInputControllerUnderline(textInput: mStartTimeField)
+        mStartTimeFieldController.placeholderText = "Start Parking On"
+        mStartTimeFieldController.inlinePlaceholderFont = LatoFont.regular(with: 15)
+        mStartTimeFieldController.inlinePlaceholderColor = .iBlack70
+        mStartTimeFieldController.floatingPlaceholderNormalColor = .iBlack70
+        mStartTimeFieldController.floatingPlaceholderActiveColor = .iDarkBlue
+        mStartTimeFieldController.floatingPlaceholderErrorActiveColor = .red
+        mStartTimeFieldController.errorColor = .red
+        mStartTimeFieldController.activeColor = .iDarkBlue
+        mStartTimeFieldController.normalColor = .iBlack70
         
-        let leftView = UIImageView()
-        leftView.image = UIImage(named: "icon-calendar")?.withRenderingMode(.alwaysTemplate)
-        mStartTimeField.leftView = leftView
-        mStartTimeField.leftViewOffset = -8
-        mStartTimeField.leftViewNormalColor = .iBlack50
-        mStartTimeField.leftViewActiveColor = .iDarkBlue
+        mStartTimeImageView.image = mStartTimeImageView.image?.withRenderingMode(.alwaysTemplate)
+        mStartTimeImageView.tintColor = .iBlack70
     }
     
     func prepareSearchButton() {
-        searchButton.roundCorners(corners: [.allCorners], radius: 4)
-        searchButton.titleLabel?.font = LatoFont.black(with: 18)
+//        searchButton.roundCorners(corners: [.allCorners], radius: 4)
+        searchButton.layer.cornerRadius = 8
+        searchButton.layer.masksToBounds = true
     }
     
     func parseAddress(selectedItem:MKPlacemark) -> String {
