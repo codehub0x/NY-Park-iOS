@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 
 protocol SavedCellDelegate {
     func onDetails()
@@ -23,12 +23,12 @@ class SavedCell: UITableViewCell {
     @IBOutlet weak var labelAddress: UIView!
     @IBOutlet weak var labelTitle: UIView!
     @IBOutlet weak var imageViewItem: UIImageView!
-    @IBOutlet weak var btnStar: FlatButton!
+    @IBOutlet weak var btnStar: MDCButton!
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
-    @IBOutlet weak var btnBook: RaisedButton!
-    @IBOutlet weak var btnDetails: FlatButton!
+    @IBOutlet weak var btnBook: MDCButton!
+    @IBOutlet weak var btnDetails: MDCButton!
     
     var delegate: SavedCellDelegate!
     
@@ -38,6 +38,7 @@ class SavedCell: UITableViewCell {
         prepareCardView()
         prepareImageView()
         prepareLocationImageView()
+        prepareStarButton()
         prepareBookButton()
         prepareDetailsButton()
     }
@@ -78,6 +79,10 @@ fileprivate extension SavedCell {
         locationImageView.tintColor = UIColor.iGray
     }
     
+    func prepareStarButton() {
+        btnStar.applyTextTheme(withScheme: Global.textButtonScheme())
+    }
+    
     func prepareBookButton() {
         let textString = NSMutableAttributedString(
             string: btnBook.title(for: .normal)!,
@@ -90,9 +95,10 @@ fileprivate extension SavedCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnBook.setAttributedTitle(textString, for: .normal)
-        btnBook.layer.cornerRadius = 2
+        btnBook.applyContainedTheme(withScheme: Global.tinyButtonScheme())
+        btnBook.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
     
     func prepareDetailsButton() {
@@ -107,13 +113,12 @@ fileprivate extension SavedCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnDetails.setAttributedTitle(textString, for: .normal)
-        btnDetails.layer.borderWidth = 1
-        btnDetails.layer.cornerRadius = 2
-        btnDetails.layer.borderColor = UIColor.iBlack70.cgColor
-        
         btnDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnDetails.tintColor = UIColor.iBlack90
+        btnDetails.applyOutlinedTheme(withScheme: Global.tinyOutlinedButtonScheme())
+        btnDetails.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        btnDetails.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
 }

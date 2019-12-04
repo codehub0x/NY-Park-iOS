@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Material
 
 protocol BookCellDelegate {
     func onItemClick(_ indexPath: IndexPath)
@@ -19,7 +18,7 @@ class BookCell: UICollectionViewCell {
     
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var button: FlatButton!
+    @IBOutlet weak var button: UIButton!
     
     open var indexPath: IndexPath!
     open var delegate: BookCellDelegate!
@@ -30,7 +29,7 @@ class BookCell: UICollectionViewCell {
         prepareButton()
     }
     
-    @IBAction func onButtonClick(_ sender: FlatButton) {
+    @IBAction func onButtonClick(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         delegate.onItemClick(indexPath)
     }

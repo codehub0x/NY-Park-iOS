@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 
 protocol ReservationCellDelegate {
     func onDetails()
@@ -29,8 +29,8 @@ class ReservationCell: UITableViewCell {
     @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelFlag: UILabel!
-    @IBOutlet weak var btnDirections: RaisedButton!
-    @IBOutlet weak var btnDetails: FlatButton!
+    @IBOutlet weak var btnDirections: MDCButton!
+    @IBOutlet weak var btnDetails: MDCButton!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var hoursImageView: UIImageView!
     @IBOutlet weak var locationImageView: UIImageView!
@@ -43,9 +43,8 @@ class ReservationCell: UITableViewCell {
             case .upcoming:
                 btnDirections.setTitle("DIRECTIONS", for: .normal)
                 btnDirections.setImage(nil, for: .normal)
-                btnDirections.backgroundColor = UIColor.iDarkBlue
-                btnDirections.tintColor = UIColor.white
-                btnDirections.setTitleColor(UIColor.white, for: .normal)
+                btnDirections.applyContainedTheme(withScheme: Global.tinySecondaryButtonScheme())
+                btnDirections.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
                 
                 priceView.backgroundColor = UIColor.iYellow
                 labelPrice.textColor = UIColor.iDarkBlue
@@ -54,9 +53,8 @@ class ReservationCell: UITableViewCell {
             case .past:
                 btnDirections.setTitle("REBOOK", for: .normal)
                 btnDirections.setImage(UIImage(named: "icon-rebook")?.withRenderingMode(.alwaysTemplate), for: .normal)
-                btnDirections.backgroundColor = UIColor.iYellow
-                btnDirections.tintColor = UIColor.iDarkBlue
-                btnDirections.setTitleColor(UIColor.iDarkBlue, for: .normal)
+                btnDirections.applyContainedTheme(withScheme: Global.tinyButtonScheme())
+                btnDirections.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
                 
                 priceView.backgroundColor = UIColor.iDarkBlue
                 labelPrice.textColor = UIColor.white
@@ -65,9 +63,8 @@ class ReservationCell: UITableViewCell {
             case .cancelled:
                 btnDirections.setTitle("DIRECTIONS", for: .normal)
                 btnDirections.setImage(nil, for: .normal)
-                btnDirections.backgroundColor = UIColor.iDarkBlue
-                btnDirections.tintColor = UIColor.white
-                btnDirections.setTitleColor(UIColor.white, for: .normal)
+                btnDirections.applyContainedTheme(withScheme: Global.tinySecondaryButtonScheme())
+                btnDirections.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
                 
                 priceView.backgroundColor = UIColor.iYellow
                 labelPrice.textColor = UIColor.iDarkBlue
@@ -139,9 +136,9 @@ fileprivate extension ReservationCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnDirections.setAttributedTitle(textString, for: .normal)
-        btnDirections.layer.cornerRadius = 2
+        btnDirections.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func prepareDetailsButton() {
@@ -156,14 +153,14 @@ fileprivate extension ReservationCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnDetails.setAttributedTitle(textString, for: .normal)
-        btnDetails.layer.borderWidth = 1
-        btnDetails.layer.cornerRadius = 2
-        btnDetails.layer.borderColor = UIColor.iBlack70.cgColor
-        
         btnDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnDetails.tintColor = UIColor.iBlack90
+        
+        btnDetails.applyOutlinedTheme(withScheme: Global.tinyOutlinedButtonScheme())
+        btnDetails.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        btnDetails.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
     
     func prepareHoursImageView() {

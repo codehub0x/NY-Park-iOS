@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 
 protocol HomeCellDelegate {
     func onDetails()
@@ -25,8 +25,8 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
-    @IBOutlet weak var btnBook: RaisedButton!
-    @IBOutlet weak var btnDetails: FlatButton!
+    @IBOutlet weak var btnBook: MDCButton!
+    @IBOutlet weak var btnDetails: MDCButton!
     
     var delegate: HomeCellDelegate!
     
@@ -84,9 +84,10 @@ fileprivate extension HomeCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnBook.setAttributedTitle(textString, for: .normal)
-        btnBook.layer.cornerRadius = 2
+        btnBook.applyOutlinedTheme(withScheme: Global.tinyButtonScheme())
+        btnBook.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
     
     func prepareDetailsButton() {
@@ -101,13 +102,12 @@ fileprivate extension HomeCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnDetails.setAttributedTitle(textString, for: .normal)
-        btnDetails.layer.borderWidth = 1
-        btnDetails.layer.cornerRadius = 2
-        btnDetails.layer.borderColor = UIColor.iBlack70.cgColor
-        
         btnDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnDetails.tintColor = UIColor.iBlack90
+        btnDetails.applyOutlinedTheme(withScheme: Global.tinyOutlinedButtonScheme())
+        btnDetails.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        btnDetails.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
     }
 }

@@ -230,7 +230,7 @@ New York, NY 10024, USA</string>
                                     <constraint firstAttribute="width" constant="12" id="XaP-iR-Ysz"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-Qb-gRu" customClass="RaisedButton" customModule="Material">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-Qb-gRu" customClass="MDCButton">
                                 <rect key="frame" x="16" y="158" width="100" height="20"/>
                                 <color key="backgroundColor" red="0.039215686270000001" green="0.0" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -248,7 +248,7 @@ New York, NY 10024, USA</string>
                                     <action selector="onDirectionsClick:" destination="aCt-TI-mYh" eventType="touchUpInside" id="sKs-I4-Pri"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-ua-Fop" customClass="FlatButton" customModule="Material">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-ua-Fop" customClass="MDCButton">
                                 <rect key="frame" x="132" y="158" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="30q-od-9IT"/>

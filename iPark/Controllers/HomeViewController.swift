@@ -588,7 +588,7 @@ fileprivate extension HomeViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnInfoBook.setAttributedTitle(textString, for: .normal)
         btnInfoBook.applyContainedTheme(withScheme: Global.tinyButtonScheme())
         btnInfoBook.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
@@ -606,7 +606,7 @@ fileprivate extension HomeViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
-        textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
+        textString.addAttribute(NSAttributedString.Key.kern, value: 1.2, range: textRange)
         btnInfoDetails.setAttributedTitle(textString, for: .normal)
         btnInfoDetails.setImage(UIImage(named: "icon-details")?.withRenderingMode(.alwaysTemplate), for: .normal)
         btnInfoDetails.tintColor = UIColor.iBlack90
