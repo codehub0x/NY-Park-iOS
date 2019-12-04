@@ -1142,11 +1142,6 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <state key="normal" title="SAVE CHANGES">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onSaveBtnClick:" destination="5eF-dZ-4as" eventType="touchUpInside" id="O6g-u4-5GR"/>
                                                         </connections>
@@ -1404,11 +1399,6 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                         <state key="normal" title="ADD VEHICLE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onAddVehicleBtnClick:" destination="D9M-VJ-91F" eventType="touchUpInside" id="qam-Xr-p3Q"/>
                                                         </connections>
@@ -1481,6 +1471,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                         <viewLayoutGuide key="safeArea" id="xp3-tf-ZRQ"/>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="t2h-GE-Z1x" id="eE2-94-dcY"/>
                         <outlet property="colorField" destination="58R-Hh-Tfp" id="O75-sk-ec9"/>
                         <outlet property="heightConstraint" destination="qL6-a5-JGY" id="xds-Ga-iVB"/>
                         <outlet property="makeField" destination="QDF-R8-Ayz" id="0Bo-sZ-kwe"/>
@@ -2005,11 +1996,6 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                 <state key="normal" title="BOOK NOW">
                                                     <color key="titleColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onBookClick:" destination="Ach-ev-lqV" eventType="touchUpInside" id="yKV-fz-gqB"/>
                                                 </connections>
@@ -2712,11 +2698,6 @@ All SUVs oversized fee of $12.00 daily</string>
                                                 <state key="normal" title="ADD TO CALENDAR">
                                                     <color key="titleColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onAddToCalendarBtnClick:" destination="H2T-hW-pgo" eventType="touchUpInside" id="OO5-If-Wl9"/>
                                                 </connections>
@@ -2861,11 +2842,6 @@ Between 2nd Ave. and 3rd Ave.</string>
                                                         <state key="normal" title="GET DIRECTIONS">
                                                             <color key="titleColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onGetDirectionsBtnClick:" destination="H2T-hW-pgo" eventType="touchUpInside" id="5S7-Zf-iBq"/>
                                                         </connections>
@@ -3551,11 +3527,6 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                         <state key="normal" title="ADD PAYMENT">
                                                             <color key="titleColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="8"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onAddPaymentBtnClick:" destination="0kw-bc-I4O" eventType="touchUpInside" id="uBh-0W-pbE"/>
                                                         </connections>
@@ -3927,11 +3898,6 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                                 <state key="normal" title="SAVE CHANGES">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onClickSave:" destination="p1P-dn-Hnh" eventType="touchUpInside" id="YCX-Ah-ZQg"/>
                                                 </connections>
@@ -5253,11 +5219,6 @@ New York, NY 10024, USA</string>
                                                         <state key="normal" title="Create your account">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="4"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onCreateAccountBtnClick:" destination="H2c-SF-Uai" eventType="touchUpInside" id="JUR-7L-H5H"/>
                                                         </connections>
@@ -5352,11 +5313,6 @@ New York, NY 10024, USA</string>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSigninBtnClick:" destination="H2c-SF-Uai" eventType="touchUpInside" id="aMh-r7-Koq"/>
                                         </connections>
@@ -5649,11 +5605,6 @@ New York, NY 10024, USA</string>
                                                         <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
                                                         <state key="normal" title="855-472-7569" image="icon-phone"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="6"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onPhoneBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="6CG-co-qoJ"/>
                                                         </connections>

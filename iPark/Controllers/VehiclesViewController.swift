@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 
 class VehiclesViewController: UIViewController {
     
@@ -20,6 +20,7 @@ class VehiclesViewController: UIViewController {
     @IBOutlet weak var plateField: UITextField!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var btnAdd: MDCButton!
     
     var data: [[String: String]] = [
         ["make": "Bently", "model": "Contiential", "color": "Black", "plate": "FAA-1000"],
@@ -32,6 +33,7 @@ class VehiclesViewController: UIViewController {
         
         adjustUIHeight()
         prepareNavigation()
+        prepareButton()
         
         tableView.register(UINib(nibName: "\(VehicleCell.self)", bundle: Bundle.main), forCellReuseIdentifier: VehicleCell.reuseIdentifier)
     }
@@ -105,5 +107,9 @@ fileprivate extension VehiclesViewController {
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "icon-arrow-left")?.withRenderingMode(.alwaysTemplate), style: .plain, target: self, action: #selector(onBackClick))
         self.navigationItem.leftBarButtonItem = leftButton
+    }
+    
+    func prepareButton() {
+        btnAdd.applyContainedTheme(withScheme: Global.defaultButtonScheme())
     }
 }

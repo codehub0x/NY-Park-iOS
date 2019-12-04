@@ -45,7 +45,7 @@
                                 <color key="textColor" red="0.20392156859999999" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13f-AY-hmx" customClass="FlatButton" customModule="Material">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13f-AY-hmx" customClass="MDCButton">
                                 <rect key="frame" x="338" y="8" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lwp-5j-yav"/>
@@ -84,6 +84,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="btnEdit" destination="13f-AY-hmx" id="fpT-ND-wAD"/>
                 <outlet property="cardView" destination="0Ri-fO-6UO" id="C7w-en-lOS"/>
                 <outlet property="labelDetails" destination="W85-Yh-fNH" id="kAh-PX-eFb"/>
                 <outlet property="labelMake" destination="ggh-Yf-zyQ" id="geF-xu-Abb"/>

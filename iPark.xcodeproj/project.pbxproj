@@ -53,7 +53,6 @@
 		3C29BFAB237DBC9E009F46EC /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF84237DBC9E009F46EC /* Lato-ThinItalic.ttf */; };
 		3C29BFAC237DBC9E009F46EC /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF85237DBC9E009F46EC /* OFL.txt */; };
 		3C29BFAD237DBC9E009F46EC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BF86237DBC9E009F46EC /* README.txt */; };
-		3C37A7172385044A00159022 /* RPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C37A7162385044900159022 /* RPicker.swift */; };
 		3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */; };
 		3C3FAC972397F6A80049E2BE /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */; };
 		3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42AFC32384723000C8582C /* VehiclesViewController.swift */; };
@@ -170,7 +169,6 @@
 		3C29BF84237DBC9E009F46EC /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		3C29BF85237DBC9E009F46EC /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		3C29BF86237DBC9E009F46EC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		3C37A7162385044900159022 /* RPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPicker.swift; sourceTree = "<group>"; };
 		3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingDetailsViewController.swift; sourceTree = "<group>"; };
 		3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		3C42AFC32384723000C8582C /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
@@ -328,27 +326,26 @@
 		3C8924FC237C319A004F7E97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CF87AE72384C95E00DE9995 /* BookCell.swift */,
+				3CF87AE92384C98000DE9995 /* BookCell.xib */,
+				3CB0385F238724A10050130F /* BookedCell.swift */,
+				3CB03861238724B20050130F /* BookedCell.xib */,
+				3CBC15582390329900328CE6 /* CustomAnnotationView.swift */,
+				3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */,
+				3C011430239683BA0055BC2A /* ErrorTextField.swift */,
 				3CC896802386C7E70085DCA1 /* FAQViewCell.swift */,
 				3CC8967E2386C7DA0085DCA1 /* FAQViewCell.xib */,
 				3CC83A6823918B6200C339CF /* FAQHeader.swift */,
-				3C37A7162385044900159022 /* RPicker.swift */,
 				3CABA6862382A3C000EB368E /* HomeCell.swift */,
 				3CABA6872382A3C000EB368E /* HomeCell.xib */,
+				3C952FAC238FE73200D0A313 /* ImagePicker.swift */,
 				3C29BEBA237DA110009F46EC /* ReservationCell.swift */,
 				3C29BEBC237DA141009F46EC /* ReservationCell.xib */,
 				3CB69DBB237F87C400E85702 /* SavedCell.swift */,
 				3CB69DBD237F87CF00E85702 /* SavedCell.xib */,
-				3CF87AE72384C95E00DE9995 /* BookCell.swift */,
-				3CF87AE92384C98000DE9995 /* BookCell.xib */,
+				3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */,
 				3C8D2D4E2385769200B91F09 /* VehicleCell.swift */,
 				3C8D2D4C2385768500B91F09 /* VehicleCell.xib */,
-				3CB0385F238724A10050130F /* BookedCell.swift */,
-				3CB03861238724B20050130F /* BookedCell.xib */,
-				3C952FAC238FE73200D0A313 /* ImagePicker.swift */,
-				3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */,
-				3CBC15582390329900328CE6 /* CustomAnnotationView.swift */,
-				3CBC155A23903B4400328CE6 /* CustomAnnotation.swift */,
-				3C011430239683BA0055BC2A /* ErrorTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -762,7 +759,6 @@
 				3CC83A6923918B6200C339CF /* FAQHeader.swift in Sources */,
 				3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */,
 				3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */,
-				3C37A7172385044A00159022 /* RPicker.swift in Sources */,
 				3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */,
 				3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */,
 				3CA6F6A82386D3E900A24521 /* FAQViewController.swift in Sources */,
