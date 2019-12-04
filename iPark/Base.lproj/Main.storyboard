@@ -5424,48 +5424,54 @@ New York, NY 10024, USA</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkP-US-ms5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-F5-FFa" userLabel="Terms Button" customClass="FlatButton" customModule="Material">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-F5-FFa" userLabel="Terms Button" customClass="MDCButton">
                                                 <rect key="frame" x="8" y="536" width="398" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="ta2-QE-dPN"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
-                                                <state key="normal" image="icon-arrow-right"/>
+                                                <state key="normal" title="Terms &amp; Conditions"/>
                                                 <connections>
                                                     <action selector="onTermsBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="213-nZ-aHm"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-rY-Vxe">
-                                                <rect key="frame" x="32" y="554" width="157.5" height="22"/>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18.299999237060547"/>
-                                                <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-X0-Nan" userLabel="Privacy Button" customClass="FlatButton" customModule="Material">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="4Ay-f3-10d">
+                                                <rect key="frame" x="366" y="553" width="24" height="24"/>
+                                                <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="1Oq-jg-tEg"/>
+                                                    <constraint firstAttribute="height" constant="24" id="c66-3f-MbX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-X0-Nan" userLabel="Privacy Button" customClass="MDCButton">
                                                 <rect key="frame" x="8" y="604" width="398" height="58"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="jmy-eR-DHP"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
-                                                <state key="normal" image="icon-arrow-right"/>
+                                                <state key="normal" title="Privacy Policy"/>
                                                 <connections>
                                                     <action selector="onPrivacyBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="xop-nP-Uwq"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Po5-rw-voC">
-                                                <rect key="frame" x="32" y="622" width="110.5" height="22"/>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18.299999237060547"/>
-                                                <color key="textColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="3oZ-nJ-pBt">
+                                                <rect key="frame" x="366" y="621" width="24" height="24"/>
+                                                <color key="tintColor" red="0.027450980390000001" green="0.0" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="QhR-lK-Vek"/>
+                                                    <constraint firstAttribute="height" constant="24" id="zKc-0V-el3"/>
+                                                </constraints>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55E-ME-gJf" userLabel="Bottom View">
                                                 <rect key="frame" x="0.0" y="686" width="414" height="60"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-Ga-GMa" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-Ga-GMa" customClass="MDCButton">
                                                         <rect key="frame" x="154" y="6" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="48" id="0Yi-zW-xfL"/>
@@ -5476,7 +5482,7 @@ New York, NY 10024, USA</string>
                                                             <action selector="onFacebookBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="EH5-30-NIE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riU-6r-U9o" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riU-6r-U9o" customClass="MDCButton">
                                                         <rect key="frame" x="212" y="6" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="AHy-hq-cON"/>
@@ -5519,14 +5525,10 @@ New York, NY 10024, USA</string>
                                                                             <constraint firstAttribute="width" constant="32" id="a3u-d6-riw"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-vU-wjT">
-                                                                        <rect key="frame" x="15" y="48" width="62" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.16862745098039217" green="0.15686274509803921" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEB-Q3-EQc" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEB-Q3-EQc" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="70"/>
+                                                                        <inset key="contentEdgeInsets" minX="0.0" minY="40" maxX="0.0" maxY="0.0"/>
+                                                                        <state key="normal" title="Website"/>
                                                                         <connections>
                                                                             <action selector="onWebsiteBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="Ycy-M2-7LC"/>
                                                                         </connections>
@@ -5534,11 +5536,9 @@ New York, NY 10024, USA</string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="bMo-vU-wjT" firstAttribute="centerX" secondItem="5P6-T4-JOd" secondAttribute="centerX" id="5ef-Ov-5kj"/>
                                                                     <constraint firstItem="ZEB-Q3-EQc" firstAttribute="leading" secondItem="5P6-T4-JOd" secondAttribute="leading" id="R2m-sJ-mdR"/>
                                                                     <constraint firstAttribute="bottom" secondItem="ZEB-Q3-EQc" secondAttribute="bottom" id="SqM-j2-O2P"/>
                                                                     <constraint firstAttribute="trailing" secondItem="ZEB-Q3-EQc" secondAttribute="trailing" id="Ypc-UM-wCa"/>
-                                                                    <constraint firstItem="bMo-vU-wjT" firstAttribute="top" secondItem="W5N-H0-Ioe" secondAttribute="bottom" constant="12" id="qgf-mY-TyD"/>
                                                                     <constraint firstItem="ZEB-Q3-EQc" firstAttribute="top" secondItem="5P6-T4-JOd" secondAttribute="top" id="qpZ-9K-q0N"/>
                                                                     <constraint firstItem="W5N-H0-Ioe" firstAttribute="top" secondItem="5P6-T4-JOd" secondAttribute="top" constant="4" id="sY9-cz-bEp"/>
                                                                     <constraint firstItem="W5N-H0-Ioe" firstAttribute="centerX" secondItem="5P6-T4-JOd" secondAttribute="centerX" id="zhI-OT-IeO"/>
@@ -5554,14 +5554,10 @@ New York, NY 10024, USA</string>
                                                                             <constraint firstAttribute="height" constant="32" id="xsa-uw-nw8"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIM-X9-WZA">
-                                                                        <rect key="frame" x="13" y="48" width="66" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.16862745100000001" green="0.15686274510000001" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1j-IG-oLO" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1j-IG-oLO" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="70"/>
+                                                                        <inset key="contentEdgeInsets" minX="0.0" minY="40" maxX="0.0" maxY="0.0"/>
+                                                                        <state key="normal" title="Email Us"/>
                                                                         <connections>
                                                                             <action selector="onEmailBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="rEZ-Tg-O3z"/>
                                                                         </connections>
@@ -5573,10 +5569,8 @@ New York, NY 10024, USA</string>
                                                                     <constraint firstItem="q1j-IG-oLO" firstAttribute="top" secondItem="9zy-ph-dWe" secondAttribute="top" id="6JE-74-6NE"/>
                                                                     <constraint firstItem="rdH-MF-CuE" firstAttribute="top" secondItem="9zy-ph-dWe" secondAttribute="top" constant="4" id="IeP-Fb-XK1"/>
                                                                     <constraint firstAttribute="trailing" secondItem="q1j-IG-oLO" secondAttribute="trailing" id="M9y-h6-Blm"/>
-                                                                    <constraint firstItem="KIM-X9-WZA" firstAttribute="top" secondItem="rdH-MF-CuE" secondAttribute="bottom" constant="12" id="Ysi-XZ-w2f"/>
                                                                     <constraint firstAttribute="bottom" secondItem="q1j-IG-oLO" secondAttribute="bottom" id="adw-hW-7ez"/>
                                                                     <constraint firstItem="rdH-MF-CuE" firstAttribute="centerX" secondItem="9zy-ph-dWe" secondAttribute="centerX" id="scA-Xg-EUc"/>
-                                                                    <constraint firstItem="KIM-X9-WZA" firstAttribute="centerX" secondItem="9zy-ph-dWe" secondAttribute="centerX" id="tnb-Dw-sVS"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mN-XH-RtU">
@@ -5589,14 +5583,10 @@ New York, NY 10024, USA</string>
                                                                             <constraint firstAttribute="width" constant="32" id="ddn-tM-H9t"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbU-Ov-ynL">
-                                                                        <rect key="frame" x="16" y="48" width="60" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.16862745100000001" green="0.15686274510000001" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-u4-p8L" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-u4-p8L" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="70"/>
+                                                                        <inset key="contentEdgeInsets" minX="0.0" minY="40" maxX="0.0" maxY="0.0"/>
+                                                                        <state key="normal" title="Rate Us"/>
                                                                         <connections>
                                                                             <action selector="onRateUsBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="zgF-aG-Wa8"/>
                                                                         </connections>
@@ -5604,12 +5594,10 @@ New York, NY 10024, USA</string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="FbU-Ov-ynL" firstAttribute="top" secondItem="Haj-7O-69N" secondAttribute="bottom" constant="12" id="6PB-01-7Sf"/>
                                                                     <constraint firstItem="Haj-7O-69N" firstAttribute="centerX" secondItem="1mN-XH-RtU" secondAttribute="centerX" id="8MS-E1-O57"/>
                                                                     <constraint firstItem="Haj-7O-69N" firstAttribute="top" secondItem="1mN-XH-RtU" secondAttribute="top" constant="4" id="N6D-6g-DLl"/>
                                                                     <constraint firstAttribute="bottom" secondItem="gT8-u4-p8L" secondAttribute="bottom" id="URd-94-fvr"/>
                                                                     <constraint firstAttribute="trailing" secondItem="gT8-u4-p8L" secondAttribute="trailing" id="Vet-lN-i26"/>
-                                                                    <constraint firstItem="FbU-Ov-ynL" firstAttribute="centerX" secondItem="1mN-XH-RtU" secondAttribute="centerX" id="Wf0-L8-sT9"/>
                                                                     <constraint firstItem="gT8-u4-p8L" firstAttribute="leading" secondItem="1mN-XH-RtU" secondAttribute="leading" id="hqC-qf-54q"/>
                                                                     <constraint firstItem="gT8-u4-p8L" firstAttribute="top" secondItem="1mN-XH-RtU" secondAttribute="top" id="xZV-iN-tz3"/>
                                                                 </constraints>
@@ -5624,14 +5612,10 @@ New York, NY 10024, USA</string>
                                                                             <constraint firstAttribute="height" constant="32" id="tMK-EP-9AQ"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYH-ie-6rl">
-                                                                        <rect key="frame" x="30" y="48" width="32" height="20.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="0.16862745100000001" green="0.15686274510000001" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6n-EQ-Szq" customClass="FlatButton" customModule="Material">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6n-EQ-Szq" customClass="MDCButton">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91.5" height="70"/>
+                                                                        <inset key="contentEdgeInsets" minX="0.0" minY="40" maxX="0.0" maxY="0.0"/>
+                                                                        <state key="normal" title="FAQ"/>
                                                                         <connections>
                                                                             <action selector="onFaqBtnClick:" destination="psX-lJ-wSC" eventType="touchUpInside" id="4lZ-mR-2nW"/>
                                                                         </connections>
@@ -5639,12 +5623,10 @@ New York, NY 10024, USA</string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="GYH-ie-6rl" firstAttribute="top" secondItem="0V6-qc-c43" secondAttribute="bottom" constant="12" id="Bow-ak-JHV"/>
                                                                     <constraint firstAttribute="trailing" secondItem="L6n-EQ-Szq" secondAttribute="trailing" id="Inq-Af-C0Y"/>
                                                                     <constraint firstItem="L6n-EQ-Szq" firstAttribute="leading" secondItem="xel-ce-lDD" secondAttribute="leading" id="K0a-FV-eGq"/>
                                                                     <constraint firstItem="L6n-EQ-Szq" firstAttribute="top" secondItem="xel-ce-lDD" secondAttribute="top" id="Tct-fc-e8q"/>
                                                                     <constraint firstAttribute="bottom" secondItem="L6n-EQ-Szq" secondAttribute="bottom" id="WJO-Wu-SA5"/>
-                                                                    <constraint firstItem="GYH-ie-6rl" firstAttribute="centerX" secondItem="xel-ce-lDD" secondAttribute="centerX" id="ZvH-eZ-8TZ"/>
                                                                     <constraint firstItem="0V6-qc-c43" firstAttribute="top" secondItem="xel-ce-lDD" secondAttribute="top" constant="4" id="a80-UX-cnj"/>
                                                                     <constraint firstItem="0V6-qc-c43" firstAttribute="centerX" secondItem="xel-ce-lDD" secondAttribute="centerX" id="qhZ-fF-OIb"/>
                                                                 </constraints>
@@ -5654,7 +5636,7 @@ New York, NY 10024, USA</string>
                                                             <constraint firstAttribute="height" constant="70" id="TGw-Xp-a8I"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-Hq-bty" customClass="RaisedButton" customModule="Material">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-Hq-bty" customClass="MDCButton">
                                                         <rect key="frame" x="6" y="458" width="386" height="52"/>
                                                         <color key="backgroundColor" red="0.98823529409999999" green="0.72941176470000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -5691,24 +5673,24 @@ New York, NY 10024, USA</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Po5-rw-voC" firstAttribute="centerY" secondItem="FKh-X0-Nan" secondAttribute="centerY" id="0S5-sc-ksh"/>
                                             <constraint firstItem="f4v-F5-FFa" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" constant="8" id="1SV-zH-5VE"/>
-                                            <constraint firstItem="Po5-rw-voC" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" constant="32" id="2N4-j6-7AQ"/>
-                                            <constraint firstItem="k6o-rY-Vxe" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" constant="32" id="3xa-Z0-lXv"/>
+                                            <constraint firstItem="4Ay-f3-10d" firstAttribute="trailing" secondItem="f4v-F5-FFa" secondAttribute="trailing" constant="-16" id="2Qu-6V-MY4"/>
                                             <constraint firstItem="f4v-F5-FFa" firstAttribute="top" secondItem="Hbr-ky-eRt" secondAttribute="bottom" constant="12" id="4hI-u8-kTX"/>
                                             <constraint firstAttribute="bottom" secondItem="55E-ME-gJf" secondAttribute="bottom" constant="24" id="7GR-Sc-nqF"/>
                                             <constraint firstItem="55E-ME-gJf" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" id="DJ4-0g-lGv"/>
                                             <constraint firstItem="Hbr-ky-eRt" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" constant="8" id="Hs0-ne-DiP"/>
+                                            <constraint firstItem="3oZ-nJ-pBt" firstAttribute="centerY" secondItem="FKh-X0-Nan" secondAttribute="centerY" id="Lvm-ME-1HV"/>
                                             <constraint firstAttribute="trailing" secondItem="55E-ME-gJf" secondAttribute="trailing" id="Mf7-fj-n4e"/>
                                             <constraint firstItem="FKh-X0-Nan" firstAttribute="top" secondItem="f4v-F5-FFa" secondAttribute="bottom" constant="10" id="Mff-xg-4t9"/>
                                             <constraint firstAttribute="trailing" secondItem="f4v-F5-FFa" secondAttribute="trailing" constant="8" id="OUm-9W-VJ4"/>
                                             <constraint firstAttribute="trailing" secondItem="FKh-X0-Nan" secondAttribute="trailing" constant="8" id="P5f-Ht-81t"/>
                                             <constraint firstAttribute="trailing" secondItem="Hbr-ky-eRt" secondAttribute="trailing" constant="8" id="TRh-7K-HQo"/>
+                                            <constraint firstItem="3oZ-nJ-pBt" firstAttribute="trailing" secondItem="FKh-X0-Nan" secondAttribute="trailing" constant="-16" id="Zhz-hA-50T"/>
                                             <constraint firstItem="FKh-X0-Nan" firstAttribute="leading" secondItem="ZkP-US-ms5" secondAttribute="leading" constant="8" id="Zzu-rU-Ssa"/>
                                             <constraint firstAttribute="height" constant="770" id="c1Z-jc-nxm"/>
-                                            <constraint firstItem="k6o-rY-Vxe" firstAttribute="centerY" secondItem="f4v-F5-FFa" secondAttribute="centerY" id="c7a-eI-eFH"/>
                                             <constraint firstItem="Hbr-ky-eRt" firstAttribute="top" secondItem="ZkP-US-ms5" secondAttribute="top" constant="8" id="vgX-D8-WSr"/>
                                             <constraint firstItem="55E-ME-gJf" firstAttribute="top" secondItem="FKh-X0-Nan" secondAttribute="bottom" constant="24" id="zqX-Gz-8fd"/>
+                                            <constraint firstItem="4Ay-f3-10d" firstAttribute="centerY" secondItem="f4v-F5-FFa" secondAttribute="centerY" id="zru-yH-LGX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -5737,13 +5719,22 @@ New York, NY 10024, USA</string>
                     </view>
                     <navigationItem key="navigationItem" id="qQw-RF-PNF"/>
                     <connections>
+                        <outlet property="btnCall" destination="iy9-Hq-bty" id="8GI-EX-yM6"/>
+                        <outlet property="btnEmailUs" destination="q1j-IG-oLO" id="KYK-ae-f5N"/>
+                        <outlet property="btnFAQ" destination="L6n-EQ-Szq" id="c03-Dp-1af"/>
+                        <outlet property="btnFacebook" destination="B1m-Ga-GMa" id="Mm4-X7-I6l"/>
+                        <outlet property="btnPrivacy" destination="FKh-X0-Nan" id="3tX-81-Ilg"/>
+                        <outlet property="btnRateUs" destination="gT8-u4-p8L" id="eHY-kz-lN0"/>
+                        <outlet property="btnTerms" destination="f4v-F5-FFa" id="bSM-F3-vGr"/>
+                        <outlet property="btnTwitter" destination="riU-6r-U9o" id="xpJ-LN-Wl7"/>
+                        <outlet property="btnWebsite" destination="ZEB-Q3-EQc" id="k2X-ZT-PeW"/>
                         <outlet property="emailImageView" destination="rdH-MF-CuE" id="iJO-Cc-Lay"/>
                         <outlet property="faqImageView" destination="0V6-qc-c43" id="tu2-5B-zjT"/>
                         <outlet property="heightConstraint" destination="c1Z-jc-nxm" id="HbA-za-NOY"/>
+                        <outlet property="imgPrivacyArrow" destination="3oZ-nJ-pBt" id="RkK-QY-4OC"/>
+                        <outlet property="imgTermsArrow" destination="4Ay-f3-10d" id="k8p-PK-ozI"/>
                         <outlet property="mainView" destination="Hbr-ky-eRt" id="eEK-xJ-do9"/>
-                        <outlet property="privacyBtn" destination="FKh-X0-Nan" id="R1E-J4-nSL"/>
                         <outlet property="rateImageView" destination="Haj-7O-69N" id="nfS-wH-17N"/>
-                        <outlet property="termsBtn" destination="f4v-F5-FFa" id="Fom-Ot-v8a"/>
                         <outlet property="websiteImageView" destination="W5N-H0-Ioe" id="WV8-sq-zYM"/>
                     </connections>
                 </viewController>

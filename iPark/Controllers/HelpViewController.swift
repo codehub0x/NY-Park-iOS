@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material
+import MaterialComponents.MaterialButtons
 import MessageUI
 
 class HelpViewController: UIViewController {
@@ -19,8 +19,17 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var emailImageView: UIImageView!
     @IBOutlet weak var rateImageView: UIImageView!
     @IBOutlet weak var faqImageView: UIImageView!
-    @IBOutlet weak var termsBtn: FlatButton!
-    @IBOutlet weak var privacyBtn: FlatButton!
+    @IBOutlet weak var btnWebsite: MDCButton!
+    @IBOutlet weak var btnEmailUs: MDCButton!
+    @IBOutlet weak var btnRateUs: MDCButton!
+    @IBOutlet weak var btnFAQ: MDCButton!
+    @IBOutlet weak var btnCall: MDCButton!
+    @IBOutlet weak var btnTerms: MDCButton!
+    @IBOutlet weak var btnPrivacy: MDCButton!
+    @IBOutlet weak var btnFacebook: MDCButton!
+    @IBOutlet weak var btnTwitter: MDCButton!
+    @IBOutlet weak var imgTermsArrow: UIImageView!
+    @IBOutlet weak var imgPrivacyArrow: UIImageView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
     fileprivate var mainStoryboard: UIStoryboard!
@@ -34,8 +43,7 @@ class HelpViewController: UIViewController {
         prepareNavigation()
         prepareMainView()
         prepareImageViews()
-        prepareTermsBtn()
-        preparePrivacyBtn()
+        prepareButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -156,31 +164,68 @@ fileprivate extension HelpViewController {
         mainView.layer.masksToBounds = true
     }
     
-    func prepareTermsBtn() {
-        termsBtn.layer.cornerRadius = 6
-        termsBtn.layer.borderColor = UIColor.iBlack70.cgColor
-        termsBtn.layer.borderWidth = 0.5
-        termsBtn.layer.masksToBounds = true
-    }
-    
-    func preparePrivacyBtn() {
-        privacyBtn.layer.cornerRadius = 6
-        privacyBtn.layer.borderColor = UIColor.iBlack70.cgColor
-        privacyBtn.layer.borderWidth = 0.5
-        privacyBtn.layer.masksToBounds = true
+    func prepareButtons() {
+        let topEdgeInsets = UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0)
+        let leftEdgeInsets = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+        let textScheme = Global.textButtonScheme()
+        textScheme.colorScheme.primaryColor = .iBlackBlue
+        textScheme.typographyScheme.button = LatoFont.regular(with: 17)
+        
+        btnWebsite.applyTextTheme(withScheme: textScheme)
+        btnWebsite.isUppercaseTitle = false
+        btnWebsite.contentEdgeInsets = topEdgeInsets
+        
+        btnEmailUs.applyTextTheme(withScheme: textScheme)
+        btnEmailUs.isUppercaseTitle = false
+        btnEmailUs.contentEdgeInsets = topEdgeInsets
+        
+        btnRateUs.applyTextTheme(withScheme: textScheme)
+        btnRateUs.isUppercaseTitle = false
+        btnRateUs.contentEdgeInsets = topEdgeInsets
+        
+        btnFAQ.applyTextTheme(withScheme: textScheme)
+        btnFAQ.isUppercaseTitle = false
+        btnFAQ.contentEdgeInsets = topEdgeInsets
+        
+        btnCall.applyContainedTheme(withScheme: Global.defaultButtonScheme())
+        
+        let outlinedScheme = Global.outlinedButtonScheme()
+        outlinedScheme.colorScheme.primaryColor = .iDarkBlue
+        outlinedScheme.colorScheme.backgroundColor = .white
+        outlinedScheme.typographyScheme.button = LatoFont.regular(with: 19)
+        
+        btnTerms.applyOutlinedTheme(withScheme: outlinedScheme)
+        btnTerms.isUppercaseTitle = false
+        btnTerms.contentEdgeInsets = leftEdgeInsets
+        
+        btnPrivacy.applyOutlinedTheme(withScheme: outlinedScheme)
+        btnPrivacy.isUppercaseTitle = false
+        btnPrivacy.contentEdgeInsets = leftEdgeInsets
+        
+        btnFacebook.applyTextTheme(withScheme: Global.textButtonScheme())
+        btnFacebook.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        btnTwitter.applyTextTheme(withScheme: Global.textButtonScheme())
+        btnTwitter.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func prepareImageViews() {
         websiteImageView.image = websiteImageView.image?.withRenderingMode(.alwaysTemplate)
-        websiteImageView.tintColor = UIColor.iYellow
+        websiteImageView.tintColor = .iYellow
         
         emailImageView.image = emailImageView.image?.withRenderingMode(.alwaysTemplate)
-        emailImageView.tintColor = UIColor.iYellow
+        emailImageView.tintColor = .iYellow
         
         rateImageView.image = rateImageView.image?.withRenderingMode(.alwaysTemplate)
-        rateImageView.tintColor = UIColor.iYellow
+        rateImageView.tintColor = .iYellow
         
         faqImageView.image = faqImageView.image?.withRenderingMode(.alwaysTemplate)
-        faqImageView.tintColor = UIColor.iYellow
+        faqImageView.tintColor = .iYellow
+        
+        imgTermsArrow.image = imgTermsArrow.image?.withRenderingMode(.alwaysTemplate)
+        imgTermsArrow.tintColor = .iDarkBlue
+        
+        imgPrivacyArrow.image = imgPrivacyArrow.image?.withRenderingMode(.alwaysTemplate)
+        imgPrivacyArrow.tintColor = .iDarkBlue
     }
 }
