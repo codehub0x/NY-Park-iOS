@@ -90,7 +90,7 @@ fileprivate extension ReservationsViewController {
         
         tabBar.dividerColor = UIColor.iBlack80
         tabBar.dividerAlignment = .top
-        tabBar.dividerThickness = 0.3
+        tabBar.dividerThickness = 0.1
         
         tabBar.lineColor = UIColor.iYellow
         tabBar.lineAlignment = .bottom

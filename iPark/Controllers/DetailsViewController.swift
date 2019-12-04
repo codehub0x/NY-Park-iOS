@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import FSPagerView
+import MaterialComponents.MaterialButtons
 
 class DetailsViewController: UIViewController {
     
@@ -20,7 +21,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var labelStayPayload: UILabel!
     @IBOutlet weak var labelDistance: UILabel!
     @IBOutlet weak var typeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var btnHelp: UIButton!
+    @IBOutlet weak var btnHelp: MDCButton!
+    @IBOutlet weak var btnBook: MDCButton!
     @IBOutlet weak var labelSuv: UILabel!
     @IBOutlet weak var labelTax: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -47,7 +49,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var labelHours: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
-    @IBOutlet weak var btnDirections: UIButton!
+    @IBOutlet weak var btnDirections: MDCButton!
     @IBOutlet weak var labelPhone: UILabel!
     @IBOutlet weak var labelHoursTitle: UILabel!
     @IBOutlet weak var labelAddressTitle: UILabel!
@@ -76,8 +78,7 @@ class DetailsViewController: UIViewController {
         prepareLocationImageView()
         prepareTypeSegmentedControl()
         prepareSegmentedControl()
-        prepareHelpButton()
-        prepareGetDirectionsButton()
+        prepareButtons()
         prepareHoursTitle()
         prepareAddressTitle()
         preparePhoneTitle()
@@ -128,19 +129,16 @@ class DetailsViewController: UIViewController {
             infoView.isHidden = false
             ratesView.isHidden = true
             specialsView.isHidden = true
-//            scrollHeight.constant = 1160
             break
         case 1:
             infoView.isHidden = true
             ratesView.isHidden = false
             specialsView.isHidden = true
-//            scrollHeight.constant = 900
             break
         case 2:
             infoView.isHidden = true
             ratesView.isHidden = true
             specialsView.isHidden = false
-//            scrollHeight.constant = 700
             break
         default:
             break
@@ -226,17 +224,12 @@ fileprivate extension DetailsViewController {
         segmentedControl.layer.masksToBounds = true
     }
     
-    func prepareHelpButton() {
-        btnHelp.layer.cornerRadius = 4
-        btnHelp.layer.borderWidth = 1
-        btnHelp.layer.borderColor = UIColor.iBlack70.cgColor
+    func prepareButtons() {
+        btnBook.applyContainedTheme(withScheme: Global.defaultButtonScheme())
         
-        btnHelp.setImage(UIImage(named: "icon-questionmark")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        btnHelp.tintColor = UIColor.iBlack90
+        btnHelp.applyOutlinedTheme(withScheme: Global.outlinedButtonScheme())
         btnHelp.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    
-    func prepareGetDirectionsButton() {
+        
         let textString = NSMutableAttributedString(
             string: btnDirections.title(for: .normal)!,
             attributes: [
@@ -249,11 +242,10 @@ fileprivate extension DetailsViewController {
         paragraphStyle.lineSpacing = 0
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
         textString.addAttribute(NSAttributedString.Key.kern, value: 1, range: textRange)
+        
         btnDirections.setAttributedTitle(textString, for: .normal)
-        btnDirections.layer.borderWidth = 1
-        btnDirections.layer.cornerRadius = 4
-        btnDirections.layer.borderColor = UIColor.iBlack70.cgColor
-        btnDirections.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        btnDirections.applyOutlinedTheme(withScheme: Global.smallOutlinedButtonScheme())
+        btnDirections.contentEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
     }
     
     func prepareHoursTitle() {

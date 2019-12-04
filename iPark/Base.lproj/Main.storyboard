@@ -1968,7 +1968,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                     <constraint firstItem="2pp-sj-5Wo" firstAttribute="centerY" secondItem="gOe-aE-gcD" secondAttribute="centerY" id="u5V-1H-Eeu"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-Oh-AcO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zc-Oh-AcO" customClass="MDCButton">
                                                 <rect key="frame" x="363" y="44" width="35" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2197,7 +2197,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-in-l8N">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTV-in-l8N" customClass="MDCButton">
                                                                 <rect key="frame" x="226" y="0.0" width="140" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -2419,6 +2419,7 @@ All SUVs oversized fee of $12.00 daily</string>
                         <viewLayoutGuide key="safeArea" id="T9l-G1-kGR"/>
                     </view>
                     <connections>
+                        <outlet property="btnBook" destination="k97-bg-NB9" id="8LK-oF-agw"/>
                         <outlet property="btnDirections" destination="zTV-in-l8N" id="kaY-Xf-0p9"/>
                         <outlet property="btnHelp" destination="1Zc-Oh-AcO" id="6ER-YE-ceS"/>
                         <outlet property="hoursImageView" destination="pxP-v6-ull" id="lAo-sK-tCt"/>
