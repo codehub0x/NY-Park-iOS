@@ -3,6 +3,7 @@
 //
 
 #import "CardIO.h"
+#import "CustomTextInputControllerOutlined.h"
 
 @import AudioToolbox;
 @import AVFoundation;

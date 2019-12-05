@@ -22,10 +22,10 @@ class VehiclesViewController: UIViewController {
     @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnAdd: MDCButton!
     
-    var makeFieldController: MDCTextInputControllerOutlined!
-    var modelFieldController: MDCTextInputControllerOutlined!
-    var colorFieldController: MDCTextInputControllerOutlined!
-    var plateFieldController: MDCTextInputControllerOutlined!
+    var makeFieldController: CustomTextInputControllerOutlined!
+    var modelFieldController: CustomTextInputControllerOutlined!
+    var colorFieldController: CustomTextInputControllerOutlined!
+    var plateFieldController: CustomTextInputControllerOutlined!
     
     var data: [[String: String]] = [
         ["make": "Bently", "model": "Contiential", "color": "Black", "plate": "FAA-1000"],
@@ -221,7 +221,7 @@ fileprivate extension VehiclesViewController {
         makeField.font = LatoFont.regular(with: 17)
         makeField.textColor = .iBlack95
         
-        makeFieldController = MDCTextInputControllerOutlined(textInput: makeField)
+        makeFieldController = CustomTextInputControllerOutlined(textInput: makeField)
         makeFieldController.placeholderText = "Vehicle Make"
         makeFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         makeFieldController.inlinePlaceholderColor = .iBlack70
@@ -237,7 +237,7 @@ fileprivate extension VehiclesViewController {
         modelField.font = LatoFont.regular(with: 17)
         modelField.textColor = .iBlack95
         
-        modelFieldController = MDCTextInputControllerOutlined(textInput: modelField)
+        modelFieldController = CustomTextInputControllerOutlined(textInput: modelField)
         modelFieldController.placeholderText = "Vehicle Model"
         modelFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         modelFieldController.inlinePlaceholderColor = .iBlack70
@@ -253,7 +253,7 @@ fileprivate extension VehiclesViewController {
         colorField.font = LatoFont.regular(with: 17)
         colorField.textColor = .iBlack95
         
-        colorFieldController = MDCTextInputControllerOutlined(textInput: colorField)
+        colorFieldController = CustomTextInputControllerOutlined(textInput: colorField)
         colorFieldController.placeholderText = "Color"
         colorFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         colorFieldController.inlinePlaceholderColor = .iBlack70
@@ -269,7 +269,7 @@ fileprivate extension VehiclesViewController {
         plateField.font = LatoFont.regular(with: 17)
         plateField.textColor = .iBlack95
         
-        plateFieldController = MDCTextInputControllerOutlined(textInput: plateField)
+        plateFieldController = CustomTextInputControllerOutlined(textInput: plateField)
         plateFieldController.placeholderText = "Plate"
         plateFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         plateFieldController.inlinePlaceholderColor = .iBlack70

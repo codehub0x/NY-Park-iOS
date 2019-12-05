@@ -22,9 +22,9 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var btnTerms: UIButton!
     @IBOutlet weak var btnClose: MDCButton!
     
-    var nameFieldController: MDCTextInputControllerOutlined!
-    var emailFieldController: MDCTextInputControllerOutlined!
-    var passwordFieldController: MDCTextInputControllerOutlined!
+    var nameFieldController: CustomTextInputControllerOutlined!
+    var emailFieldController: CustomTextInputControllerOutlined!
+    var passwordFieldController: CustomTextInputControllerOutlined!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
@@ -189,7 +189,7 @@ fileprivate extension SignupViewController {
         nameField.font = LatoFont.regular(with: 17)
         nameField.textColor = .iBlack95
         
-        nameFieldController = MDCTextInputControllerOutlined(textInput: nameField)
+        nameFieldController = CustomTextInputControllerOutlined(textInput: nameField)
         nameFieldController.placeholderText = "Full Name"
         nameFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         nameFieldController.inlinePlaceholderColor = .iBlack70
@@ -199,13 +199,14 @@ fileprivate extension SignupViewController {
         nameFieldController.errorColor = .red
         nameFieldController.normalColor = .iBlack70
         nameFieldController.activeColor = .iDarkBlue
+        nameFieldController.isFloatingEnabled = false
     }
     
     func prepareEmailField() {
         emailField.font = LatoFont.regular(with: 17)
         emailField.textColor = .iBlack95
         
-        emailFieldController = MDCTextInputControllerOutlined(textInput: emailField)
+        emailFieldController = CustomTextInputControllerOutlined(textInput: emailField)
         emailFieldController.placeholderText = "Email"
         emailFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         emailFieldController.inlinePlaceholderColor = .iBlack70
@@ -221,7 +222,7 @@ fileprivate extension SignupViewController {
         passwordField.font = LatoFont.regular(with: 17)
         passwordField.textColor = .iBlack95
         
-        passwordFieldController = MDCTextInputControllerOutlined(textInput: passwordField)
+        passwordFieldController = CustomTextInputControllerOutlined(textInput: passwordField)
         passwordFieldController.placeholderText = "Password"
         passwordFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         passwordFieldController.inlinePlaceholderColor = .iBlack70

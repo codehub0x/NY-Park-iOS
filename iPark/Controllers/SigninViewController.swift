@@ -21,8 +21,8 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var btnForgotPassword: MDCButton!
     @IBOutlet weak var btnClose: MDCButton!
     
-    var emailFieldController: MDCTextInputControllerOutlined!
-    var passwordFieldController: MDCTextInputControllerOutlined!
+    var emailFieldController: CustomTextInputControllerOutlined!
+    var passwordFieldController: CustomTextInputControllerOutlined!
     
     fileprivate var mainStoryboard: UIStoryboard!
     
@@ -142,7 +142,7 @@ fileprivate extension SigninViewController {
         emailField.font = LatoFont.regular(with: 17)
         emailField.textColor = .iBlack95
         
-        emailFieldController = MDCTextInputControllerOutlined(textInput: emailField)
+        emailFieldController = CustomTextInputControllerOutlined(textInput: emailField)
         emailFieldController.placeholderText = "Email"
         emailFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         emailFieldController.inlinePlaceholderColor = .iBlack70
@@ -158,7 +158,7 @@ fileprivate extension SigninViewController {
         passwordField.font = LatoFont.regular(with: 17)
         passwordField.textColor = .iBlack95
         
-        passwordFieldController = MDCTextInputControllerOutlined(textInput: passwordField)
+        passwordFieldController = CustomTextInputControllerOutlined(textInput: passwordField)
         passwordFieldController.placeholderText = "Password"
         passwordFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         passwordFieldController.inlinePlaceholderColor = .iBlack70

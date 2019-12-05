@@ -25,11 +25,11 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var btnSave: MDCButton!
     @IBOutlet weak var btnPaymentMethod: MDCButton!
     
-    var nameFieldController: MDCTextInputControllerOutlined!
-    var emailFieldController: MDCTextInputControllerOutlined!
-    var phoneFieldController: MDCTextInputControllerOutlined!
-    var passwordFieldController: MDCTextInputControllerOutlined!
-    var repeatFieldController: MDCTextInputControllerOutlined!
+    var nameFieldController: CustomTextInputControllerOutlined!
+    var emailFieldController: CustomTextInputControllerOutlined!
+    var phoneFieldController: CustomTextInputControllerOutlined!
+    var passwordFieldController: CustomTextInputControllerOutlined!
+    var repeatFieldController: CustomTextInputControllerOutlined!
     
     var imagePicker: ImagePicker!
     
@@ -269,7 +269,7 @@ fileprivate extension AccountViewController {
         nameField.font = LatoFont.regular(with: 17)
         nameField.textColor = .iBlack95
         
-        nameFieldController = MDCTextInputControllerOutlined(textInput: nameField)
+        nameFieldController = CustomTextInputControllerOutlined(textInput: nameField)
         nameFieldController.placeholderText = "Full Name"
         nameFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         nameFieldController.inlinePlaceholderColor = .iBlack70
@@ -285,7 +285,7 @@ fileprivate extension AccountViewController {
         emailField.font = LatoFont.regular(with: 17)
         emailField.textColor = .iBlack95
         
-        emailFieldController = MDCTextInputControllerOutlined(textInput: emailField)
+        emailFieldController = CustomTextInputControllerOutlined(textInput: emailField)
         emailFieldController.placeholderText = "Email"
         emailFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         emailFieldController.inlinePlaceholderColor = .iBlack70
@@ -301,7 +301,7 @@ fileprivate extension AccountViewController {
         phoneField.font = LatoFont.regular(with: 17)
         phoneField.textColor = .iBlack95
         
-        phoneFieldController = MDCTextInputControllerOutlined(textInput: phoneField)
+        phoneFieldController = CustomTextInputControllerOutlined(textInput: phoneField)
         phoneFieldController.placeholderText = "Phone Number"
         phoneFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         phoneFieldController.inlinePlaceholderColor = .iBlack70
@@ -317,7 +317,7 @@ fileprivate extension AccountViewController {
         passwordField.font = LatoFont.regular(with: 17)
         passwordField.textColor = .iBlack95
         
-        passwordFieldController = MDCTextInputControllerOutlined(textInput: passwordField)
+        passwordFieldController = CustomTextInputControllerOutlined(textInput: passwordField)
         passwordFieldController.placeholderText = "Password"
         passwordFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         passwordFieldController.inlinePlaceholderColor = .iBlack70
@@ -333,7 +333,7 @@ fileprivate extension AccountViewController {
         repeatField.font = LatoFont.regular(with: 17)
         repeatField.textColor = .iBlack95
         
-        repeatFieldController = MDCTextInputControllerOutlined(textInput: repeatField)
+        repeatFieldController = CustomTextInputControllerOutlined(textInput: repeatField)
         repeatFieldController.placeholderText = "Repeat Password"
         repeatFieldController.inlinePlaceholderFont = LatoFont.regular(with: 17)
         repeatFieldController.inlinePlaceholderColor = .iBlack70

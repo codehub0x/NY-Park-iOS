@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C011431239683BA0055BC2A /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C011430239683BA0055BC2A /* ErrorTextField.swift */; };
 		3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */; };
+		3C1F9C0423991882002421CB /* CustomTextInputControllerOutlined.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F9C0323991882002421CB /* CustomTextInputControllerOutlined.m */; };
 		3C29BEBB237DA110009F46EC /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29BEBA237DA110009F46EC /* ReservationCell.swift */; };
 		3C29BEBD237DA141009F46EC /* ReservationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C29BEBC237DA141009F46EC /* ReservationCell.xib */; };
 		3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C29BF0F237DB3D9009F46EC /* LatoFont.swift */; };
@@ -125,6 +126,8 @@
 		365F335D586FC0C3930DAE5A /* Pods-iParkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iParkTests.release.xcconfig"; path = "Target Support Files/Pods-iParkTests/Pods-iParkTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C011430239683BA0055BC2A /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		3C0B8ECF2390B0FF0027ACDA /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		3C1F9C0323991882002421CB /* CustomTextInputControllerOutlined.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTextInputControllerOutlined.m; sourceTree = "<group>"; };
+		3C1F9C05239918A8002421CB /* CustomTextInputControllerOutlined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextInputControllerOutlined.h; sourceTree = "<group>"; };
 		3C29BEBA237DA110009F46EC /* ReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
 		3C29BEBC237DA141009F46EC /* ReservationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationCell.xib; sourceTree = "<group>"; };
 		3C29BF0F237DB3D9009F46EC /* LatoFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoFont.swift; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */,
 				3C8D2D4E2385769200B91F09 /* VehicleCell.swift */,
 				3C8D2D4C2385768500B91F09 /* VehicleCell.xib */,
+				3C1F9C05239918A8002421CB /* CustomTextInputControllerOutlined.h */,
+				3C1F9C0323991882002421CB /* CustomTextInputControllerOutlined.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -774,6 +779,7 @@
 				3C29BF10237DB3D9009F46EC /* LatoFont.swift in Sources */,
 				3C8D2D4F2385769200B91F09 /* VehicleCell.swift in Sources */,
 				3CC896812386C7E70085DCA1 /* FAQViewCell.swift in Sources */,
+				3C1F9C0423991882002421CB /* CustomTextInputControllerOutlined.m in Sources */,
 				3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */,
 				3C011431239683BA0055BC2A /* ErrorTextField.swift in Sources */,
 				3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */,
