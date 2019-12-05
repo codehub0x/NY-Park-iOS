@@ -312,10 +312,6 @@ fileprivate extension SearchViewController {
     func prepareTabBar() {
         tabBar.delegate = self
         
-        tabBar.dividerColor = .iBlack80
-        tabBar.dividerAlignment = .top
-        tabBar.dividerThickness = 0.3
-        
         tabBar.lineColor = .iYellow
         tabBar.lineAlignment = .bottom
         tabBar.lineHeight = 4
