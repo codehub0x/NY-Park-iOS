@@ -68,6 +68,7 @@
 		3C952FAF2390083000D0A313 /* ThumbTextSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */; };
 		3CA30A952384495A0046CCD5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA30A942384495A0046CCD5 /* AccountViewController.swift */; };
 		3CA6F6A82386D3E900A24521 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6F6A72386D3E900A24521 /* FAQViewController.swift */; };
+		3CAB9D5E23AFD9B900AB2207 /* BillingViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAB9D5D23AFD9B900AB2207 /* BillingViewController+Delegate.swift */; };
 		3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CABA6862382A3C000EB368E /* HomeCell.swift */; };
 		3CABA6892382A3C000EB368E /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CABA6872382A3C000EB368E /* HomeCell.xib */; };
 		3CB03860238724A10050130F /* BookedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB0385F238724A10050130F /* BookedCell.swift */; };
@@ -186,6 +187,7 @@
 		3C952FAE2390083000D0A313 /* ThumbTextSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbTextSlider.swift; sourceTree = "<group>"; };
 		3CA30A942384495A0046CCD5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		3CA6F6A72386D3E900A24521 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		3CAB9D5D23AFD9B900AB2207 /* BillingViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BillingViewController+Delegate.swift"; sourceTree = "<group>"; };
 		3CABA6862382A3C000EB368E /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		3CABA6872382A3C000EB368E /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		3CB0385F238724A10050130F /* BookedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedCell.swift; sourceTree = "<group>"; };
@@ -358,9 +360,9 @@
 		3C892501237C3651004F7E97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CAB9D5C23AFD99100AB2207 /* Billing */,
 				3CF6CF08237BFF1C00E53AC0 /* TabBarController.swift */,
 				3CA30A942384495A0046CCD5 /* AccountViewController.swift */,
-				3CFE874B239498BB0080DEAC /* BillingViewController.swift */,
 				3CBE4F6C23831F59005C45DF /* BookViewController.swift */,
 				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
 				3CA6F6A72386D3E900A24521 /* FAQViewController.swift */,
@@ -378,6 +380,15 @@
 				3C42AFC32384723000C8582C /* VehiclesViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CAB9D5C23AFD99100AB2207 /* Billing */ = {
+			isa = PBXGroup;
+			children = (
+				3CFE874B239498BB0080DEAC /* BillingViewController.swift */,
+				3CAB9D5D23AFD9B900AB2207 /* BillingViewController+Delegate.swift */,
+			);
+			path = Billing;
 			sourceTree = "<group>";
 		};
 		3CF6CEF8237BFF1C00E53AC0 = {
@@ -761,6 +772,7 @@
 				3CEB5D432381C0FB0020CD14 /* SignupViewController.swift in Sources */,
 				3CA30A952384495A0046CCD5 /* AccountViewController.swift in Sources */,
 				3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */,
+				3CAB9D5E23AFD9B900AB2207 /* BillingViewController+Delegate.swift in Sources */,
 				3CC83A6923918B6200C339CF /* FAQHeader.swift in Sources */,
 				3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */,
 				3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */,
@@ -975,7 +987,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 8B38M4SCVB;
+				DEVELOPMENT_TEAM = 6AS6LVBC8Q;
 				INFOPLIST_FILE = iPark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -983,7 +995,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.newyork.iPark;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ny.iPark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iPark-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1000,7 +1012,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 8B38M4SCVB;
+				DEVELOPMENT_TEAM = 6AS6LVBC8Q;
 				INFOPLIST_FILE = iPark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1008,7 +1020,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.newyork.iPark;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ny.iPark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iPark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

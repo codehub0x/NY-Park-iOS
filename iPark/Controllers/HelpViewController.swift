@@ -84,7 +84,7 @@ class HelpViewController: UIViewController {
     }
     
     @IBAction func onRateUsBtnClick(_ sender: Any) {
-        
+//        openURL(url: URL(string: ""))
     }
     
     @IBAction func onFaqBtnClick(_ sender: Any) {

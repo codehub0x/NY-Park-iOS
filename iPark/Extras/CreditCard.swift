@@ -11,14 +11,12 @@ import Foundation
 class CreditCard {
     public enum CardType: Int {
         case amex = 0
-//        case visa
-//        case mastercard
-//        case discover
-//        case dinersClub
-//        case jcb
-//        case maestro
-//        case rupay
-//        case mir
+        case visa
+        case mastercard
+        case discover
+        case dinersClub
+        case jcb
+        case maestro
     }
     
     public enum CardError: Error {
@@ -30,22 +28,19 @@ class CreditCard {
         switch cardType {
         case .amex:
             return "^3[47][0-9]{5,}$"
-//        case .dinersClub:
-//            return "^3(?:0[0-5]|[68][0-9])[0-9]{4,}$"
-//        case .discover:
-//            return "^6(?:011|5[0-9]{2})[0-9]{3,}$"
-//        case .jcb:
-//            return "^(?:2131|1800|35[0-9]{3})[0-9]{3,}$"
-//        case .mastercard:
-//            return "^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$"
-//        case .visa:
-//            return "^4[0-9]{6,}$"
-//        case .maestro:
-//            return "^(5018|5020|5038|6304|6759|6761|6763)[0-9]{8,15}$"
-//        case .rupay:
-//            return "^6[0-9]{15}$"
-//        case .mir:
-//            return "^220[0-9]{13}$"
+        case .visa:
+            return "^4[0-9]{6,}$"
+        case .mastercard:
+            return "^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$"
+        case .discover:
+            return "^6(?:011|5[0-9]{2})[0-9]{3,}$"
+        case .dinersClub:
+            return "^3(?:0[0-5]|[68][0-9])[0-9]{4,}$"
+        case .jcb:
+            return "^(?:2131|1800|35[0-9]{3})[0-9]{3,}$"
+        case .maestro:
+            return "^(50[0-9]{4,}|5[6-8][0-9]{4,}|6[0-9]{5,})$"
+//            return "^(5018|5020|5038|5893|6304|6759|6761|6762|6763)[0-9]{8,15}$"
         }
     }
     
@@ -53,35 +48,168 @@ class CreditCard {
         switch cardType {
         case .amex:
             return "^3[47][0-9]+$"
-//        case .dinersClub:
-//            return "^3(?:0[0-5]|[68][0-9])[0-9]+$"
-//        case .discover:
-//            return "^6(?:011|5[0-9]{2})[0-9]+$"
-//        case .jcb:
-//            return "^(?:2131|1800|35[0-9]{3})[0-9]+$"
-//        case .mastercard:
-//            return "^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$"
-//        case .visa:
-//            return "^4[0-9]+$"
-//        case .maestro:
-//            return "^(5018|5020|5038|6304|6759|6761|6763)[0-9]+$"
-//        case .rupay:
-//            return "^6[0-9]+$"
-//        case .mir:
-//            return "^220[0-9]+$"
+        case .visa:
+            return "^4[0-9]+$"
+        case .mastercard:
+            return "^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$"
+        case .discover:
+            return "^6(?:011|5[0-9]{2})[0-9]+$"
+        case .dinersClub:
+            return "^3(?:0[0-5]|[68][0-9])[0-9]+$"
+        case .jcb:
+            return "^(?:2131|1800|35[0-9]{3})[0-9]+$"
+        case .maestro:
+            return "^(50[0-9]{4,}|5[6-8][0-9]{4,}|6[0-9]{5,})$"
+//            return "^(5018|5020|5038|5893|6304|6759|6761|6762|6763)[0-9]+$"
+        }
+    }
+    
+    class func isValidEditable(with cardNumber: String) -> Bool {
+        let cleanCardNumber = cardNumber.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        let count = cleanCardNumber.count
+        do {
+            let type = try cardType(for: cleanCardNumber)
+            
+            switch type {
+            case .amex:
+                return count <= 15
+            case .visa:
+                return count <= 19
+            case .mastercard:
+                return count <= 16
+            case .discover:
+                return count <= 16
+            case .dinersClub:
+                return count <= 16
+            case .jcb:
+                return count <= 19
+            case .maestro:
+                return count <= 19
+            }
+        }
+        catch {
+            return count < 20
+        }
+    }
+    
+    class func formattedNumber(with cardNumber: String) -> String {
+        let cleanCardNumber = cardNumber.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        let count = cleanCardNumber.count
+        
+        var pattern = ""
+        do {
+            let type = try cardType(for: cleanCardNumber)
+            switch type {
+            case .amex:
+                pattern = "#### ###### #####"
+                break
+            case .visa:
+                if count <= 16 {
+                    pattern = "#### #### #### ####"
+                } else if count <= 19 {
+                    pattern = "#### #### #### #### ###"
+                }
+                break
+            case .mastercard:
+                pattern = "#### #### #### ####"
+                break
+            case .discover:
+                pattern = "#### #### #### ####"
+                break
+            case .dinersClub:
+                if count <= 14 {
+                    pattern = "#### ###### ####"
+                } else if count <= 16 {
+                    pattern = "#### #### #### ####"
+                }
+                break
+            case .jcb:
+                pattern = "#### #### #### ####"
+                break
+            case .maestro:
+                if count <= 13 {
+                    pattern = "#### #### #####"
+                } else if count <= 15 {
+                    pattern = "#### ###### #####"
+                } else if count == 16 {
+                    pattern = "#### #### #### ####"
+                } else if count <= 19 {
+                    pattern = "#### #### #### #### ###"
+                }
+                break
+            }
+        } catch {
+            
+        }
+        
+        if pattern.isEmpty {
+            return cleanCardNumber
+        } else {
+            var result = ""
+            var index = cleanCardNumber.startIndex
+            for ch in pattern where index < cleanCardNumber.endIndex {
+                if ch == "#" {
+                    result.append(cleanCardNumber[index])
+                    index = cleanCardNumber.index(after: index)
+                } else {
+                    result.append(ch)
+                }
+            }
+            return result
         }
     }
     
     class func performAlgorithm(with cardNumber: String) throws {
-        
-        let formattedCardNumber = cardNumber.formattedCardNumber().replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-        
-        guard formattedCardNumber.count >= 15 else {
-            throw CardError.invalid
+        let cleanCardNumber = cardNumber.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+
+        let count = cleanCardNumber.count
+        do {
+            let type = try cardType(for: cardNumber)
+            switch type {
+            case .amex:
+                guard count == 15 else {
+                    throw CardError.invalid
+                }
+                break
+            case .visa:
+                guard count >= 13 && count <= 19 else {
+                    throw CardError.invalid
+                }
+                break
+            case .mastercard:
+                guard count == 16 else {
+                    throw CardError.invalid
+                }
+                break
+            case .discover:
+                guard count == 16 else {
+                    throw CardError.invalid
+                }
+                break
+            case .dinersClub:
+                guard count >= 14 && count <= 16 else {
+                    throw CardError.invalid
+                }
+                break
+            case .jcb:
+                guard count == 16 else {
+                    throw CardError.invalid
+                }
+                break
+            case .maestro:
+                guard count >= 12 && count <= 19 else {
+                    throw CardError.invalid
+                }
+                break
+            }
+        } catch {
+            guard count >= 12 && count <= 19 else {
+                throw CardError.invalid
+            }
         }
         
-        let originalCheckDigit = formattedCardNumber.last!
-        let characters = formattedCardNumber.dropLast().reversed()
+        let originalCheckDigit = cleanCardNumber.last!
+        let characters = cleanCardNumber.dropLast().reversed()
         
         var digitSum = 0
         
@@ -115,20 +243,19 @@ class CreditCard {
     
     class func cardType(for cardNumber: String, suggest: Bool = false) throws -> CardType {
         var foundCardType: CardType?
-         let cardNumber = cardNumber.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        let cleanCardNumber = cardNumber.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
         
-//        for i in CardType.amex.rawValue...CardType.jcb.rawValue {
-//            let cardType = CardType(rawValue: i)!
-            let cardType = CardType(rawValue: 0)!
+        for i in CardType.amex.rawValue...CardType.maestro.rawValue {
+            let cardType = CardType(rawValue: i)!
             let regex = suggest ? suggestionRegularExpression(for: cardType) : regularExpression(for: cardType)
             
             let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
             
-            if predicate.evaluate(with: cardNumber) == true {
+            if predicate.evaluate(with: cleanCardNumber) == true {
                 foundCardType = cardType
-//                break
+                break
             }
-//        }
+        }
         
         if foundCardType == nil {
             throw CardError.invalid
@@ -143,22 +270,37 @@ public extension CreditCard.CardType {
         switch self {
         case .amex:
             return "American Express"
-//        case .visa:
-//            return "Visa"
-//        case .mastercard:
-//            return "Mastercard"
-//        case .discover:
-//            return "Discover"
-//        case .dinersClub:
-//            return "Diner's Club"
-//        case .jcb:
-//            return "JCB"
-//        case .maestro:
-//            return "Maestro"
-//        case .rupay:
-//            return "Rupay"
-//        case .mir:
-//            return "Mir"
+        case .visa:
+            return "Visa"
+        case .mastercard:
+            return "Mastercard"
+        case .discover:
+            return "Discover"
+        case .dinersClub:
+            return "Diner's Club"
+        case .jcb:
+            return "JCB"
+        case .maestro:
+            return "Maestro"
+        }
+    }
+    
+    func pattern() -> String {
+        switch self {
+        case .amex:
+            return "#### ###### #####"
+        case .visa:
+            return "#### #### #### ####"
+        case .mastercard:
+            return "#### #### #### ####"
+        case .discover:
+            return ""
+        case .dinersClub:
+            return ""
+        case .jcb:
+            return "#### #### #### ####"
+        case .maestro:
+            return ""
         }
     }
     
@@ -166,22 +308,18 @@ public extension CreditCard.CardType {
         switch string.lowercased() {
         case "american express":
             self.init(rawValue: 0)
-//        case "visa":
-//            self.init(rawValue: 1)
-//        case "mastercard":
-//            self.init(rawValue: 2)
-//        case "discover":
-//            self.init(rawValue: 3)
-//        case "diner's club":
-//            self.init(rawValue: 4)
-//        case "jcb":
-//            self.init(rawValue: 5)
-//        case "maestro":
-//            self.init(rawValue: 6)
-//        case "rupay":
-//            self.init(rawValue: 7)
-//        case "mir":
-//            self.init(rawValue: 8)
+        case "visa":
+            self.init(rawValue: 1)
+        case "mastercard":
+            self.init(rawValue: 2)
+        case "discover":
+            self.init(rawValue: 3)
+        case "diner's club":
+            self.init(rawValue: 4)
+        case "jcb":
+            self.init(rawValue: 5)
+        case "maestro":
+            self.init(rawValue: 6)
         default:
             return nil
         }

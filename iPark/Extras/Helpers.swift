@@ -302,6 +302,7 @@ extension String {
         let cardType = try? CreditCard.cardType(for: self)
         return cardType
     }
+    
     func suggestedCardType() -> CreditCard.CardType? {
         let cardType = try? CreditCard.cardType(for: self, suggest: true)
         return cardType
@@ -385,7 +386,7 @@ extension String {
     func isValidCVV() -> Bool {
         let cleanCVV = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         
-        if cleanCVV.count == 4 {
+        if cleanCVV.count == 3 || cleanCVV.count == 4 {
             return true
         } else {
             return false
