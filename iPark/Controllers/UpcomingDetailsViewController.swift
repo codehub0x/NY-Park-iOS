@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-import FSPagerView
+import ImageSlideshow
 import MaterialComponents.MaterialButtons
 
 class UpcomingDetailsViewController: UIViewController {
@@ -31,24 +31,7 @@ class UpcomingDetailsViewController: UIViewController {
     @IBOutlet weak var labelTotal: UILabel!
     @IBOutlet weak var qrcodeImageView: UIImageView!
     @IBOutlet weak var barcodeImageView: UIImageView!
-    
-    @IBOutlet weak var pagerView: FSPagerView! {
-        didSet {
-            self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
-            self.pagerView.isInfinite = true
-        }
-    }
-    @IBOutlet weak var pageControl: FSPageControl! {
-        didSet {
-            self.pageControl.numberOfPages = self.images.count
-            self.pageControl.contentHorizontalAlignment = .center
-            self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-            self.pageControl.hidesForSinglePage = true
-            self.pageControl.setStrokeColor(.white, for: .normal)
-            self.pageControl.setStrokeColor(.white, for: .selected)
-            self.pageControl.setFillColor(.white, for: .selected)
-        }
-    }
+    @IBOutlet weak var slideshow: ImageSlideshow!
     
     @IBOutlet weak var labelVehicleTitle: UILabel!
     @IBOutlet weak var labelAmenitiesTitle: UILabel!
@@ -61,17 +44,13 @@ class UpcomingDetailsViewController: UIViewController {
     @IBOutlet weak var btnCancelReservation: MDCButton!
     @IBOutlet weak var btnPaid: MDCButton!
     
-    var images = [
-        UIImage(named: "image1"),
-        UIImage(named: "image2")
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         prepareNavigation(title: "West 90TH Garage Corp.", subTitle: "7 East 14th Street, New York, NY...")
         prepareHoursImageView()
         prepareLocationImageView()
+        prepareSlideshow()
         prepareButtons()
         prepareVehicleTitle()
         prepareAmenitiesTitle()
@@ -87,6 +66,12 @@ class UpcomingDetailsViewController: UIViewController {
     
     @objc func onBackClick() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func didTabSlideshow() {
+        let fullScreenController = slideshow.presentFullScreenController(from: self)
+        // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
+        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
     }
     
     @IBAction func onAddToCalendarBtnClick(_ sender: Any) {
@@ -115,28 +100,10 @@ class UpcomingDetailsViewController: UIViewController {
     }
 }
 
-// MARK: - FSPagerView data source
-extension UpcomingDetailsViewController: FSPagerViewDataSource {
-    func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return images.count
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.image = images[index]
-        cell.imageView?.contentMode = .scaleAspectFill
-        return cell
-    }
-}
-
-// MARK: - FSPagerView delegate
-extension UpcomingDetailsViewController: FSPagerViewDelegate {
-    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
-        pagerView.deselectItem(at: index, animated: true)
-    }
-    
-    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        self.pageControl.currentPage = targetIndex
+// MARK: - ImageSlideshow delegate
+extension UpcomingDetailsViewController: ImageSlideshowDelegate {
+    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
+        print("current page:", page)
     }
 }
 
@@ -272,5 +239,27 @@ fileprivate extension UpcomingDetailsViewController {
         textString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: textRange)
         textString.addAttribute(NSAttributedString.Key.kern, value: 2, range: textRange)
         labelPhoneTitle.attributedText = textString
+    }
+    
+    func prepareSlideshow() {
+        slideshow.zoomEnabled = true
+        
+        let pageIndicator = UIPageControl()
+        let image = UIImage.outlinedEllipse(size: CGSize(width: 7, height: 7), color: .white)
+        pageIndicator.pageIndicatorTintColor = .white
+        pageIndicator.currentPageIndicatorTintColor = UIColor(patternImage: image!)
+        slideshow.pageIndicator = pageIndicator
+        
+        slideshow.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .customBottom(padding: 0))
+        slideshow.contentScaleMode = .scaleAspectFill
+        
+        // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
+        slideshow.activityIndicator = DefaultActivityIndicator()
+        slideshow.delegate = self
+        
+        slideshow.setImageInputs([BundleImageSource(imageString: "image1"), BundleImageSource(imageString: "image2"), BundleImageSource(imageString: "image1"), BundleImageSource(imageString: "image2")])
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTabSlideshow))
+        slideshow.addGestureRecognizer(recognizer)
     }
 }

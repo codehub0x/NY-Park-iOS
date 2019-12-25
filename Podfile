@@ -12,12 +12,12 @@ target 'iPark' do
   pod 'MaterialComponents/TextFields'
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/Buttons+Theming'
-  pod 'FSPagerView'
   pod 'TPKeyboardAvoiding'
   pod 'Stripe'
   pod 'CardIO'
   pod 'CountryPickerView'
   pod 'PhoneNumberKit'
+  pod 'ImageSlideshow'
 
   # Pods for Test
 

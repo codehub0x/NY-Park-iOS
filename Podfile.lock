@@ -1,7 +1,9 @@
 PODS:
   - CardIO (5.4.1)
   - CountryPickerView (3.0.4)
-  - FSPagerView (0.8.3)
+  - ImageSlideshow (1.8.1):
+    - ImageSlideshow/Core (= 1.8.1)
+  - ImageSlideshow/Core (1.8.1)
   - Material (3.1.8):
     - Material/Core (= 3.1.8)
   - Material/Core (3.1.8):
@@ -101,7 +103,7 @@ PODS:
 DEPENDENCIES:
   - CardIO
   - CountryPickerView
-  - FSPagerView
+  - ImageSlideshow
   - Material (~> 3.1.0)
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
@@ -114,7 +116,7 @@ SPEC REPOS:
   trunk:
     - CardIO
     - CountryPickerView
-    - FSPagerView
+    - ImageSlideshow
     - Material
     - MaterialComponents
     - MDFInternationalization
@@ -127,7 +129,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   CountryPickerView: 43142f2a31a20860939ec54f6e22d4b92a35b488
-  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  ImageSlideshow: 634865d7d4e96f21e3830a31b51bde768cc94cea
   Material: a2a3f400a3b549d53ef89e56c58c4535b29db387
   MaterialComponents: 3ee5327e02dc3f34df48c68205b5fd7dce171744
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -137,6 +139,6 @@ SPEC CHECKSUMS:
   Stripe: a468d5f39703807e840fdfed39572ffad0aaf053
   TPKeyboardAvoiding: 6dd3fe3268b8f2627beb7ff3d82a3cacbdf66a36
 
-PODFILE CHECKSUM: eb4fa3e63a75e36f30da56b634091e164f48d23e
+PODFILE CHECKSUM: 043258c70814f6cb4da82ed71b7677f643aa2cd2
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

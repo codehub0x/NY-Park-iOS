@@ -1784,7 +1784,7 @@ After every 10 points earned you will receive 1 free reservation.*</string>
             </objects>
             <point key="canvasLocation" x="-75" y="556"/>
         </scene>
-        <!--Data Source-->
+        <!--Details View Controller-->
         <scene sceneID="5gB-5i-fBG">
             <objects>
                 <viewController storyboardIdentifier="DetailsViewController" id="Ach-ev-lqV" customClass="DetailsViewController" customModule="iPark" customModuleProvider="target" sceneMemberID="viewController">
@@ -2054,21 +2054,10 @@ After every 10 points earned you will receive 1 free reservation.*</string>
                                                     <action selector="onViewIndexChanged:" destination="Ach-ev-lqV" eventType="valueChanged" id="mWf-0r-xHX"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Is6-VU-CLl" customClass="FSPagerView" customModule="FSPagerView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Is6-VU-CLl" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                                 <rect key="frame" x="16" y="237.5" width="382" height="239"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Is6-VU-CLl" secondAttribute="height" multiplier="8:5" id="xf0-eU-Idw"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="Ach-ev-lqV" id="Br0-2F-aqU"/>
-                                                    <outlet property="delegate" destination="Ach-ev-lqV" id="AcU-rd-jdW"/>
-                                                </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjH-gj-7fp" customClass="FSPageControl" customModule="FSPagerView">
-                                                <rect key="frame" x="16" y="451.5" width="382" height="25"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="X8B-gS-HUa"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9G-q0-lYo">
@@ -2356,7 +2345,6 @@ All SUVs oversized fee of $12.00 daily</string>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="qjH-gj-7fp" firstAttribute="leading" secondItem="Is6-VU-CLl" secondAttribute="leading" id="0Cp-2H-enh"/>
                                             <constraint firstItem="1Zc-Oh-AcO" firstAttribute="leading" secondItem="dX8-L5-Maq" secondAttribute="trailing" constant="16" id="0IE-9U-PNf"/>
                                             <constraint firstItem="L1i-lh-kdw" firstAttribute="centerY" secondItem="emZ-aU-DwI" secondAttribute="centerY" id="4n9-lQ-FY4"/>
                                             <constraint firstItem="RaC-5m-I3e" firstAttribute="top" secondItem="Is6-VU-CLl" secondAttribute="bottom" id="66N-aJ-QEa"/>
@@ -2387,9 +2375,7 @@ All SUVs oversized fee of $12.00 daily</string>
                                             <constraint firstItem="A5b-lg-tQy" firstAttribute="top" secondItem="Is6-VU-CLl" secondAttribute="bottom" id="fdt-Jp-RU2"/>
                                             <constraint firstItem="gOe-aE-gcD" firstAttribute="top" secondItem="nmC-7x-Z4M" secondAttribute="top" id="hfZ-rC-U9T"/>
                                             <constraint firstItem="k97-bg-NB9" firstAttribute="top" secondItem="dX8-L5-Maq" secondAttribute="bottom" constant="16" id="jBV-eb-tdw"/>
-                                            <constraint firstItem="qjH-gj-7fp" firstAttribute="bottom" secondItem="Is6-VU-CLl" secondAttribute="bottom" id="jPs-PP-xmf"/>
                                             <constraint firstAttribute="trailing" secondItem="A5b-lg-tQy" secondAttribute="trailing" id="jux-IO-X9a"/>
-                                            <constraint firstItem="qjH-gj-7fp" firstAttribute="trailing" secondItem="Is6-VU-CLl" secondAttribute="trailing" id="sW7-qK-M0E"/>
                                             <constraint firstItem="Is6-VU-CLl" firstAttribute="top" secondItem="A4z-qe-80Q" secondAttribute="bottom" constant="16" id="wDA-L3-NyZ"/>
                                             <constraint firstItem="Is6-VU-CLl" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" constant="16" id="wWI-IH-yef"/>
                                             <constraint firstItem="RaC-5m-I3e" firstAttribute="leading" secondItem="nmC-7x-Z4M" secondAttribute="leading" id="wYd-n0-zSz"/>
@@ -2440,10 +2426,9 @@ All SUVs oversized fee of $12.00 daily</string>
                         <outlet property="labelSuv" destination="emZ-aU-DwI" id="sAL-Zh-9lM"/>
                         <outlet property="labelTax" destination="L1i-lh-kdw" id="eTe-c0-4js"/>
                         <outlet property="locationImageView" destination="Lfj-ao-kMN" id="EjO-Ch-CZZ"/>
-                        <outlet property="pageControl" destination="qjH-gj-7fp" id="jSH-QQ-wGb"/>
-                        <outlet property="pagerView" destination="Is6-VU-CLl" id="PDb-e2-ntr"/>
                         <outlet property="ratesView" destination="RaC-5m-I3e" id="bpr-lc-7Jw"/>
                         <outlet property="segmentedControl" destination="A4z-qe-80Q" id="nsv-zt-EHQ"/>
+                        <outlet property="slideshow" destination="Is6-VU-CLl" id="iOT-8h-irr"/>
                         <outlet property="specialsView" destination="A5b-lg-tQy" id="uqV-uV-sNc"/>
                         <outlet property="typeSegmentedControl" destination="dX8-L5-Maq" id="XuF-CP-0l8"/>
                     </connections>
@@ -2452,7 +2437,7 @@ All SUVs oversized fee of $12.00 daily</string>
             </objects>
             <point key="canvasLocation" x="798.55072463768124" y="555.80357142857144"/>
         </scene>
-        <!--Data Source-->
+        <!--Upcoming Details View Controller-->
         <scene sceneID="Rxj-gz-CYd">
             <objects>
                 <viewController storyboardIdentifier="UpcomingDetailsViewController" id="H2T-hW-pgo" customClass="UpcomingDetailsViewController" customModule="iPark" customModuleProvider="target" sceneMemberID="viewController">
@@ -2657,20 +2642,10 @@ All SUVs oversized fee of $12.00 daily</string>
                                                     <constraint firstAttribute="trailing" secondItem="fN5-MU-UGI" secondAttribute="trailing" constant="32" id="wG8-zL-IzV"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3F1-CC-6yU" userLabel="Page View" customClass="FSPagerView" customModule="FSPagerView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3F1-CC-6yU" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                                 <rect key="frame" x="0.0" y="44" width="414" height="310.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="3F1-CC-6yU" secondAttribute="height" multiplier="4:3" id="rTm-5O-90b"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="H2T-hW-pgo" id="wFx-eA-oHk"/>
-                                                    <outlet property="delegate" destination="H2T-hW-pgo" id="tMa-W4-YhK"/>
-                                                </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-g0-6sj" customClass="FSPageControl" customModule="FSPagerView">
-                                                <rect key="frame" x="0.0" y="329.5" width="414" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="U9K-7U-hNu"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6f-Hj-YFv">
@@ -3115,7 +3090,6 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="SWl-g0-6sj" firstAttribute="trailing" secondItem="3F1-CC-6yU" secondAttribute="trailing" id="2xV-ef-gkd"/>
                                             <constraint firstAttribute="trailing" secondItem="bYK-xV-km3" secondAttribute="trailing" constant="16" id="4Md-Gp-Efx"/>
                                             <constraint firstItem="bYK-xV-km3" firstAttribute="top" secondItem="N6f-Hj-YFv" secondAttribute="bottom" constant="16" id="9Vp-H2-MdU"/>
                                             <constraint firstAttribute="trailing" secondItem="N6f-Hj-YFv" secondAttribute="trailing" id="C7J-fA-Vd3"/>
@@ -3127,12 +3101,10 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                                             <constraint firstItem="3F1-CC-6yU" firstAttribute="top" secondItem="cUR-XQ-yNO" secondAttribute="bottom" id="cPt-Mq-7LG"/>
                                             <constraint firstItem="N6f-Hj-YFv" firstAttribute="top" secondItem="3F1-CC-6yU" secondAttribute="bottom" id="d5f-DM-XhA"/>
                                             <constraint firstItem="dtU-V7-xNa" firstAttribute="top" secondItem="bYK-xV-km3" secondAttribute="bottom" constant="24" id="g3x-Gi-QFn"/>
-                                            <constraint firstItem="SWl-g0-6sj" firstAttribute="leading" secondItem="3F1-CC-6yU" secondAttribute="leading" id="gwc-dA-16X"/>
                                             <constraint firstItem="cUR-XQ-yNO" firstAttribute="top" secondItem="EpK-zT-top" secondAttribute="top" id="l0Q-v2-7h8"/>
                                             <constraint firstItem="bYK-xV-km3" firstAttribute="leading" secondItem="EpK-zT-top" secondAttribute="leading" constant="16" id="mWi-6n-mcD"/>
                                             <constraint firstItem="N6f-Hj-YFv" firstAttribute="leading" secondItem="EpK-zT-top" secondAttribute="leading" id="oFV-Yf-NP3"/>
                                             <constraint firstItem="3F1-CC-6yU" firstAttribute="leading" secondItem="EpK-zT-top" secondAttribute="leading" id="obP-nE-qSW"/>
-                                            <constraint firstItem="SWl-g0-6sj" firstAttribute="bottom" secondItem="3F1-CC-6yU" secondAttribute="bottom" id="pxy-S6-sc2"/>
                                             <constraint firstAttribute="trailing" secondItem="dtU-V7-xNa" secondAttribute="trailing" id="tBr-tG-zsx"/>
                                         </constraints>
                                     </view>
@@ -3186,9 +3158,8 @@ NOTE: IF YOU INTEND ON ENTERING WITH AN SUV OR OVERSIZED VEHICLE YOU MUST CONTAC
                         <outlet property="labelVehicle" destination="n7Y-2T-llC" id="5aX-E3-Sbs"/>
                         <outlet property="labelVehicleTitle" destination="ULT-4y-M81" id="v6E-xn-snp"/>
                         <outlet property="locationImageView" destination="Eqw-FT-Zoj" id="FDL-rG-la1"/>
-                        <outlet property="pageControl" destination="SWl-g0-6sj" id="y5e-Kt-tAQ"/>
-                        <outlet property="pagerView" destination="3F1-CC-6yU" id="sFJ-Py-qv0"/>
                         <outlet property="qrcodeImageView" destination="1pz-pY-SEw" id="XGc-LM-4cc"/>
+                        <outlet property="slideshow" destination="3F1-CC-6yU" id="9VN-ry-BZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVD-vj-Phe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5725,7 +5696,7 @@ New York, NY 10024, USA</string>
         </scene>
     </scenes>
     <resources>
-        <image name="amex" width="134" height="88"/>
+        <image name="amex" width="24" height="15"/>
         <image name="avatar" width="68" height="68"/>
         <image name="bar-code" width="162" height="50"/>
         <image name="credit-card" width="24" height="24"/>
