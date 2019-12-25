@@ -12,7 +12,7 @@ target 'iPark' do
   pod 'MaterialComponents/TextFields'
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/Buttons+Theming'
-  pod 'TPKeyboardAvoiding'
+  pod 'IQKeyboardManagerSwift'
   pod 'Stripe'
   pod 'CardIO'
   pod 'CountryPickerView'

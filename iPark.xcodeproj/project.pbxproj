@@ -366,6 +366,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3C42F78123B3BC3100B1B24E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
+				3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		3C8924FC237C319A004F7E97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,11 +407,11 @@
 		3C892501237C3651004F7E97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3CAB9D5C23AFD99100AB2207 /* Billing */,
 				3CF6CF08237BFF1C00E53AC0 /* TabBarController.swift */,
+				3CAB9D5C23AFD99100AB2207 /* Billing */,
+				3C42F78123B3BC3100B1B24E /* Details */,
 				3CA30A942384495A0046CCD5 /* AccountViewController.swift */,
 				3CBE4F6C23831F59005C45DF /* BookViewController.swift */,
-				3CB69DC1237FA8E100E85702 /* DetailsViewController.swift */,
 				3CA6F6A72386D3E900A24521 /* FAQViewController.swift */,
 				3CB4DB15238429690037B033 /* HelpViewController.swift */,
 				3C8924FF237C364B004F7E97 /* HomeViewController.swift */,
@@ -414,7 +423,6 @@
 				3C892508237CF3BF004F7E97 /* SearchViewController.swift */,
 				3CEB5D402381BF4A0020CD14 /* SigninViewController.swift */,
 				3CEB5D422381C0FB0020CD14 /* SignupViewController.swift */,
-				3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */,
 				3C42AFC32384723000C8582C /* VehiclesViewController.swift */,
 			);
 			path = Controllers;

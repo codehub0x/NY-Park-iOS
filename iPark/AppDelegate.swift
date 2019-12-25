@@ -8,6 +8,7 @@
 
 import UIKit
 import Stripe
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Stripe.setDefaultPublishableKey("pk_test_lmmb95O3GAHkmeEILw4FaNhD00E9CLyn6N")
+        
+        IQKeyboardManager.shared.enable = true
         return true
     }
 
