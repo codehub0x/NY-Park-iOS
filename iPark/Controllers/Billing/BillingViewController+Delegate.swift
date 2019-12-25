@@ -30,7 +30,9 @@ extension BillingViewController: UITextFieldDelegate {
             if CreditCard.isValidEditable(with: updatedString) {
                 cardNumberTextField.text = cardNumber
             }
-            let isValid = updatedString.isValidCardNumber()
+            cardImageView.image = getCardImage(cardNumber)
+            
+            let isValid = cardNumber.isValidCardNumber()
             updateLabel(isValid, textField: textField)
             if isValid {
                 expDateTextField.becomeFirstResponder()
@@ -70,7 +72,7 @@ extension BillingViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let str = textField.text!.trimmed
+        let str = textField.text?.trimmingCharacters(in: .whitespaces) ?? ""
         if textField == fullNameTextField {
             textField.rightView?.isHidden = !str.isEmpty
         } else if textField == cardNumberTextField {

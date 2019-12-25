@@ -19,6 +19,7 @@ class BillingViewController: UIViewController {
     @IBOutlet weak var cardInfoView: UIView!
     @IBOutlet weak var fullNameTextField: ErrorTextField!
     @IBOutlet weak var cardNumberTextField: ErrorTextField!
+    @IBOutlet weak var cardImageView: UIImageView!
     @IBOutlet weak var expDateTextField: ErrorTextField!
     @IBOutlet weak var cvvTextField: ErrorTextField!
     @IBOutlet weak var billingInfoView: ErrorTextField!
@@ -166,6 +167,15 @@ class BillingViewController: UIViewController {
             textField.textColor = UIColor.iBlack90
         } else {
             textField.textColor = UIColor.red
+        }
+    }
+    
+    func getCardImage(_ cardNumber: String) -> UIImage {
+        do {
+            let cardType = try CreditCard.cardType(for: cardNumber, suggest: true)
+            return cardType.image()
+        } catch {
+            return UIImage(named: "credit-card")!
         }
     }
     

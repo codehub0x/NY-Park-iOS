@@ -172,7 +172,7 @@ class CreditCard {
                 }
                 break
             case .visa:
-                guard count >= 13 && count <= 19 else {
+                guard count >= 16 && count <= 19 else {
                     throw CardError.invalid
                 }
                 break
@@ -202,7 +202,9 @@ class CreditCard {
                 }
                 break
             }
-        } catch {
+        } catch CardError.invalid {
+            throw CardError.invalid
+        } catch CardError.unsupported {
             guard count >= 12 && count <= 19 else {
                 throw CardError.invalid
             }
@@ -258,7 +260,7 @@ class CreditCard {
         }
         
         if foundCardType == nil {
-            throw CardError.invalid
+            throw CardError.unsupported
         }
         
         return foundCardType!
@@ -285,22 +287,23 @@ public extension CreditCard.CardType {
         }
     }
     
-    func pattern() -> String {
+    func image() -> UIImage {
+        let cardImage = UIImage(named: "credit-card")!
         switch self {
         case .amex:
-            return "#### ###### #####"
+            return UIImage(named: "amex") ?? cardImage
         case .visa:
-            return "#### #### #### ####"
+            return UIImage(named: "visa") ?? cardImage
         case .mastercard:
-            return "#### #### #### ####"
+            return UIImage(named: "master") ?? cardImage
         case .discover:
-            return ""
+            return UIImage(named: "discover") ?? cardImage
         case .dinersClub:
-            return ""
+            return UIImage(named: "diners-club") ?? cardImage
         case .jcb:
-            return "#### #### #### ####"
+            return UIImage(named: "jcb") ?? cardImage
         case .maestro:
-            return ""
+            return UIImage(named: "maestro") ?? cardImage
         }
     }
     

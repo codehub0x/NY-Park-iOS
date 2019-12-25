@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "amex.png",
+      "filename" : "discover.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "amex@2x.png",
+      "filename" : "discover@2x.png",
       "scale" : "2x"
     },
     {
