@@ -57,7 +57,17 @@
 		3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */; };
 		3C3FAC972397F6A80049E2BE /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */; };
 		3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42AFC32384723000C8582C /* VehiclesViewController.swift */; };
-		3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8924FD237C31D4004F7E97 /* Helpers.swift */; };
+		3C42F76C23B3AB9100B1B24E /* UIImage+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F76B23B3AB9100B1B24E /* UIImage+iPark.swift */; };
+		3C42F76E23B3ABBA00B1B24E /* UITextField+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F76D23B3ABBA00B1B24E /* UITextField+iPark.swift */; };
+		3C42F77023B3ABDD00B1B24E /* UIImageView+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F76F23B3ABDD00B1B24E /* UIImageView+iPark.swift */; };
+		3C42F77223B3AC1100B1B24E /* String+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77123B3AC1100B1B24E /* String+iPark.swift */; };
+		3C42F77423B3AC3200B1B24E /* Date+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77323B3AC3200B1B24E /* Date+iPark.swift */; };
+		3C42F77623B3AC4E00B1B24E /* UIButton+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77523B3AC4E00B1B24E /* UIButton+iPark.swift */; };
+		3C42F77823B3AC6800B1B24E /* UIViewController+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77723B3AC6800B1B24E /* UIViewController+iPark.swift */; };
+		3C42F77A23B3AC8F00B1B24E /* UIColor+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77923B3AC8F00B1B24E /* UIColor+iPark.swift */; };
+		3C42F77C23B3ACAA00B1B24E /* UINavigationItem+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77B23B3ACAA00B1B24E /* UINavigationItem+iPark.swift */; };
+		3C42F77E23B3ACD000B1B24E /* UIStackView+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77D23B3ACD000B1B24E /* UIStackView+iPark.swift */; };
+		3C42F78023B3ACF500B1B24E /* UIView+iPark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C42F77F23B3ACF500B1B24E /* UIView+iPark.swift */; };
 		3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8924FF237C364B004F7E97 /* HomeViewController.swift */; };
 		3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892502237C51BE004F7E97 /* ReservationsViewController.swift */; };
 		3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C892506237C693F004F7E97 /* MenuViewController.swift */; };
@@ -176,7 +186,17 @@
 		3C3AF97A2382D73400EAA4A8 /* UpcomingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingDetailsViewController.swift; sourceTree = "<group>"; };
 		3C3FAC962397F6A80049E2BE /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		3C42AFC32384723000C8582C /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
-		3C8924FD237C31D4004F7E97 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		3C42F76B23B3AB9100B1B24E /* UIImage+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+iPark.swift"; sourceTree = "<group>"; };
+		3C42F76D23B3ABBA00B1B24E /* UITextField+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+iPark.swift"; sourceTree = "<group>"; };
+		3C42F76F23B3ABDD00B1B24E /* UIImageView+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77123B3AC1100B1B24E /* String+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77323B3AC3200B1B24E /* Date+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77523B3AC4E00B1B24E /* UIButton+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77723B3AC6800B1B24E /* UIViewController+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77923B3AC8F00B1B24E /* UIColor+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77B23B3ACAA00B1B24E /* UINavigationItem+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77D23B3ACD000B1B24E /* UIStackView+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+iPark.swift"; sourceTree = "<group>"; };
+		3C42F77F23B3ACF500B1B24E /* UIView+iPark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+iPark.swift"; sourceTree = "<group>"; };
 		3C8924FF237C364B004F7E97 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3C892502237C51BE004F7E97 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
 		3C892506237C693F004F7E97 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +348,24 @@
 			path = Lato;
 			sourceTree = "<group>";
 		};
+		3C42F76A23B3AB5D00B1B24E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C42F77323B3AC3200B1B24E /* Date+iPark.swift */,
+				3C42F77123B3AC1100B1B24E /* String+iPark.swift */,
+				3C42F77523B3AC4E00B1B24E /* UIButton+iPark.swift */,
+				3C42F77923B3AC8F00B1B24E /* UIColor+iPark.swift */,
+				3C42F76B23B3AB9100B1B24E /* UIImage+iPark.swift */,
+				3C42F76F23B3ABDD00B1B24E /* UIImageView+iPark.swift */,
+				3C42F77B23B3ACAA00B1B24E /* UINavigationItem+iPark.swift */,
+				3C42F77D23B3ACD000B1B24E /* UIStackView+iPark.swift */,
+				3C42F76D23B3ABBA00B1B24E /* UITextField+iPark.swift */,
+				3C42F77F23B3ACF500B1B24E /* UIView+iPark.swift */,
+				3C42F77723B3AC6800B1B24E /* UIViewController+iPark.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3C8924FC237C319A004F7E97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +455,7 @@
 		3CF6CF03237BFF1C00E53AC0 /* iPark */ = {
 			isa = PBXGroup;
 			children = (
+				3C42F76A23B3AB5D00B1B24E /* Extensions */,
 				3CFE8748239442D40080DEAC /* Extras */,
 				3C29BEBE237DA573009F46EC /* Fonts */,
 				3C892501237C3651004F7E97 /* Controllers */,
@@ -454,7 +493,6 @@
 			children = (
 				3CB4DB13238400820037B033 /* Global.swift */,
 				3CFE8746239409350080DEAC /* MyAPIClient.swift */,
-				3C8924FD237C31D4004F7E97 /* Helpers.swift */,
 				3CFE8749239443720080DEAC /* CreditCard.swift */,
 			);
 			path = Extras;
@@ -772,16 +810,21 @@
 				3CEB5D432381C0FB0020CD14 /* SignupViewController.swift in Sources */,
 				3CA30A952384495A0046CCD5 /* AccountViewController.swift in Sources */,
 				3C892500237C364B004F7E97 /* HomeViewController.swift in Sources */,
+				3C42F76E23B3ABBA00B1B24E /* UITextField+iPark.swift in Sources */,
 				3CAB9D5E23AFD9B900AB2207 /* BillingViewController+Delegate.swift in Sources */,
 				3CC83A6923918B6200C339CF /* FAQHeader.swift in Sources */,
 				3C42AFC42384723000C8582C /* VehiclesViewController.swift in Sources */,
+				3C42F77423B3AC3200B1B24E /* Date+iPark.swift in Sources */,
 				3C0B8ED02390B0FF0027ACDA /* LocationSearchTable.swift in Sources */,
 				3CABA6882382A3C000EB368E /* HomeCell.swift in Sources */,
 				3CBE4F6D23831F59005C45DF /* BookViewController.swift in Sources */,
+				3C42F77E23B3ACD000B1B24E /* UIStackView+iPark.swift in Sources */,
+				3C42F77623B3AC4E00B1B24E /* UIButton+iPark.swift in Sources */,
 				3CA6F6A82386D3E900A24521 /* FAQViewController.swift in Sources */,
 				3CF6CF09237BFF1C00E53AC0 /* TabBarController.swift in Sources */,
 				3CB4DB14238400820037B033 /* Global.swift in Sources */,
 				3C3FAC972397F6A80049E2BE /* RewardsViewController.swift in Sources */,
+				3C42F78023B3ACF500B1B24E /* UIView+iPark.swift in Sources */,
 				3CF87AE82384C95E00DE9995 /* BookCell.swift in Sources */,
 				3CFE874C239498BB0080DEAC /* BillingViewController.swift in Sources */,
 				3CB69DBC237F87C400E85702 /* SavedCell.swift in Sources */,
@@ -793,20 +836,25 @@
 				3CC896812386C7E70085DCA1 /* FAQViewCell.swift in Sources */,
 				3C1F9C0423991882002421CB /* CustomTextInputControllerOutlined.m in Sources */,
 				3C3AF97B2382D73400EAA4A8 /* UpcomingDetailsViewController.swift in Sources */,
+				3C42F77023B3ABDD00B1B24E /* UIImageView+iPark.swift in Sources */,
 				3C011431239683BA0055BC2A /* ErrorTextField.swift in Sources */,
+				3C42F77A23B3AC8F00B1B24E /* UIColor+iPark.swift in Sources */,
 				3C892509237CF3BF004F7E97 /* SearchViewController.swift in Sources */,
 				3C892503237C51BE004F7E97 /* ReservationsViewController.swift in Sources */,
 				3CFE874A239443720080DEAC /* CreditCard.swift in Sources */,
 				3C29BF14237DB43E009F46EC /* Fonts.swift in Sources */,
 				3CF6CF05237BFF1C00E53AC0 /* AppDelegate.swift in Sources */,
+				3C42F77C23B3ACAA00B1B24E /* UINavigationItem+iPark.swift in Sources */,
 				3CBC15592390329900328CE6 /* CustomAnnotationView.swift in Sources */,
 				3CB69DC2237FA8E100E85702 /* DetailsViewController.swift in Sources */,
 				3C29BF12237DB3EC009F46EC /* RobottoFont.swift in Sources */,
 				3CFE8747239409350080DEAC /* MyAPIClient.swift in Sources */,
 				3CBC155B23903B4400328CE6 /* CustomAnnotation.swift in Sources */,
+				3C42F77823B3AC6800B1B24E /* UIViewController+iPark.swift in Sources */,
+				3C42F76C23B3AB9100B1B24E /* UIImage+iPark.swift in Sources */,
 				3CEB5D412381BF4A0020CD14 /* SigninViewController.swift in Sources */,
 				3CF6CF07237BFF1C00E53AC0 /* SceneDelegate.swift in Sources */,
-				3C8924FE237C31D4004F7E97 /* Helpers.swift in Sources */,
+				3C42F77223B3AC1100B1B24E /* String+iPark.swift in Sources */,
 				3CB4DB16238429690037B033 /* HelpViewController.swift in Sources */,
 				3C892507237C693F004F7E97 /* MenuViewController.swift in Sources */,
 				3C952FAF2390083000D0A313 /* ThumbTextSlider.swift in Sources */,
