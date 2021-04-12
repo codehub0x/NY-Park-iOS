@@ -12,7 +12,6 @@
 
 ### 🌱 Technologies and Frameworks
 <p>
-    <br/>
     <!-- Swift -->
     <img src="https://img.shields.io/badge/Swift-fa7343?flat=plastic&logo=swift&logoColor=white" height="32" alt="Swift" />
     &nbsp;
