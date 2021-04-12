@@ -17,4 +17,7 @@
     <!-- Swift -->
     <img src="https://img.shields.io/badge/CocoaPods-ee3322?flat=plastic&logo=cocoapods&logoColor=white" height="32" alt="CocoaPods" />
     &nbsp;
+    <!-- Google Maps -->
+    <img src="https://img.shields.io/badge/Google%20Maps-4285f4?flat=plastic&logo=google%20maps&logoColor=white" height="32" alt="Google Maps" />
+    &nbsp;
 </p>
