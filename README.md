@@ -26,10 +26,16 @@
     <!-- MasterCard -->
     <img src="https://img.shields.io/badge/MasterCard-eb001b?flat=plastic&logo=mastercard&logoColor=white" height="32" alt="MasterCard" />
     &nbsp;
+    <!-- Visa -->
+    <img src="https://img.shields.io/badge/Visa-1a1f71?flat=plastic&logo=visa&logoColor=white" height="32" alt="Visa" />
+    &nbsp;
     <!-- American Express -->
     <img src="https://img.shields.io/badge/American%20Express-0078d2?flat=plastic&logo=american%20express&logoColor=white" height="32" alt="American Express" />
     &nbsp;
-    <!-- Visa -->
-    <img src="https://img.shields.io/badge/Visa-1a1f71?flat=plastic&logo=visa&logoColor=white" height="32" alt="Visa" />
+    <!-- Discover -->
+    <img src="https://img.shields.io/badge/Discover-ff6000?flat=plastic&logo=discover&logoColor=white" height="32" alt="Discover" />
+    &nbsp;
+    <!-- JCB -->
+    <img src="https://img.shields.io/badge/JCB-0b4ea2?flat=plastic&logo=jcb&logoColor=white" height="32" alt="jcb" />
     &nbsp;
 </p>
