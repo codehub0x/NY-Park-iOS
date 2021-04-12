@@ -20,4 +20,7 @@
     <!-- Google Maps -->
     <img src="https://img.shields.io/badge/Google%20Maps-4285f4?flat=plastic&logo=google%20maps&logoColor=white" height="32" alt="Google Maps" />
     &nbsp;
+    <!-- Apple Pay -->
+    <img src="https://img.shields.io/badge/Apple%20Pay-000000?flat=plastic&logo=apple%20pay&logoColor=white" height="32" alt="Apple Pay" />
+    &nbsp;
 </p>
