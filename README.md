@@ -12,9 +12,9 @@
 <p>
     <br/>
     <!-- Swift -->
-    <img src="https://img.shields.io/badge/Swift-fa7343?flat=plastic&logo=swift&logoColor=black" height="32" alt="Swift" />
+    <img src="https://img.shields.io/badge/Swift-fa7343?flat=plastic&logo=swift&logoColor=white" height="32" alt="Swift" />
     &nbsp;
     <!-- Swift -->
-    <img src="https://img.shields.io/badge/CocoaPods-ee3322?flat=plastic&logo=cocoapods&logoColor=black" height="32" alt="CocoaPods" />
+    <img src="https://img.shields.io/badge/CocoaPods-ee3322?flat=plastic&logo=cocoapods&logoColor=white" height="32" alt="CocoaPods" />
     &nbsp;
 </p>
