@@ -8,6 +8,8 @@
   <img src="https://img.shields.io/badge/Supported%20by-Xcode%20Power%20User%20%E2%86%92-gray.svg?colorA=655BE1&colorB=4F44D6&style=for-the-badge"/>
 </p>
 
+---
+
 ### 🌱 Technologies and Frameworks
 <p>
     <br/>
