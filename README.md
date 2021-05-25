@@ -40,4 +40,7 @@
     <!-- Material-UI -->
     <img src="https://img.shields.io/badge/Material-UI-0081cb?flat=plastic&logo=material-ui&logoColor=white" height="32" alt="Materail-UI" />
     &nbsp;
+    <!-- Material Design -->
+    <img src="https://img.shields.io/badge/Material%20Design-757575?flat=plastic&logo=material%20design&logoColor=white" height="32" alt="Materail Design" />
+    &nbsp;
 </p>
